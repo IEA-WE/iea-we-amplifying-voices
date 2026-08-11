@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IEA-WE | Women in Economics</title>
+
+<meta name="description" content="IEA-WE is a global initiative of the International Economic Association to strengthen the presence and influence of women in the economics profession.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --navy: #14213d;
+    --navy-light: #203456;
+    --green: #79c9a4;
+    --green-dark: #4c9f7b;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --light: #eef2ef;
+    --text: #263238;
+    --muted: #69747a;
+    --border: #dce3df;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1160px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247,245,239,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    font-size: 1.15rem;
+}
+
+.logo-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--green);
+    display: grid;
+    place-items: center;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--green-dark);
+}
+
+/* HERO */
+
+.hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 110px 0 105px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0.12;
+    right: -170px;
+    top: -180px;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-family: "Fraunces", serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    margin-bottom: 34px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1.18rem;
+    color: #dce5e5;
+    line-height: 1.7;
+    margin-bottom: 38px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: var(--green);
+    color: var(--navy);
+}
+
+.button-secondary {
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+}
+
+/* INTRO */
+
+.intro {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.intro h2,
+.section-heading {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    color: var(--navy);
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.intro h2 {
+    margin-top: 18px;
+}
+
+.intro-copy {
+    font-size: 1.12rem;
+    color: var(--muted);
+}
+
+.intro-copy p + p {
+    margin-top: 22px;
+}
+
+/* STATS */
+
+.stats {
+    background: var(--green);
+    color: var(--navy);
+    padding: 58px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.stat {
+    border-left: 1px solid rgba(20,33,61,0.25);
+    padding-left: 25px;
+}
+
+.stat:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.stat-number {
+    font-family: "Fraunces", serif;
+    font-size: 3.3rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.stat-label {
+    margin-top: 9px;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+/* WHY */
+
+.why {
+    padding: 105px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 90px;
+}
+
+.why-copy {
+    font-size: 1.08rem;
+    color: var(--muted);
+}
+
+.why-copy p + p {
+    margin-top: 24px;
+}
+
+/* WORK */
+
+.work {
+    background: var(--white);
+    padding: 105px 0;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.section-intro {
+    max-width: 570px;
+    color: var(--muted);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.work-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 34px;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-number {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    color: var(--green-dark);
+    margin-bottom: 55px;
+}
+
+.work-card h3 {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.work-card p {
+    color: var(--muted);
+}
+
+.card-link {
+    margin-top: auto;
+    padding-top: 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+/* FEATURE */
+
+.feature {
+    background: var(--navy);
+    color: white;
+    padding: 105px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.feature h2 {
+    font-family: "Fraunces", serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+}
+
+.feature-copy {
+    color: #d4dddd;
+    font-size: 1.05rem;
+    margin-top: 25px;
+}
+
+.feature-list {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.feature-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-item strong {
+    color: var(--green);
+}
+
+.feature-item span {
+    color: #d4dddd;
+    text-align: right;
+}
+
+/* LEADERSHIP */
+
+.leadership {
+    padding: 105px 0;
+    background: var(--cream);
+}
+
+.leadership-intro {
+    max-width: 700px;
+    color: var(--muted);
+    margin: 25px 0 50px;
+    font-size: 1.08rem;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.person {
+    background: var(--cream);
+    padding: 30px;
+}
+
+.person-name {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+}
+
+.person-role {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* SUPPORT */
+
+.support {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.support-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.support-copy {
+    max-width: 720px;
+}
+
+.support-copy p {
+    margin-top: 15px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 65px 0 35px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 0.7fr;
+    gap: 60px;
+    padding-bottom: 55px;
+}
+
+.footer-title {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+footer p {
+    color: #bdc9cc;
+    max-width: 500px;
+}
+
+.footer-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #dce5e5;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+    color: #9eabad;
+    font-size: 0.78rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .container {
+        width: min(100% - 34px, 1160px);
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .intro-grid,
+    .why-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat:nth-child(3) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-top,
+    .support-inner {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-left: none;
+        border-top: 1px solid rgba(20,33,61,0.25);
+        padding: 20px 0 0;
+    }
+
+    .stat:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">IEA</span>
+            <span>IEA-WE</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#work">Our Work</a>
+            <a href="#voices">Amplifying Voices</a>
+            <a href="#leadership">Leadership</a>
+            <a href="reports/amplifying-voices-impact-report.html">Reports</a>
+            <a href="#about">About</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="eyebrow">International Economic Association</div>
+
+        <h1>
+            Women shaping <span>economics.</span>
+        </h1>
+
+        <p class="hero-text">
+            IEA-WE is a global initiative to strengthen the presence and influence
+            of women in the economics profession — through research, collaboration,
+            advocacy and amplifying women's voices in economic debate.
+        </p>
+
+        <div class="buttons">
+            <a href="#work" class="button button-primary">
+                Explore our work →
+            </a>
+
+            <a href="#about" class="button button-secondary">
+                About IEA-WE
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="about">
+
+    <div class="container intro-grid">
+
+        <div>
+            <div class="section-label">The initiative</div>
+
+            <h2>
+                Changing who gets heard.
+            </h2>
+        </div>
+
+        <div class="intro-copy">
+
+            <p>
+                The International Economic Association has launched a multi-year
+                global initiative to strengthen the presence and influence of women
+                in the economics profession.
+            </p>
+
+            <p>
+                Through research, collaboration, and advocacy, IEA-WE seeks to
+                identify and remove barriers to women's participation — and to
+                amplify the voices of women economists in shaping global economic
+                discourse.
+            </p>
+
+            <p>
+                We believe that economics is stronger when more perspectives
+                contribute to the questions the discipline asks, the evidence it
+                produces, and the policies it informs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">policy articles</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">27+</div>
+            <div class="stat-label">countries represented</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">regions across the Global South</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">2</div>
+            <div class="stat-label">podcasts launched</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY THIS MATTERS -->
+
+<section class="why">
+
+    <div class="container why-grid">
+
+        <div>
+            <div class="section-label">Why this matters</div>
+
+            <h2 class="section-heading">
+                Better economics needs more voices.
+            </h2>
+        </div>
+
+        <div class="why-copy">
+
+            <p>
+                Economics shapes how we understand governments, markets, and
+                public policy — yet women remain underrepresented, especially
+                in leadership roles.
+            </p>
+
+            <p>
+                These disparities deepen when viewed through the lens of race,
+                ethnicity, geography, caste and region. Women from developing
+                countries can face a double disadvantage — by gender and geography.
+            </p>
+
+            <p>
+                IEA-WE recognises that progress requires both expanding the
+                pipeline of qualified women economists and dismantling the
+                structural barriers that hinder advancement.
+            </p>
+
+            <p>
+                Greater inclusion is not only a matter of fairness. Diverse
+                perspectives lead to richer analyses, more innovative solutions,
+                and ultimately better-functioning societies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR WORK -->
+
+<section class="work" id="work">
+
+    <div class="container">
+
+        <div class="section-top">
+
+            <div>
+                <div class="section-label">Our work</div>
+
+                <h2 class="section-heading">
+                    From evidence<br>to influence.
+                </h2>
+            </div>
+
+            <p class="section-intro">
+                IEA-WE works across research, communication and institutional
+                change to create a more inclusive economics profession.
+            </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+            <article class="work-card">
+
+                <div class="work-number">01</div>
+
+                <h3>Building the evidence base</h3>
+
+                <p>
+                    Research across Latin America, Africa and Asia examines
+                    gender gaps in the economics profession, experiences and
+                    barriers, and interventions that can reduce inequality.
+                </p>
+
+                <a href="#research" class="card-link">
+                    Explore the research →
+                </a>
+
+            </article>
+
+
+            <article class="work-card">
+
+                <div class="work-number">02</div>
+
+                <h3>Amplifying women's voices</h3>
+
+                <p>
+                    We work with women economists to translate academic research
+                    into accessible policy articles, podcasts and other forms
+                    of public engagement.
+                </p>
+
+                <a href="#voices" class="card-link">
+                    Explore Amplifying Voices →
+                </a>
+
+            </article>
+
+
+            <article class="work-card">
+
+                <div class="work-number">03</div>
+
+                <h3>Building synergies</h3>
+
+                <p>
+                    We engage with professional associations and like-minded
+                    organisations to strengthen networks and promote lasting
+                    institutional change.
+                </p>
+
+                <a href="#leadership" class="card-link">
+                    Explore our networks →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AMPLIFYING VOICES -->
+
+<section class="feature" id="voices">
+
+    <div class="container feature-grid">
+
+        <div>
+
+            <div class="section-label">Amplifying Voices</div>
+
+            <h2>
+                Making research heard.
+            </h2>
+
+            <p class="feature-copy">
+                The Amplifying Voices project connects women economists with
+                global platforms to translate rigorous research into accessible
+                policy conversations.
+            </p>
+
+            <div class="buttons" style="margin-top:30px;">
+
+                <a href="reports/amplifying-voices-impact-report.html"
+                   class="button button-primary">
+                    Explore the impact report →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="feature-list">
+
+            <div class="feature-item">
+                <strong>Global platforms</strong>
+                <span>Project Syndicate · VoxEU · VoxDev · IMF F&D</span>
+            </div>
+
+            <div class="feature-item">
+                <strong>Policy articles</strong>
+                <span>Research translated for wider audiences</span>
+            </div>
+
+            <div class="feature-item">
+                <strong>Global network</strong>
+                <span>Women economists across Africa, Asia and LAC</span>
+            </div>
+
+            <div class="feature-item">
+                <strong>Podcasts</strong>
+                <span>Driving Change · Econ-on-Mics</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section class="intro" id="research">
+
+    <div class="container intro-grid">
+
+        <div>
+            <div class="section-label">Research</div>
+
+            <h2>
+                Evidence on what holds women back — and what works.
+            </h2>
+        </div>
+
+        <div class="intro-copy">
+
+            <p>
+                Our research spans Latin America, Africa and Asia, examining
+                gender gaps in the economics profession and the barriers women
+                face throughout their careers.
+            </p>
+
+            <p>
+                The programme also evaluates interventions designed to reduce
+                gender inequality and identifies approaches that can support
+                meaningful change.
+            </p>
+
+            <a href="#work"
+               class="button button-primary"
+               style="margin-top:28px;">
+                Explore research →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="leadership" id="leadership">
+
+    <div class="container">
+
+        <div class="section-label">Leadership</div>
+
+        <h2 class="section-heading">
+            A global initiative,<br>
+            led by economists.
+        </h2>
+
+        <p class="leadership-intro">
+            IEA-WE brings together leading scholars committed to advancing
+            equity and excellence in the economics profession.
+        </p>
+
+
+        <div class="people-grid">
+
+            <div class="person">
+                <div class="person-name">Ashwini Deshpande</div>
+                <div class="person-role">Ashoka University</div>
+            </div>
+
+            <div class="person">
+                <div class="person-name">María Inés Berniell</div>
+                <div class="person-role">Universidad Nacional de la Plata and CEDLAS</div>
+            </div>
+
+            <div class="person">
+                <div class="person-name">Raquel Fernández</div>
+                <div class="person-role">New York University</div>
+            </div>
+
+            <div class="person">
+                <div class="person-name">Dani Rodrik</div>
+                <div class="person-role">Harvard University</div>
+            </div>
+
+            <div class="person">
+                <div class="person-name">Fiona Tregenna</div>
+                <div class="person-role">University of Johannesburg</div>
+            </div>
+
+            <div class="person">
+                <div class="person-name">Navika Mehta</div>
+                <div class="person-role">
+                    Strategic Communications and Research Dissemination Lead, IEA-WE
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="support">
+
+    <div class="container support-inner">
+
+        <div class="support-copy">
+
+            <div class="section-label">With support from</div>
+
+            <h2 class="section-heading" style="font-size:3rem;">
+                Investing in a more inclusive economics profession.
+            </h2>
+
+            <p>
+                We gratefully acknowledge the support of the Co-Impact Foundation
+                and the Open Society Foundation, whose funding has made this
+                initiative possible.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-title">IEA-WE</div>
+
+                <p>
+                    A global initiative of the International Economic Association
+                    to strengthen the presence and influence of women in economics.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-heading">Explore</div>
+
+                <div class="footer-links">
+                    <a href="#work">Our Work</a>
+                    <a href="#voices">Amplifying Voices</a>
+                    <a href="#research">Research</a>
+                    <a href="#leadership">Leadership</a>
+                    <a href="reports/amplifying-voices-impact-report.html">Reports</a>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-heading">International Economic Association</div>
+
+                <div class="footer-links">
+                    <a href="#about">About IEA-WE</a>
+                    <a href="#leadership">Team</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2026 International Economic Association · IEA-WE
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
