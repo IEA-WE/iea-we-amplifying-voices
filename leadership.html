@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leadership | IEA-WE</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+    :root {
+      --navy: #0b3568;
+      --dark-blue: #102b52;
+      --pink: #df5b78;
+      --light-blue: #eef4fc;
+      --white: #ffffff;
+      --text: #17263b;
+      --muted: #536174;
+      --line: #dce3ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #edf0f4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo img {
+      width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--pink);
+    }
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      padding: 90px 0 80px;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(52px, 7vw, 86px);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .page-hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       LEADERSHIP
+    ========================= */
+
+    .leadership {
+      padding: 85px 0;
+      background: var(--light-blue);
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 62px);
+      line-height: 1.1;
+      font-weight: 500;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .leadership-title {
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 75px;
+    }
+
+    .person {
+      background: var(--white);
+      padding: 30px;
+      min-height: 155px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .person:hover {
+      border-top-color: var(--pink);
+      transform: translateY(-3px);
+    }
+
+    .person h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .person p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       ADVISORY BOARD
+    ========================= */
+
+    .advisory-section {
+      background: var(--white);
+      padding: 90px 0;
+    }
+
+    .advisory-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 45px;
+    }
+
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .advisory-card {
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 150px;
+      background: var(--white);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .advisory-card:hover {
+      border-color: var(--pink);
+      transform: translateY(-3px);
+    }
+
+    .advisory-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .advisory-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 55px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #cbd5e4;
+      font-size: 14px;
+      max-width: 500px;
+    }
+
+    footer h4 {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #e5eaf2;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #385171;
+      margin-top: 45px;
+      padding-top: 22px;
+      color: #aebbd0;
+      font-size: 12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .people-grid,
+      .advisory-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 65px 0;
+      }
+
+      .page-hero h1 {
+        font-size: 50px;
+      }
+
+      .leadership,
+      .advisory-section {
+        padding: 65px 0;
+      }
+
+      .people-grid,
+      .advisory-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        <img src="logoWE.svg" alt="IEA-WE">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Our Work</a>
+        <a href="articles.html">Amplifying Voices</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       PAGE INTRO
+  ========================= -->
+
+  <main>
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <div class="section-label">
+          Leadership
+        </div>
+
+        <h1>
+          A global network committed to changing economics.
+        </h1>
+
+        <p>
+          IEA-WE brings together leading economists, scholars and
+          practitioners working across regions and disciplines to advance
+          women's participation and influence in economics.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INITIATIVE LEADERSHIP
+    ========================= -->
+
+    <section class="leadership">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Initiative Leadership
+          </div>
+
+          <h2>
+            Leading the IEA-WE initiative.
+          </h2>
+
+          <p>
+            The initiative is led by economists committed to identifying
+            barriers to women's participation and advancing greater equity
+            and excellence in the economics profession.
+          </p>
+
+        </div>
+
+
+        <div class="people-grid">
+
+          <div class="person">
+            <h3>Ashwini Deshpande</h3>
+            <p>Ashoka University</p>
+          </div>
+
+          <div class="person">
+            <h3>María Inés Berniell</h3>
+            <p>Universidad Nacional de la Plata and CEDLAS</p>
+          </div>
+
+          <div class="person">
+            <h3>Raquel Fernández</h3>
+            <p>New York University</p>
+          </div>
+
+          <div class="person">
+            <h3>Dani Rodrik</h3>
+            <p>Harvard University</p>
+          </div>
+
+          <div class="person">
+            <h3>Fiona Tregenna</h3>
+            <p>University of Johannesburg</p>
+          </div>
+
+          <div class="person">
+            <h3>Navika Mehta</h3>
+            <p>
+              Strategic Communications and Research Dissemination Lead,
+              IEA-WE
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ADVISORY BOARD
+    ========================= -->
+
+    <section class="advisory-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Advisory Board
+          </div>
+
+          <h2>
+            Expertise guiding the initiative.
+          </h2>
+
+        </div>
+
+        <p class="advisory-intro">
+          The IEA-WE Advisory Board brings together leading scholars from
+          around the world whose expertise helps inform the initiative's
+          research, partnerships and broader goals.
+        </p>
+
+
+        <div class="advisory-grid">
+
+          <div class="advisory-card">
+            <h3>Radhika Balakrishnan</h3>
+            <p>Rutgers University</p>
+          </div>
+
+          <div class="advisory-card">
+            <h3>Marianne Bertrand</h3>
+            <p>University of Chicago Booth School of Business</p>
+          </div>
+
+          <div class="advisory-card">
+            <h3>Wendy Carlin</h3>
+            <p>University College London, CEPR and Santa Fe Institute</p>
+          </div>
+
+          <div class="advisory-card">
+            <h3>Marcela Eslava</h3>
+            <p>Universidad de los Andes</p>
+          </div>
+
+          <div class="advisory-card">
+            <h3>Rohini Pande</h3>
+            <p>Yale University</p>
+          </div>
+
+          <div class="advisory-card">
+            <h3>Leonard Wantchekon</h3>
+            <p>Princeton University</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+            IEA-WE
+          </div>
+
+          <p>
+            Strengthening the presence and influence of women in economics
+            through research, collaboration, advocacy and amplifying voices.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            Explore
+          </h4>
+
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Our Work</a>
+            <a href="articles.html">Amplifying Voices</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="reports.html">Reports</a>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            IEA-WE
+          </h4>
+
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="leadership.html">Advisory Board</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+        International Economic Association — Women in Economics Initiative
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
