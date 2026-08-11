@@ -81,7 +81,6 @@
       display: block;
     }
 
-    /* Temporary text fallback if logo image isn't uploaded yet */
     .logo-fallback {
       display: none;
       font-weight: 700;
@@ -108,52 +107,56 @@
     }
 
     /* =========================
-       HERO
+       HERO — LIGHT VERSION
     ========================= */
 
     .hero {
-      background: var(--dark-blue);
-      color: var(--white);
-      min-height: 650px;
+      background: var(--white);
+      color: var(--navy);
+      min-height: 610px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid #edf0f4;
     }
 
+    /* subtle blue accent */
     .hero::after {
       content: "";
       position: absolute;
-      width: 430px;
-      height: 430px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
-      background: var(--navy);
-      right: -100px;
-      top: -170px;
-      opacity: 0.8;
+      background: var(--light-blue);
+      right: -150px;
+      top: -150px;
+      z-index: 0;
     }
 
+    /* small pink accent */
     .hero::before {
       content: "";
       position: absolute;
-      width: 180px;
-      height: 180px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
-      background: #243f72;
+      background: var(--pink);
       right: 12%;
-      bottom: -125px;
-      opacity: 0.8;
+      bottom: -45px;
+      opacity: 0.13;
+      z-index: 0;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 850px;
-      padding: 90px 0;
+      padding: 100px 0;
     }
 
     .eyebrow {
-      color: var(--pink);
+      color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 14px;
@@ -163,6 +166,7 @@
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
       font-size: clamp(60px, 8vw, 108px);
       line-height: 0.98;
       font-weight: 500;
@@ -180,7 +184,7 @@
       max-width: 780px;
       font-size: 20px;
       line-height: 1.75;
-      color: #eef2f8;
+      color: var(--muted);
       margin-bottom: 36px;
     }
 
@@ -209,13 +213,14 @@
     }
 
     .button-secondary {
-      border: 1px solid #aebed3;
-      color: white;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
     }
 
     .button-secondary:hover {
-      background: white;
-      color: var(--dark-blue);
+      background: var(--navy);
+      color: white;
     }
 
     /* =========================
@@ -755,13 +760,13 @@
     <div class="container nav">
 
       <a href="index.html" class="logo">
-        <!-- Upload your original IEA-WE logo as:
-             images/iea-we-logo.svg -->
+
         <img src="images/iea-we-logo.svg"
              alt="IEA-WE"
              onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';">
 
         <span class="logo-fallback">IEA–WE</span>
+
       </a>
 
       <nav>
@@ -804,6 +809,7 @@
           </p>
 
           <div class="buttons">
+
             <a href="#work" class="button button-primary">
               Explore our work →
             </a>
@@ -811,6 +817,7 @@
             <a href="#about" class="button button-secondary">
               About IEA-WE
             </a>
+
           </div>
 
         </div>
@@ -835,9 +842,11 @@
         <div class="why-grid">
 
           <div>
+
             <h2>
               A stronger economics profession starts with inclusion.
             </h2>
+
           </div>
 
           <div class="why-copy">
@@ -857,6 +866,7 @@
             </p>
 
             <div class="why-highlight">
+
               <strong>Diversity strengthens the discipline.</strong>
 
               <p>
@@ -864,6 +874,7 @@
                 Diverse perspectives lead to richer analyses, more innovative
                 solutions and ultimately better-functioning societies.
               </p>
+
             </div>
 
           </div>
@@ -915,7 +926,6 @@
 
         </div>
 
-
         <div class="leadership-title">
           Initiative Leadership
         </div>
@@ -953,7 +963,6 @@
           </div>
 
         </div>
-
 
         <div class="advisory">
 
@@ -1026,7 +1035,6 @@
           </p>
 
         </div>
-
 
         <div class="work-grid">
 
@@ -1121,7 +1129,6 @@
           into global policy conversations.
         </p>
 
-
         <div class="stats">
 
           <div class="stat">
@@ -1162,6 +1169,7 @@
         <div class="article-header">
 
           <div>
+
             <div class="section-label">
               Latest
             </div>
@@ -1169,6 +1177,7 @@
             <h2>
               Amplifying Voices
             </h2>
+
           </div>
 
           <a href="articles.html">
@@ -1177,11 +1186,7 @@
 
         </div>
 
-
         <div class="article-grid">
-
-          <!-- These are temporary cards.
-               We will replace them with the real article database later. -->
 
           <article class="article-card">
 
