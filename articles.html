@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amplifying Voices | IEA-WE</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+    :root {
+      --navy: #0b3568;
+      --dark-blue: #102b52;
+      --blue: #1557a6;
+      --pink: #df5b78;
+      --light-blue: #eef4fc;
+      --white: #ffffff;
+      --text: #17263b;
+      --muted: #536174;
+      --line: #dce3ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #edf0f4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo img {
+      width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--pink);
+    }
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      background: var(--white);
+      padding: 90px 0 75px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(50px, 7vw, 82px);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .page-hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 65px 0 45px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .intro h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 500;
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       ARTICLE ARCHIVE
+    ========================= */
+
+    .archive {
+      background: var(--light-blue);
+      padding: 70px 0 100px;
+    }
+
+    .archive-heading {
+      margin-bottom: 35px;
+    }
+
+    .archive-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 45px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .archive-heading p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       FILTERS
+    ========================= */
+
+    .filters {
+      background: var(--white);
+      padding: 25px;
+      margin-bottom: 45px;
+      border: 1px solid var(--line);
+    }
+
+    .filter-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .search-box,
+    .filter-select {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid #cbd5e2;
+      background: white;
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+
+    .search-box:focus,
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--pink);
+    }
+
+    /* =========================
+       ARTICLE CARDS
+    ========================= */
+
+    .article-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 30px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.08);
+    }
+
+    .article-meta {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .article-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.35;
+      margin-bottom: 13px;
+    }
+
+    .article-author {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .article-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: var(--pink);
+      font-weight: 700;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 55px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #cbd5e4;
+      font-size: 14px;
+      max-width: 500px;
+    }
+
+    footer h4 {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #e5eaf2;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #385171;
+      margin-top: 45px;
+      padding-top: 22px;
+      color: #aebbd0;
+      font-size: 12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .filter-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .article-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 65px 0;
+      }
+
+      .page-hero h1 {
+        font-size: 50px;
+      }
+
+      .filter-row {
+        grid-template-columns: 1fr;
+      }
+
+      .archive {
+        padding: 60px 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        <img src="logoWE.svg" alt="IEA-WE">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Our Work</a>
+        <a href="articles.html">Amplifying Voices</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       PAGE HERO
+  ========================= -->
+
+  <main>
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <div class="section-label">
+          Amplifying Women's Voices
+        </div>
+
+        <h1>
+          Making women's research heard.
+        </h1>
+
+        <p>
+          Through the Amplifying Voices Project, IEA-WE works with women
+          economists across Africa, Asia and Latin America to bring research
+          into global policy conversations and expand their visibility and
+          influence.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <div class="intro-grid">
+
+          <div>
+            <h2>
+              From research to global policy conversations.
+            </h2>
+          </div>
+
+          <div>
+
+            <p>
+              The Amplifying Voices Project supports women economists in
+              translating their academic research into accessible,
+              policy-relevant writing and reaching audiences beyond academia.
+            </p>
+
+            <br>
+
+            <p>
+              IEA-WE has partnered with major platforms including Project
+              Syndicate, VoxEU, VoxDev and IMF Finance & Development to help
+              bring diverse voices and perspectives into economic debate.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ARTICLE ARCHIVE
+    ========================= -->
+
+    <section class="archive">
+
+      <div class="container">
+
+        <div class="archive-heading">
+
+          <div class="section-label">
+            Article archive
+          </div>
+
+          <h2>
+            Explore the collection.
+          </h2>
+
+          <p>
+            Browse articles by topic, author, country or publication.
+          </p>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+          <div class="filter-row">
+
+            <input
+              type="text"
+              class="search-box"
+              placeholder="Search by title or author..."
+            >
+
+            <select class="filter-select">
+              <option>All topics</option>
+              <option>Gender</option>
+              <option>Labour markets</option>
+              <option>Digital finance</option>
+              <option>Climate</option>
+              <option>Governance</option>
+            </select>
+
+            <select class="filter-select">
+              <option>All countries</option>
+              <option>India</option>
+              <option>Mexico</option>
+              <option>Argentina</option>
+              <option>Colombia</option>
+              <option>Ghana</option>
+              <option>South Africa</option>
+            </select>
+
+            <select class="filter-select">
+              <option>All publications</option>
+              <option>Project Syndicate</option>
+              <option>VoxEU</option>
+              <option>VoxDev</option>
+              <option>IMF Finance & Development</option>
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- TEMPORARY ARTICLES -->
+
+        <div class="article-list">
+
+
+          <article class="article-card">
+
+            <div class="article-meta">
+              Labour markets · 2025
+            </div>
+
+            <h3>
+              The evolution of gender in the labour market
+            </h3>
+
+            <div class="article-author">
+              Jessica Pan, Claudia Olivetti and Barbara Petrongolo
+            </div>
+
+            <p class="article-description">
+              Research and perspectives on gender and labour market
+              participation.
+            </p>
+
+            <a href="#" class="read-more">
+              Read article →
+            </a>
+
+          </article>
+
+
+          <article class="article-card">
+
+            <div class="article-meta">
+              Digital finance · Mexico
+            </div>
+
+            <h3>
+              Supporting the transition to digital cash transfers in rural Mexico
+            </h3>
+
+            <div class="article-author">
+              Fernanda Márquez-Padilla and Susan W. Parker
+            </div>
+
+            <p class="article-description">
+              Exploring digital finance and the transition to digital cash
+              transfers in rural communities.
+            </p>
+
+            <a href="#" class="read-more">
+              Read article →
+            </a>
+
+          </article>
+
+
+          <article class="article-card">
+
+            <div class="article-meta">
+              Gender · Africa
+            </div>
+
+            <h3>
+              Women economists and the future of economic policymaking
+            </h3>
+
+            <div class="article-author">
+              IEA-WE contributor
+            </div>
+
+            <p class="article-description">
+              Exploring the importance of women's voices in economic policy
+              and public debate.
+            </p>
+
+            <a href="#" class="read-more">
+              Read article →
+            </a>
+
+          </article>
+
+
+          <article class="article-card">
+
+            <div class="article-meta">
+              Climate · Latin America
+            </div>
+
+            <h3>
+              Gender, climate and inclusive economic development
+            </h3>
+
+            <div class="article-author">
+              IEA-WE contributor
+            </div>
+
+            <p class="article-description">
+              Research examining the connections between gender, climate and
+              economic development.
+            </p>
+
+            <a href="#" class="read-more">
+              Read article →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+            IEA-WE
+          </div>
+
+          <p>
+            Strengthening the presence and influence of women in economics
+            through research, collaboration, advocacy and amplifying voices.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            Explore
+          </h4>
+
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Our Work</a>
+            <a href="articles.html">Amplifying Voices</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="reports.html">Reports</a>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            IEA-WE
+          </h4>
+
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="leadership.html">Advisory Board</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+        International Economic Association — Women in Economics Initiative
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
