@@ -12,7 +12,6 @@
     :root {
       --navy: #0b3568;
       --dark-blue: #102b52;
-      --blue: #1557a6;
       --pink: #df5b78;
       --light-blue: #eef4fc;
       --white: #ffffff;
@@ -92,12 +91,12 @@
     }
 
     /* =========================
-       PAGE HERO
+       HERO
     ========================= */
 
     .page-hero {
-      background: var(--white);
       padding: 90px 0 75px;
+      background: var(--white);
       border-bottom: 1px solid var(--line);
     }
 
@@ -113,131 +112,141 @@
     .page-hero h1 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(50px, 7vw, 82px);
+      font-size: clamp(52px, 7vw, 86px);
       line-height: 1.05;
       font-weight: 500;
       letter-spacing: -2px;
-      max-width: 850px;
+      max-width: 900px;
       margin-bottom: 25px;
     }
 
     .page-hero p {
-      max-width: 760px;
+      max-width: 780px;
       color: var(--muted);
       font-size: 18px;
       line-height: 1.8;
     }
 
     /* =========================
-       INTRO
-    ========================= */
-
-    .intro {
-      padding: 65px 0 45px;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .intro h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 42px;
-      line-height: 1.15;
-      font-weight: 500;
-    }
-
-    .intro p {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       ARTICLE ARCHIVE
+       ARCHIVE
     ========================= */
 
     .archive {
-      background: var(--light-blue);
-      padding: 70px 0 100px;
-    }
-
-    .archive-heading {
-      margin-bottom: 35px;
-    }
-
-    .archive-heading h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 45px;
-      line-height: 1.15;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .archive-heading p {
-      color: var(--muted);
+      padding: 75px 0 100px;
+      background: var(--white);
     }
 
     /* =========================
-       FILTERS
+       SEARCH + FILTERS
     ========================= */
 
     .filters {
-      background: var(--white);
-      padding: 25px;
-      margin-bottom: 45px;
+      background: var(--light-blue);
       border: 1px solid var(--line);
+      padding: 25px;
+      margin-bottom: 50px;
+    }
+
+    .search-wrap {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 15px 18px 15px 45px;
+      border: 1px solid #cbd5e2;
+      background: white;
+      color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 15px;
+      border-radius: 3px;
+    }
+
+    #searchInput:focus {
+      outline: none;
+      border-color: var(--pink);
     }
 
     .filter-row {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
     }
 
-    .search-box,
-    .filter-select {
+    select {
       width: 100%;
-      padding: 13px 15px;
+      padding: 13px 14px;
       border: 1px solid #cbd5e2;
       background: white;
       color: var(--text);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 14px;
       border-radius: 3px;
+      cursor: pointer;
     }
 
-    .search-box:focus,
-    .filter-select:focus {
+    select:focus {
       outline: none;
       border-color: var(--pink);
+    }
+
+    /* =========================
+       RESULTS HEADER
+    ========================= */
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .results-header h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 38px;
+      font-weight: 500;
+    }
+
+    #resultCount {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     /* =========================
        ARTICLE CARDS
     ========================= */
 
-    .article-list {
+    #articleGrid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .article-card {
-      background: var(--white);
       border: 1px solid var(--line);
-      padding: 30px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--white);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .article-card:hover {
+      border-color: var(--pink);
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.08);
     }
 
     .article-meta {
@@ -246,35 +255,59 @@
       letter-spacing: 1px;
       font-size: 11px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
     .article-card h3 {
       color: var(--navy);
       font-size: 22px;
       line-height: 1.35;
-      margin-bottom: 13px;
+      margin-bottom: 15px;
     }
 
     .article-author {
       color: var(--text);
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
 
-    .article-description {
+    .article-details {
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
+      font-size: 13px;
+      line-height: 1.6;
     }
 
     .read-more {
       display: inline-block;
       color: var(--pink);
       font-weight: 700;
-      margin-top: 18px;
       font-size: 14px;
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 70px 20px;
+      border: 1px solid var(--line);
+      background: var(--light-blue);
+    }
+
+    #noResults h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    #noResults p {
+      color: var(--muted);
     }
 
     /* =========================
@@ -332,36 +365,18 @@
        MOBILE
     ========================= */
 
-    @media (max-width: 850px) {
+    @media (max-width: 950px) {
 
-      nav {
-        gap: 15px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      #articleGrid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .filter-row {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .article-list {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
       .container {
         width: 88%;
@@ -379,12 +394,30 @@
         font-size: 50px;
       }
 
+      .archive {
+        padding: 60px 0 75px;
+      }
+
+      #articleGrid {
+        grid-template-columns: 1fr;
+      }
+
       .filter-row {
         grid-template-columns: 1fr;
       }
 
-      .archive {
-        padding: 60px 0;
+      .results-header {
+        display: block;
+      }
+
+      .results-header #resultCount {
+        display: block;
+        margin-top: 5px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
     }
 
@@ -398,6 +431,7 @@
   ========================= -->
 
   <header>
+
     <div class="container nav">
 
       <a href="index.html" class="logo">
@@ -414,6 +448,7 @@
       </nav>
 
     </div>
+
   </header>
 
 
@@ -432,56 +467,14 @@
         </div>
 
         <h1>
-          Making women's research heard.
+          Making research heard.
         </h1>
 
         <p>
-          Through the Amplifying Voices Project, IEA-WE works with women
-          economists across Africa, Asia and Latin America to bring research
-          into global policy conversations and expand their visibility and
-          influence.
+          Explore policy-relevant articles from women economists across
+          Africa, Asia and Latin America, published through leading global
+          economic platforms.
         </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         INTRO
-    ========================= -->
-
-    <section class="intro">
-
-      <div class="container">
-
-        <div class="intro-grid">
-
-          <div>
-            <h2>
-              From research to global policy conversations.
-            </h2>
-          </div>
-
-          <div>
-
-            <p>
-              The Amplifying Voices Project supports women economists in
-              translating their academic research into accessible,
-              policy-relevant writing and reaching audiences beyond academia.
-            </p>
-
-            <br>
-
-            <p>
-              IEA-WE has partnered with major platforms including Project
-              Syndicate, VoxEU, VoxDev and IMF Finance & Development to help
-              bring diverse voices and perspectives into economic debate.
-            </p>
-
-          </div>
-
-        </div>
 
       </div>
 
@@ -496,60 +489,40 @@
 
       <div class="container">
 
-        <div class="archive-heading">
 
-          <div class="section-label">
-            Article archive
-          </div>
-
-          <h2>
-            Explore the collection.
-          </h2>
-
-          <p>
-            Browse articles by topic, author, country or publication.
-          </p>
-
-        </div>
-
-
-        <!-- FILTERS -->
+        <!-- SEARCH + FILTERS -->
 
         <div class="filters">
 
-          <div class="filter-row">
+          <div class="search-wrap">
+
+            <span class="search-icon">⌕</span>
 
             <input
               type="text"
-              class="search-box"
-              placeholder="Search by title or author..."
+              id="searchInput"
+              placeholder="Search by article title, author, topic or publication..."
             >
 
-            <select class="filter-select">
-              <option>All topics</option>
-              <option>Gender</option>
-              <option>Labour markets</option>
-              <option>Digital finance</option>
-              <option>Climate</option>
-              <option>Governance</option>
+          </div>
+
+
+          <div class="filter-row">
+
+            <select id="topicFilter">
+              <option value="">All topics</option>
             </select>
 
-            <select class="filter-select">
-              <option>All countries</option>
-              <option>India</option>
-              <option>Mexico</option>
-              <option>Argentina</option>
-              <option>Colombia</option>
-              <option>Ghana</option>
-              <option>South Africa</option>
+            <select id="countryFilter">
+              <option value="">All countries</option>
             </select>
 
-            <select class="filter-select">
-              <option>All publications</option>
-              <option>Project Syndicate</option>
-              <option>VoxEU</option>
-              <option>VoxDev</option>
-              <option>IMF Finance & Development</option>
+            <select id="publicationFilter">
+              <option value="">All publications</option>
+            </select>
+
+            <select id="yearFilter">
+              <option value="">All years</option>
             </select>
 
           </div>
@@ -557,114 +530,33 @@
         </div>
 
 
-        <!-- TEMPORARY ARTICLES -->
+        <!-- RESULTS -->
 
-        <div class="article-list">
+        <div class="results-header">
 
+          <h2>
+            All articles
+          </h2>
 
-          <article class="article-card">
+          <div id="resultCount">
+            Loading articles...
+          </div>
 
-            <div class="article-meta">
-              Labour markets · 2025
-            </div>
-
-            <h3>
-              The evolution of gender in the labour market
-            </h3>
-
-            <div class="article-author">
-              Jessica Pan, Claudia Olivetti and Barbara Petrongolo
-            </div>
-
-            <p class="article-description">
-              Research and perspectives on gender and labour market
-              participation.
-            </p>
-
-            <a href="#" class="read-more">
-              Read article →
-            </a>
-
-          </article>
+        </div>
 
 
-          <article class="article-card">
-
-            <div class="article-meta">
-              Digital finance · Mexico
-            </div>
-
-            <h3>
-              Supporting the transition to digital cash transfers in rural Mexico
-            </h3>
-
-            <div class="article-author">
-              Fernanda Márquez-Padilla and Susan W. Parker
-            </div>
-
-            <p class="article-description">
-              Exploring digital finance and the transition to digital cash
-              transfers in rural communities.
-            </p>
-
-            <a href="#" class="read-more">
-              Read article →
-            </a>
-
-          </article>
+        <div id="articleGrid"></div>
 
 
-          <article class="article-card">
+        <div id="noResults">
 
-            <div class="article-meta">
-              Gender · Africa
-            </div>
+          <h3>
+            No articles found.
+          </h3>
 
-            <h3>
-              Women economists and the future of economic policymaking
-            </h3>
-
-            <div class="article-author">
-              IEA-WE contributor
-            </div>
-
-            <p class="article-description">
-              Exploring the importance of women's voices in economic policy
-              and public debate.
-            </p>
-
-            <a href="#" class="read-more">
-              Read article →
-            </a>
-
-          </article>
-
-
-          <article class="article-card">
-
-            <div class="article-meta">
-              Climate · Latin America
-            </div>
-
-            <h3>
-              Gender, climate and inclusive economic development
-            </h3>
-
-            <div class="article-author">
-              IEA-WE contributor
-            </div>
-
-            <p class="article-description">
-              Research examining the connections between gender, climate and
-              economic development.
-            </p>
-
-            <a href="#" class="read-more">
-              Read article →
-            </a>
-
-          </article>
-
+          <p>
+            Try changing your search or filters.
+          </p>
 
         </div>
 
@@ -739,6 +631,266 @@
     </div>
 
   </footer>
+
+
+  <!-- ARTICLE DATABASE -->
+
+  <script src="articles-data.js"></script>
+
+
+  <!-- SEARCH + FILTER SYSTEM -->
+
+  <script>
+
+    const articleGrid = document.getElementById("articleGrid");
+    const searchInput = document.getElementById("searchInput");
+
+    const topicFilter = document.getElementById("topicFilter");
+    const countryFilter = document.getElementById("countryFilter");
+    const publicationFilter = document.getElementById("publicationFilter");
+    const yearFilter = document.getElementById("yearFilter");
+
+    const resultCount = document.getElementById("resultCount");
+    const noResults = document.getElementById("noResults");
+
+
+    /* =========================
+       CREATE FILTER OPTIONS
+    ========================= */
+
+    function addOptions(select, values) {
+
+      const uniqueValues = [...new Set(values)]
+        .filter(value => value !== undefined && value !== null && value !== "")
+        .sort();
+
+      uniqueValues.forEach(value => {
+
+        const option = document.createElement("option");
+
+        option.value = value;
+        option.textContent = value;
+
+        select.appendChild(option);
+
+      });
+
+    }
+
+
+    addOptions(
+      topicFilter,
+      articles.map(article => article.topic)
+    );
+
+    addOptions(
+      countryFilter,
+      articles.map(article => article.country)
+    );
+
+    addOptions(
+      publicationFilter,
+      articles.map(article => article.publication)
+    );
+
+    addOptions(
+      yearFilter,
+      articles.map(article => article.year)
+    );
+
+
+    /* =========================
+       DISPLAY ARTICLES
+    ========================= */
+
+    function displayArticles() {
+
+      const searchTerm =
+        searchInput.value.toLowerCase().trim();
+
+      const selectedTopic =
+        topicFilter.value;
+
+      const selectedCountry =
+        countryFilter.value;
+
+      const selectedPublication =
+        publicationFilter.value;
+
+      const selectedYear =
+        yearFilter.value;
+
+
+      const filteredArticles = articles.filter(article => {
+
+        const searchableText = [
+
+          article.title,
+          article.author,
+          article.country,
+          article.topic,
+          article.publication,
+          article.year
+
+        ]
+        .join(" ")
+        .toLowerCase();
+
+
+        const matchesSearch =
+          searchableText.includes(searchTerm);
+
+
+        const matchesTopic =
+          !selectedTopic ||
+          article.topic === selectedTopic;
+
+
+        const matchesCountry =
+          !selectedCountry ||
+          article.country === selectedCountry;
+
+
+        const matchesPublication =
+          !selectedPublication ||
+          article.publication === selectedPublication;
+
+
+        const matchesYear =
+          !selectedYear ||
+          String(article.year) === String(selectedYear);
+
+
+        return (
+          matchesSearch &&
+          matchesTopic &&
+          matchesCountry &&
+          matchesPublication &&
+          matchesYear
+        );
+
+      });
+
+
+      /* =========================
+         CLEAR CURRENT RESULTS
+      ========================= */
+
+      articleGrid.innerHTML = "";
+
+
+      /* =========================
+         DISPLAY RESULT COUNT
+      ========================= */
+
+      resultCount.textContent =
+        filteredArticles.length +
+        (filteredArticles.length === 1
+          ? " article"
+          : " articles");
+
+
+      /* =========================
+         NO RESULTS
+      ========================= */
+
+      if (filteredArticles.length === 0) {
+
+        noResults.style.display = "block";
+
+        return;
+
+      }
+
+      noResults.style.display = "none";
+
+
+      /* =========================
+         CREATE ARTICLE CARDS
+      ========================= */
+
+      filteredArticles.forEach(article => {
+
+        const card =
+          document.createElement("article");
+
+        card.className = "article-card";
+
+
+        card.innerHTML = `
+
+          <div class="article-meta">
+            ${article.topic} · ${article.year}
+          </div>
+
+          <h3>
+            ${article.title}
+          </h3>
+
+          <div class="article-author">
+            ${article.author}
+          </div>
+
+          <div class="article-details">
+            ${article.country} · ${article.publication}
+          </div>
+
+          <a
+            href="${article.url}"
+            class="read-more"
+            target="_blank"
+            rel="noopener"
+          >
+            Read article →
+          </a>
+
+        `;
+
+
+        articleGrid.appendChild(card);
+
+      });
+
+    }
+
+
+    /* =========================
+       FILTER EVENTS
+    ========================= */
+
+    searchInput.addEventListener(
+      "input",
+      displayArticles
+    );
+
+    topicFilter.addEventListener(
+      "change",
+      displayArticles
+    );
+
+    countryFilter.addEventListener(
+      "change",
+      displayArticles
+    );
+
+    publicationFilter.addEventListener(
+      "change",
+      displayArticles
+    );
+
+    yearFilter.addEventListener(
+      "change",
+      displayArticles
+    );
+
+
+    /* =========================
+       INITIAL DISPLAY
+    ========================= */
+
+    displayArticles();
+
+  </script>
 
 </body>
 </html>
