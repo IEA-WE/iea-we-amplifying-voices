@@ -15,16 +15,23 @@
 <style>
 
 :root {
-    --navy: #14213d;
-    --navy-light: #203456;
-    --green: #79c9a4;
-    --green-dark: #4c9f7b;
-    --cream: #f7f5ef;
-    --white: #ffffff;
-    --light: #eef2ef;
+    /* IEA-WE brand colours */
+    --navy: #023364;
+    --navy-light: #0B467D;
+    --blue: #0353A4;
+
+    /* Editorial accent */
+    --pink: #D85C72;
+    --pink-dark: #B8425A;
+    --pink-light: #F3D7DD;
+
+    /* Neutrals */
+    --cream: #F8F6F2;
+    --white: #FFFFFF;
+    --light: #F0F3F5;
     --text: #263238;
-    --muted: #69747a;
-    --border: #dce3df;
+    --muted: #68757D;
+    --border: #D9E0E5;
 }
 
 * {
@@ -54,13 +61,15 @@ a {
     margin: 0 auto;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(247,245,239,0.96);
+    background: rgba(248,246,242,0.97);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
 }
@@ -87,10 +96,10 @@ a {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: var(--green);
+    background: var(--blue);
     display: grid;
     place-items: center;
-    color: var(--navy);
+    color: var(--white);
     font-weight: 700;
     font-size: 0.8rem;
 }
@@ -104,10 +113,12 @@ a {
 }
 
 .nav-links a:hover {
-    color: var(--green-dark);
+    color: var(--pink-dark);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     background: var(--navy);
@@ -123,10 +134,22 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: var(--green);
-    opacity: 0.12;
+    background: var(--blue);
+    opacity: 0.35;
     right: -170px;
     top: -180px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--pink);
+    opacity: 0.12;
+    right: 210px;
+    bottom: -100px;
 }
 
 .eyebrow {
@@ -134,7 +157,7 @@ a {
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--green);
+    color: var(--pink);
     margin-bottom: 22px;
 }
 
@@ -149,13 +172,13 @@ a {
 }
 
 .hero h1 span {
-    color: var(--green);
+    color: var(--pink);
 }
 
 .hero-text {
     max-width: 700px;
     font-size: 1.18rem;
-    color: #dce5e5;
+    color: #E2E9EE;
     line-height: 1.7;
     margin-bottom: 38px;
 }
@@ -182,16 +205,27 @@ a {
 }
 
 .button-primary {
-    background: var(--green);
-    color: var(--navy);
+    background: var(--pink);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: var(--pink-dark);
 }
 
 .button-secondary {
-    border: 1px solid rgba(255,255,255,0.4);
-    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--white);
 }
 
-/* INTRO */
+.button-secondary:hover {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+/* =========================
+   INTRO
+========================= */
 
 .intro {
     padding: 100px 0;
@@ -210,7 +244,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.14em;
     font-weight: 700;
-    color: var(--green-dark);
+    color: var(--pink-dark);
 }
 
 .intro h2,
@@ -236,11 +270,13 @@ a {
     margin-top: 22px;
 }
 
-/* STATS */
+/* =========================
+   STATS
+========================= */
 
 .stats {
-    background: var(--green);
-    color: var(--navy);
+    background: var(--navy);
+    color: var(--white);
     padding: 58px 0;
 }
 
@@ -251,7 +287,7 @@ a {
 }
 
 .stat {
-    border-left: 1px solid rgba(20,33,61,0.25);
+    border-left: 1px solid rgba(255,255,255,0.25);
     padding-left: 25px;
 }
 
@@ -265,18 +301,23 @@ a {
     font-size: 3.3rem;
     line-height: 1;
     letter-spacing: -0.04em;
+    color: var(--pink);
 }
 
 .stat-label {
     margin-top: 9px;
     font-size: 0.86rem;
     font-weight: 600;
+    color: #E2E9EE;
 }
 
-/* WHY */
+/* =========================
+   WHY THIS MATTERS
+========================= */
 
 .why {
     padding: 105px 0;
+    background: var(--cream);
 }
 
 .why-grid {
@@ -294,7 +335,9 @@ a {
     margin-top: 24px;
 }
 
-/* WORK */
+/* =========================
+   OUR WORK
+========================= */
 
 .work {
     background: var(--white);
@@ -327,12 +370,18 @@ a {
     min-height: 390px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pink);
 }
 
 .work-number {
     font-family: "Fraunces", serif;
     font-size: 1.5rem;
-    color: var(--green-dark);
+    color: var(--pink-dark);
     margin-bottom: 55px;
 }
 
@@ -353,14 +402,16 @@ a {
     padding-top: 28px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--pink-dark);
 }
 
-/* FEATURE */
+/* =========================
+   AMPLIFYING VOICES
+========================= */
 
 .feature {
     background: var(--navy);
-    color: white;
+    color: var(--white);
     padding: 105px 0;
 }
 
@@ -380,7 +431,7 @@ a {
 }
 
 .feature-copy {
-    color: #d4dddd;
+    color: #D4DEE4;
     font-size: 1.05rem;
     margin-top: 25px;
 }
@@ -398,15 +449,25 @@ a {
 }
 
 .feature-item strong {
-    color: var(--green);
+    color: var(--pink);
 }
 
 .feature-item span {
-    color: #d4dddd;
+    color: #D4DEE4;
     text-align: right;
 }
 
-/* LEADERSHIP */
+/* =========================
+   RESEARCH
+========================= */
+
+#research {
+    background: var(--white);
+}
+
+/* =========================
+   LEADERSHIP
+========================= */
 
 .leadership {
     padding: 105px 0;
@@ -431,6 +492,11 @@ a {
 .person {
     background: var(--cream);
     padding: 30px;
+    transition: background 0.2s ease;
+}
+
+.person:hover {
+    background: var(--white);
 }
 
 .person-name {
@@ -445,7 +511,9 @@ a {
     margin-top: 5px;
 }
 
-/* SUPPORT */
+/* =========================
+   SUPPORT
+========================= */
 
 .support {
     background: var(--white);
@@ -468,11 +536,13 @@ a {
     color: var(--muted);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: var(--navy);
-    color: white;
+    color: var(--white);
     padding: 65px 0 35px;
 }
 
@@ -490,7 +560,7 @@ footer {
 }
 
 footer p {
-    color: #bdc9cc;
+    color: #BDC9D0;
     max-width: 500px;
 }
 
@@ -498,7 +568,7 @@ footer p {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--green);
+    color: var(--pink);
     font-weight: 700;
     margin-bottom: 18px;
 }
@@ -507,18 +577,24 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    color: #dce5e5;
+    color: #DCE5EA;
     font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.15);
     padding-top: 25px;
-    color: #9eabad;
+    color: #9EACB4;
     font-size: 0.78rem;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -582,7 +658,7 @@ footer p {
 
     .stat {
         border-left: none;
-        border-top: 1px solid rgba(20,33,61,0.25);
+        border-top: 1px solid rgba(255,255,255,0.25);
         padding: 20px 0 0;
     }
 
@@ -597,47 +673,68 @@ footer p {
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav class="nav">
+
     <div class="container nav-inner">
 
         <a href="index.html" class="logo">
+
             <span class="logo-mark">IEA</span>
+
             <span>IEA-WE</span>
+
         </a>
 
         <div class="nav-links">
+
             <a href="#work">Our Work</a>
+
             <a href="#voices">Amplifying Voices</a>
+
             <a href="#leadership">Leadership</a>
-            <a href="reports/amplifying-voices-impact-report.html">Reports</a>
+
+            <a href="reports/amplifying-voices-impact-report.html">
+                Reports
+            </a>
+
             <a href="#about">About</a>
+
         </div>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
     <div class="container">
 
-        <div class="eyebrow">International Economic Association</div>
+        <div class="eyebrow">
+            International Economic Association
+        </div>
 
         <h1>
             Women shaping <span>economics.</span>
         </h1>
 
         <p class="hero-text">
-            IEA-WE is a global initiative to strengthen the presence and influence
-            of women in the economics profession — through research, collaboration,
-            advocacy and amplifying women's voices in economic debate.
+            IEA-WE is a global initiative to strengthen the presence and
+            influence of women in the economics profession — through research,
+            collaboration, advocacy and amplifying women's voices in economic
+            debate.
         </p>
 
         <div class="buttons">
+
             <a href="#work" class="button button-primary">
                 Explore our work →
             </a>
@@ -645,6 +742,7 @@ footer p {
             <a href="#about" class="button button-secondary">
                 About IEA-WE
             </a>
+
         </div>
 
     </div>
@@ -652,39 +750,45 @@ footer p {
 </header>
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRODUCTION
+========================= -->
 
 <section class="intro" id="about">
 
     <div class="container intro-grid">
 
         <div>
-            <div class="section-label">The initiative</div>
+
+            <div class="section-label">
+                The initiative
+            </div>
 
             <h2>
                 Changing who gets heard.
             </h2>
+
         </div>
 
         <div class="intro-copy">
 
             <p>
-                The International Economic Association has launched a multi-year
-                global initiative to strengthen the presence and influence of women
-                in the economics profession.
+                The International Economic Association has launched a
+                multi-year global initiative to strengthen the presence and
+                influence of women in the economics profession.
             </p>
 
             <p>
                 Through research, collaboration, and advocacy, IEA-WE seeks to
                 identify and remove barriers to women's participation — and to
-                amplify the voices of women economists in shaping global economic
-                discourse.
+                amplify the voices of women economists in shaping global
+                economic discourse.
             </p>
 
             <p>
                 We believe that economics is stronger when more perspectives
-                contribute to the questions the discipline asks, the evidence it
-                produces, and the policies it informs.
+                contribute to the questions the discipline asks, the evidence
+                it produces, and the policies it informs.
             </p>
 
         </div>
@@ -694,30 +798,63 @@ footer p {
 </section>
 
 
-<!-- STATS -->
+<!-- =========================
+     STATS
+========================= -->
 
 <section class="stats">
 
     <div class="container stats-grid">
 
         <div class="stat">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">policy articles</div>
+
+            <div class="stat-number">
+                100+
+            </div>
+
+            <div class="stat-label">
+                policy articles
+            </div>
+
         </div>
 
-        <div class="stat">
-            <div class="stat-number">27+</div>
-            <div class="stat-label">countries represented</div>
-        </div>
 
         <div class="stat">
-            <div class="stat-number">3</div>
-            <div class="stat-label">regions across the Global South</div>
+
+            <div class="stat-number">
+                27+
+            </div>
+
+            <div class="stat-label">
+                countries represented
+            </div>
+
         </div>
 
+
         <div class="stat">
-            <div class="stat-number">2</div>
-            <div class="stat-label">podcasts launched</div>
+
+            <div class="stat-number">
+                3
+            </div>
+
+            <div class="stat-label">
+                regions across the Global South
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-number">
+                2
+            </div>
+
+            <div class="stat-label">
+                podcasts launched
+            </div>
+
         </div>
 
     </div>
@@ -725,18 +862,24 @@ footer p {
 </section>
 
 
-<!-- WHY THIS MATTERS -->
+<!-- =========================
+     WHY THIS MATTERS
+========================= -->
 
 <section class="why">
 
     <div class="container why-grid">
 
         <div>
-            <div class="section-label">Why this matters</div>
+
+            <div class="section-label">
+                Why this matters
+            </div>
 
             <h2 class="section-heading">
                 Better economics needs more voices.
             </h2>
+
         </div>
 
         <div class="why-copy">
@@ -750,7 +893,8 @@ footer p {
             <p>
                 These disparities deepen when viewed through the lens of race,
                 ethnicity, geography, caste and region. Women from developing
-                countries can face a double disadvantage — by gender and geography.
+                countries can face a double disadvantage — by gender and
+                geography.
             </p>
 
             <p>
@@ -761,8 +905,8 @@ footer p {
 
             <p>
                 Greater inclusion is not only a matter of fairness. Diverse
-                perspectives lead to richer analyses, more innovative solutions,
-                and ultimately better-functioning societies.
+                perspectives lead to richer analyses, more innovative
+                solutions, and ultimately better-functioning societies.
             </p>
 
         </div>
@@ -772,7 +916,9 @@ footer p {
 </section>
 
 
-<!-- OUR WORK -->
+<!-- =========================
+     OUR WORK
+========================= -->
 
 <section class="work" id="work">
 
@@ -781,11 +927,16 @@ footer p {
         <div class="section-top">
 
             <div>
-                <div class="section-label">Our work</div>
+
+                <div class="section-label">
+                    Our work
+                </div>
 
                 <h2 class="section-heading">
-                    From evidence<br>to influence.
+                    From evidence<br>
+                    to influence.
                 </h2>
+
             </div>
 
             <p class="section-intro">
@@ -798,11 +949,16 @@ footer p {
 
         <div class="work-grid">
 
+
             <article class="work-card">
 
-                <div class="work-number">01</div>
+                <div class="work-number">
+                    01
+                </div>
 
-                <h3>Building the evidence base</h3>
+                <h3>
+                    Building the evidence base
+                </h3>
 
                 <p>
                     Research across Latin America, Africa and Asia examines
@@ -819,14 +975,18 @@ footer p {
 
             <article class="work-card">
 
-                <div class="work-number">02</div>
+                <div class="work-number">
+                    02
+                </div>
 
-                <h3>Amplifying women's voices</h3>
+                <h3>
+                    Amplifying women's voices
+                </h3>
 
                 <p>
-                    We work with women economists to translate academic research
-                    into accessible policy articles, podcasts and other forms
-                    of public engagement.
+                    We work with women economists to translate academic
+                    research into accessible policy articles, podcasts and
+                    other forms of public engagement.
                 </p>
 
                 <a href="#voices" class="card-link">
@@ -838,9 +998,13 @@ footer p {
 
             <article class="work-card">
 
-                <div class="work-number">03</div>
+                <div class="work-number">
+                    03
+                </div>
 
-                <h3>Building synergies</h3>
+                <h3>
+                    Building synergies
+                </h3>
 
                 <p>
                     We engage with professional associations and like-minded
@@ -854,6 +1018,7 @@ footer p {
 
             </article>
 
+
         </div>
 
     </div>
@@ -861,7 +1026,9 @@ footer p {
 </section>
 
 
-<!-- AMPLIFYING VOICES -->
+<!-- =========================
+     AMPLIFYING VOICES
+========================= -->
 
 <section class="feature" id="voices">
 
@@ -869,7 +1036,9 @@ footer p {
 
         <div>
 
-            <div class="section-label">Amplifying Voices</div>
+            <div class="section-label">
+                Amplifying Voices
+            </div>
 
             <h2>
                 Making research heard.
@@ -883,8 +1052,10 @@ footer p {
 
             <div class="buttons" style="margin-top:30px;">
 
-                <a href="reports/amplifying-voices-impact-report.html"
-                   class="button button-primary">
+                <a
+                    href="reports/amplifying-voices-impact-report.html"
+                    class="button button-primary"
+                >
                     Explore the impact report →
                 </a>
 
@@ -896,23 +1067,54 @@ footer p {
         <div class="feature-list">
 
             <div class="feature-item">
-                <strong>Global platforms</strong>
-                <span>Project Syndicate · VoxEU · VoxDev · IMF F&D</span>
+
+                <strong>
+                    Global platforms
+                </strong>
+
+                <span>
+                    Project Syndicate · VoxEU · VoxDev · IMF F&amp;D
+                </span>
+
             </div>
 
-            <div class="feature-item">
-                <strong>Policy articles</strong>
-                <span>Research translated for wider audiences</span>
-            </div>
 
             <div class="feature-item">
-                <strong>Global network</strong>
-                <span>Women economists across Africa, Asia and LAC</span>
+
+                <strong>
+                    Policy articles
+                </strong>
+
+                <span>
+                    Research translated for wider audiences
+                </span>
+
             </div>
 
+
             <div class="feature-item">
-                <strong>Podcasts</strong>
-                <span>Driving Change · Econ-on-Mics</span>
+
+                <strong>
+                    Global network
+                </strong>
+
+                <span>
+                    Women economists across Africa, Asia and LAC
+                </span>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <strong>
+                    Podcasts
+                </strong>
+
+                <span>
+                    Driving Change · Econ-on-Mics
+                </span>
+
             </div>
 
         </div>
@@ -922,18 +1124,24 @@ footer p {
 </section>
 
 
-<!-- RESEARCH -->
+<!-- =========================
+     RESEARCH
+========================= -->
 
 <section class="intro" id="research">
 
     <div class="container intro-grid">
 
         <div>
-            <div class="section-label">Research</div>
+
+            <div class="section-label">
+                Research
+            </div>
 
             <h2>
                 Evidence on what holds women back — and what works.
             </h2>
+
         </div>
 
         <div class="intro-copy">
@@ -950,9 +1158,11 @@ footer p {
                 meaningful change.
             </p>
 
-            <a href="#work"
-               class="button button-primary"
-               style="margin-top:28px;">
+            <a
+                href="#work"
+                class="button button-primary"
+                style="margin-top:28px;"
+            >
                 Explore research →
             </a>
 
@@ -963,13 +1173,17 @@ footer p {
 </section>
 
 
-<!-- LEADERSHIP -->
+<!-- =========================
+     LEADERSHIP
+========================= -->
 
 <section class="leadership" id="leadership">
 
     <div class="container">
 
-        <div class="section-label">Leadership</div>
+        <div class="section-label">
+            Leadership
+        </div>
 
         <h2 class="section-heading">
             A global initiative,<br>
@@ -984,37 +1198,85 @@ footer p {
 
         <div class="people-grid">
 
-            <div class="person">
-                <div class="person-name">Ashwini Deshpande</div>
-                <div class="person-role">Ashoka University</div>
-            </div>
 
             <div class="person">
-                <div class="person-name">María Inés Berniell</div>
-                <div class="person-role">Universidad Nacional de la Plata and CEDLAS</div>
-            </div>
 
-            <div class="person">
-                <div class="person-name">Raquel Fernández</div>
-                <div class="person-role">New York University</div>
-            </div>
-
-            <div class="person">
-                <div class="person-name">Dani Rodrik</div>
-                <div class="person-role">Harvard University</div>
-            </div>
-
-            <div class="person">
-                <div class="person-name">Fiona Tregenna</div>
-                <div class="person-role">University of Johannesburg</div>
-            </div>
-
-            <div class="person">
-                <div class="person-name">Navika Mehta</div>
-                <div class="person-role">
-                    Strategic Communications and Research Dissemination Lead, IEA-WE
+                <div class="person-name">
+                    Ashwini Deshpande
                 </div>
+
+                <div class="person-role">
+                    Ashoka University
+                </div>
+
             </div>
+
+
+            <div class="person">
+
+                <div class="person-name">
+                    María Inés Berniell
+                </div>
+
+                <div class="person-role">
+                    Universidad Nacional de la Plata and CEDLAS
+                </div>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="person-name">
+                    Raquel Fernández
+                </div>
+
+                <div class="person-role">
+                    New York University
+                </div>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="person-name">
+                    Dani Rodrik
+                </div>
+
+                <div class="person-role">
+                    Harvard University
+                </div>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="person-name">
+                    Fiona Tregenna
+                </div>
+
+                <div class="person-role">
+                    University of Johannesburg
+                </div>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="person-name">
+                    Navika Mehta
+                </div>
+
+                <div class="person-role">
+                    Strategic Communications and Research Dissemination Lead,
+                    IEA-WE
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -1023,7 +1285,9 @@ footer p {
 </section>
 
 
-<!-- SUPPORT -->
+<!-- =========================
+     SUPPORT
+========================= -->
 
 <section class="support">
 
@@ -1031,9 +1295,14 @@ footer p {
 
         <div class="support-copy">
 
-            <div class="section-label">With support from</div>
+            <div class="section-label">
+                With support from
+            </div>
 
-            <h2 class="section-heading" style="font-size:3rem;">
+            <h2
+                class="section-heading"
+                style="font-size:3rem;"
+            >
                 Investing in a more inclusive economics profession.
             </h2>
 
@@ -1050,7 +1319,9 @@ footer p {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1058,13 +1329,17 @@ footer p {
 
         <div class="footer-grid">
 
+
             <div>
 
-                <div class="footer-title">IEA-WE</div>
+                <div class="footer-title">
+                    IEA-WE
+                </div>
 
                 <p>
                     A global initiative of the International Economic Association
-                    to strengthen the presence and influence of women in economics.
+                    to strengthen the presence and influence of women in
+                    economics.
                 </p>
 
             </div>
@@ -1072,14 +1347,32 @@ footer p {
 
             <div>
 
-                <div class="footer-heading">Explore</div>
+                <div class="footer-heading">
+                    Explore
+                </div>
 
                 <div class="footer-links">
-                    <a href="#work">Our Work</a>
-                    <a href="#voices">Amplifying Voices</a>
-                    <a href="#research">Research</a>
-                    <a href="#leadership">Leadership</a>
-                    <a href="reports/amplifying-voices-impact-report.html">Reports</a>
+
+                    <a href="#work">
+                        Our Work
+                    </a>
+
+                    <a href="#voices">
+                        Amplifying Voices
+                    </a>
+
+                    <a href="#research">
+                        Research
+                    </a>
+
+                    <a href="#leadership">
+                        Leadership
+                    </a>
+
+                    <a href="reports/amplifying-voices-impact-report.html">
+                        Reports
+                    </a>
+
                 </div>
 
             </div>
@@ -1087,14 +1380,24 @@ footer p {
 
             <div>
 
-                <div class="footer-heading">International Economic Association</div>
+                <div class="footer-heading">
+                    International Economic Association
+                </div>
 
                 <div class="footer-links">
-                    <a href="#about">About IEA-WE</a>
-                    <a href="#leadership">Team</a>
+
+                    <a href="#about">
+                        About IEA-WE
+                    </a>
+
+                    <a href="#leadership">
+                        Team
+                    </a>
+
                 </div>
 
             </div>
+
 
         </div>
 
