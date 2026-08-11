@@ -49,6 +49,7 @@
       margin: 0 auto;
     }
 
+
     /* =========================
        NAVIGATION
     ========================= */
@@ -81,14 +82,6 @@
       display: block;
     }
 
-    .logo-fallback {
-      display: none;
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--navy);
-      letter-spacing: -0.5px;
-    }
-
     nav {
       display: flex;
       align-items: center;
@@ -106,53 +99,48 @@
       color: var(--pink);
     }
 
+
     /* =========================
-       HERO — LIGHT VERSION
+       HERO
     ========================= */
 
     .hero {
       background: var(--white);
       color: var(--navy);
-      min-height: 610px;
+      min-height: 650px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid #edf0f4;
     }
 
-    /* subtle blue accent */
     .hero::after {
       content: "";
       position: absolute;
-      width: 420px;
-      height: 420px;
+      width: 430px;
+      height: 430px;
       border-radius: 50%;
       background: var(--light-blue);
-      right: -150px;
-      top: -150px;
-      z-index: 0;
+      right: -100px;
+      top: -170px;
     }
 
-    /* small pink accent */
     .hero::before {
       content: "";
       position: absolute;
-      width: 95px;
-      height: 95px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: var(--pink);
+      background: #fbe8ed;
       right: 12%;
-      bottom: -45px;
-      opacity: 0.13;
-      z-index: 0;
+      bottom: -125px;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 850px;
-      padding: 100px 0;
+      padding: 90px 0;
     }
 
     .eyebrow {
@@ -166,7 +154,6 @@
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
       font-size: clamp(60px, 8vw, 108px);
       line-height: 0.98;
       font-weight: 500;
@@ -215,7 +202,6 @@
     .button-secondary {
       border: 1px solid var(--navy);
       color: var(--navy);
-      background: transparent;
     }
 
     .button-secondary:hover {
@@ -223,12 +209,13 @@
       color: white;
     }
 
+
     /* =========================
        WHY THIS MATTERS
     ========================= */
 
     .why {
-      padding: 90px 0 82px;
+      padding: 80px 0 75px;
       background: var(--white);
     }
 
@@ -244,7 +231,7 @@
     .why-grid {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
-      gap: 80px;
+      gap: 70px;
       align-items: start;
     }
 
@@ -264,13 +251,13 @@
     }
 
     .why-copy p {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .why-highlight {
       border-top: 2px solid var(--pink);
-      padding-top: 22px;
-      margin-top: 28px;
+      padding-top: 20px;
+      margin-top: 24px;
     }
 
     .why-highlight strong {
@@ -281,8 +268,8 @@
     }
 
     .community {
-      margin-top: 48px;
-      padding: 27px 30px;
+      margin-top: 38px;
+      padding: 24px 28px;
       background: var(--light-blue);
       border-left: 5px solid var(--pink);
     }
@@ -293,6 +280,7 @@
       display: block;
       margin-bottom: 5px;
     }
+
 
     /* =========================
        LEADERSHIP
@@ -368,6 +356,7 @@
       padding-top: 10px;
     }
 
+
     /* =========================
        OUR WORK
     ========================= */
@@ -389,6 +378,12 @@
       padding: 35px;
       min-height: 300px;
       position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-3px);
+      border-color: #bdc9d8;
     }
 
     .work-number {
@@ -417,6 +412,7 @@
       font-weight: 700;
       margin-top: 22px;
     }
+
 
     /* =========================
        AMPLIFYING VOICES
@@ -470,6 +466,7 @@
       color: #dfe6ef;
       font-size: 14px;
     }
+
 
     /* =========================
        LATEST ARTICLES
@@ -556,6 +553,7 @@
       font-weight: 700;
     }
 
+
     /* =========================
        REPORTS
     ========================= */
@@ -597,6 +595,17 @@
       display: block;
       margin-bottom: 8px;
     }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
 
     /* =========================
        FOOTER
@@ -641,6 +650,10 @@
       margin-bottom: 7px;
     }
 
+    .footer-links a:hover {
+      color: var(--pink);
+    }
+
     .footer-bottom {
       border-top: 1px solid #385171;
       margin-top: 45px;
@@ -648,6 +661,7 @@
       color: #aebbd0;
       font-size: 12px;
     }
+
 
     /* =========================
        MOBILE
@@ -711,6 +725,7 @@
       }
     }
 
+
     @media (max-width: 600px) {
 
       .container {
@@ -719,6 +734,10 @@
 
       nav {
         display: none;
+      }
+
+      .logo img {
+        width: 125px;
       }
 
       .hero h1 {
@@ -734,6 +753,7 @@
       .work,
       .articles,
       .reports,
+      .about-section,
       .amplifying {
         padding: 65px 0;
       }
@@ -745,10 +765,25 @@
       .report-box {
         padding: 30px;
       }
+
+      .hero::after {
+        width: 260px;
+        height: 260px;
+        right: -120px;
+        top: -80px;
+      }
+
+      .hero::before {
+        width: 120px;
+        height: 120px;
+        right: 5%;
+        bottom: -80px;
+      }
     }
 
   </style>
 </head>
+
 
 <body>
 
@@ -759,9 +794,10 @@
   <header>
     <div class="container nav">
 
-     <a href="index.html" class="logo">
-  <img src="images/iea-we-logo.svg" alt="IEA-WE">
-</a>
+      <a href="index.html" class="logo">
+        <!-- Original IEA-WE logo is in the root of the repository -->
+        <img src="logoWE.svg" alt="IEA-WE">
+      </a>
 
       <nav>
         <a href="#work">Our Work</a>
@@ -861,7 +897,9 @@
 
             <div class="why-highlight">
 
-              <strong>Diversity strengthens the discipline.</strong>
+              <strong>
+                Diversity strengthens the discipline.
+              </strong>
 
               <p>
                 Greater inclusion is not only a matter of fairness.
@@ -874,6 +912,7 @@
           </div>
 
         </div>
+
 
         <div class="community">
 
@@ -920,6 +959,7 @@
 
         </div>
 
+
         <div class="leadership-title">
           Initiative Leadership
         </div>
@@ -953,10 +993,13 @@
 
           <div class="person">
             <h3>Navika Mehta</h3>
-            <p>Strategic Communications and Research Dissemination Lead, IEA-WE</p>
+            <p>
+              Strategic Communications and Research Dissemination Lead, IEA-WE
+            </p>
           </div>
 
         </div>
+
 
         <div class="advisory">
 
@@ -978,7 +1021,9 @@
 
             <div class="person">
               <h3>Wendy Carlin</h3>
-              <p>University College London, CEPR and Santa Fe Institute</p>
+              <p>
+                University College London, CEPR and Santa Fe Institute
+              </p>
             </div>
 
             <div class="person">
@@ -1030,11 +1075,14 @@
 
         </div>
 
+
         <div class="work-grid">
 
           <div class="work-card">
 
-            <div class="work-number">01</div>
+            <div class="work-number">
+              01
+            </div>
 
             <h3>
               Building the Evidence Base
@@ -1055,7 +1103,9 @@
 
           <div class="work-card">
 
-            <div class="work-number">02</div>
+            <div class="work-number">
+              02
+            </div>
 
             <h3>
               Amplifying Women's Voices
@@ -1076,7 +1126,9 @@
 
           <div class="work-card">
 
-            <div class="work-number">03</div>
+            <div class="work-number">
+              03
+            </div>
 
             <h3>
               Building Synergies
@@ -1123,26 +1175,35 @@
           into global policy conversations.
         </p>
 
+
         <div class="stats">
 
           <div class="stat">
             <div class="stat-number">80+</div>
-            <div class="stat-label">Policy-relevant articles</div>
+            <div class="stat-label">
+              Policy-relevant articles
+            </div>
           </div>
 
           <div class="stat">
             <div class="stat-number">27</div>
-            <div class="stat-label">Countries represented</div>
+            <div class="stat-label">
+              Countries represented
+            </div>
           </div>
 
           <div class="stat">
             <div class="stat-number">4+</div>
-            <div class="stat-label">Major media partnerships</div>
+            <div class="stat-label">
+              Major media partnerships
+            </div>
           </div>
 
           <div class="stat">
             <div class="stat-number">2</div>
-            <div class="stat-label">Podcasts</div>
+            <div class="stat-label">
+              Podcasts
+            </div>
           </div>
 
         </div>
@@ -1180,7 +1241,11 @@
 
         </div>
 
+
         <div class="article-grid">
+
+
+          <!-- ARTICLE 1 -->
 
           <article class="article-card">
 
@@ -1211,6 +1276,8 @@
           </article>
 
 
+          <!-- ARTICLE 2 -->
+
           <article class="article-card">
 
             <div class="article-image">
@@ -1239,6 +1306,8 @@
 
           </article>
 
+
+          <!-- ARTICLE 3 -->
 
           <article class="article-card">
 
@@ -1304,6 +1373,7 @@
 
           </div>
 
+
           <div class="report-side">
 
             <strong>
@@ -1315,9 +1385,11 @@
               across Latin America, Africa and Asia.
             </p>
 
-            <a href="reports.html"
-               class="button button-primary"
-               style="margin-top:20px;">
+            <a
+              href="reports.html"
+              class="button button-primary"
+              style="margin-top:20px;"
+            >
               View reports →
             </a>
 
@@ -1334,7 +1406,7 @@
          ABOUT
     ========================= -->
 
-    <section class="why" id="about">
+    <section class="about-section" id="about">
 
       <div class="container">
 
@@ -1394,6 +1466,7 @@
 
       <div class="footer-grid">
 
+
         <div>
 
           <div class="footer-brand">
@@ -1415,11 +1488,27 @@
           </h4>
 
           <div class="footer-links">
-            <a href="#work">Our Work</a>
-            <a href="#amplifying">Amplifying Voices</a>
-            <a href="#leadership">Leadership</a>
-            <a href="articles.html">Articles</a>
-            <a href="reports.html">Reports</a>
+
+            <a href="#work">
+              Our Work
+            </a>
+
+            <a href="#amplifying">
+              Amplifying Voices
+            </a>
+
+            <a href="#leadership">
+              Leadership
+            </a>
+
+            <a href="articles.html">
+              Articles
+            </a>
+
+            <a href="reports.html">
+              Reports
+            </a>
+
           </div>
 
         </div>
@@ -1432,8 +1521,15 @@
           </h4>
 
           <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#leadership">Advisory Board</a>
+
+            <a href="#about">
+              About
+            </a>
+
+            <a href="#leadership">
+              Advisory Board
+            </a>
+
           </div>
 
         </div>
@@ -1448,6 +1544,7 @@
     </div>
 
   </footer>
+
 
 </body>
 </html>
