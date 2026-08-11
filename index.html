@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>IEA-WE | International Economic Association Women in Economics</title>
+  <title>IEA-WE | Women in Economics</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
@@ -49,7 +49,6 @@
       margin: 0 auto;
     }
 
-
     /* =========================
        NAVIGATION
     ========================= */
@@ -77,7 +76,7 @@
     }
 
     .logo img {
-      width: 145px;
+      width: 155px;
       height: auto;
       display: block;
     }
@@ -99,15 +98,14 @@
       color: var(--pink);
     }
 
-
     /* =========================
        HERO
     ========================= */
 
     .hero {
       background: var(--white);
-      color: var(--navy);
-      min-height: 650px;
+      color: var(--text);
+      min-height: 590px;
       display: flex;
       align-items: center;
       position: relative;
@@ -117,23 +115,25 @@
     .hero::after {
       content: "";
       position: absolute;
-      width: 430px;
-      height: 430px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       background: var(--light-blue);
-      right: -100px;
-      top: -170px;
+      right: -150px;
+      top: -150px;
+      opacity: 0.9;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      background: #fbe8ed;
-      right: 12%;
-      bottom: -125px;
+      background: #f8dfe6;
+      right: 13%;
+      bottom: -105px;
+      opacity: 0.75;
     }
 
     .hero-content {
@@ -144,22 +144,23 @@
     }
 
     .eyebrow {
-      color: var(--blue);
+      color: var(--pink);
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 14px;
       font-weight: 700;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
       font-size: clamp(60px, 8vw, 108px);
       line-height: 0.98;
       font-weight: 500;
       letter-spacing: -4px;
       max-width: 850px;
-      margin-bottom: 38px;
+      margin-bottom: 34px;
     }
 
     .hero h1 span {
@@ -209,13 +210,12 @@
       color: white;
     }
 
-
     /* =========================
        WHY THIS MATTERS
     ========================= */
 
     .why {
-      padding: 80px 0 75px;
+      padding: 82px 0 75px;
       background: var(--white);
     }
 
@@ -231,7 +231,7 @@
     .why-grid {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
-      gap: 70px;
+      gap: 75px;
       align-items: start;
     }
 
@@ -257,7 +257,7 @@
     .why-highlight {
       border-top: 2px solid var(--pink);
       padding-top: 20px;
-      margin-top: 24px;
+      margin-top: 25px;
     }
 
     .why-highlight strong {
@@ -268,7 +268,7 @@
     }
 
     .community {
-      margin-top: 38px;
+      margin-top: 42px;
       padding: 24px 28px;
       background: var(--light-blue);
       border-left: 5px solid var(--pink);
@@ -281,19 +281,18 @@
       margin-bottom: 5px;
     }
 
-
     /* =========================
        LEADERSHIP
     ========================= */
 
     .leadership {
       background: var(--light-blue);
-      padding: 90px 0;
+      padding: 88px 0;
     }
 
     .section-heading {
       max-width: 760px;
-      margin-bottom: 48px;
+      margin-bottom: 45px;
     }
 
     .section-heading h2 {
@@ -317,20 +316,20 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     .people-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-      margin-bottom: 58px;
+      margin-bottom: 52px;
     }
 
     .person {
       background: var(--white);
-      padding: 28px;
-      min-height: 145px;
+      padding: 26px;
+      min-height: 140px;
       border-top: 3px solid transparent;
       transition: border-color 0.2s ease, transform 0.2s ease;
     }
@@ -353,9 +352,8 @@
     }
 
     .advisory {
-      padding-top: 10px;
+      padding-top: 5px;
     }
-
 
     /* =========================
        OUR WORK
@@ -370,7 +368,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin-top: 45px;
+      margin-top: 42px;
     }
 
     .work-card {
@@ -378,12 +376,6 @@
       padding: 35px;
       min-height: 300px;
       position: relative;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .work-card:hover {
-      transform: translateY(-3px);
-      border-color: #bdc9d8;
     }
 
     .work-number {
@@ -413,7 +405,6 @@
       margin-top: 22px;
     }
 
-
     /* =========================
        AMPLIFYING VOICES
     ========================= */
@@ -440,7 +431,20 @@
       max-width: 750px;
       color: #e8edf5;
       font-size: 17px;
-      margin-bottom: 42px;
+      margin-bottom: 40px;
+    }
+
+    .amplifying-image {
+      width: 100%;
+      margin: 0 0 48px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .amplifying-image img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .stats {
@@ -466,7 +470,6 @@
       color: #dfe6ef;
       font-size: 14px;
     }
-
 
     /* =========================
        LATEST ARTICLES
@@ -553,7 +556,6 @@
       font-weight: 700;
     }
 
-
     /* =========================
        REPORTS
     ========================= */
@@ -596,16 +598,14 @@
       margin-bottom: 8px;
     }
 
-
     /* =========================
        ABOUT
     ========================= */
 
-    .about-section {
+    .about {
       padding: 90px 0;
       background: var(--white);
     }
-
 
     /* =========================
        FOOTER
@@ -650,10 +650,6 @@
       margin-bottom: 7px;
     }
 
-    .footer-links a:hover {
-      color: var(--pink);
-    }
-
     .footer-bottom {
       border-top: 1px solid #385171;
       margin-top: 45px;
@@ -661,7 +657,6 @@
       color: #aebbd0;
       font-size: 12px;
     }
-
 
     /* =========================
        MOBILE
@@ -725,7 +720,6 @@
       }
     }
 
-
     @media (max-width: 600px) {
 
       .container {
@@ -737,7 +731,7 @@
       }
 
       .logo img {
-        width: 125px;
+        width: 135px;
       }
 
       .hero h1 {
@@ -753,8 +747,8 @@
       .work,
       .articles,
       .reports,
-      .about-section,
-      .amplifying {
+      .amplifying,
+      .about {
         padding: 65px 0;
       }
 
@@ -766,24 +760,13 @@
         padding: 30px;
       }
 
-      .hero::after {
-        width: 260px;
-        height: 260px;
-        right: -120px;
-        top: -80px;
-      }
-
-      .hero::before {
-        width: 120px;
-        height: 120px;
-        right: 5%;
-        bottom: -80px;
+      .amplifying-image {
+        margin-bottom: 35px;
       }
     }
 
   </style>
 </head>
-
 
 <body>
 
@@ -795,8 +778,8 @@
     <div class="container nav">
 
       <a href="index.html" class="logo">
-        <!-- Original IEA-WE logo is in the root of the repository -->
-        <img src="logoWE.svg" alt="IEA-WE">
+        <img src="logoWE.svg"
+             alt="IEA-WE">
       </a>
 
       <nav>
@@ -897,9 +880,7 @@
 
             <div class="why-highlight">
 
-              <strong>
-                Diversity strengthens the discipline.
-              </strong>
+              <strong>Diversity strengthens the discipline.</strong>
 
               <p>
                 Greater inclusion is not only a matter of fairness.
@@ -912,7 +893,6 @@
           </div>
 
         </div>
-
 
         <div class="community">
 
@@ -993,9 +973,7 @@
 
           <div class="person">
             <h3>Navika Mehta</h3>
-            <p>
-              Strategic Communications and Research Dissemination Lead, IEA-WE
-            </p>
+            <p>Strategic Communications and Research Dissemination Lead, IEA-WE</p>
           </div>
 
         </div>
@@ -1021,9 +999,7 @@
 
             <div class="person">
               <h3>Wendy Carlin</h3>
-              <p>
-                University College London, CEPR and Santa Fe Institute
-              </p>
+              <p>University College London, CEPR and Santa Fe Institute</p>
             </div>
 
             <div class="person">
@@ -1080,9 +1056,7 @@
 
           <div class="work-card">
 
-            <div class="work-number">
-              01
-            </div>
+            <div class="work-number">01</div>
 
             <h3>
               Building the Evidence Base
@@ -1103,9 +1077,7 @@
 
           <div class="work-card">
 
-            <div class="work-number">
-              02
-            </div>
+            <div class="work-number">02</div>
 
             <h3>
               Amplifying Women's Voices
@@ -1126,9 +1098,7 @@
 
           <div class="work-card">
 
-            <div class="work-number">
-              03
-            </div>
+            <div class="work-number">03</div>
 
             <h3>
               Building Synergies
@@ -1174,6 +1144,16 @@
           economists across Africa, Asia and Latin America to bring research
           into global policy conversations.
         </p>
+
+
+        <!-- YOUR UPLOADED IMAGE -->
+
+        <div class="amplifying-image">
+
+          <img src="amplifying-voices.png"
+               alt="IEA-WE Amplifying Women's Voices">
+
+        </div>
 
 
         <div class="stats">
@@ -1244,9 +1224,6 @@
 
         <div class="article-grid">
 
-
-          <!-- ARTICLE 1 -->
-
           <article class="article-card">
 
             <div class="article-image">
@@ -1275,8 +1252,6 @@
 
           </article>
 
-
-          <!-- ARTICLE 2 -->
 
           <article class="article-card">
 
@@ -1307,8 +1282,6 @@
           </article>
 
 
-          <!-- ARTICLE 3 -->
-
           <article class="article-card">
 
             <div class="article-image">
@@ -1318,11 +1291,11 @@
             <div class="article-content">
 
               <div class="article-meta">
-                Coming soon
+                Explore the archive
               </div>
 
               <h3>
-                Explore the latest research from women economists
+                Explore research from women economists
               </h3>
 
               <p>
@@ -1373,7 +1346,6 @@
 
           </div>
 
-
           <div class="report-side">
 
             <strong>
@@ -1385,11 +1357,9 @@
               across Latin America, Africa and Asia.
             </p>
 
-            <a
-              href="reports.html"
-              class="button button-primary"
-              style="margin-top:20px;"
-            >
+            <a href="reports.html"
+               class="button button-primary"
+               style="margin-top:20px;">
               View reports →
             </a>
 
@@ -1406,7 +1376,7 @@
          ABOUT
     ========================= -->
 
-    <section class="about-section" id="about">
+    <section class="about" id="about">
 
       <div class="container">
 
@@ -1466,7 +1436,6 @@
 
       <div class="footer-grid">
 
-
         <div>
 
           <div class="footer-brand">
@@ -1489,9 +1458,7 @@
 
           <div class="footer-links">
 
-            <a href="#work">
-              Our Work
-            </a>
+            <a href="#work">Our Work</a>
 
             <a href="#amplifying">
               Amplifying Voices
@@ -1544,7 +1511,6 @@
     </div>
 
   </footer>
-
 
 </body>
 </html>
