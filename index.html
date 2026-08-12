@@ -211,6 +211,169 @@
     }
 
     /* =========================
+       LATEST FROM IEA-WE
+    ========================= */
+
+    .latest {
+      background: var(--dark-blue);
+      color: white;
+      padding: 65px 0 70px;
+      overflow: hidden;
+    }
+
+    .latest-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .latest .section-label {
+      color: #f28a9b;
+      margin-bottom: 10px;
+    }
+
+    .latest-heading {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.1;
+      font-weight: 500;
+      color: white;
+    }
+
+    .latest-subtitle {
+      color: #cbd5e4;
+      font-size: 15px;
+      max-width: 450px;
+      text-align: right;
+    }
+
+    .latest-track-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-left: calc((100vw - min(1180px, 90vw)) / -2);
+      margin-right: calc((100vw - min(1180px, 90vw)) / -2);
+      padding: 5px 0 15px;
+    }
+
+    .latest-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: latestMove 30s linear infinite;
+      padding-left: max(5vw, calc((100vw - 1180px) / 2));
+    }
+
+    .latest-track:hover {
+      animation-play-state: paused;
+    }
+
+    .latest-card {
+      width: 365px;
+      min-height: 275px;
+      background: white;
+      color: var(--text);
+      padding: 30px;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .latest-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .latest-card.video-card {
+      background: linear-gradient(135deg, #fff 0%, #f8e7ea 100%);
+    }
+
+    .latest-card.article-card-latest {
+      background: linear-gradient(135deg, #fff 0%, #eef4fc 100%);
+    }
+
+    .latest-card.podcast-card {
+      background: linear-gradient(135deg, #fff 0%, #f5e8eb 100%);
+    }
+
+    .latest-type {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .latest-card h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 27px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .latest-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 310px;
+    }
+
+    .latest-card-link {
+      position: absolute;
+      bottom: 27px;
+      left: 30px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .play-circle {
+      position: absolute;
+      right: 25px;
+      bottom: 22px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      padding-left: 3px;
+    }
+
+    .latest-card-decoration {
+      position: absolute;
+      right: -35px;
+      top: -35px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(201, 47, 69, 0.08);
+    }
+
+    @keyframes latestMove {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-785px);
+      }
+    }
+
+    .latest-note {
+      margin-top: 23px;
+      color: #9fb0c7;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* =========================
        WHY THIS MATTERS
     ========================= */
 
@@ -715,6 +878,19 @@
         grid-template-columns: 1fr;
         gap: 30px;
       }
+
+      .latest-top {
+        display: block;
+      }
+
+      .latest-subtitle {
+        text-align: left;
+        margin-top: 12px;
+      }
+
+      .latest-card {
+        width: 320px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -745,7 +921,8 @@
       .articles,
       .reports,
       .amplifying,
-      .about-home {
+      .about-home,
+      .latest {
         padding: 65px 0;
       }
 
@@ -755,6 +932,34 @@
 
       .report-box {
         padding: 30px;
+      }
+
+      .latest-card {
+        width: 290px;
+        min-height: 285px;
+      }
+
+      .latest-track {
+        padding-left: 6%;
+      }
+
+      @keyframes latestMove {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-630px);
+        }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .latest-track {
+        animation: none;
+      }
+
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
@@ -820,6 +1025,243 @@
 
     </div>
 
+  </div>
+
+</section>
+
+
+<!-- LATEST FROM IEA-WE -->
+
+<section class="latest">
+
+  <div class="container">
+
+    <div class="latest-top">
+
+      <div>
+        <div class="section-label">
+          Latest from IEA-WE
+        </div>
+
+        <h2 class="latest-heading">
+          Research, conversations<br>
+          & moments from the network.
+        </h2>
+      </div>
+
+      <p class="latest-subtitle">
+        Catch up with the latest work, conversations and moments
+        shaping the IEA-WE community.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="latest-track-wrap">
+
+    <div class="latest-track">
+
+      <!-- VIDEO -->
+
+      <a
+        href="https://youtu.be/aimEh15fkBM?si=m1ws6HfnIoKiTkba"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card video-card"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          🎥 IEA Congress · June 2026
+        </div>
+
+        <h3>
+          Women in Economics:
+          Evidence, Interventions & Change
+        </h3>
+
+        <p>
+          Watch the IEA-WE presentation from the International Economic
+          Association World Congress in Serbia.
+        </p>
+
+        <span class="latest-card-link">
+          Watch the presentation →
+        </span>
+
+        <div class="play-circle">
+          ▶
+        </div>
+
+      </a>
+
+
+      <!-- ARTICLE -->
+
+      <a
+        href="https://cepr.org/voxeu/columns/high-speed-internet-and-early-childhood-development-causal-evidence-countrywide"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card article-card-latest"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          📰 Latest article · VoxEU
+        </div>
+
+        <h3>
+          High-speed internet and early childhood development
+        </h3>
+
+        <p>
+          New research examines the causal effects of a countrywide
+          high-speed internet programme on early childhood development.
+        </p>
+
+        <span class="latest-card-link">
+          Read the article →
+        </span>
+
+      </a>
+
+
+      <!-- PODCAST -->
+
+      <a
+        href="https://www.imf.org/en/news/podcasts/all-podcasts/2024/11/29/power-of-local-marcela-eslava"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card podcast-card"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          🎙 Podcast · IMF
+        </div>
+
+        <h3>
+          The Power of Local
+        </h3>
+
+        <p>
+          Listen to Marcela Eslava discuss local economic development
+          and the importance of understanding economies close to home.
+        </p>
+
+        <span class="latest-card-link">
+          Listen to the podcast →
+        </span>
+
+      </a>
+
+
+      <!-- DUPLICATE CARDS FOR SEAMLESS LOOP -->
+
+      <a
+        href="https://youtu.be/aimEh15fkBM?si=m1ws6HfnIoKiTkba"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card video-card"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          🎥 IEA Congress · June 2026
+        </div>
+
+        <h3>
+          Women in Economics:
+          Evidence, Interventions & Change
+        </h3>
+
+        <p>
+          Watch the IEA-WE presentation from the International Economic
+          Association World Congress in Serbia.
+        </p>
+
+        <span class="latest-card-link">
+          Watch the presentation →
+        </span>
+
+        <div class="play-circle">
+          ▶
+        </div>
+
+      </a>
+
+
+      <a
+        href="https://cepr.org/voxeu/columns/high-speed-internet-and-early-childhood-development-causal-evidence-countrywide"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card article-card-latest"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          📰 Latest article · VoxEU
+        </div>
+
+        <h3>
+          High-speed internet and early childhood development
+        </h3>
+
+        <p>
+          New research examines the causal effects of a countrywide
+          high-speed internet programme on early childhood development.
+        </p>
+
+        <span class="latest-card-link">
+          Read the article →
+        </span>
+
+      </a>
+
+
+      <a
+        href="https://www.imf.org/en/news/podcasts/all-podcasts/2024/11/29/power-of-local-marcela-eslava"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="latest-card podcast-card"
+      >
+
+        <div class="latest-card-decoration"></div>
+
+        <div class="latest-type">
+          🎙 Podcast · IMF
+        </div>
+
+        <h3>
+          The Power of Local
+        </h3>
+
+        <p>
+          Listen to Marcela Eslava discuss local economic development
+          and the importance of understanding economies close to home.
+        </p>
+
+        <span class="latest-card-link">
+          Listen to the podcast →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="latest-note">
+      Hover over a card to pause · Click to explore
+    </div>
   </div>
 
 </section>
