@@ -157,7 +157,7 @@
 
     .impact-number {
       font-family: "Playfair Display", Georgia, serif;
-      color: var(--red);
+      color: var(--white);
       font-size: 52px;
       line-height: 1;
       margin-bottom: 10px;
@@ -219,6 +219,10 @@
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .story-image + .story-image {
+      margin-top: 25px;
     }
 
     /* =========================
@@ -364,6 +368,14 @@
       font-size: 46px;
       line-height: 1.1;
       margin-bottom: 10px;
+    }
+
+    .editor-name-link {
+      transition: color 0.2s ease;
+    }
+
+    .editor-name-link:hover {
+      color: var(--red);
     }
 
     .editor-role {
@@ -802,9 +814,18 @@
 
           </div>
 
-          <div class="story-image">
-            <img src="amplifying-voices.png"
-                 alt="Amplifying Voices">
+          <div>
+
+            <div class="story-image">
+              <img src="amplifying_voices_main.png"
+                   alt="Amplifying Voices">
+            </div>
+
+            <div class="story-image">
+              <img src="writers_photo.jpg"
+                   alt="Women economists and contributors to Amplifying Voices">
+            </div>
+
           </div>
 
         </div>
@@ -843,7 +864,8 @@
 
             <a class="feature-link"
                href="https://ieawe.substack.com/?r=3aktt8&utm_campaign=pub-share-checklist"
-               target="_blank">
+               target="_blank"
+               rel="noopener noreferrer">
               Subscribe →
             </a>
 
@@ -1009,7 +1031,14 @@
             </div>
 
             <h2>
-              Navika Mehta
+              <a
+                class="editor-name-link"
+                href="https://www.linkedin.com/in/navika-m-5a3071a5/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Navika Mehta
+              </a>
             </h2>
 
             <div class="editor-role">
@@ -1147,7 +1176,7 @@
             <a href="index.html">Our Work</a>
             <a href="articles.html">Amplifying Voices</a>
             <a href="leadership.html">Leadership</a>
-            <a href="articles.html#archive">Articles</a>
+            <a href="#archive">Articles</a>
             <a href="reports.html">Reports</a>
           </div>
 
@@ -1209,7 +1238,11 @@
     function getField(article, possibleNames) {
 
       for (const name of possibleNames) {
-        if (article && article[name] !== undefined && article[name] !== null) {
+        if (
+          article &&
+          article[name] !== undefined &&
+          article[name] !== null
+        ) {
           return article[name];
         }
       }
@@ -1307,11 +1340,30 @@
 
         const title = getField(article, ["title", "name"]);
         const author = getField(article, ["author", "authors"]);
-        const description = getField(article, ["description", "summary", "excerpt"]);
-        const topic = getField(article, ["topic", "topics", "category"]);
-        const country = getField(article, ["country", "countries"]);
-        const publication = getField(article, ["publication", "publications", "outlet"]);
-        const year = getField(article, ["year", "date"]);
+        const description = getField(
+          article,
+          ["description", "summary", "excerpt"]
+        );
+
+        const topic = getField(
+          article,
+          ["topic", "topics", "category"]
+        );
+
+        const country = getField(
+          article,
+          ["country", "countries"]
+        );
+
+        const publication = getField(
+          article,
+          ["publication", "publications", "outlet"]
+        );
+
+        const year = getField(
+          article,
+          ["year", "date"]
+        );
 
 
         const searchableText = [
@@ -1328,7 +1380,8 @@
 
 
         const matchesSearch =
-          !searchTerm || searchableText.includes(searchTerm);
+          !searchTerm ||
+          searchableText.includes(searchTerm);
 
         const matchesTopic =
           !selectedTopic ||
@@ -1363,13 +1416,43 @@
 
       filteredArticles.forEach(article => {
 
-        const title = getField(article, ["title", "name"]) || "Untitled article";
-        const author = getField(article, ["author", "authors"]) || "";
-        const description = getField(article, ["description", "summary", "excerpt"]) || "";
-        const topic = getField(article, ["topic", "topics", "category"]) || "";
-        const publication = getField(article, ["publication", "publications", "outlet"]) || "";
-        const year = getField(article, ["year", "date"]) || "";
-        const url = getField(article, ["url", "link", "articleUrl"]);
+        const title =
+          getField(article, ["title", "name"]) ||
+          "Untitled article";
+
+        const author =
+          getField(article, ["author", "authors"]) ||
+          "";
+
+        const description =
+          getField(
+            article,
+            ["description", "summary", "excerpt"]
+          ) || "";
+
+        const topic =
+          getField(
+            article,
+            ["topic", "topics", "category"]
+          ) || "";
+
+        const publication =
+          getField(
+            article,
+            ["publication", "publications", "outlet"]
+          ) || "";
+
+        const year =
+          getField(
+            article,
+            ["year", "date"]
+          ) || "";
+
+        const url =
+          getField(
+            article,
+            ["url", "link", "articleUrl"]
+          );
 
 
         const card = document.createElement("article");
@@ -1418,7 +1501,14 @@
 
           ${
             url
-              ? `<a href="${url}" target="_blank" class="read-more">Read article →</a>`
+              ? `<a
+                  href="${url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="read-more"
+                >
+                  Read article →
+                </a>`
               : ""
           }
 
@@ -1438,11 +1528,30 @@
     }
 
 
-    searchInput.addEventListener("input", renderArticles);
-    topicFilter.addEventListener("change", renderArticles);
-    countryFilter.addEventListener("change", renderArticles);
-    publicationFilter.addEventListener("change", renderArticles);
-    yearFilter.addEventListener("change", renderArticles);
+    searchInput.addEventListener(
+      "input",
+      renderArticles
+    );
+
+    topicFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+    countryFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+    publicationFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+    yearFilter.addEventListener(
+      "change",
+      renderArticles
+    );
 
 
     /*
@@ -1450,12 +1559,15 @@
       then initialise the archive.
     */
 
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
 
-      initialiseFilters();
-      renderArticles();
+        initialiseFilters();
+        renderArticles();
 
-    });
+      }
+    );
 
   </script>
 
