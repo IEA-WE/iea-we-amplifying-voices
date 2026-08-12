@@ -12,8 +12,11 @@
     :root {
       --navy: #0b3568;
       --dark-blue: #102b52;
-      --pink: #df5b78;
+      --blue: #1557a6;
+      --red: #c92f45;
+      --red-dark: #a92539;
       --light-blue: #eef4fc;
+      --off-white: #faf9f5;
       --white: #ffffff;
       --text: #17263b;
       --muted: #536174;
@@ -68,7 +71,7 @@
     }
 
     .logo img {
-      width: 145px;
+      width: 175px;
       height: auto;
       display: block;
     }
@@ -76,32 +79,113 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 34px;
+      gap: 30px;
     }
 
     nav a {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: var(--text);
       transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: var(--pink);
+      color: var(--red);
     }
 
     /* =========================
        HERO
     ========================= */
 
-    .page-hero {
-      padding: 90px 0 75px;
+    .hero {
       background: var(--white);
+      padding: 95px 0 85px;
       border-bottom: 1px solid var(--line);
     }
 
+    .eyebrow {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -4px;
+      max-width: 900px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero-intro {
+      max-width: 820px;
+      font-size: 21px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    /* =========================
+       IMPACT STATS
+    ========================= */
+
+    .impact {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 65px 0;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .impact-stat {
+      border-top: 1px solid #7285a2;
+      padding-top: 20px;
+    }
+
+    .impact-number {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--red);
+      font-size: 52px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .impact-label {
+      color: #e4eaf2;
+      font-size: 14px;
+    }
+
+    /* =========================
+       STORY
+    ========================= */
+
+    .story {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
     .section-label {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 2.5px;
       font-size: 13px;
@@ -109,22 +193,194 @@
       margin-bottom: 18px;
     }
 
-    .page-hero h1 {
+    .story h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(52px, 7vw, 86px);
-      line-height: 1.05;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.1;
       font-weight: 500;
-      letter-spacing: -2px;
-      max-width: 900px;
+      letter-spacing: -1.5px;
       margin-bottom: 25px;
     }
 
-    .page-hero p {
-      max-width: 780px;
+    .story p {
       color: var(--muted);
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .story-image {
+      background: var(--light-blue);
+      overflow: hidden;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* =========================
+       FEATURE CARDS
+    ========================= */
+
+    .features {
+      background: var(--light-blue);
+      padding: 85px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      padding: 38px;
+      min-height: 330px;
+      border-top: 4px solid var(--red);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .feature-card .feature-link {
+      color: var(--red);
+      font-weight: 700;
+      margin-top: auto;
+    }
+
+    .feature-card .small-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       PARTNERSHIPS
+    ========================= */
+
+    .partnerships {
+      padding: 95px 0;
+      background: var(--white);
+    }
+
+    .partnerships-header {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .partnerships h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .partnerships-intro {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .partner {
+      border: 1px solid var(--line);
+      padding: 32px;
+      min-height: 280px;
+    }
+
+    .partner h3 {
+      color: var(--navy);
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .partner p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       EDITOR
+    ========================= */
+
+    .editor {
+      background: var(--off-white);
+      padding: 90px 0;
+    }
+
+    .editor-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .editor-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--light-blue);
+    }
+
+    .editor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .editor h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 46px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .editor-role {
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .editor p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .editor-email {
+      color: var(--red);
+      font-weight: 600;
     }
 
     /* =========================
@@ -132,49 +388,51 @@
     ========================= */
 
     .archive {
-      padding: 75px 0 100px;
+      padding: 100px 0;
       background: var(--white);
     }
 
-    /* =========================
-       SEARCH + FILTERS
-    ========================= */
+    .archive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .archive-header h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+
+    .archive-header p {
+      color: var(--muted);
+      max-width: 500px;
+      margin-top: 12px;
+    }
 
     .filters {
       background: var(--light-blue);
-      border: 1px solid var(--line);
-      padding: 25px;
-      margin-bottom: 50px;
+      padding: 28px;
+      margin-bottom: 40px;
     }
 
-    .search-wrap {
-      position: relative;
-      margin-bottom: 15px;
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    #searchInput {
+    .search-box {
       width: 100%;
-      padding: 15px 18px 15px 45px;
-      border: 1px solid #cbd5e2;
-      background: white;
-      color: var(--text);
+      padding: 15px 18px;
+      border: 1px solid var(--line);
+      background: var(--white);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 15px;
-      border-radius: 3px;
+      margin-bottom: 18px;
+      outline: none;
     }
 
-    #searchInput:focus {
-      outline: none;
-      border-color: var(--pink);
+    .search-box:focus {
+      border-color: var(--red);
     }
 
     .filter-row {
@@ -183,52 +441,17 @@
       gap: 12px;
     }
 
-    select {
+    .filter-row select {
       width: 100%;
       padding: 13px 14px;
-      border: 1px solid #cbd5e2;
-      background: white;
-      color: var(--text);
+      border: 1px solid var(--line);
+      background: var(--white);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 14px;
-      border-radius: 3px;
-      cursor: pointer;
+      color: var(--text);
     }
 
-    select:focus {
-      outline: none;
-      border-color: var(--pink);
-    }
-
-    /* =========================
-       RESULTS HEADER
-    ========================= */
-
-    .results-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 28px;
-    }
-
-    .results-header h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 38px;
-      font-weight: 500;
-    }
-
-    #resultCount {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================
-       ARTICLE CARDS
-    ========================= */
-
-    #articleGrid {
+    .article-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
@@ -238,76 +461,48 @@
       border: 1px solid var(--line);
       background: var(--white);
       padding: 28px;
-      display: flex;
-      flex-direction: column;
-      min-height: 330px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .article-card:hover {
-      border-color: var(--pink);
       transform: translateY(-3px);
+      border-color: var(--red);
     }
 
     .article-meta {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 11px;
       font-weight: 700;
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
 
     .article-card h3 {
       color: var(--navy);
-      font-size: 22px;
+      font-size: 21px;
       line-height: 1.35;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
-    .article-author {
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 7px;
-    }
-
-    .article-details {
+    .article-card p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 14px;
       line-height: 1.6;
     }
 
     .read-more {
       display: inline-block;
-      color: var(--pink);
+      margin-top: 18px;
+      color: var(--red);
       font-weight: 700;
       font-size: 14px;
-      margin-top: auto;
-      padding-top: 22px;
     }
 
-    /* =========================
-       NO RESULTS
-    ========================= */
-
-    #noResults {
+    .no-results {
       display: none;
-      text-align: center;
-      padding: 70px 20px;
-      border: 1px solid var(--line);
-      background: var(--light-blue);
-    }
-
-    #noResults h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    #noResults p {
       color: var(--muted);
+      padding: 30px 0;
     }
 
     /* =========================
@@ -317,7 +512,7 @@
     footer {
       background: var(--dark-blue);
       color: white;
-      padding: 55px 0;
+      padding: 60px 0;
     }
 
     .footer-grid {
@@ -328,18 +523,18 @@
 
     .footer-brand {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 34px;
+      margin-bottom: 12px;
     }
 
     footer p {
       color: #cbd5e4;
       font-size: 14px;
-      max-width: 500px;
+      max-width: 480px;
     }
 
     footer h4 {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 12px;
@@ -351,6 +546,10 @@
       color: #e5eaf2;
       font-size: 14px;
       margin-bottom: 7px;
+    }
+
+    .footer-links a:hover {
+      color: var(--red);
     }
 
     .footer-bottom {
@@ -365,18 +564,46 @@
        MOBILE
     ========================= */
 
-    @media (max-width: 950px) {
+    @media (max-width: 850px) {
 
-      #articleGrid {
+      .nav {
+        min-height: 70px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .story-grid,
+      .editor-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .features-grid,
+      .partner-grid,
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .filter-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .archive-header {
+        display: block;
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
 
       .container {
         width: 88%;
@@ -386,33 +613,51 @@
         display: none;
       }
 
-      .page-hero {
+      .logo img {
+        width: 150px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+      }
+
+      .hero-intro {
+        font-size: 17px;
+      }
+
+      .impact,
+      .story,
+      .features,
+      .partnerships,
+      .editor,
+      .archive {
         padding: 65px 0;
       }
 
-      .page-hero h1 {
-        font-size: 50px;
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
       }
 
-      .archive {
-        padding: 60px 0 75px;
-      }
-
-      #articleGrid {
-        grid-template-columns: 1fr;
+      .impact-number {
+        font-size: 42px;
       }
 
       .filter-row {
         grid-template-columns: 1fr;
       }
 
-      .results-header {
-        display: block;
+      .editor-grid {
+        gap: 30px;
       }
 
-      .results-header #resultCount {
-        display: block;
-        margin-top: 5px;
+      .editor-photo {
+        max-width: 280px;
       }
 
       .footer-grid {
@@ -420,7 +665,6 @@
         gap: 30px;
       }
     }
-
   </style>
 </head>
 
@@ -431,7 +675,6 @@
   ========================= -->
 
   <header>
-
     <div class="container nav">
 
       <a href="index.html" class="logo">
@@ -440,41 +683,354 @@
 
       <nav>
         <a href="index.html">Home</a>
-        <a href="work.html">Our Work</a>
         <a href="articles.html">Amplifying Voices</a>
         <a href="leadership.html">Leadership</a>
         <a href="reports.html">Reports</a>
-        <a href="about.html">About</a>
       </nav>
 
     </div>
-
   </header>
 
 
   <!-- =========================
-       PAGE HERO
+       HERO
   ========================= -->
 
   <main>
 
-    <section class="page-hero">
+    <section class="hero">
 
       <div class="container">
 
-        <div class="section-label">
-          Amplifying Women's Voices
+        <div class="eyebrow">
+          IEA-WE · Amplifying Voices
         </div>
 
         <h1>
-          Making research heard.
+          Turning up the volume
+          <span>for women in economics.</span>
         </h1>
 
-        <p>
-          Explore policy-relevant articles from women economists across
-          Africa, Asia and Latin America, published through leading global
-          economic platforms.
+        <p class="hero-intro">
+          Turning rigorous research by women economists into a global editorial
+          movement — 100 articles, 120 authors, 30 countries, 18M+ readers,
+          and counting.
         </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPACT
+    ========================= -->
+
+    <section class="impact">
+
+      <div class="container">
+
+        <div class="impact-grid">
+
+          <div class="impact-stat">
+            <div class="impact-number">~100</div>
+            <div class="impact-label">Policy-relevant articles</div>
+          </div>
+
+          <div class="impact-stat">
+            <div class="impact-number">120</div>
+            <div class="impact-label">Women economists featured</div>
+          </div>
+
+          <div class="impact-stat">
+            <div class="impact-number">30</div>
+            <div class="impact-label">Countries represented</div>
+          </div>
+
+          <div class="impact-stat">
+            <div class="impact-number">18M+</div>
+            <div class="impact-label">Combined audience reach</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STORY
+    ========================= -->
+
+    <section class="story">
+
+      <div class="container">
+
+        <div class="story-grid">
+
+          <div>
+
+            <div class="section-label">
+              The project
+            </div>
+
+            <h2>
+              An editorial bridge between research and the real world.
+            </h2>
+
+            <p>
+              Launched in 2023, Amplifying Voices set out to broaden who gets
+              to shape global policy conversations. It's grown from a scrappy
+              pilot into IEA-WE's primary mechanism for getting evidence in
+              front of policymakers, journalists, and the public — one
+              carefully edited, carefully placed article at a time.
+            </p>
+
+            <p>
+              Nearly every piece published features an author based in Africa,
+              Asia, or Latin America and the Caribbean — regions where women
+              economists remain structurally underrepresented in the outlets
+              that shape policy debate.
+            </p>
+
+            <p>
+              Run as a one-person editorial operation by Navika Mehta, the
+              project pairs hands-on mentoring with strategic media
+              partnerships and full-cycle publication support.
+            </p>
+
+          </div>
+
+          <div class="story-image">
+            <img src="amplifying-voices.png"
+                 alt="Amplifying Voices">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NEWSLETTER / PARTNERS / EDITOR
+    ========================= -->
+
+    <section class="features">
+
+      <div class="container">
+
+        <div class="features-grid">
+
+          <!-- Newsletter -->
+
+          <div class="feature-card">
+
+            <div class="small-label">
+              Stay connected
+            </div>
+
+            <h3>
+              Get new article alerts.
+            </h3>
+
+            <p>
+              Subscribe to the Amplifying Voices newsletter to receive alerts
+              when new articles by women economists are published.
+            </p>
+
+            <a class="feature-link"
+               href="https://ieawe.substack.com/?r=3aktt8&utm_campaign=pub-share-checklist"
+               target="_blank">
+              Subscribe →
+            </a>
+
+          </div>
+
+
+          <!-- Partnerships -->
+
+          <div class="feature-card">
+
+            <div class="small-label">
+              Global partnerships
+            </div>
+
+            <h3>
+              Bringing research to new audiences.
+            </h3>
+
+            <p>
+              Amplifying Voices works with leading international editorial
+              platforms to bring research by women economists into global
+              policy conversations.
+            </p>
+
+            <a href="#partnerships" class="feature-link">
+              Our partnerships →
+            </a>
+
+          </div>
+
+
+          <!-- Editor -->
+
+          <div class="feature-card">
+
+            <div class="small-label">
+              Meet the editor
+            </div>
+
+            <h3>
+              The person behind Amplifying Voices.
+            </h3>
+
+            <p>
+              Learn more about Navika Mehta, Strategic Communications &
+              Research Dissemination Lead at IEA.
+            </p>
+
+            <a href="#editor" class="feature-link">
+              Meet Navika →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PARTNERSHIPS
+    ========================= -->
+
+    <section class="partnerships" id="partnerships">
+
+      <div class="container">
+
+        <div class="partnerships-header">
+
+          <div class="section-label">
+            Amplifying Voices Partnerships
+          </div>
+
+          <h2>
+            Taking women's economic research to global audiences.
+          </h2>
+
+          <p class="partnerships-intro">
+            Strategic partnerships help connect women economists with the
+            platforms and audiences that shape international policy debate.
+          </p>
+
+        </div>
+
+
+        <div class="partner-grid">
+
+          <div class="partner">
+
+            <h3>Project Syndicate</h3>
+
+            <p>
+              Project Syndicate produces and delivers original, high-quality
+              commentaries to a global audience. Featuring contributions from
+              political leaders, policymakers, scholars, business leaders and
+              civic activists, it provides news media and their readers with
+              analysis and insight. Its membership includes more than 500
+              media outlets in 156 countries.
+            </p>
+
+          </div>
+
+
+          <div class="partner">
+
+            <h3>VoxEU</h3>
+
+            <p>
+              VoxEU is CEPR's policy portal, established to promote
+              research-based policy analysis and commentary by leading
+              economists. Its audience includes economists working in the
+              public sector, private sector, academia and media, as well as
+              students of economics.
+            </p>
+
+          </div>
+
+
+          <div class="partner">
+
+            <h3>VoxDev</h3>
+
+            <p>
+              VoxDev is a platform for economists, policymakers, practitioners,
+              donors, the private sector and others interested in development.
+              Expert contributors provide accessible commentary, analysis and
+              evidence on a wide range of policy challenges.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDITOR
+    ========================= -->
+
+    <section class="editor" id="editor">
+
+      <div class="container">
+
+        <div class="editor-grid">
+
+          <div class="editor-photo">
+
+            <img src="navika_photo.jpeg"
+                 alt="Navika Mehta">
+
+          </div>
+
+
+          <div>
+
+            <div class="section-label">
+              Meet the editor
+            </div>
+
+            <h2>
+              Navika Mehta
+            </h2>
+
+            <div class="editor-role">
+              Strategic Communications & Research Dissemination Lead, IEA
+            </div>
+
+            <p>
+              For any queries or suggestions about Amplifying Voices,
+              please get in touch.
+            </p>
+
+            <p>
+              <a class="editor-email"
+                 href="mailto:navika.mehta@iea-world.org">
+                navika.mehta@iea-world.org
+              </a>
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -485,27 +1041,42 @@
          ARTICLE ARCHIVE
     ========================= -->
 
-    <section class="archive">
+    <section class="archive" id="archive">
 
       <div class="container">
 
+        <div class="archive-header">
 
-        <!-- SEARCH + FILTERS -->
+          <div>
 
-        <div class="filters">
+            <div class="section-label">
+              Explore the archive
+            </div>
 
-          <div class="search-wrap">
+            <h2>
+              Amplifying Voices articles.
+            </h2>
 
-            <span class="search-icon">⌕</span>
-
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Search by article title, author, topic or publication..."
-            >
+            <p>
+              Explore articles by women economists across topics, countries
+              and global media platforms.
+            </p>
 
           </div>
 
+        </div>
+
+
+        <!-- Search and filters -->
+
+        <div class="filters">
+
+          <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="Search by article title, author or keyword..."
+          >
 
           <div class="filter-row">
 
@@ -530,34 +1101,12 @@
         </div>
 
 
-        <!-- RESULTS -->
+        <!-- Article cards -->
 
-        <div class="results-header">
+        <div id="articleGrid" class="article-grid"></div>
 
-          <h2>
-            All articles
-          </h2>
-
-          <div id="resultCount">
-            Loading articles...
-          </div>
-
-        </div>
-
-
-        <div id="articleGrid"></div>
-
-
-        <div id="noResults">
-
-          <h3>
-            No articles found.
-          </h3>
-
-          <p>
-            Try changing your search or filters.
-          </p>
-
+        <div id="noResults" class="no-results">
+          No articles match your search or filters.
         </div>
 
       </div>
@@ -584,8 +1133,7 @@
           </div>
 
           <p>
-            Strengthening the presence and influence of women in economics
-            through research, collaboration, advocacy and amplifying voices.
+            Strengthening the presence and influence of women in economics.
           </p>
 
         </div>
@@ -593,15 +1141,13 @@
 
         <div>
 
-          <h4>
-            Explore
-          </h4>
+          <h4>Explore</h4>
 
           <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="work.html">Our Work</a>
+            <a href="index.html">Our Work</a>
             <a href="articles.html">Amplifying Voices</a>
             <a href="leadership.html">Leadership</a>
+            <a href="articles.html#archive">Articles</a>
             <a href="reports.html">Reports</a>
           </div>
 
@@ -610,12 +1156,10 @@
 
         <div>
 
-          <h4>
-            IEA-WE
-          </h4>
+          <h4>IEA-WE</h4>
 
           <div class="footer-links">
-            <a href="about.html">About</a>
+            <a href="index.html#about">About</a>
             <a href="leadership.html">Advisory Board</a>
           </div>
 
@@ -633,36 +1177,68 @@
   </footer>
 
 
-  <!-- ARTICLE DATABASE -->
+  <!-- =========================
+       ARTICLE DATA
+  ========================= -->
 
   <script src="articles-data.js"></script>
 
 
-  <!-- SEARCH + FILTER SYSTEM -->
+  <!-- =========================
+       ARTICLE ARCHIVE SCRIPT
+  ========================= -->
 
   <script>
 
     const articleGrid = document.getElementById("articleGrid");
     const searchInput = document.getElementById("searchInput");
-
     const topicFilter = document.getElementById("topicFilter");
     const countryFilter = document.getElementById("countryFilter");
     const publicationFilter = document.getElementById("publicationFilter");
     const yearFilter = document.getElementById("yearFilter");
-
-    const resultCount = document.getElementById("resultCount");
     const noResults = document.getElementById("noResults");
 
 
-    /* =========================
-       CREATE FILTER OPTIONS
-    ========================= */
+    /*
+      This works with the existing articles-data.js.
 
-    function addOptions(select, values) {
+      The helper functions below allow the archive to work even if
+      some article fields are missing.
+    */
 
-      const uniqueValues = [...new Set(values)]
-        .filter(value => value !== undefined && value !== null && value !== "")
-        .sort();
+    function getField(article, possibleNames) {
+
+      for (const name of possibleNames) {
+        if (article && article[name] !== undefined && article[name] !== null) {
+          return article[name];
+        }
+      }
+
+      return "";
+    }
+
+
+    function getArray(value) {
+
+      if (Array.isArray(value)) {
+        return value;
+      }
+
+      if (typeof value === "string" && value.trim() !== "") {
+        return value.split(",").map(item => item.trim());
+      }
+
+      return [];
+    }
+
+
+    function addFilterOptions(select, values) {
+
+      const uniqueValues = [...new Set(
+        values
+          .flatMap(value => getArray(value))
+          .filter(value => value !== "")
+      )].sort();
 
       uniqueValues.forEach(value => {
 
@@ -678,87 +1254,97 @@
     }
 
 
-    addOptions(
-      topicFilter,
-      articles.map(article => article.topic)
-    );
+    function initialiseFilters() {
 
-    addOptions(
-      countryFilter,
-      articles.map(article => article.country)
-    );
+      const articles = window.articles || window.articleData || [];
 
-    addOptions(
-      publicationFilter,
-      articles.map(article => article.publication)
-    );
+      const topics = [];
+      const countries = [];
+      const publications = [];
+      const years = [];
 
-    addOptions(
-      yearFilter,
-      articles.map(article => article.year)
-    );
+      articles.forEach(article => {
+
+        topics.push(
+          getField(article, ["topic", "topics", "category"])
+        );
+
+        countries.push(
+          getField(article, ["country", "countries"])
+        );
+
+        publications.push(
+          getField(article, ["publication", "publications", "outlet"])
+        );
+
+        years.push(
+          getField(article, ["year", "date"])
+        );
+
+      });
 
 
-    /* =========================
-       DISPLAY ARTICLES
-    ========================= */
+      addFilterOptions(topicFilter, topics);
+      addFilterOptions(countryFilter, countries);
+      addFilterOptions(publicationFilter, publications);
+      addFilterOptions(yearFilter, years);
 
-    function displayArticles() {
+    }
 
-      const searchTerm =
-        searchInput.value.toLowerCase().trim();
 
-      const selectedTopic =
-        topicFilter.value;
+    function renderArticles() {
 
-      const selectedCountry =
-        countryFilter.value;
+      const articles = window.articles || window.articleData || [];
 
-      const selectedPublication =
-        publicationFilter.value;
-
-      const selectedYear =
-        yearFilter.value;
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const selectedTopic = topicFilter.value;
+      const selectedCountry = countryFilter.value;
+      const selectedPublication = publicationFilter.value;
+      const selectedYear = yearFilter.value;
 
 
       const filteredArticles = articles.filter(article => {
 
+        const title = getField(article, ["title", "name"]);
+        const author = getField(article, ["author", "authors"]);
+        const description = getField(article, ["description", "summary", "excerpt"]);
+        const topic = getField(article, ["topic", "topics", "category"]);
+        const country = getField(article, ["country", "countries"]);
+        const publication = getField(article, ["publication", "publications", "outlet"]);
+        const year = getField(article, ["year", "date"]);
+
+
         const searchableText = [
-
-          article.title,
-          article.author,
-          article.country,
-          article.topic,
-          article.publication,
-          article.year
-
+          title,
+          author,
+          description,
+          topic,
+          country,
+          publication
         ]
-        .join(" ")
-        .toLowerCase();
+          .flatMap(value => getArray(value))
+          .join(" ")
+          .toLowerCase();
 
 
         const matchesSearch =
-          searchableText.includes(searchTerm);
-
+          !searchTerm || searchableText.includes(searchTerm);
 
         const matchesTopic =
           !selectedTopic ||
-          article.topic === selectedTopic;
-
+          getArray(topic).includes(selectedTopic);
 
         const matchesCountry =
           !selectedCountry ||
-          article.country === selectedCountry;
-
+          getArray(country).includes(selectedCountry);
 
         const matchesPublication =
           !selectedPublication ||
-          article.publication === selectedPublication;
-
+          getArray(publication).includes(selectedPublication);
 
         const matchesYear =
           !selectedYear ||
-          String(article.year) === String(selectedYear);
+          String(year).includes(selectedYear);
 
 
         return (
@@ -772,77 +1358,69 @@
       });
 
 
-      /* =========================
-         CLEAR CURRENT RESULTS
-      ========================= */
-
       articleGrid.innerHTML = "";
 
 
-      /* =========================
-         DISPLAY RESULT COUNT
-      ========================= */
-
-      resultCount.textContent =
-        filteredArticles.length +
-        (filteredArticles.length === 1
-          ? " article"
-          : " articles");
-
-
-      /* =========================
-         NO RESULTS
-      ========================= */
-
-      if (filteredArticles.length === 0) {
-
-        noResults.style.display = "block";
-
-        return;
-
-      }
-
-      noResults.style.display = "none";
-
-
-      /* =========================
-         CREATE ARTICLE CARDS
-      ========================= */
-
       filteredArticles.forEach(article => {
 
-        const card =
-          document.createElement("article");
+        const title = getField(article, ["title", "name"]) || "Untitled article";
+        const author = getField(article, ["author", "authors"]) || "";
+        const description = getField(article, ["description", "summary", "excerpt"]) || "";
+        const topic = getField(article, ["topic", "topics", "category"]) || "";
+        const publication = getField(article, ["publication", "publications", "outlet"]) || "";
+        const year = getField(article, ["year", "date"]) || "";
+        const url = getField(article, ["url", "link", "articleUrl"]);
+
+
+        const card = document.createElement("article");
 
         card.className = "article-card";
+
+
+        const metaParts = [];
+
+        if (topic) {
+          metaParts.push(
+            getArray(topic).join(" · ")
+          );
+        }
+
+        if (publication) {
+          metaParts.push(
+            getArray(publication).join(" · ")
+          );
+        }
+
+        if (year) {
+          metaParts.push(String(year));
+        }
 
 
         card.innerHTML = `
 
           <div class="article-meta">
-            ${article.topic} · ${article.year}
+            ${metaParts.join(" · ")}
           </div>
 
           <h3>
-            ${article.title}
+            ${title}
           </h3>
 
-          <div class="article-author">
-            ${article.author}
-          </div>
+          <p>
+            ${author}
+          </p>
 
-          <div class="article-details">
-            ${article.country} · ${article.publication}
-          </div>
+          ${
+            description
+              ? `<p style="margin-top:10px;">${description}</p>`
+              : ""
+          }
 
-          <a
-            href="${article.url}"
-            class="read-more"
-            target="_blank"
-            rel="noopener"
-          >
-            Read article →
-          </a>
+          ${
+            url
+              ? `<a href="${url}" target="_blank" class="read-more">Read article →</a>`
+              : ""
+          }
 
         `;
 
@@ -851,44 +1429,33 @@
 
       });
 
+
+      noResults.style.display =
+        filteredArticles.length === 0
+          ? "block"
+          : "none";
+
     }
 
 
-    /* =========================
-       FILTER EVENTS
-    ========================= */
-
-    searchInput.addEventListener(
-      "input",
-      displayArticles
-    );
-
-    topicFilter.addEventListener(
-      "change",
-      displayArticles
-    );
-
-    countryFilter.addEventListener(
-      "change",
-      displayArticles
-    );
-
-    publicationFilter.addEventListener(
-      "change",
-      displayArticles
-    );
-
-    yearFilter.addEventListener(
-      "change",
-      displayArticles
-    );
+    searchInput.addEventListener("input", renderArticles);
+    topicFilter.addEventListener("change", renderArticles);
+    countryFilter.addEventListener("change", renderArticles);
+    publicationFilter.addEventListener("change", renderArticles);
+    yearFilter.addEventListener("change", renderArticles);
 
 
-    /* =========================
-       INITIAL DISPLAY
-    ========================= */
+    /*
+      Give the existing article data a moment to load,
+      then initialise the archive.
+    */
 
-    displayArticles();
+    document.addEventListener("DOMContentLoaded", () => {
+
+      initialiseFilters();
+      renderArticles();
+
+    });
 
   </script>
 
