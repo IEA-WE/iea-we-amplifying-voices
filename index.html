@@ -628,91 +628,6 @@
     }
 
     /* =========================
-       LATEST ARTICLES
-    ========================= */
-
-    .articles {
-      padding: 95px 0;
-      background: var(--white);
-    }
-
-    .article-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-      margin-bottom: 45px;
-    }
-
-    .article-header h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: clamp(42px, 5vw, 60px);
-      font-weight: 500;
-      line-height: 1.1;
-    }
-
-    .article-header a {
-      color: var(--red);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .article-card {
-      background: var(--light-blue);
-      overflow: hidden;
-    }
-
-    .article-image {
-      height: 210px;
-      background: #d7e2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      font-size: 14px;
-    }
-
-    .article-content {
-      padding: 28px;
-    }
-
-    .article-meta {
-      color: var(--red);
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-    }
-
-    .article-card h3 {
-      color: var(--navy);
-      font-size: 22px;
-      line-height: 1.35;
-      margin-bottom: 15px;
-    }
-
-    .article-card p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .read-more {
-      display: inline-block;
-      margin-top: 20px;
-      color: var(--red);
-      font-weight: 700;
-    }
-
-    /* =========================
        REPORTS
     ========================= */
 
@@ -813,7 +728,734 @@
       color: #aebbd0;
       font-size: 12px;
     }
+<!-- =========================================
+     LATEST FROM IEA-WE
+========================================= -->
 
+<style>
+
+.latest-section {
+  background:
+    radial-gradient(circle at 8% 20%, rgba(245, 217, 222, 0.55), transparent 24%),
+    radial-gradient(circle at 92% 80%, rgba(238, 244, 252, 0.9), transparent 28%),
+    var(--off-white);
+  padding: 105px 0 90px;
+  overflow: hidden;
+  position: relative;
+}
+
+.latest-section::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #f6dfe3;
+  opacity: 0.35;
+  top: -170px;
+  right: 10%;
+}
+
+.latest-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.latest-heading {
+  max-width: 780px;
+}
+
+.latest-heading .section-label {
+  margin-bottom: 20px;
+}
+
+.latest-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--navy);
+  font-size: clamp(46px, 6vw, 78px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -2.5px;
+}
+
+.latest-heading h2 span {
+  color: var(--red);
+}
+
+.latest-intro {
+  max-width: 360px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-bottom: 7px;
+}
+
+
+/* MOVING TRACK */
+
+.latest-window {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.latest-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: latestScroll 42s linear infinite;
+  padding-left: 5vw;
+}
+
+.latest-window:hover .latest-track {
+  animation-play-state: paused;
+}
+
+@keyframes latestScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* CARDS */
+
+.latest-card {
+  width: 390px;
+  min-height: 395px;
+  background: var(--white);
+  border: 1px solid rgba(11, 53, 104, 0.10);
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 35px rgba(11, 53, 104, 0.07);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.latest-card:hover {
+  transform: translateY(-8px) rotate(-0.4deg);
+  box-shadow: 0 20px 45px rgba(11, 53, 104, 0.13);
+}
+
+
+/* Decorative circle */
+
+.latest-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f6e1e5;
+  right: -60px;
+  top: -60px;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.latest-card:nth-child(even)::after {
+  background: #e8f0fa;
+}
+
+.latest-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.latest-meta {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.latest-icon {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.latest-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--navy);
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 500;
+  margin-bottom: 18px;
+  max-width: 320px;
+}
+
+.latest-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+
+  max-width: 330px;
+}
+
+.latest-link {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.latest-link::after {
+  content: " →";
+  transition: margin-left 0.2s ease;
+}
+
+.latest-card:hover .latest-link::after {
+  margin-left: 5px;
+}
+
+
+/* VIDEO CARD */
+
+.latest-video {
+  background: var(--navy);
+  color: white;
+}
+
+.latest-video::after {
+  background: #d83b52;
+  opacity: 0.30;
+}
+
+.latest-video .latest-meta {
+  color: #ffb1bd;
+}
+
+.latest-video h3 {
+  color: white;
+}
+
+.latest-video p {
+  color: #d7e0ed;
+}
+
+.video-play {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 21px;
+  margin-top: 28px;
+  transition: transform 0.25s ease;
+}
+
+.latest-card:hover .video-play {
+  transform: scale(1.08);
+}
+
+
+/* BOTTOM NOTE */
+
+.latest-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.latest-note span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .latest-section {
+    padding: 75px 0;
+  }
+
+  .latest-top {
+    display: block;
+  }
+
+  .latest-intro {
+    margin-top: 20px;
+    max-width: 600px;
+  }
+
+  .latest-card {
+    width: 320px;
+    min-height: 370px;
+    padding: 25px;
+  }
+
+  .latest-card h3 {
+    font-size: 27px;
+  }
+
+  .latest-track {
+    gap: 18px;
+    animation-duration: 35s;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .latest-section {
+    padding: 65px 0;
+  }
+
+  .latest-heading h2 {
+    font-size: 46px;
+    letter-spacing: -1.5px;
+  }
+
+  .latest-card {
+    width: 290px;
+    min-height: 350px;
+  }
+
+  .latest-card h3 {
+    font-size: 25px;
+  }
+
+}
+
+</style>
+
+
+<section class="latest-section">
+
+  <div class="container">
+
+    <div class="latest-top">
+
+      <div class="latest-heading">
+
+        <div class="section-label">
+          Latest from IEA-WE
+        </div>
+
+        <h2>
+          Research, conversations
+          <span>& moments.</span>
+        </h2>
+
+      </div>
+
+      <p class="latest-intro">
+        Catch up with the latest research, conversations and moments
+        shaping the IEA-WE community.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- MOVING CARDS -->
+
+  <div class="latest-window">
+
+    <div class="latest-track">
+
+
+      <!-- CARD 1 — CONGRESS VIDEO -->
+
+      <article class="latest-card latest-video">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🎥 IEA Congress · June 2026
+          </div>
+
+          <h3>
+            Women in Economics:
+            Evidence, Interventions & Change
+          </h3>
+
+          <p>
+            Watch the IEA-WE presentation from the International Economic
+            Association World Congress in Serbia, bringing together the
+            initiative's research on evidence, interventions and change.
+          </p>
+
+        </div>
+
+        <div>
+
+          <a
+            href="https://youtu.be/aimEh15fkBM"
+            target="_blank"
+            rel="noopener"
+            class="video-play"
+            aria-label="Watch the IEA-WE presentation"
+          >
+            ▶
+          </a>
+
+          <a
+            href="https://youtu.be/aimEh15fkBM"
+            target="_blank"
+            rel="noopener"
+            class="latest-link"
+            style="color:#ffb1bd;"
+          >
+            Watch the presentation
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 2 — VOXEU -->
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            📰 Latest article · VoxEU
+          </div>
+
+          <h3>
+            High-speed internet and early childhood development
+          </h3>
+
+          <p>
+            New research examines the causal effects of a countrywide
+            high-speed internet programme on early childhood development
+            in Uruguay.
+          </p>
+
+        </div>
+
+        <a
+          href="https://cepr.org/voxeu/columns/high-speed-internet-and-early-childhood-development-causal-evidence-countrywide"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Read the article
+        </a>
+
+      </article>
+
+
+      <!-- CARD 3 — VOXDEV -->
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            ✦ VoxDev · IEA-WE
+          </div>
+
+          <h3>
+            Bridging the gap for women in export-led growth
+          </h3>
+
+          <p>
+            Research from India shows that export-oriented factories
+            employ more women and have smaller gender wage gaps — but
+            these gains weaken as production becomes more capital-intensive.
+          </p>
+
+        </div>
+
+        <a
+          href="https://voxdev.org/topic/labour-markets/bridging-gap-women-export-led-growth"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Read the VoxDev article
+        </a>
+
+      </article>
+
+
+      <!-- CARD 4 — PODCAST -->
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🎙 Podcast · IMF
+          </div>
+
+          <h3>
+            The Power of Local
+          </h3>
+
+          <p>
+            Listen to Marcela Eslava discuss local economic development
+            and the importance of understanding economics close to home.
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.imf.org/en/news/podcasts/all-podcasts/2024/11/29/power-of-local-marcela-eslava"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Listen to the podcast
+        </a>
+
+      </article>
+
+
+      <!-- CARD 5 — RESEARCH -->
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🔬 Research · IEA-WE
+          </div>
+
+          <h3>
+            Evidence on women in economics
+          </h3>
+
+          <p>
+            Six country studies across Argentina, Colombia, Ghana, India,
+            Mexico and South Africa are building a stronger evidence base
+            on women's participation and advancement in economics.
+          </p>
+
+        </div>
+
+        <a
+          href="reports.html"
+          class="latest-link"
+        >
+          Explore the research
+        </a>
+
+      </article>
+
+
+      <!-- DUPLICATE CARDS FOR SEAMLESS LOOP -->
+
+      <article class="latest-card latest-video">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🎥 IEA Congress · June 2026
+          </div>
+
+          <h3>
+            Women in Economics:
+            Evidence, Interventions & Change
+          </h3>
+
+          <p>
+            Watch the IEA-WE presentation from the International Economic
+            Association World Congress in Serbia.
+          </p>
+
+        </div>
+
+        <div>
+
+          <a
+            href="https://youtu.be/aimEh15fkBM"
+            target="_blank"
+            rel="noopener"
+            class="video-play"
+            aria-label="Watch the IEA-WE presentation"
+          >
+            ▶
+          </a>
+
+          <a
+            href="https://youtu.be/aimEh15fkBM"
+            target="_blank"
+            rel="noopener"
+            class="latest-link"
+            style="color:#ffb1bd;"
+          >
+            Watch the presentation
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            📰 Latest article · VoxEU
+          </div>
+
+          <h3>
+            High-speed internet and early childhood development
+          </h3>
+
+          <p>
+            New research examines the causal effects of a countrywide
+            high-speed internet programme on early childhood development.
+          </p>
+
+        </div>
+
+        <a
+          href="https://cepr.org/voxeu/columns/high-speed-internet-and-early-childhood-development-causal-evidence-countrywide"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Read the article
+        </a>
+
+      </article>
+
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            ✦ VoxDev · IEA-WE
+          </div>
+
+          <h3>
+            Bridging the gap for women in export-led growth
+          </h3>
+
+          <p>
+            Research from India examines how export-led growth can create
+            opportunities for women — and where those gains fall short.
+          </p>
+
+        </div>
+
+        <a
+          href="https://voxdev.org/topic/labour-markets/bridging-gap-women-export-led-growth"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Read the VoxDev article
+        </a>
+
+      </article>
+
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🎙 Podcast · IMF
+          </div>
+
+          <h3>
+            The Power of Local
+          </h3>
+
+          <p>
+            Listen to Marcela Eslava discuss local economic development
+            and the importance of understanding economics close to home.
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.imf.org/en/news/podcasts/all-podcasts/2024/11/29/power-of-local-marcela-eslava"
+          target="_blank"
+          rel="noopener"
+          class="latest-link"
+        >
+          Listen to the podcast
+        </a>
+
+      </article>
+
+
+      <article class="latest-card">
+
+        <div class="latest-card-content">
+
+          <div class="latest-meta">
+            🔬 Research · IEA-WE
+          </div>
+
+          <h3>
+            Evidence on women in economics
+          </h3>
+
+          <p>
+            Six country studies across Argentina, Colombia, Ghana, India,
+            Mexico and South Africa are building a stronger evidence base
+            on women's participation and advancement in economics.
+          </p>
+
+        </div>
+
+        <a
+          href="reports.html"
+          class="latest-link"
+        >
+          Explore the research
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="latest-note">
+    <span>Hover</span> to pause · <span>Click</span> to explore
+  </div>
+
+</section>
     /* =========================
        MOBILE
     ========================= */
