@@ -50,6 +50,7 @@
       margin: 0 auto;
     }
 
+
     /* =========================
        NAVIGATION
     ========================= */
@@ -93,6 +94,7 @@
       color: var(--red);
     }
 
+
     /* =========================
        HERO
     ========================= */
@@ -134,6 +136,7 @@
       color: var(--muted);
     }
 
+
     /* =========================
        IMPACT STATS
     ========================= */
@@ -168,18 +171,19 @@
       font-size: 14px;
     }
 
+
     /* =========================
        STORY
     ========================= */
 
     .story {
-      padding: 100px 0;
+      padding: 100px 0 55px;
       background: var(--white);
     }
 
     .story-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.9fr 1.1fr;
       gap: 75px;
       align-items: center;
     }
@@ -210,20 +214,67 @@
       margin-bottom: 20px;
     }
 
-    .story-image {
-      background: var(--light-blue);
+    /*
+      Main project image.
+      Much larger than before so it becomes a visual anchor.
+    */
+
+    .story-main-image {
+      width: 100%;
       overflow: hidden;
+      background: var(--light-blue);
     }
 
-    .story-image img {
+    .story-main-image img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .story-image + .story-image {
-      margin-top: 25px;
+
+    /* =========================
+       LARGE WRITERS IMAGE
+    ========================= */
+
+    .writers-feature {
+      padding: 55px 0 100px;
+      background: var(--white);
     }
+
+    .writers-feature-image {
+      width: 100%;
+      overflow: hidden;
+      background: var(--light-blue);
+    }
+
+    .writers-feature-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .writers-caption {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 25px;
+      align-items: start;
+    }
+
+    .writers-caption-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .writers-caption p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
 
     /* =========================
        FEATURE CARDS
@@ -279,6 +330,7 @@
       margin-bottom: 12px;
     }
 
+
     /* =========================
        PARTNERSHIPS
     ========================= */
@@ -331,41 +383,43 @@
       line-height: 1.7;
     }
 
+
     /* =========================
        EDITOR
     ========================= */
 
     .editor {
       background: var(--off-white);
-      padding: 90px 0;
+      padding: 100px 0;
     }
 
     .editor-grid {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 60px;
+      grid-template-columns: 460px 1fr;
+      gap: 80px;
       align-items: center;
-      max-width: 900px;
     }
+
+    /*
+      Larger editor portrait.
+    */
 
     .editor-photo {
       width: 100%;
-      aspect-ratio: 1 / 1;
       overflow: hidden;
       background: var(--light-blue);
     }
 
     .editor-photo img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
     .editor h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: 46px;
+      font-size: 52px;
       line-height: 1.1;
       margin-bottom: 10px;
     }
@@ -394,6 +448,7 @@
       color: var(--red);
       font-weight: 600;
     }
+
 
     /* =========================
        ARCHIVE
@@ -517,6 +572,7 @@
       padding: 30px 0;
     }
 
+
     /* =========================
        FOOTER
     ========================= */
@@ -572,6 +628,7 @@
       font-size: 12px;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
@@ -596,6 +653,11 @@
         gap: 40px;
       }
 
+      .writers-caption {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
       .features-grid,
       .partner-grid,
       .article-grid {
@@ -613,7 +675,12 @@
       .archive-header {
         display: block;
       }
+
+      .editor-photo {
+        max-width: 500px;
+      }
     }
+
 
     @media (max-width: 600px) {
 
@@ -644,6 +711,7 @@
 
       .impact,
       .story,
+      .writers-feature,
       .features,
       .partnerships,
       .editor,
@@ -668,8 +736,8 @@
         gap: 30px;
       }
 
-      .editor-photo {
-        max-width: 280px;
+      .editor h2 {
+        font-size: 42px;
       }
 
       .footer-grid {
@@ -679,6 +747,7 @@
     }
   </style>
 </head>
+
 
 <body>
 
@@ -814,17 +883,12 @@
 
           </div>
 
-          <div>
+          <div class="story-main-image">
 
-            <div class="story-image">
-              <img src="amplifying_voices_main.png"
-                   alt="Amplifying Voices">
-            </div>
-
-            <div class="story-image">
-              <img src="writers_photo.jpg"
-                   alt="Women economists and contributors to Amplifying Voices">
-            </div>
+            <img
+              src="amplifying_voices_main.png"
+              alt="Amplifying Voices project"
+            >
 
           </div>
 
@@ -836,7 +900,44 @@
 
 
     <!-- =========================
-         NEWSLETTER / PARTNERS / EDITOR
+         WRITERS PHOTO
+    ========================= -->
+
+    <section class="writers-feature">
+
+      <div class="container">
+
+        <div class="writers-feature-image">
+
+          <img
+            src="writers_photo.jpg"
+            alt="Women economists and contributors to Amplifying Voices"
+          >
+
+        </div>
+
+        <div class="writers-caption">
+
+          <div class="writers-caption-label">
+            The people behind the project
+          </div>
+
+          <p>
+            Amplifying Voices brings together women economists from across
+            Africa, Asia, and Latin America and the Caribbean, helping their
+            research reach the audiences and platforms shaping global economic
+            debate.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
     ========================= -->
 
     <section class="features">
@@ -844,8 +945,6 @@
       <div class="container">
 
         <div class="features-grid">
-
-          <!-- Newsletter -->
 
           <div class="feature-card">
 
@@ -862,17 +961,17 @@
               when new articles by women economists are published.
             </p>
 
-            <a class="feature-link"
-               href="https://ieawe.substack.com/?r=3aktt8&utm_campaign=pub-share-checklist"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="feature-link"
+              href="https://ieawe.substack.com/?r=3aktt8&utm_campaign=pub-share-checklist"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Subscribe →
             </a>
 
           </div>
 
-
-          <!-- Partnerships -->
 
           <div class="feature-card">
 
@@ -896,8 +995,6 @@
 
           </div>
 
-
-          <!-- Editor -->
 
           <div class="feature-card">
 
@@ -1018,8 +1115,10 @@
 
           <div class="editor-photo">
 
-            <img src="navika_photo.jpeg"
-                 alt="Navika Mehta">
+            <img
+              src="navika_photo.jpeg"
+              alt="Navika Mehta"
+            >
 
           </div>
 
@@ -1051,8 +1150,10 @@
             </p>
 
             <p>
-              <a class="editor-email"
-                 href="mailto:navika.mehta@iea-world.org">
+              <a
+                class="editor-email"
+                href="mailto:navika.mehta@iea-world.org"
+              >
                 navika.mehta@iea-world.org
               </a>
             </p>
@@ -1096,8 +1197,6 @@
         </div>
 
 
-        <!-- Search and filters -->
-
         <div class="filters">
 
           <input
@@ -1129,8 +1228,6 @@
 
         </div>
 
-
-        <!-- Article cards -->
 
         <div id="articleGrid" class="article-grid"></div>
 
@@ -1228,16 +1325,10 @@
     const noResults = document.getElementById("noResults");
 
 
-    /*
-      This works with the existing articles-data.js.
-
-      The helper functions below allow the archive to work even if
-      some article fields are missing.
-    */
-
     function getField(article, possibleNames) {
 
       for (const name of possibleNames) {
+
         if (
           article &&
           article[name] !== undefined &&
@@ -1245,6 +1336,7 @@
         ) {
           return article[name];
         }
+
       }
 
       return "";
@@ -1289,7 +1381,10 @@
 
     function initialiseFilters() {
 
-      const articles = window.articles || window.articleData || [];
+      const articles =
+        window.articles ||
+        window.articleData ||
+        [];
 
       const topics = [];
       const countries = [];
@@ -1327,9 +1422,14 @@
 
     function renderArticles() {
 
-      const articles = window.articles || window.articleData || [];
+      const articles =
+        window.articles ||
+        window.articleData ||
+        [];
 
-      const searchTerm = searchInput.value.toLowerCase().trim();
+      const searchTerm =
+        searchInput.value.toLowerCase().trim();
+
       const selectedTopic = topicFilter.value;
       const selectedCountry = countryFilter.value;
       const selectedPublication = publicationFilter.value;
@@ -1338,32 +1438,41 @@
 
       const filteredArticles = articles.filter(article => {
 
-        const title = getField(article, ["title", "name"]);
-        const author = getField(article, ["author", "authors"]);
-        const description = getField(
-          article,
-          ["description", "summary", "excerpt"]
-        );
+        const title =
+          getField(article, ["title", "name"]);
 
-        const topic = getField(
-          article,
-          ["topic", "topics", "category"]
-        );
+        const author =
+          getField(article, ["author", "authors"]);
 
-        const country = getField(
-          article,
-          ["country", "countries"]
-        );
+        const description =
+          getField(
+            article,
+            ["description", "summary", "excerpt"]
+          );
 
-        const publication = getField(
-          article,
-          ["publication", "publications", "outlet"]
-        );
+        const topic =
+          getField(
+            article,
+            ["topic", "topics", "category"]
+          );
 
-        const year = getField(
-          article,
-          ["year", "date"]
-        );
+        const country =
+          getField(
+            article,
+            ["country", "countries"]
+          );
+
+        const publication =
+          getField(
+            article,
+            ["publication", "publications", "outlet"]
+          );
+
+        const year =
+          getField(
+            article,
+            ["year", "date"]
+          );
 
 
         const searchableText = [
@@ -1455,7 +1564,8 @@
           );
 
 
-        const card = document.createElement("article");
+        const card =
+          document.createElement("article");
 
         card.className = "article-card";
 
@@ -1463,19 +1573,27 @@
         const metaParts = [];
 
         if (topic) {
+
           metaParts.push(
             getArray(topic).join(" · ")
           );
+
         }
 
         if (publication) {
+
           metaParts.push(
             getArray(publication).join(" · ")
           );
+
         }
 
         if (year) {
-          metaParts.push(String(year));
+
+          metaParts.push(
+            String(year)
+          );
+
         }
 
 
@@ -1553,11 +1671,6 @@
       renderArticles
     );
 
-
-    /*
-      Give the existing article data a moment to load,
-      then initialise the archive.
-    */
 
     document.addEventListener(
       "DOMContentLoaded",
