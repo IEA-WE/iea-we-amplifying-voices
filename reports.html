@@ -12,8 +12,11 @@
     :root {
       --navy: #0b3568;
       --dark-blue: #102b52;
-      --pink: #df5b78;
+      --blue: #1557a6;
+      --red: #c92f45;
+      --red-dark: #a92539;
       --light-blue: #eef4fc;
+      --off-white: #faf9f5;
       --white: #ffffff;
       --text: #17263b;
       --muted: #536174;
@@ -47,6 +50,7 @@
       margin: 0 auto;
     }
 
+
     /* =========================
        NAVIGATION
     ========================= */
@@ -68,7 +72,7 @@
     }
 
     .logo img {
-      width: 145px;
+      width: 175px;
       height: auto;
       display: block;
     }
@@ -76,32 +80,81 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 34px;
+      gap: 30px;
     }
 
     nav a {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: var(--text);
       transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: var(--pink);
+      color: var(--red);
     }
 
+
     /* =========================
-       PAGE HERO
+       HERO
     ========================= */
 
-    .page-hero {
-      padding: 90px 0 80px;
+    .hero {
       background: var(--white);
+      padding: 95px 0 85px;
       border-bottom: 1px solid var(--line);
     }
 
+    .eyebrow {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -4px;
+      max-width: 950px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero-intro {
+      max-width: 850px;
+      font-size: 21px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+
+    /* =========================
+       RESEARCH OVERVIEW
+    ========================= */
+
+    .overview {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
     .section-label {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 2.5px;
       font-size: 13px;
@@ -109,208 +162,433 @@
       margin-bottom: 18px;
     }
 
-    .page-hero h1 {
+    .overview h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(52px, 7vw, 86px);
-      line-height: 1.05;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.1;
       font-weight: 500;
-      letter-spacing: -2px;
-      max-width: 900px;
-      margin-bottom: 25px;
+      letter-spacing: -1.5px;
     }
 
-    .page-hero p {
-      max-width: 780px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       RESEARCH INTRO
-    ========================= */
-
-    .research-intro {
-      padding: 75px 0;
-      background: var(--light-blue);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .intro-grid h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 45px;
-      line-height: 1.15;
-      font-weight: 500;
-    }
-
-    .intro-grid p {
+    .overview-copy p {
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 18px;
+      line-height: 1.85;
+      margin-bottom: 20px;
     }
 
-    /* =========================
-       RESEARCH COLLECTION
-    ========================= */
-
-    .research {
-      padding: 90px 0 105px;
-      background: var(--white);
+    .research-components {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
     }
 
-    .research-heading {
-      margin-bottom: 45px;
-    }
-
-    .research-heading h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 48px;
-      line-height: 1.15;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .research-heading p {
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    /* =========================
-       FILTERS
-    ========================= */
-
-    .filters {
-      background: var(--light-blue);
-      padding: 25px;
-      margin-bottom: 45px;
-      border: 1px solid var(--line);
-    }
-
-    .filter-row {
+    .component {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: 45px 1fr;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .search-box,
-    .filter-select {
-      width: 100%;
-      padding: 13px 15px;
-      border: 1px solid #cbd5e2;
-      background: white;
-      color: var(--text);
-      font-family: "DM Sans", Arial, sans-serif;
+    .component-number {
+      color: var(--red);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 25px;
+    }
+
+    .component h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .component p {
+      color: var(--muted);
       font-size: 14px;
-      border-radius: 3px;
+      line-height: 1.65;
     }
 
-    .search-box:focus,
-    .filter-select:focus {
-      outline: none;
-      border-color: var(--pink);
-    }
 
     /* =========================
-       REPORT CARDS
+       RESEARCH STATS
     ========================= */
 
-    .report-list {
+    .stats {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 65px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .stat {
+      border-top: 1px solid #7285a2;
+      padding-top: 20px;
+    }
+
+    .stat-number {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--white);
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      color: #e4eaf2;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       EVIDENCE PAPERS
+    ========================= */
+
+    .evidence {
+      padding: 100px 0;
+      background: var(--light-blue);
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 62px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .paper-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
-    .report-card {
-      border: 1px solid var(--line);
-      padding: 32px;
+    .paper-card {
       background: var(--white);
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      border-top: 4px solid var(--red);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
     }
 
-    .report-card:hover {
-      border-color: var(--pink);
-      transform: translateY(-3px);
-    }
-
-    .report-meta {
-      color: var(--pink);
+    .paper-country {
+      color: var(--red);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 11px;
+      letter-spacing: 1.8px;
+      font-size: 12px;
       font-weight: 700;
       margin-bottom: 13px;
     }
 
-    .report-card h3 {
+    .paper-card h3 {
       color: var(--navy);
-      font-size: 23px;
-      line-height: 1.35;
-      margin-bottom: 14px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 12px;
     }
 
-    .report-card p {
+    .paper-date {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .paper-authors {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .paper-authors a {
+      color: var(--red);
+    }
+
+    .paper-authors a:hover {
+      color: var(--red-dark);
+    }
+
+    .paper-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+      margin-bottom: 25px;
+    }
+
+    .paper-link {
+      display: inline-block;
+      color: var(--red);
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    .paper-link:hover {
+      color: var(--red-dark);
+    }
+
+
+    /* =========================
+       DISSEMINATION
+    ========================= */
+
+    .dissemination {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .dissemination-card {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .dissemination-label {
+      color: #f1a6b2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .dissemination-card h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(38px, 4vw, 52px);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+
+    .dissemination-copy p {
+      color: #dce5f0;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .dissemination-link {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--red);
+      color: var(--white);
+      padding: 13px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .dissemination-link:hover {
+      background: var(--red-dark);
+    }
+
+
+    /* =========================
+       QUALITATIVE RESEARCH
+    ========================= */
+
+    .qualitative {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .qualitative-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .qualitative h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(40px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .qualitative-intro {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .qualitative-copy > p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .qual-lead {
+      border-left: 4px solid var(--red);
+      padding: 5px 0 5px 22px;
+      margin-bottom: 30px;
+    }
+
+    .qual-lead strong {
+      color: var(--navy);
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .qual-lead span {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .qual-facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .qual-fact {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 20px;
+    }
+
+    .qual-fact-number {
+      color: var(--red);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .qual-fact-label {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .qual-status {
+      margin-top: 30px;
+      background: var(--light-blue);
+      padding: 24px;
+    }
+
+    .qual-status h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .qual-status p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.7;
     }
 
-    .report-link {
-      display: inline-block;
-      color: var(--pink);
-      font-weight: 700;
-      margin-top: 20px;
-      font-size: 14px;
-    }
 
     /* =========================
-       RESEARCH AREAS
+       INTERVENTION STUDIES
     ========================= */
 
-    .research-areas {
-      background: var(--dark-blue);
-      color: white;
-      padding: 80px 0;
+    .interventions {
+      padding: 100px 0;
+      background: var(--white);
     }
 
-    .research-areas h2 {
+    .intervention-intro {
+      max-width: 800px;
+      margin-bottom: 45px;
+    }
+
+    .intervention-intro h2 {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 45px;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1.1;
       font-weight: 500;
-      margin-bottom: 35px;
+      margin-bottom: 20px;
     }
 
-    .areas-grid {
+    .intervention-intro p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .coming-soon {
+      background: var(--light-blue);
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--red);
+    }
+
+    .coming-soon strong {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .coming-soon p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .intervention-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 14px;
     }
 
-    .area {
-      border-top: 1px solid #7185a4;
-      padding-top: 20px;
+    .intervention-item {
+      border: 1px solid var(--line);
+      padding: 20px 22px;
+      background: var(--white);
     }
 
-    .area h3 {
-      color: var(--pink);
-      font-size: 18px;
-      margin-bottom: 8px;
+    .intervention-item span {
+      display: block;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
-    .area p {
-      color: #dfe6ef;
+    .intervention-item p {
+      color: var(--navy);
       font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.5;
+      font-weight: 600;
     }
+
 
     /* =========================
        FOOTER
@@ -319,7 +597,7 @@
     footer {
       background: var(--dark-blue);
       color: white;
-      padding: 55px 0;
+      padding: 60px 0;
     }
 
     .footer-grid {
@@ -330,18 +608,18 @@
 
     .footer-brand {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 34px;
+      margin-bottom: 12px;
     }
 
     footer p {
       color: #cbd5e4;
       font-size: 14px;
-      max-width: 500px;
+      max-width: 480px;
     }
 
     footer h4 {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 12px;
@@ -355,6 +633,10 @@
       margin-bottom: 7px;
     }
 
+    .footer-links a:hover {
+      color: var(--red);
+    }
+
     .footer-bottom {
       border-top: 1px solid #385171;
       margin-top: 45px;
@@ -363,11 +645,16 @@
       font-size: 12px;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
 
     @media (max-width: 850px) {
+
+      .nav {
+        min-height: 70px;
+      }
 
       nav {
         gap: 15px;
@@ -377,28 +664,26 @@
         font-size: 12px;
       }
 
-      .intro-grid {
+      .overview-grid,
+      .qualitative-grid,
+      .dissemination-card {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
       }
 
-      .filter-row {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .report-list {
+      .paper-grid {
         grid-template-columns: 1fr;
       }
 
-      .areas-grid {
-        grid-template-columns: 1fr 1fr;
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .intervention-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+
 
     @media (max-width: 600px) {
 
@@ -410,28 +695,65 @@
         display: none;
       }
 
-      .page-hero {
-        padding: 65px 0;
+      .logo img {
+        width: 150px;
       }
 
-      .page-hero h1 {
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
         font-size: 50px;
+        letter-spacing: -2px;
       }
 
-      .research,
-      .research-intro,
-      .research-areas {
+      .hero-intro {
+        font-size: 17px;
+      }
+
+      .overview,
+      .evidence,
+      .dissemination,
+      .qualitative,
+      .interventions {
         padding: 65px 0;
       }
 
-      .filter-row,
-      .areas-grid {
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+      }
+
+      .stat-number {
+        font-size: 40px;
+      }
+
+      .paper-card {
+        padding: 28px;
+        min-height: 0;
+      }
+
+      .dissemination-card {
+        padding: 35px 28px;
+      }
+
+      .qual-facts {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .intervention-grid {
         grid-template-columns: 1fr;
       }
-    }
 
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
   </style>
 </head>
+
 
 <body>
 
@@ -440,7 +762,6 @@
   ========================= -->
 
   <header>
-
     <div class="container nav">
 
       <a href="index.html" class="logo">
@@ -449,40 +770,39 @@
 
       <nav>
         <a href="index.html">Home</a>
-        <a href="work.html">Our Work</a>
         <a href="articles.html">Amplifying Voices</a>
         <a href="leadership.html">Leadership</a>
         <a href="reports.html">Reports</a>
-        <a href="about.html">About</a>
       </nav>
 
     </div>
-
   </header>
 
 
   <!-- =========================
-       PAGE HERO
+       HERO
   ========================= -->
 
   <main>
 
-    <section class="page-hero">
+    <section class="hero">
 
       <div class="container">
 
-        <div class="section-label">
-          Research & Reports
+        <div class="eyebrow">
+          IEA-WE · Research
         </div>
 
         <h1>
-          Evidence for a more inclusive economics profession.
+          Building the evidence
+          <span>for change.</span>
         </h1>
 
-        <p>
-          IEA-WE's research examines gender inequality in the economics
-          profession, identifies barriers to women's participation and
-          evaluates interventions that can help create lasting change.
+        <p class="hero-intro">
+          A comprehensive research programme examining gender disparities
+          across the economics profession — and identifying effective
+          strategies to promote women's participation and leadership in
+          economics across Africa, Asia, and Latin America and the Caribbean.
         </p>
 
       </div>
@@ -491,41 +811,101 @@
 
 
     <!-- =========================
-         INTRO
+         OVERVIEW
     ========================= -->
 
-    <section class="research-intro">
+    <section class="overview">
 
       <div class="container">
 
-        <div class="intro-grid">
+        <div class="overview-grid">
 
           <div>
 
             <div class="section-label">
-              Building the evidence base
+              The research programme
             </div>
 
             <h2>
-              Understanding the barriers — and what works.
+              Understanding the gap. Finding what works.
             </h2>
 
           </div>
 
-          <div>
+
+          <div class="overview-copy">
 
             <p>
-              IEA-WE's research spans Latin America, Africa and Asia and
-              focuses on understanding gender gaps in the economics profession,
-              documenting experiences and barriers, and identifying effective
-              interventions.
+              The International Economic Association's Women in Leadership
+              in Economics Initiative (IEA-WE) is leading a comprehensive
+              research programme to advance gender inclusivity in the
+              economics profession across Africa, Latin America and the
+              Caribbean, and Asia.
             </p>
 
             <p>
-              The research programme brings together evidence from different
-              countries and contexts to help strengthen the evidence base for
-              greater gender equality in economics.
+              Following a competitive call for proposals, six evidence-based
+              studies were commissioned in Argentina, Colombia, Ghana, India,
+              Mexico, and South Africa, alongside eight intervention studies.
             </p>
+
+            <p>
+              Together, the research seeks to build a deeper understanding of
+              gender disparities in economics while identifying effective
+              strategies to promote women's participation and leadership in
+              the field.
+            </p>
+
+
+            <div class="research-components">
+
+              <div class="component">
+
+                <div class="component-number">01</div>
+
+                <div>
+                  <h3>Data gathering and synthesis</h3>
+                  <p>
+                    Building evidence on women's representation and
+                    trajectories across the economics profession in three
+                    regions.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="component">
+
+                <div class="component-number">02</div>
+
+                <div>
+                  <h3>Qualitative cross-national evidence</h3>
+                  <p>
+                    Examining experiences and obstacles faced by women in
+                    economics, including through longitudinal and tracking
+                    studies.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="component">
+
+                <div class="component-number">03</div>
+
+                <div>
+                  <h3>Intervention research</h3>
+                  <p>
+                    Evaluating specific interventions and policies to identify
+                    what works in lowering the gender gap in economics.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -537,158 +917,363 @@
 
 
     <!-- =========================
-         RESEARCH COLLECTION
+         STATS
     ========================= -->
 
-    <section class="research">
+    <section class="stats">
 
       <div class="container">
 
-        <div class="research-heading">
+        <div class="stats-grid">
+
+          <div class="stat">
+            <div class="stat-number">6</div>
+            <div class="stat-label">
+              Evidence-based country studies
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">
+              Intervention studies
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">
+              Regions: Africa, Asia & Latin America and the Caribbean
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">6</div>
+            <div class="stat-label">
+              Countries in the qualitative research programme
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVIDENCE PAPERS
+    ========================= -->
+
+    <section class="evidence" id="evidence">
+
+      <div class="container">
+
+        <div class="section-header">
 
           <div class="section-label">
-            Research collection
+            Evidence-based papers
           </div>
 
           <h2>
-            Explore our research.
+            Mapping women's position in economics.
           </h2>
 
           <p>
-            Browse evidence papers, intervention studies and reports from
-            across the IEA-WE research programme.
+            Six independent studies examine women's representation and
+            progression through the economics profession, from undergraduate
+            education through faculty and research positions. Together, they
+            provide country-level evidence on career trajectories, research,
+            leadership, networks, and persistent gender gaps.
           </p>
 
         </div>
 
 
-        <!-- FILTERS -->
+        <div class="paper-grid">
 
-        <div class="filters">
 
-          <div class="filter-row">
+          <!-- ARGENTINA -->
 
-            <input
-              type="text"
-              class="search-box"
-              placeholder="Search research..."
+          <article class="paper-card">
+
+            <div class="paper-country">
+              Argentina
+            </div>
+
+            <h3>
+              Examining the Situation of Women in the Economics Profession in Argentina
+            </h3>
+
+            <div class="paper-date">
+              August 2025 · Authors
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/mariana-viollaz-4/" target="_blank" rel="noopener noreferrer">
+                Mariana Viollaz
+              </a>,
+              <a href="https://www.iea-world.org/mariana-marchionni-4/" target="_blank" rel="noopener noreferrer">
+                Mariana Marchionni
+              </a>,
+              <a href="https://www.iea-world.org/maria-edo-2/" target="_blank" rel="noopener noreferrer">
+                María Edo
+              </a>,
+              <a href="https://www.iea-world.org/maria-florencia-pinto/" target="_blank" rel="noopener noreferrer">
+                Florencia Pinto
+              </a>
+            </div>
+
+            <p class="paper-description">
+              This paper documents the situation of women and gender gaps in
+              the economics profession across academic tiers in Argentina.
+              Drawing on administrative national and institutional databases,
+              institutional microdata, and web-scraped information, it examines
+              representation, career trajectories, academic performance,
+              research opportunities, and participation in professional
+              networks.
+            </p>
+
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/01/Argentina-Final-version_Dec2024.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-
-            <select class="filter-select">
-
-              <option>All types</option>
-              <option>Evidence paper</option>
-              <option>Intervention study</option>
-              <option>Report</option>
-
-            </select>
-
-            <select class="filter-select">
-
-              <option>All regions</option>
-              <option>Latin America</option>
-              <option>Africa</option>
-              <option>Asia</option>
-
-            </select>
-
-          </div>
-
-        </div>
-
-
-        <!-- TEMPORARY RESEARCH ITEMS -->
-
-        <div class="report-list">
-
-
-          <article class="report-card">
-
-            <div class="report-meta">
-              Evidence paper · Latin America
-            </div>
-
-            <h3>
-              Gender gaps in the economics profession
-            </h3>
-
-            <p>
-              Evidence examining women's representation, participation and
-              advancement within the economics profession.
-            </p>
-
-            <a href="#" class="report-link">
-              Read research →
+              Read the full paper →
             </a>
 
           </article>
 
 
-          <article class="report-card">
+          <!-- COLOMBIA -->
 
-            <div class="report-meta">
-              Evidence paper · Africa
+          <article class="paper-card">
+
+            <div class="paper-country">
+              Colombia
             </div>
 
             <h3>
-              Women economists and barriers to participation
+              Bridging the Gap: Gender Disparities in Colombia's Economics Profession
             </h3>
 
-            <p>
-              Research documenting the experiences and barriers faced by
-              women economists across different professional contexts.
+            <div class="paper-date">
+              August 2025 · Author
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/maria-del-pilar-lopez-uribe/" target="_blank" rel="noopener noreferrer">
+                Maria del Pilar López-Uribe
+              </a>
+            </div>
+
+            <p class="paper-description">
+              This report examines gender disparities in Colombia's economics
+              profession using data from the National Higher Education
+              Information System (SNIES). It covers representation from
+              undergraduate through doctoral levels, graduation rates, faculty
+              composition, leadership positions, professional networks, and
+              research productivity.
             </p>
 
-            <a href="#" class="report-link">
-              Read research →
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/02/IEA_final.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full paper →
             </a>
 
           </article>
 
 
-          <article class="report-card">
+          <!-- GHANA -->
 
-            <div class="report-meta">
-              Intervention study · Asia
+          <article class="paper-card">
+
+            <div class="paper-country">
+              Ghana
             </div>
 
             <h3>
-              What works to reduce gender inequality?
+              Evidence Papers on Women in Economics: A Case Study of Ghana
             </h3>
 
-            <p>
-              Evidence from interventions designed to address gender gaps and
-              improve women's participation and advancement.
+            <div class="paper-date">
+              August 2025 · Authors
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/abena-oduro/" target="_blank" rel="noopener noreferrer">
+                Abena Oduro
+              </a>
+              &amp;
+              <a href="https://www.iea-world.org/gloria-afful-mensah/" target="_blank" rel="noopener noreferrer">
+                Gloria Afful-Mensah
+              </a>
+            </div>
+
+            <p class="paper-description">
+              Using administrative data from the Ghana Tertiary Education
+              Commission and selected universities, alongside faculty records
+              from RePEc, Google Scholar, and CVs, this study tracks women's
+              representation in economics across education, research, and
+              leadership. The findings highlight persistent gaps as women
+              progress through postgraduate education and academic careers.
             </p>
 
-            <a href="#" class="report-link">
-              Read research →
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/08/Ghana-Women-in-Economics_June-2025-Final.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full paper →
             </a>
 
           </article>
 
 
-          <article class="report-card">
+          <!-- INDIA -->
 
-            <div class="report-meta">
-              Report · Global
+          <article class="paper-card">
+
+            <div class="paper-country">
+              India
             </div>
 
             <h3>
-              Women in economics: evidence across regions
+              Women in Indian Economics Academia
             </h3>
 
-            <p>
-              A synthesis of evidence examining gender inequality and
-              women's representation across the economics profession.
+            <div class="paper-date">
+              August 2025 · Authors
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/ambrish-dongre/" target="_blank" rel="noopener noreferrer">
+                Ambrish Dongre
+              </a>,
+              <a href="https://www.iea-world.org/upasak-das/" target="_blank" rel="noopener noreferrer">
+                Upasak Das
+              </a>
+              &amp;
+              <a href="https://www.iea-world.org/karan-singhal/" target="_blank" rel="noopener noreferrer">
+                Karan Singhal
+              </a>
+            </div>
+
+            <p class="paper-description">
+              This report analyses the gender landscape in Indian Economics
+              academia, documenting women's representation from undergraduate
+              education through faculty positions. It examines differences
+              across institutions, research visibility, conference participation,
+              journal authorship, professional association membership, and
+              representation in senior academic positions.
             </p>
 
-            <a href="#" class="report-link">
-              Read report →
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/08/Women-in-Indian-Economics-Academia_Dongre_Das_Singhal_April_30_2025-updated-July-7-2025-_-with-new-figures.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full paper →
             </a>
 
           </article>
 
+
+          <!-- MEXICO -->
+
+          <article class="paper-card">
+
+            <div class="paper-country">
+              Mexico
+            </div>
+
+            <h3>
+              Status of Women in Economics: Mexico
+            </h3>
+
+            <div class="paper-date">
+              August 2025 · Author
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/eva-o-arceo-gomez/" target="_blank" rel="noopener noreferrer">
+                Eva Olimpia Arceo-Gómez
+              </a>
+            </div>
+
+            <p class="paper-description">
+              This study examines the status of women in Economics in Mexico,
+              tracing representation among students and researchers and across
+              academic ranks. It finds persistent under-representation at the
+              top of the research system and a stalled progression toward more
+              balanced representation in student bodies, faculties, and
+              academic production.
+            </p>
+
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/02/Arceo_2025_Staus-of-women-in-Economics-Mexico.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full paper →
+            </a>
+
+          </article>
+
+
+          <!-- SOUTH AFRICA -->
+
+          <article class="paper-card">
+
+            <div class="paper-country">
+              South Africa
+            </div>
+
+            <h3>
+              Women in Economics in South Africa
+            </h3>
+
+            <div class="paper-date">
+              August 2025 · Authors
+            </div>
+
+            <div class="paper-authors">
+              <a href="https://www.iea-world.org/nicola-branson/" target="_blank" rel="noopener noreferrer">
+                Nicola Branson
+              </a>
+              &amp;
+              <a href="https://www.iea-world.org/emma-whitelaw/" target="_blank" rel="noopener noreferrer">
+                Emma Whitelaw
+              </a>
+            </div>
+
+            <p class="paper-description">
+              This research examines gender imbalances across academic tiers
+              in South Africa's economics profession. It considers women's
+              representation among students, graduates, PhD candidates and
+              senior academics, while highlighting the importance of continued
+              support for women through the academic pipeline and into
+              leadership.
+            </p>
+
+            <a
+              class="paper-link"
+              href="https://www.iea-world.org/wp-content/uploads/2025/02/IEA_report_south_africa_v02122024.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full paper →
+            </a>
+
+          </article>
 
         </div>
 
@@ -698,98 +1283,342 @@
 
 
     <!-- =========================
-         RESEARCH AREAS
+         RESEARCH DISSEMINATION
     ========================= -->
 
-    <section class="research-areas">
+    <section class="dissemination">
 
       <div class="container">
 
-        <h2>
-          Our research spans regions and questions.
-        </h2>
+        <div class="dissemination-card">
 
-        <div class="areas-grid">
+          <div>
 
-          <div class="area">
+            <div class="dissemination-label">
+              Research dissemination · VoxDev
+            </div>
 
-            <h3>
-              Gender gaps
-            </h3>
+            <h2>
+              Bringing the evidence into the wider policy conversation.
+            </h2>
+
+          </div>
+
+
+          <div class="dissemination-copy">
 
             <p>
-              Measuring and understanding gender disparities within the
-              economics profession.
+              The IEA-WE research programme has also been brought to a wider
+              audience through VoxDev, highlighting evidence on women's status
+              in the economics profession across Africa, Asia, and Latin
+              America.
+            </p>
+
+            <p>
+              The article draws together insights from the evidence-based
+              research and helps translate country-level findings into a
+              broader conversation about gender, representation, and
+              progression in economics.
+            </p>
+
+            <a
+              class="dissemination-link"
+              href="https://voxdev.org/topic/labour-markets/womens-status-economics-evidence-africa-asia-and-latin-america"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the VoxDev article →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUALITATIVE RESEARCH
+    ========================= -->
+
+    <section class="qualitative" id="qualitative">
+
+      <div class="container">
+
+        <div class="qualitative-grid">
+
+          <div>
+
+            <div class="section-label">
+              Qualitative research
+            </div>
+
+            <h2>
+              Understanding experiences behind the numbers.
+            </h2>
+
+            <p class="qualitative-intro">
+              Alongside the country evidence, the IEA-WE research programme
+              includes a cross-national qualitative study examining the
+              experiences and barriers faced by women in economics.
             </p>
 
           </div>
 
 
-          <div class="area">
+          <div class="qualitative-copy">
 
-            <h3>
-              Experiences & barriers
-            </h3>
+            <div class="qual-lead">
+
+              <strong>
+                Monica Biradavolu
+              </strong>
+
+              <span>
+                Principal Investigator · QualAnalytics
+              </span>
+
+            </div>
 
             <p>
-              Understanding the experiences and institutional barriers that
-              shape women's careers in economics.
+              The QualAnalytics team, led by Monica Biradavolu, comprises
+              six country teams. Data collection across Argentina, Colombia,
+              Ghana, India, Mexico, and South Africa is approaching completion,
+              with country reports at different stages of finalisation.
             </p>
+
+            <p>
+              The research combines in-depth interviews and focus groups
+              across universities in the six countries. Longitudinal interviews
+              are ongoing and will conclude at the end of 2026, with findings
+              incorporated into the respective final country reports.
+            </p>
+
+
+            <div class="qual-facts">
+
+              <div class="qual-fact">
+
+                <div class="qual-fact-number">
+                  6
+                </div>
+
+                <div class="qual-fact-label">
+                  Countries covered by the qualitative study
+                </div>
+
+              </div>
+
+
+              <div class="qual-fact">
+
+                <div class="qual-fact-number">
+                  220+
+                </div>
+
+                <div class="qual-fact-label">
+                  Interviews and focus groups completed across the six countries
+                </div>
+
+              </div>
+
+
+              <div class="qual-fact">
+
+                <div class="qual-fact-number">
+                  6
+                </div>
+
+                <div class="qual-fact-label">
+                  Country teams working across the research programme
+                </div>
+
+              </div>
+
+
+              <div class="qual-fact">
+
+                <div class="qual-fact-number">
+                  2026
+                </div>
+
+                <div class="qual-fact-label">
+                  Findings to be presented at the IEA World Congress
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="qual-status">
+
+              <h3>
+                Country-level research is progressing
+              </h3>
+
+              <p>
+                Data collection is complete in Argentina, Colombia, Ghana,
+                India, Mexico, and South Africa, with country reports at
+                different stages of completion. Findings from the qualitative
+                research will contribute to the consolidated presentation at
+                the IEA World Congress 2026.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTERVENTION STUDIES
+    ========================= -->
+
+    <section class="interventions" id="interventions">
+
+      <div class="container">
+
+        <div class="intervention-intro">
+
+          <div class="section-label">
+            Intervention-based papers
+          </div>
+
+          <h2>
+            Testing what works.
+          </h2>
+
+          <p>
+            Eight studies examine interventions that may be effective in
+            lowering the gender gap in economics. The evidence will be
+            generated through trials of new interventions or analysis of
+            existing policies.
+          </p>
+
+        </div>
+
+
+        <div class="coming-soon">
+
+          <strong>
+            Papers coming soon.
+          </strong>
+
+          <p>
+            The intervention studies are currently underway and will be added
+            here as the research becomes available.
+          </p>
+
+        </div>
+
+
+        <div class="intervention-grid">
+
+          <div class="intervention-item">
+            <span>Argentina</span>
+            <p>Hernán Ruffo</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Brazil</span>
+            <p>Bruna Borges, Fernanda Estevan, Kelly Santos</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>China</span>
+            <p>Xianghong Shirley Wang</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Colombia</span>
+            <p>Camila Galindo and Julia Seither</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Ghana</span>
+            <p>Rebecca Nana Yaa Ayifah and Emmanuel Ayifah</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>India</span>
+            <p>Anahita Karandikar</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>India</span>
+            <p>Bharti Nandwani and Akanksha Aggarwal</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Mexico</span>
+            <p>Joana Chapa, Stanislao Maldonado, and Elvira Naranjo</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Mexico</span>
+            <p>Lucia Del Carpio, Emilio Gutierrez, Adrian Rubli</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>South Africa</span>
+            <p>Carike Claassen</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>South Africa</span>
+            <p>Janine Jantjies</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUALITATIVE NOTE
+    ========================= -->
+
+    <section class="dissemination">
+
+      <div class="container">
+
+        <div class="dissemination-card">
+
+          <div>
+
+            <div class="dissemination-label">
+              QualAnalytics
+            </div>
+
+            <h2>
+              More findings to come.
+            </h2>
 
           </div>
 
 
-          <div class="area">
-
-            <h3>
-              What works
-            </h3>
+          <div class="dissemination-copy">
 
             <p>
-              Evaluating interventions designed to reduce gender inequality
-              and strengthen women's participation.
+              The qualitative research is ongoing, with longitudinal interviews
+              continuing through the end of 2026. Final country reports and
+              consolidated findings will add further depth to the evidence
+              base on women's experiences in economics.
             </p>
 
-          </div>
-
-
-          <div class="area">
-
-            <h3>
-              Latin America
-            </h3>
-
             <p>
-              Research examining gender and economics across Latin American
-              contexts.
-            </p>
-
-          </div>
-
-
-          <div class="area">
-
-            <h3>
-              Africa
-            </h3>
-
-            <p>
-              Evidence and research from countries across the African
-              continent.
-            </p>
-
-          </div>
-
-
-          <div class="area">
-
-            <h3>
-              Asia
-            </h3>
-
-            <p>
-              Research exploring gender, institutions and the economics
-              profession across Asia.
+              Findings from the research programme will be presented at the
+              International Economic Association World Congress 2026.
             </p>
 
           </div>
@@ -820,8 +1649,7 @@
           </div>
 
           <p>
-            Strengthening the presence and influence of women in economics
-            through research, collaboration, advocacy and amplifying voices.
+            Strengthening the presence and influence of women in economics.
           </p>
 
         </div>
@@ -829,15 +1657,13 @@
 
         <div>
 
-          <h4>
-            Explore
-          </h4>
+          <h4>Explore</h4>
 
           <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="work.html">Our Work</a>
+            <a href="index.html">Our Work</a>
             <a href="articles.html">Amplifying Voices</a>
             <a href="leadership.html">Leadership</a>
+            <a href="#evidence">Research</a>
             <a href="reports.html">Reports</a>
           </div>
 
@@ -846,13 +1672,12 @@
 
         <div>
 
-          <h4>
-            IEA-WE
-          </h4>
+          <h4>Research</h4>
 
           <div class="footer-links">
-            <a href="about.html">About</a>
-            <a href="leadership.html">Advisory Board</a>
+            <a href="#evidence">Evidence Papers</a>
+            <a href="#qualitative">Qualitative Research</a>
+            <a href="#interventions">Intervention Studies</a>
           </div>
 
         </div>
