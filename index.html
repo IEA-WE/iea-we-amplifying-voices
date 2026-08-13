@@ -748,16 +748,6 @@
       overflow: hidden;
     }
 
-    .article-image {
-      height: 210px;
-      background: #d7e2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      font-size: 14px;
-    }
-
     .article-content {
       padding: 28px;
     }
@@ -2027,17 +2017,13 @@
       .slice(0, 3);
 
     latestArticlesContainer.innerHTML = latestArticles.map(article => `
-      <article class="article-card">
+   <article class="article-card">
 
-        <div class="article-image">
-          Article image
-        </div>
+  <div class="article-content">
 
-        <div class="article-content">
-
-          <div class="article-meta">
-            ${article.topic} · ${article.year}
-          </div>
+    <div class="article-meta">
+      ${article.topic} · ${article.year}
+    </div>
 
           <h3>
             ${article.title}
