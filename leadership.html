@@ -8,7 +8,6 @@
   <title>Leadership | IEA-WE</title>
 
   <style>
-
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
     :root {
@@ -102,7 +101,7 @@
     ========================= */
 
     .page-hero {
-      padding: 90px 0 80px;
+      padding: 90px 0 70px;
       background: var(--white);
       border-bottom: 1px solid var(--line);
     }
@@ -128,7 +127,7 @@
     }
 
     .page-hero p {
-      max-width: 760px;
+      max-width: 900px;
       color: var(--muted);
       font-size: 18px;
       line-height: 1.8;
@@ -140,13 +139,13 @@
     ========================= */
 
     .leadership {
-      padding: 95px 0 105px;
+      padding: 80px 0 100px;
       background: var(--light-blue);
     }
 
     .section-heading {
-      max-width: 780px;
-      margin-bottom: 48px;
+      max-width: 800px;
+      margin-bottom: 50px;
     }
 
     .section-heading h2 {
@@ -172,22 +171,16 @@
 
     .people-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 300px;
+      grid-template-columns: repeat(12, 1fr);
       gap: 18px;
-      margin-top: 55px;
+      position: relative;
     }
 
     .person {
       position: relative;
       overflow: hidden;
-      background: var(--navy);
-      min-height: 300px;
-    }
-
-    .person.large {
-      grid-column: span 2;
-      min-height: 420px;
+      background: var(--white);
+      min-width: 0;
     }
 
     .person img {
@@ -199,93 +192,113 @@
     }
 
     .person:hover img {
-      transform: scale(1.035);
+      transform: scale(1.025);
     }
 
-    /* Individual image positioning */
+    /* Large top images */
 
-    .person.ashwini img {
-      object-position: center 35%;
+    .person.large {
+      grid-column: span 6;
+      height: 440px;
+      z-index: 2;
     }
 
-    .person.ines img {
-      object-position: center 35%;
-    }
+    /*
+      Put the large-image names slightly above the bottom edge.
+      This means the smaller images can overlap the bottom of the
+      large images without covering the names.
+    */
 
-    .person.raquel img {
-      object-position: center 35%;
-    }
-
-    .person.dani img {
-      object-position: center 40%;
-    }
-
-    .person.fiona img {
-      object-position: center 30%;
-    }
-
-    .person.navika img {
-      object-position: center 35%;
+    .person.large .person-info {
+      bottom: 35px;
     }
 
 
-    /* Dark gradient over image */
+    /* Smaller bottom images */
+
+    .person.small {
+      grid-column: span 3;
+      height: 330px;
+      margin-top: -55px;
+      z-index: 3;
+    }
+
+
+    /* Dark gradient over each photograph */
 
     .person::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(8, 28, 55, 0.88) 0%,
-        rgba(8, 28, 55, 0.45) 32%,
-        rgba(8, 28, 55, 0.05) 68%,
-        rgba(8, 28, 55, 0) 100%
-      );
+      background:
+        linear-gradient(
+          to top,
+          rgba(8, 24, 45, 0.82) 0%,
+          rgba(8, 24, 45, 0.48) 30%,
+          rgba(8, 24, 45, 0.08) 58%,
+          rgba(8, 24, 45, 0) 75%
+        );
       pointer-events: none;
     }
 
 
-    /* Text over images */
+    /* Text sitting directly on the photographs */
 
     .person-info {
       position: absolute;
-      left: 28px;
-      right: 28px;
+      left: 30px;
+      right: 25px;
       bottom: 25px;
-      z-index: 2;
+      z-index: 5;
       color: var(--white);
     }
-
-    .person-info h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 28px;
-      line-height: 1.15;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-
-    .person-info p {
-      font-size: 14px;
-      line-height: 1.5;
-      color: rgba(255, 255, 255, 0.88);
-      max-width: 420px;
-    }
-
-    .person-info .role {
-      color: #ffffff;
-    }
-
-
-    /* Small red accent */
 
     .person-info::before {
       content: "";
       display: block;
-      width: 32px;
+      width: 40px;
       height: 3px;
       background: var(--red);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .person-info h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--white);
+      font-size: 29px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    .person-info p {
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+
+    /* Smaller card typography */
+
+    .person.small .person-info {
+      left: 20px;
+      right: 18px;
+      bottom: 20px;
+    }
+
+    .person.small .person-info::before {
+      width: 35px;
+      height: 3px;
+      margin-bottom: 11px;
+    }
+
+    .person.small .person-info h3 {
+      font-size: 22px;
+    }
+
+    .person.small .person-info p {
+      font-size: 13px;
     }
 
 
@@ -294,8 +307,8 @@
     ========================= */
 
     .advisory-section {
-      background: var(--white);
-      padding: 95px 0;
+      background: var(--off-white);
+      padding: 90px 0;
     }
 
     .advisory-intro {
@@ -327,15 +340,26 @@
 
     .advisory-card h3 {
       color: var(--navy);
-      font-size: 20px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 22px;
       line-height: 1.3;
       margin-bottom: 8px;
+      font-weight: 500;
     }
 
     .advisory-card p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
+    }
+
+    .advisory-card::after {
+      content: "";
+      display: block;
+      width: 35px;
+      height: 3px;
+      background: var(--red);
+      margin-top: 22px;
     }
 
 
@@ -383,7 +407,7 @@
     }
 
     .footer-links a:hover {
-      color: white;
+      color: var(--white);
     }
 
     .footer-bottom {
@@ -396,30 +420,36 @@
 
 
     /* =========================
-       MOBILE
+       MOBILE / TABLET
     ========================= */
 
-    @media (max-width: 950px) {
+    @media (max-width: 900px) {
 
       nav {
-        gap: 20px;
+        gap: 18px;
       }
 
       nav a {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .people-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 300px;
       }
 
       .person.large {
-        grid-column: span 2;
+        grid-column: span 1;
+        height: 400px;
+      }
+
+      .person.small {
+        grid-column: span 1;
+        height: 330px;
+        margin-top: 0;
       }
 
       .advisory-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-grid {
@@ -428,6 +458,10 @@
       }
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 600px) {
 
@@ -452,26 +486,32 @@
         padding: 65px 0;
       }
 
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
       .people-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 360px;
         gap: 14px;
       }
 
-      .person,
-      .person.large {
+      .person.large,
+      .person.small {
         grid-column: span 1;
-        min-height: 360px;
+        height: 380px;
+        margin-top: 0;
       }
 
-      .person-info {
-        left: 22px;
-        right: 22px;
-        bottom: 22px;
+      .person.large .person-info {
+        bottom: 25px;
       }
 
       .person-info h3 {
         font-size: 26px;
+      }
+
+      .person.small .person-info h3 {
+        font-size: 24px;
       }
 
       .advisory-grid {
@@ -485,7 +525,6 @@
     }
 
   </style>
-
 </head>
 
 
@@ -548,7 +587,7 @@
 
 
     <!-- =========================
-         INITIATIVE LEADERSHIP
+         IEA-WE TEAM
     ========================= -->
 
     <section class="leadership">
@@ -558,11 +597,11 @@
         <div class="section-heading">
 
           <div class="section-label">
-            Initiative Leadership
+            IEA-WE Team
           </div>
 
           <h2>
-            Leading the IEA-WE initiative.
+            The IEA-WE Team.
           </h2>
 
           <p>
@@ -575,7 +614,7 @@
 
 
         <!-- =========================
-             PEOPLE PHOTO GRID
+             PHOTO GRID
         ========================= -->
 
         <div class="people-grid">
@@ -583,11 +622,11 @@
 
           <!-- ASHWINI -->
 
-          <div class="person large ashwini">
+          <div class="person large">
 
             <img
               src="ashwini_photo.jpeg"
-              alt="Ashwini Deshpande speaking at an event"
+              alt="Ashwini Deshpande"
             >
 
             <div class="person-info">
@@ -607,11 +646,11 @@
 
           <!-- MARÍA INÉS -->
 
-          <div class="person large ines">
+          <div class="person large">
 
             <img
               src="ines_photo.jpeg"
-              alt="María Inés Berniell speaking at an event"
+              alt="María Inés Berniell"
             >
 
             <div class="person-info">
@@ -631,11 +670,11 @@
 
           <!-- RAQUEL -->
 
-          <div class="person raquel">
+          <div class="person small">
 
             <img
               src="raquel_photo.jpg"
-              alt="Raquel Fernández speaking at an event"
+              alt="Raquel Fernández"
             >
 
             <div class="person-info">
@@ -655,11 +694,11 @@
 
           <!-- DANI -->
 
-          <div class="person dani">
+          <div class="person small">
 
             <img
               src="dani_photo.jpeg"
-              alt="Dani Rodrik speaking at an event"
+              alt="Dani Rodrik"
             >
 
             <div class="person-info">
@@ -679,7 +718,7 @@
 
           <!-- FIONA -->
 
-          <div class="person fiona">
+          <div class="person small">
 
             <img
               src="fiona_photo.jpeg"
@@ -703,11 +742,11 @@
 
           <!-- NAVIKA -->
 
-          <div class="person navika">
+          <div class="person small">
 
             <img
               src="navika_photo.jpg"
-              alt="Navika Mehta at the IEA World Congress Serbia 2026"
+              alt="Navika Mehta"
             >
 
             <div class="person-info">
@@ -716,9 +755,8 @@
                 Navika Mehta
               </h3>
 
-              <p class="role">
-                Strategic Communications and Research Dissemination Lead,
-                IEA-WE
+              <p>
+                Strategic Communications and Research Dissemination Lead, IEA-WE
               </p>
 
             </div>
@@ -753,10 +791,13 @@
 
         </div>
 
+
         <p class="advisory-intro">
+
           The IEA-WE Advisory Board brings together leading scholars from
           around the world whose expertise helps inform the initiative's
           research, partnerships and broader goals.
+
         </p>
 
 
@@ -944,5 +985,4 @@
 
 
 </body>
-
 </html>
