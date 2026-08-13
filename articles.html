@@ -805,6 +805,65 @@
 
 
     /* =========================
+       FLOATING SUBSCRIBE BUTTON
+       ========================= */
+
+    .floating-subscribe {
+
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      z-index: 200;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      background: var(--red);
+      color: var(--white);
+
+      padding: 16px 22px;
+
+      border-radius: 50px;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.22);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+    }
+
+
+    .floating-subscribe:hover {
+
+      background: var(--red-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(16, 43, 82, 0.28);
+
+    }
+
+
+    .floating-subscribe-text {
+
+      line-height: 1.2;
+
+    }
+
+
+    .floating-subscribe-arrow {
+
+      font-size: 18px;
+      line-height: 1;
+
+    }
+
+
+    /* =========================
        FOOTER
        ========================= */
 
@@ -1067,6 +1126,20 @@
 
       }
 
+
+      /* FLOATING SUBSCRIBE BUTTON — MOBILE */
+
+      .floating-subscribe {
+
+        right: 16px;
+        bottom: 16px;
+
+        padding: 14px 18px;
+
+        font-size: 14px;
+
+      }
+
     }
 
   </style>
@@ -1247,11 +1320,11 @@
             <p>
 
               Launched in 2023, Amplifying Voices set out to broaden who
-              gets to shape global policy conversations. What began as a 
+              gets to shape global policy conversations. What began as a
               small editorial initiative has grown into IEA-WE's primary
-              mechanism for making research accessible to policymakers, 
-              journalists, and the public — one carefully edited, carefully 
-              placed article at a time. 
+              mechanism for making research accessible to policymakers,
+              journalists, and the public — one carefully edited, carefully
+              placed article at a time.
 
             </p>
 
@@ -1500,8 +1573,8 @@
 
               VoxEU is CEPR's policy portal, established to promote
               research-based policy analysis and commentary by leading
-              economists. Its audience includes economists working in
-              the public sector, private sector, academia and media,
+              economists. Its audience includes economists working in the
+              public sector, private sector, academia and media,
               as well as students of economics.
 
             </p>
@@ -1738,6 +1811,29 @@
 
 
   <!-- =========================
+       FLOATING SUBSCRIBE BUTTON
+       ========================= -->
+
+  <a
+    class="floating-subscribe"
+    href="https://ieawe.substack.com/?r=3aktt8&utm_campaign=pub-share-checklist"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Subscribe to Amplifying Voices article alerts"
+  >
+
+    <span class="floating-subscribe-text">
+      Subscribe for article alerts
+    </span>
+
+    <span class="floating-subscribe-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <!-- =========================
        FOOTER
        ========================= -->
 
@@ -1777,7 +1873,7 @@
               Amplifying Voices
             </a>
 
-           <a href="leadership.html">
+            <a href="leadership.html">
               Team
             </a>
 
