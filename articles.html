@@ -11,6 +11,7 @@
 
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
+
     :root {
       --navy: #0b3568;
       --dark-blue: #102b52;
@@ -25,15 +26,18 @@
       --line: #dce3ec;
     }
 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: "DM Sans", Arial, sans-serif;
@@ -42,15 +46,18 @@
       line-height: 1.7;
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
 
+
     .container {
       width: min(1180px, 90%);
       margin: 0 auto;
     }
+
 
     /* =========================
        NAVIGATION
@@ -64,6 +71,7 @@
       z-index: 100;
     }
 
+
     .nav {
       min-height: 82px;
       display: flex;
@@ -72,17 +80,20 @@
       gap: 30px;
     }
 
+
     .logo img {
       width: 175px;
       height: auto;
       display: block;
     }
 
+
     nav {
       display: flex;
       align-items: center;
       gap: 30px;
     }
+
 
     nav a {
       font-size: 14px;
@@ -91,9 +102,11 @@
       transition: color 0.2s ease;
     }
 
+
     nav a:hover {
       color: var(--red);
     }
+
 
     /* =========================
        HERO
@@ -105,6 +118,7 @@
       border-bottom: 1px solid var(--line);
     }
 
+
     .eyebrow {
       color: var(--red);
       text-transform: uppercase;
@@ -113,6 +127,7 @@
       font-weight: 700;
       margin-bottom: 24px;
     }
+
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
@@ -125,9 +140,11 @@
       margin-bottom: 32px;
     }
 
+
     .hero h1 span {
       color: var(--red);
     }
+
 
     .hero-intro {
       max-width: 820px;
@@ -135,6 +152,7 @@
       line-height: 1.7;
       color: var(--muted);
     }
+
 
     /* =========================
        IMPACT STATS
@@ -146,16 +164,19 @@
       padding: 65px 0;
     }
 
+
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 25px;
     }
 
+
     .impact-stat {
       border-top: 1px solid #7285a2;
       padding-top: 20px;
     }
+
 
     .impact-number {
       font-family: "Playfair Display", Georgia, serif;
@@ -165,10 +186,12 @@
       margin-bottom: 10px;
     }
 
+
     .impact-label {
       color: #e4eaf2;
       font-size: 14px;
     }
+
 
     /* =========================
        STORY
@@ -179,12 +202,14 @@
       background: var(--white);
     }
 
+
     .story-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 75px;
       align-items: center;
     }
+
 
     .section-label {
       color: var(--red);
@@ -194,6 +219,7 @@
       font-weight: 700;
       margin-bottom: 18px;
     }
+
 
     .story h2 {
       font-family: "Playfair Display", Georgia, serif;
@@ -205,6 +231,7 @@
       margin-bottom: 25px;
     }
 
+
     .story p {
       color: var(--muted);
       font-size: 16px;
@@ -212,17 +239,20 @@
       margin-bottom: 20px;
     }
 
+
     .story-main-image {
       width: 100%;
       overflow: hidden;
       background: var(--light-blue);
     }
 
+
     .story-main-image img {
       width: 100%;
       height: auto;
       display: block;
     }
+
 
     /* =========================
        LARGE WRITERS IMAGE
@@ -233,17 +263,20 @@
       background: var(--white);
     }
 
+
     .writers-feature-image {
       width: 100%;
       overflow: hidden;
       background: var(--light-blue);
     }
 
+
     .writers-feature-image img {
       width: 100%;
       height: auto;
       display: block;
     }
+
 
     .writers-caption {
       display: grid;
@@ -253,6 +286,7 @@
       align-items: start;
     }
 
+
     .writers-caption-label {
       color: var(--red);
       text-transform: uppercase;
@@ -261,11 +295,13 @@
       font-weight: 700;
     }
 
+
     .writers-caption p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.7;
     }
+
 
     /* =========================
        FEATURE CARDS
@@ -276,11 +312,13 @@
       padding: 85px 0;
     }
 
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
 
     .feature-card {
       background: var(--white);
@@ -291,6 +329,7 @@
       flex-direction: column;
     }
 
+
     .feature-card h3 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
@@ -299,6 +338,7 @@
       margin-bottom: 18px;
     }
 
+
     .feature-card p {
       color: var(--muted);
       font-size: 15px;
@@ -306,11 +346,13 @@
       margin-bottom: 18px;
     }
 
+
     .feature-card .feature-link {
       color: var(--red);
       font-weight: 700;
       margin-top: auto;
     }
+
 
     .feature-card .small-label {
       color: var(--red);
@@ -321,6 +363,7 @@
       margin-bottom: 12px;
     }
 
+
     /* =========================
        PARTNERSHIPS
     ========================= */
@@ -330,10 +373,12 @@
       background: var(--white);
     }
 
+
     .partnerships-header {
       max-width: 760px;
       margin-bottom: 45px;
     }
+
 
     .partnerships h2 {
       font-family: "Playfair Display", Georgia, serif;
@@ -344,10 +389,12 @@
       margin-bottom: 18px;
     }
 
+
     .partnerships-intro {
       color: var(--muted);
       font-size: 17px;
     }
+
 
     .partner-grid {
       display: grid;
@@ -355,11 +402,13 @@
       gap: 20px;
     }
 
+
     .partner {
       border: 1px solid var(--line);
       padding: 32px;
       min-height: 280px;
     }
+
 
     .partner h3 {
       color: var(--navy);
@@ -367,11 +416,13 @@
       margin-bottom: 15px;
     }
 
+
     .partner p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.7;
     }
+
 
     /* =========================
        EDITOR
@@ -382,12 +433,14 @@
       padding: 100px 0;
     }
 
+
     .editor-grid {
       display: grid;
       grid-template-columns: 460px 1fr;
       gap: 80px;
       align-items: center;
     }
+
 
     .editor-photo {
       width: 100%;
@@ -396,11 +449,13 @@
       padding: 18px;
     }
 
+
     .editor-photo img {
       width: 100%;
       height: auto;
       display: block;
     }
+
 
     .editor h2 {
       font-family: "Playfair Display", Georgia, serif;
@@ -410,13 +465,16 @@
       margin-bottom: 10px;
     }
 
+
     .editor-name-link {
       transition: color 0.2s ease;
     }
 
+
     .editor-name-link:hover {
       color: var(--red);
     }
+
 
     .editor-role {
       color: var(--red);
@@ -424,16 +482,19 @@
       margin-bottom: 22px;
     }
 
+
     .editor p {
       color: var(--muted);
       font-size: 16px;
       margin-bottom: 12px;
     }
 
+
     .editor-email {
       color: var(--red);
       font-weight: 600;
     }
+
 
     /* =========================
        ARCHIVE
@@ -444,6 +505,7 @@
       background: var(--white);
     }
 
+
     .archive-header {
       display: flex;
       justify-content: space-between;
@@ -451,6 +513,7 @@
       gap: 30px;
       margin-bottom: 45px;
     }
+
 
     .archive-header h2 {
       font-family: "Playfair Display", Georgia, serif;
@@ -460,11 +523,13 @@
       font-weight: 500;
     }
 
+
     .archive-header p {
       color: var(--muted);
       max-width: 500px;
       margin-top: 12px;
     }
+
 
     /* =========================
        FILTERS
@@ -475,6 +540,7 @@
       padding: 28px;
       margin-bottom: 40px;
     }
+
 
     .search-box {
       width: 100%;
@@ -487,15 +553,18 @@
       outline: none;
     }
 
+
     .search-box:focus {
       border-color: var(--red);
     }
+
 
     .filter-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
+
 
     .filter-row select {
       width: 100%;
@@ -508,10 +577,12 @@
       cursor: pointer;
     }
 
+
     .filter-row select:focus {
       outline: none;
       border-color: var(--red);
     }
+
 
     /* =========================
        ARTICLE GRID
@@ -522,6 +593,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
+
 
     .article-card {
       border: 1px solid var(--line);
@@ -538,11 +610,13 @@
       min-height: 300px;
     }
 
+
     .article-card:hover {
       transform: translateY(-3px);
       border-color: var(--red);
       box-shadow: 0 8px 25px rgba(16, 43, 82, 0.08);
     }
+
 
     .article-meta {
       color: var(--red);
@@ -554,6 +628,7 @@
       margin-bottom: 12px;
     }
 
+
     .article-card h3 {
       color: var(--navy);
       font-size: 21px;
@@ -561,11 +636,13 @@
       margin-bottom: 12px;
     }
 
+
     .article-card p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
     }
+
 
     .read-more {
       display: inline-block;
@@ -576,15 +653,18 @@
       font-size: 14px;
     }
 
+
     .read-more:hover {
       color: var(--red-dark);
     }
+
 
     .no-results {
       display: none;
       color: var(--muted);
       padding: 30px 0;
     }
+
 
     /* =========================
        FOOTER
@@ -596,11 +676,13 @@
       padding: 60px 0;
     }
 
+
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 50px;
     }
+
 
     .footer-brand {
       font-family: "Playfair Display", Georgia, serif;
@@ -608,11 +690,13 @@
       margin-bottom: 12px;
     }
 
+
     footer p {
       color: #cbd5e4;
       font-size: 14px;
       max-width: 480px;
     }
+
 
     footer h4 {
       color: var(--red);
@@ -622,6 +706,7 @@
       margin-bottom: 15px;
     }
 
+
     .footer-links a {
       display: block;
       color: #e5eaf2;
@@ -629,9 +714,11 @@
       margin-bottom: 7px;
     }
 
+
     .footer-links a:hover {
       color: var(--red);
     }
+
 
     .footer-bottom {
       border-top: 1px solid #385171;
@@ -640,6 +727,7 @@
       color: #aebbd0;
       font-size: 12px;
     }
+
 
     /* =========================
        MOBILE
@@ -651,13 +739,16 @@
         min-height: 70px;
       }
 
+
       nav {
         gap: 15px;
       }
 
+
       nav a {
         font-size: 12px;
       }
+
 
       .story-grid,
       .editor-grid {
@@ -665,10 +756,12 @@
         gap: 40px;
       }
 
+
       .writers-caption {
         grid-template-columns: 1fr;
         gap: 12px;
       }
+
 
       .features-grid,
       .partner-grid,
@@ -676,17 +769,21 @@
         grid-template-columns: 1fr;
       }
 
+
       .impact-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
 
       .filter-row {
         grid-template-columns: 1fr 1fr;
       }
 
+
       .archive-header {
         display: block;
       }
+
 
       .editor-photo {
         max-width: 500px;
@@ -694,32 +791,39 @@
 
     }
 
+
     @media (max-width: 600px) {
 
       .container {
         width: 88%;
       }
 
+
       nav {
         display: none;
       }
+
 
       .logo img {
         width: 150px;
       }
 
+
       .hero {
         padding: 70px 0;
       }
+
 
       .hero h1 {
         font-size: 50px;
         letter-spacing: -2px;
       }
 
+
       .hero-intro {
         font-size: 17px;
       }
+
 
       .impact,
       .story,
@@ -731,26 +835,32 @@
         padding: 65px 0;
       }
 
+
       .impact-grid {
         grid-template-columns: 1fr 1fr;
         gap: 25px 15px;
       }
 
+
       .impact-number {
         font-size: 42px;
       }
+
 
       .filter-row {
         grid-template-columns: 1fr;
       }
 
+
       .editor-grid {
         gap: 30px;
       }
 
+
       .editor h2 {
         font-size: 42px;
       }
+
 
       .footer-grid {
         grid-template-columns: 1fr;
@@ -766,6 +876,7 @@
 
 <body>
 
+
   <!-- =========================
        NAVIGATION
   ========================= -->
@@ -777,6 +888,7 @@
       <a href="index.html" class="logo">
         <img src="logoWE.svg" alt="IEA-WE">
       </a>
+
 
       <nav>
 
@@ -809,10 +921,12 @@
           IEA-WE · Amplifying Voices
         </div>
 
+
         <h1>
           Turning up the volume
           <span>for women in economics.</span>
         </h1>
+
 
         <p class="hero-intro">
           Turning rigorous research by women economists into a global editorial
@@ -901,9 +1015,11 @@
               The project
             </div>
 
+
             <h2>
               An editorial bridge between research and the real world.
             </h2>
+
 
             <p>
               Launched in 2023, Amplifying Voices set out to broaden who gets
@@ -913,12 +1029,14 @@
               carefully edited, carefully placed article at a time.
             </p>
 
+
             <p>
               Nearly every piece published features an author based in Africa,
               Asia, or Latin America and the Caribbean — regions where women
               economists remain structurally underrepresented in the outlets
               that shape policy debate.
             </p>
+
 
             <p>
               Run as a one-person editorial operation by Navika Mehta, the
@@ -1457,545 +1575,453 @@
 
   <script src="articles-data.js"></script>
 
-<script>
 
-  const articleGrid = document.getElementById("articleGrid");
-  const searchInput = document.getElementById("searchInput");
-  const topicFilter = document.getElementById("topicFilter");
-  const countryFilter = document.getElementById("countryFilter");
-  const publicationFilter = document.getElementById("publicationFilter");
-  const yearFilter = document.getElementById("yearFilter");
-  const noResults = document.getElementById("noResults");
+  <!-- =========================
+       ARTICLE ARCHIVE SCRIPT
+  ========================= -->
+
+  <script>
 
 
-  // =========================
-  // HELPERS
-  // =========================
+    const articleGrid =
+      document.getElementById("articleGrid");
 
-  function getField(article, possibleNames) {
 
-    for (const name of possibleNames) {
+    const searchInput =
+      document.getElementById("searchInput");
 
-      if (
-        article &&
-        article[name] !== undefined &&
-        article[name] !== null
-      ) {
-        return article[name];
+
+    const topicFilter =
+      document.getElementById("topicFilter");
+
+
+    const countryFilter =
+      document.getElementById("countryFilter");
+
+
+    const publicationFilter =
+      document.getElementById("publicationFilter");
+
+
+    const yearFilter =
+      document.getElementById("yearFilter");
+
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    // =========================
+    // HELPERS
+    // =========================
+
+    function getArray(value) {
+
+      if (Array.isArray(value)) {
+        return value;
       }
 
+
+      if (
+        typeof value === "string" &&
+        value.trim() !== ""
+      ) {
+        return [value.trim()];
+      }
+
+
+      return [];
+
     }
 
-    return "";
 
-  }
+    function escapeHTML(value) {
 
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
-  function getArray(value) {
-
-    if (Array.isArray(value)) {
-      return value;
     }
 
-    if (
-      typeof value === "string" &&
-      value.trim() !== ""
-    ) {
-      return [value.trim()];
+
+    // =========================
+    // FILTER OPTIONS
+    // =========================
+
+    function addFilterOptions(select, values) {
+
+      const uniqueValues = [
+        ...new Set(
+          values
+            .flatMap(value => getArray(value))
+            .filter(value => value !== "")
+        )
+      ];
+
+
+      uniqueValues.sort((a, b) =>
+        a.localeCompare(b)
+      );
+
+
+      uniqueValues.forEach(value => {
+
+        const option =
+          document.createElement("option");
+
+
+        option.value = value;
+
+        option.textContent = value;
+
+
+        select.appendChild(option);
+
+      });
+
     }
 
-    return [];
 
-  }
+    function initialiseFilters() {
 
-
-  function escapeHTML(value) {
-
-    return String(value || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-
-  }
+      const articles =
+        window.articles || [];
 
 
-  // =========================
-  // GET ARTICLES
-  // =========================
-
-  function getArticles() {
-
-    return (
-      window.articles ||
-      window.articleData ||
-      []
-    );
-
-  }
+      const topics =
+        articles.map(article => article.topic);
 
 
-  // =========================
-  // FILTER OPTIONS
-  // =========================
-
-  function addFilterOptions(select, values) {
-
-    const uniqueValues = [
-      ...new Set(
-        values
-          .flatMap(value => getArray(value))
-          .filter(value => value !== "")
-      )
-    ];
-
-    uniqueValues.sort((a, b) =>
-      a.localeCompare(b)
-    );
+      const countries =
+        articles.map(article => article.country);
 
 
-    uniqueValues.forEach(value => {
-
-      const option =
-        document.createElement("option");
-
-      option.value = value;
-      option.textContent = value;
-
-      select.appendChild(option);
-
-    });
-
-  }
+      const publications =
+        articles.map(article => article.publication);
 
 
-  function initialiseFilters() {
-
-    const articles = getArticles();
-
-
-    const topics = [];
-    const countries = [];
-    const publications = [];
-    const years = [];
+      const years =
+        articles.map(article => article.year);
 
 
-    articles.forEach(article => {
-
-      topics.push(
-        getField(article, [
-          "topic",
-          "topics",
-          "category"
-        ])
+      addFilterOptions(
+        topicFilter,
+        topics
       );
 
 
-      countries.push(
-        getField(article, [
-          "country",
-          "countries"
-        ])
+      addFilterOptions(
+        countryFilter,
+        countries
       );
 
 
-      publications.push(
-        getField(article, [
-          "publication",
-          "publications",
-          "outlet"
-        ])
+      addFilterOptions(
+        publicationFilter,
+        publications
       );
 
 
-      years.push(
-        getField(article, [
-          "year"
-        ])
+      addFilterOptions(
+        yearFilter,
+        years
       );
 
-    });
+    }
 
 
-    addFilterOptions(
-      topicFilter,
-      topics
-    );
+    // =========================
+    // RENDER ARTICLES
+    // =========================
+
+    function renderArticles() {
+
+      const articles =
+        window.articles || [];
 
 
-    addFilterOptions(
-      countryFilter,
-      countries
-    );
+      const searchTerm =
+        searchInput.value
+          .toLowerCase()
+          .trim();
 
 
-    addFilterOptions(
-      publicationFilter,
-      publications
-    );
+      const selectedTopic =
+        topicFilter.value;
 
 
-    addFilterOptions(
-      yearFilter,
-      years
-    );
-
-  }
+      const selectedCountry =
+        countryFilter.value;
 
 
-  // =========================
-  // RENDER ARTICLES
-  // =========================
-
-  function renderArticles() {
-
-    const articles = getArticles();
+      const selectedPublication =
+        publicationFilter.value;
 
 
-    const searchTerm =
-      searchInput.value
-        .toLowerCase()
-        .trim();
+      const selectedYear =
+        yearFilter.value;
 
 
-    const selectedTopic =
-      topicFilter.value;
+      const filteredArticles =
+        articles.filter(article => {
 
 
-    const selectedCountry =
-      countryFilter.value;
+          const searchableText = [
+
+            article.title,
+            article.authors,
+            article.publication,
+            article.country,
+            article.topic,
+            article.date,
+            article.year
+
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
 
-    const selectedPublication =
-      publicationFilter.value;
+          const matchesSearch =
+            !searchTerm ||
+            searchableText.includes(searchTerm);
 
 
-    const selectedYear =
-      yearFilter.value;
+          const matchesTopic =
+            !selectedTopic ||
+            getArray(article.topic)
+              .includes(selectedTopic);
 
 
-    const filteredArticles =
-      articles.filter(article => {
+          const matchesCountry =
+            !selectedCountry ||
+            getArray(article.country)
+              .includes(selectedCountry);
 
 
-        const title =
-          getField(article, ["title"]);
+          const matchesPublication =
+            !selectedPublication ||
+            getArray(article.publication)
+              .includes(selectedPublication);
 
 
-        const authors =
-          getField(article, [
-            "authors",
-            "author"
-          ]);
+          const matchesYear =
+            !selectedYear ||
+            String(article.year) === selectedYear;
 
 
-        const publication =
-          getField(article, [
-            "publication",
-            "publications",
-            "outlet"
-          ]);
+          return (
+            matchesSearch &&
+            matchesTopic &&
+            matchesCountry &&
+            matchesPublication &&
+            matchesYear
+          );
+
+        });
 
 
-        const country =
-          getField(article, [
-            "country",
-            "countries"
-          ]);
+      // =========================
+      // SORT NEWEST FIRST
+      // =========================
+
+      filteredArticles.sort((a, b) => {
+
+        const yearDifference =
+          Number(b.year || 0) -
+          Number(a.year || 0);
 
 
-        const topic =
-          getField(article, [
-            "topic",
-            "topics",
-            "category"
-          ]);
+        if (yearDifference !== 0) {
+          return yearDifference;
+        }
 
 
-        const date =
-          getField(article, ["date"]);
-
-
-        const year =
-          getField(article, ["year"]);
-
-
-        const searchableText = [
-
-          title,
-          authors,
-          publication,
-          country,
-          topic,
-          date,
-          year
-
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-
-
-        const matchesSearch =
-          !searchTerm ||
-          searchableText.includes(searchTerm);
-
-
-        const matchesTopic =
-          !selectedTopic ||
-          getArray(topic)
-            .includes(selectedTopic);
-
-
-        const matchesCountry =
-          !selectedCountry ||
-          getArray(country)
-            .includes(selectedCountry);
-
-
-        const matchesPublication =
-          !selectedPublication ||
-          getArray(publication)
-            .includes(selectedPublication);
-
-
-        const matchesYear =
-          !selectedYear ||
-          String(year) === selectedYear;
-
-
-        return (
-          matchesSearch &&
-          matchesTopic &&
-          matchesCountry &&
-          matchesPublication &&
-          matchesYear
-        );
+        return String(b.date || "")
+          .localeCompare(
+            String(a.date || "")
+          );
 
       });
 
 
+      // =========================
+      // CLEAR GRID
+      // =========================
+
+      articleGrid.innerHTML = "";
+
+
+      // =========================
+      // CREATE CARDS
+      // =========================
+
+      filteredArticles.forEach(article => {
+
+
+        const card =
+          document.createElement("article");
+
+
+        card.className =
+          "article-card";
+
+
+        const topic =
+          article.topic
+            ? escapeHTML(article.topic)
+            : "";
+
+
+        const publication =
+          article.publication
+            ? escapeHTML(article.publication)
+            : "";
+
+
+        const date =
+          article.date
+            ? escapeHTML(article.date)
+            : "";
+
+
+        const title =
+          escapeHTML(article.title);
+
+
+        const authors =
+          escapeHTML(article.authors);
+
+
+        const url =
+          article.url || "";
+
+
+        card.innerHTML = `
+
+          <div class="article-meta">
+
+            ${topic}
+
+            ${
+              topic && publication
+                ? " · "
+                : ""
+            }
+
+            ${publication}
+
+            ${
+              (topic || publication) && date
+                ? " · "
+                : ""
+            }
+
+            ${date}
+
+          </div>
+
+
+          <h3>
+            ${title}
+          </h3>
+
+
+          <p>
+            ${authors}
+          </p>
+
+
+          ${
+            url
+              ? `
+                <a
+                  href="${url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="read-more"
+                >
+                  Read article →
+                </a>
+              `
+              : ""
+          }
+
+        `;
+
+
+        articleGrid.appendChild(card);
+
+      });
+
+
+      // =========================
+      // NO RESULTS
+      // =========================
+
+      noResults.style.display =
+        filteredArticles.length === 0
+          ? "block"
+          : "none";
+
+    }
+
+
     // =========================
-    // SORT NEWEST FIRST
+    // EVENTS
     // =========================
 
-    filteredArticles.sort((a, b) => {
-
-      const yearA =
-        Number(
-          getField(a, ["year"]) || 0
-        );
+    searchInput.addEventListener(
+      "input",
+      renderArticles
+    );
 
 
-      const yearB =
-        Number(
-          getField(b, ["year"]) || 0
-        );
+    topicFilter.addEventListener(
+      "change",
+      renderArticles
+    );
 
 
-      if (yearB !== yearA) {
-        return yearB - yearA;
+    countryFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+
+    publicationFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+
+    yearFilter.addEventListener(
+      "change",
+      renderArticles
+    );
+
+
+    // =========================
+    // INITIALISE
+    // =========================
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        initialiseFilters();
+
+        renderArticles();
+
       }
+    );
 
+  </script>
 
-      const dateA =
-        String(
-          getField(a, ["date"]) || ""
-        );
 
-
-      const dateB =
-        String(
-          getField(b, ["date"]) || ""
-        );
-
-
-      return dateB.localeCompare(dateA);
-
-    });
-
-
-    // =========================
-    // CLEAR GRID
-    // =========================
-
-    articleGrid.innerHTML = "";
-
-
-    // =========================
-    // CREATE CARDS
-    // =========================
-
-    filteredArticles.forEach(article => {
-
-
-      const card =
-        document.createElement("article");
-
-
-      card.className =
-        "article-card";
-
-
-      const topic =
-        escapeHTML(
-          getField(article, [
-            "topic",
-            "topics",
-            "category"
-          ])
-        );
-
-
-      const publication =
-        escapeHTML(
-          getField(article, [
-            "publication",
-            "publications",
-            "outlet"
-          ])
-        );
-
-
-      const date =
-        escapeHTML(
-          getField(article, ["date"])
-        );
-
-
-      const title =
-        escapeHTML(
-          getField(article, ["title"])
-        );
-
-
-      const authors =
-        escapeHTML(
-          getField(article, [
-            "authors",
-            "author"
-          ])
-        );
-
-
-      const url =
-        getField(article, ["url"]);
-
-
-      card.innerHTML = `
-
-        <div class="article-meta">
-
-          ${topic}
-
-          ${
-            topic && publication
-              ? " · "
-              : ""
-          }
-
-          ${publication}
-
-          ${
-            (topic || publication) && date
-              ? " · "
-              : ""
-          }
-
-          ${date}
-
-        </div>
-
-
-        <h3>
-          ${title}
-        </h3>
-
-
-        <p>
-          ${authors}
-        </p>
-
-
-        ${
-          url
-            ? `
-              <a
-                href="${escapeHTML(url)}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="read-more"
-              >
-                Read article →
-              </a>
-            `
-            : ""
-        }
-
-      `;
-
-
-      articleGrid.appendChild(card);
-
-    });
-
-
-    // =========================
-    // NO RESULTS
-    // =========================
-
-    noResults.style.display =
-      filteredArticles.length === 0
-        ? "block"
-        : "none";
-
-  }
-
-
-  // =========================
-  // EVENTS
-  // =========================
-
-  searchInput.addEventListener(
-    "input",
-    renderArticles
-  );
-
-
-  topicFilter.addEventListener(
-    "change",
-    renderArticles
-  );
-
-
-  countryFilter.addEventListener(
-    "change",
-    renderArticles
-  );
-
-
-  publicationFilter.addEventListener(
-    "change",
-    renderArticles
-  );
-
-
-  yearFilter.addEventListener(
-    "change",
-    renderArticles
-  );
-
-
-  // =========================
-  // INITIALISE
-  // =========================
-
-  initialiseFilters();
-  renderArticles();
-
-</script>
-  
 </body>
 
 </html>
