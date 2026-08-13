@@ -105,35 +105,51 @@
        HERO
     ========================= */
 
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
+.hero {
+  background: var(--white);
+  color: var(--text);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.30) 0%,
-          rgba(255, 255, 255, 0.20) 25%,
-          rgba(255, 255, 255, 0.08) 55%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        url("writers_photo.jpg");
+/* Background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("writers_photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
 
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
+/* Fade overlay:
+   left = 70% white → image appears at ~30%
+   right = transparent → image fully visible */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.70) 0%,
+    rgba(255, 255, 255, 0.55) 30%,
+    rgba(255, 255, 255, 0.20) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-      padding: 90px 0;
-    }
-
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 90px 0;
+}
     .eyebrow {
       color: var(--red);
       text-transform: uppercase;
