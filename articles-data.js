@@ -546,6 +546,576 @@ window.articles = [
   country: "Mexico",
   topic: "Development",
   url: "https://www.project-syndicate.org/commentary/latin-america-crime-crisis-economic-consequences-by-nathalie-alvarado-and-ana-maria-ibanez-2024-12"
-}
+},
+
+  // =========================
+  // 2025
+  // =========================
+
+
+  {
+  title: "The emergence of economic rationality of GPT",
+  author: "Tracy Xiao Liu and Yiting Chen",
+  publication: "VoxEU",
+  date: "07-Jan",
+  year: 2025,
+  country: "China",
+  topic: "",
+  url: "https://cepr.org/voxeu/columns/emergence-economic-rationality-gpt"
+},
+
+{
+  title: "The evolution of gender in the labour market",
+  author: "Claudia Olivetti, Jessica Pan and Barbara Petrongolo",
+  publication: "VoxEU",
+  date: "20-Jan",
+  year: 2025,
+  country: "Singapore and UK",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/evolution-gender-labour-market"
+},
+
+{
+  title: "Supporting the transition to digital cash transfers in rural Mexico",
+  author: "Fernanda Márquez-Padilla and Susan Wendy Parker",
+  publication: "VoxDev",
+  date: "21-Jan",
+  year: 2025,
+  country: "Mexico",
+  topic: "Social Protection",
+  url: "https://voxdev.org/topic/social-protection/supporting-transition-digital-cash-transfers-rural-mexico"
+},
+
+{
+  title: "The demand-side story: Structural change and the decline in female labour force participation in India",
+  author: "Ashwini Deshpande",
+  publication: "VoxEU",
+  date: "21-Jan",
+  year: 2025,
+  country: "India",
+  topic: "Labour Markets",
+  url: "https://cepr.org/voxeu/columns/demand-side-story-structural-change-and-decline-female-labour-force-participation"
+},
+
+{
+  title: "Gender and task rewards in exams: Implications for performance and labour outcomes",
+  author: "Fernanda Estevan and Bruna Borges",
+  publication: "VoxEU",
+  date: "15-Feb",
+  year: 2025,
+  country: "Brazil",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/gender-and-task-rewards-exams-implications-performance-and-labour-outcomes"
+},
+
+{
+  title: "Gender bias in access to finance and implications for capital misallocation",
+  author: "Mariana Viollaz and Arti Grover",
+  publication: "VoxEU",
+  date: "06-Mar",
+  year: 2025,
+  country: "Argentina",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/gender-bias-access-finance-and-implications-capital-misallocation"
+},
+
+{
+  title: "Twitter sentiment and stock market movements: The predictive power of social media",
+  author: "Talita Greyling and Stephanie Rossouw",
+  publication: "VoxEU",
+  date: "26-Mar",
+  year: 2025,
+  country: "South Africa and New Zealand",
+  topic: "Finance",
+  url: "https://cepr.org/voxeu/columns/twitter-sentiment-and-stock-market-movements-predictive-power-social-media"
+},
+
+{
+  title: "Managing credit in dollarised economies: The effective but asymmetric effects of foreign currency reserve requirements",
+  author: "Eugenia Andreasen and Victoria Nuguer",
+  publication: "VoxEU",
+  date: "15-Apr",
+  year: 2025,
+  country: "Chile",
+  topic: "Macroeconomics",
+  url: "https://cepr.org/voxeu/columns/managing-credit-dollarised-economies-effective-asymmetric-effects-foreign-currency"
+},
+
+{
+  title: "Female teachers help reduce gender gaps in STEM",
+  author: "Paola Bordón, María Paola Sevilla, Fernanda Ramírez-Espinoza",
+  publication: "VoxEU",
+  date: "29-Apr",
+  year: 2025,
+  country: "Chile",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/female-teachers-help-reduce-gender-gaps-stem"
+},
+
+{
+  title: "Short-term labour mobility drives innovation in Africa",
+  author: "Linguère Mously Mbaye",
+  publication: "VoxEU",
+  date: "03-May",
+  year: 2025,
+  country: "Ivory Coast",
+  topic: "Labour Markets",
+  url: "https://cepr.org/voxeu/columns/short-term-labour-mobility-drives-innovation-africa"
+},
+
+{
+  title: "Trump’s America Illustrates What Turkey Knows",
+  author: "Selva Demiralp",
+  publication: "PS",
+  date: "13-May",
+  year: 2025,
+  country: "Turkey",
+  topic: "Macroeconomics",
+  url: "https://www.project-syndicate.org/commentary/trumps-america-mirrors-turkey-pressure-on-central-bank-drives-inflation-higher-risk-premium-by-selva-demiralp-2025-05"
+},
+
+{
+  title: "Women’s Role in War Must Extend to Peace",
+  author: "Carolyn Chisadza",
+  publication: "PS",
+  date: "20-May",
+  year: 2025,
+  country: "South Africa",
+  topic: "Gender",
+  url: "https://www.project-syndicate.org/commentary/women-must-play-a-greater-role-in-peace-negotiations-and-post-conflict-governance-by-carolyn-chisadza-2025-05"
+},
+
+{
+  title: "War of attrition in the streets: Rethinking the dynamics of protest participation",
+  author: "Sofía Correa",
+  publication: "VoxDev",
+  date: "22-May",
+  year: 2025,
+  country: "Chile",
+  topic: "Institutions",
+  url: "https://voxdev.org/topic/institutions-political-economy/war-attrition-streets-rethinking-dynamics-protest"
+},
+
+{
+  title: "From risk to resilience: Increasing insurance uptake among farmers in rural Uganda",
+  author: "Aisha Nanyiti",
+  publication: "VoxDev",
+  date: "29-May",
+  year: 2025,
+  country: "Uganda",
+  topic: "Agriculture",
+  url: "https://voxdev.org/topic/agriculture/risk-resilience-increasing-insurance-uptake-among-farmers-rural-uganda"
+},
+
+{
+  title: "Risks and benefits of high-speed internet for socioemotional wellbeing in adolescence and youth",
+  author: "Elisa Failache, Karina Colombo, Martina Querejeta",
+  publication: "VoxEU",
+  date: "29-May",
+  year: 2025,
+  country: "Uruguay",
+  topic: "Health",
+  url: "https://cepr.org/voxeu/columns/risks-and-benefits-high-speed-internet-socioemotional-wellbeing-adolescence-and-youth"
+},
+
+{
+  title: "Ukrainian refugee labour market access shows no impact on local employment outcomes in Czechia",
+  author: "Agnieszka Postepska and Anastasiia Voloshyna",
+  publication: "VoxEU",
+  date: "11-Jun",
+  year: 2025,
+  country: "Netherlands",
+  topic: "Labour Markets",
+  url: "https://cepr.org/voxeu/columns/ukrainian-refugee-labour-market-access-shows-no-impact-local-employment-outcomes"
+},
+
+{
+  title: "Boosting women’s labour force participation in China: Current state and challenges",
+  author: "Xianghong Wang",
+  publication: "VoxDev",
+  date: "16-Jun",
+  year: 2025,
+  country: "China",
+  topic: "Labour Markets",
+  url: "https://voxdev.org/topic/labour-markets/boosting-womens-labour-force-participation-china-current-state-and-challenges"
+},
+
+{
+  title: "Can smoking bans curb the habit?",
+  author: "Paula Carvalho Pereda and Camila Steffens",
+  publication: "VoxDev",
+  date: "30-Jun",
+  year: 2025,
+  country: "Brazil",
+  topic: "Health",
+  url: "https://voxdev.org/topic/health/can-smoking-bans-curb-habit"
+},
+
+{
+  title: "North Africa Must Look South for Trade",
+  author: "Audrey Verdier-Chouchane",
+  publication: "PS",
+  date: "17-Jul",
+  year: 2025,
+  country: "Ivory Coast",
+  topic: "Trade",
+  url: "https://www.project-syndicate.org/commentary/north-africa-must-increase-trade-with-sub-saharan-africa-by-audrey-verdier-chouchane-2025-07"
+},
+
+{
+  title: "Pentecostal Evangelicals as a vehicle of political mobilisation",
+  author: "Daniela Sola",
+  publication: "VoxEU",
+  date: "21-Jul",
+  year: 2025,
+  country: "Spain",
+  topic: "Political Economy",
+  url: "https://cepr.org/voxeu/columns/pentecostal-evangelicals-vehicle-political-mobilisation"
+},
+
+{
+  title: "Gender-neutral economics can no longer be the default",
+  author: "Navika Mehta",
+  publication: "VoxEU",
+  date: "31-Jul",
+  year: 2025,
+  country: "India",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/gender-neutral-economics-can-no-longer-be-default"
+},
+
+{
+  title: "Unintended consequences of lockdowns: Evidence on violence against women",
+  author: "Maria Dolores Montoya Diaz, Paula Pereda, Fabiana Rocha, and Isadora Árabe",
+  publication: "VoxEU",
+  date: "09-Aug",
+  year: 2025,
+  country: "Brazil",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/unintended-consequences-lockdowns-evidence-violence-against-women"
+},
+
+{
+  title: "Small Fiscal Reforms Can Deliver Big Results",
+  author: "Ana María Ibáñez and Marta Ruiz-Arranz",
+  publication: "PS",
+  date: "15-Aug",
+  year: 2025,
+  country: "Mexico",
+  topic: "Fiscal Policy",
+  url: "https://www.project-syndicate.org/commentary/latin-america-shows-incremental-fiscal-reforms-more-effective-than-austerity-by-ana-maria-ibanez-and-marta-ruiz-arranz-2025-08"
+},
+
+{
+  title: "Reinforced regional integration fosters inclusive growth and human development",
+  author: "Mariame Bakouan",
+  publication: "VoxEU",
+  date: "14-Sep",
+  year: 2025,
+  country: "Burkina Faso",
+  topic: "Development",
+  url: "https://cepr.org/voxeu/columns/reinforced-regional-integration-fosters-inclusive-growth-and-human-development"
+},
+
+{
+  title: "Markets, marriage, and norms: Understanding female labour force participation in India",
+  author: "Farzana Afridi",
+  publication: "VoxDev",
+  date: "18-Sep",
+  year: 2025,
+  country: "India",
+  topic: "Labour Markets",
+  url: "https://voxdev.org/topic/labour-markets/markets-marriage-and-norms-understanding-female-labour-force-participation"
+},
+
+{
+  title: "Climate adaptation in Argentina: Short-term instability, long-term risk",
+  author: "Elisa Belfiori and Yanel Llohis",
+  publication: "VoxDev",
+  date: "30-Sep",
+  year: 2025,
+  country: "Argentina",
+  topic: "Climate",
+  url: "https://voxdev.org/topic/energy-environment/climate-adaptation-argentina-short-term-instability-long-term-risk"
+},
+
+{
+  title: "Why diverting cotton inputs hurts maize productivity in Burkina Faso",
+  author: "Salimata Traoré",
+  publication: "VoxDev",
+  date: "31-Oct",
+  year: 2025,
+  country: "Burkina Faso",
+  topic: "Agriculture",
+  url: "https://voxdev.org/topic/agriculture/why-diverting-cotton-inputs-hurts-maize-productivity-burkina-faso"
+},
+
+{
+  title: "After ‘the change’: How menopause affects women’s labour and health outcomes",
+  author: "Fernanda Márquez-Padilla and Laura Juarez",
+  publication: "VoxEU",
+  date: "06-Dec",
+  year: 2025,
+  country: "Mexico",
+  topic: "Gender",
+  url: "https://cepr.org/voxeu/columns/after-change-how-menopause-affects-womens-labour-and-health-outcomes"
+},
+
+  // =========================
+  // 2026
+  // =========================
+
+  {
+  title: "What Mexico’s drug war reveals about internal migration",
+  author: "Aurora Ramírez-Álvarez",
+  publication: "VoxDev",
+  date: "12-Jan",
+  year: 2026,
+  country: "Mexico",
+  topic: "Migration",
+  url: "https://voxdev.org/topic/migration-urbanisation/what-mexicos-drug-war-reveals-about-internal-migration"
+},
+
+{
+  title: "Climate adaptation and vulnerability in Mexico",
+  author: "Sandra Aguilar Gomez",
+  publication: "VoxDev",
+  date: "16-Jan",
+  year: 2026,
+  country: "Mexico",
+  topic: "Climate",
+  url: "https://voxdev.org/topic/energy-environment/climate-adaptation-and-vulnerability-mexico"
+},
+
+{
+  title: "Why Young People Are Choosing Protest",
+  author: "Rose Ngugi",
+  publication: "PS",
+  date: "28-Jan",
+  year: 2026,
+  country: "Kenya",
+  topic: "Political Economy",
+  url: "https://www.project-syndicate.org/commentary/gen-z-protests-driven-by-longstanding-institutional-failures-by-rose-ngugi-2026-01"
+},
+
+{
+  title: "Why is female labour force participation still so low in Egypt?",
+  author: "Rana Hendy",
+  publication: "VoxDev",
+  date: "30-Jan",
+  year: 2026,
+  country: "Egypt",
+  topic: "Labour Markets",
+  url: "https://voxdev.org/topic/labour-markets/why-female-labour-force-participation-still-so-low-egypt"
+},
+
+{
+  title: "The Impact of Trump’s Tariffs on Latin America",
+  author: "Eugenia Andreasen",
+  publication: "PS",
+  date: "02-Feb",
+  year: 2026,
+  country: "Chile",
+  topic: "Trade",
+  url: "https://www.project-syndicate.org/commentary/trump-tariffs-uneven-effect-on-latin-america-make-case-for-trade-diversification-by-eugenia-andreasen-2026-02"
+},
+
+{
+  title: "Urban slums: Stepping-stone for some and traps (or shields) for others",
+  author: "Luciene Periera",
+  publication: "VoxEU",
+  date: "15-Feb",
+  year: 2026,
+  country: "Brazil",
+  topic: "Urbanisation",
+  url: "https://cepr.org/voxeu/columns/urban-slums-stepping-stone-some-and-traps-or-shields-others"
+},
+
+{
+  title: "Who Can Lead India Toward Sustainable Development?",
+  author: "Bipasha Maity",
+  publication: "PS",
+  date: "04-Mar",
+  year: 2026,
+  country: "India",
+  topic: "Climate",
+  url: "https://www.project-syndicate.org/commentary/women-from-underrepresented-communities-are-best-equipped-to-lead-climate-action-in-india-by-bipasha-maity-2026-03"
+},
+
+{
+  title: "The Hidden Economic Costs of Menopause",
+  author: "Fernanda Márquez-Padilla and Laura Juárez",
+  publication: "PS",
+  date: "16-Mar",
+  year: 2026,
+  country: "Mexico",
+  topic: "Gender",
+  url: "https://www.project-syndicate.org/commentary/menopause-penalty-hidden-economic-costs-of-neglected-health-issue-by-laura-juarez-and-fernanda-marquez-padilla-2026-03"
+},
+
+{
+  title: "How Women Succeed in Male-Dominated Fields",
+  author: "Fernanda Estevan and Bruna Borges",
+  publication: "PS",
+  date: "07-Apr",
+  year: 2026,
+  country: "Brazil",
+  topic: "Gender",
+  url: "https://www.project-syndicate.org/commentary/research-shows-women-benefit-from-having-female-peers-and-teachers-by-fernanda-estevan-and-bruna-borges-2026-04"
+},
+
+{
+  title: "The value of free health insurance: Evidence from Mexico’s Seguro Popular",
+  author: "Renata Narita",
+  publication: "VoxEU",
+  date: "16-Apr",
+  year: 2026,
+  country: "Brazil",
+  topic: "Health",
+  url: "https://cepr.org/voxeu/columns/value-free-health-insurance-evidence-mexicos-seguro-popular"
+},
+
+{
+  title: "Women’s status in economics: Evidence from Africa, Asia, and Latin America",
+  author: "Inés Berniell, Ashwini Deshpande, Raquel Fernández, Navika Mehta, Fiona Tregenna",
+  publication: "VoxDev",
+  date: "22-Apr",
+  year: 2026,
+  country: "IEAWE",
+  topic: "Gender",
+  url: "https://voxdev.org/topic/labour-markets/womens-status-economics-evidence-africa-asia-and-latin-america"
+},
+
+{
+  title: "Why Slums Persist",
+  author: "Luciene Periera",
+  publication: "PS",
+  date: "23-Apr",
+  year: 2026,
+  country: "Brazil",
+  topic: "Urbanisation",
+  url: "https://www.project-syndicate.org/commentary/slums-can-be-eliminated-only-through-housing-and-education-reform-by-luciene-pereira-2026-04"
+},
+
+{
+  title: "What’s holding back agriculture in Ghana?",
+  author: "Nkechi Owoo",
+  publication: "VoxDev",
+  date: "01-May",
+  year: 2026,
+  country: "Ghana",
+  topic: "Agriculture",
+  url: "https://voxdev.org/topic/agriculture/whats-holding-back-agriculture-ghana"
+},
+
+{
+  title: "Will AI Democratize Skills?",
+  author: "María Lombardi",
+  publication: "PS",
+  date: "06-May",
+  year: 2026,
+  country: "Argentina",
+  topic: "Technology",
+  url: "https://prosyn.org/Go73fhq"
+},
+
+{
+  title: "Why Gender Inequality Still Haunts the Economy",
+  author: "Eleni Yitbarek, Nicky Nicholls, Michelle Pleace",
+  publication: "PS",
+  date: "22-May",
+  year: 2026,
+  country: "South Africa",
+  topic: "Gender",
+  url: "https://www.project-syndicate.org/commentary/why-economic-gender-inequality-persists-by-eleni-yitbarek-et-al-2026-05"
+},
+
+{
+  title: "Latin America’s Agricultural Boom Is Faltering",
+  author: "Ana María Ibáñez, Lina Salazar, Maja Schling",
+  publication: "PS",
+  date: "28-May",
+  year: 2026,
+  country: "US",
+  topic: "Agriculture",
+  url: "https://www.project-syndicate.org/commentary/productivity-crisis-threatening-latin-american-agriculture-by-ana-maria-ibanez-et-al-2026-05"
+},
+
+{
+  title: "Female labour force participation in Pakistan and the central role of norms",
+  author: "Hadia Majid",
+  publication: "VoxDev",
+  date: "29-May",
+  year: 2026,
+  country: "Pakistan",
+  topic: "Labour Markets",
+  url: "https://voxdev.org/topic/labour-markets/female-labour-force-participation-pakistan-and-central-role-norms"
+},
+
+{
+  title: "How to Encourage Deceased Organ Donation",
+  author: "Maleke Fourati and Christina Sarah Hauser",
+  publication: "PS",
+  date: "02-Jun",
+  year: 2026,
+  country: "Tunisia",
+  topic: "Health",
+  url: "https://www.project-syndicate.org/commentary/awareness-campaigns-enlarge-pool-of-organ-donors-developing-countries-by-christina-sarah-hauser-and-maleke-fourati-2026-06"
+},
+
+{
+  title: "The Right Incentives for Climate Action",
+  author: "Paula Carvalho Pereda",
+  publication: "PS",
+  date: "03-Jun",
+  year: 2026,
+  country: "Brazil",
+  topic: "Climate",
+  url: "https://prosyn.org/EST8hmE"
+},
+
+{
+  title: "Why Nigeria's smallholders remain stuck: Seeds, credit, and missing data",
+  author: "Khadijat Busola Amolegbe",
+  publication: "VoxDev",
+  date: "25-Jun",
+  year: 2026,
+  country: "Nigeria",
+  topic: "Agriculture",
+  url: "https://voxdev.org/topic/agriculture/why-nigerias-smallholders-remain-stuck-seeds-credit-and-missing-data"
+},
+
+{
+  title: "Institutions, not innovation, are the barrier to Nigeria’s agricultural productivity growth",
+  author: "Khadijat Busola Amolegbe",
+  publication: "VoxDev",
+  date: "25-Jun",
+  year: 2026,
+  country: "Nigeria",
+  topic: "Agriculture",
+  url: "https://voxdev.org/topic/agriculture/institutions-not-innovation-are-barrier-nigerias-agricultural-productivity-growth"
+},
+
+{
+  title: "Bridging the gap for women in export-led growth",
+  author: "Rozi Kumari, Prarthna Agarwal Goel and Devasmita Jena",
+  publication: "VoxDev",
+  date: "09-Jul",
+  year: 2026,
+  country: "India",
+  topic: "Labour Markets",
+  url: "https://voxdev.org/topic/labour-markets/bridging-gap-women-export-led-growth"
+},
+
+{
+  title: "High-speed internet and early childhood development: Causal evidence from a countrywide programme",
+  author: "Elisa Failache and Karina Colombo",
+  publication: "VoxEU",
+  date: "10-Jul",
+  year: 2026,
+  country: "Uruguay",
+  topic: "Health",
+  url: "https://cepr.org/voxeu/columns/high-speed-internet-and-early-childhood-development-causal-evidence-countrywide"
+},
 
 ];
