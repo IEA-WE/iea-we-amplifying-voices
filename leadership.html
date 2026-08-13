@@ -139,7 +139,7 @@
     ========================= */
 
     .leadership {
-      padding: 90px 0 100px;
+      padding: 90px 0 110px;
       background: var(--light-blue);
     }
 
@@ -164,39 +164,73 @@
       line-height: 1.8;
     }
 
-    .leadership-title {
-      color: var(--navy);
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
-    }
-
 
     /* =========================
-       PHOTO GRID
+       EDITORIAL PHOTO GRID
     ========================= */
 
     .people-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-bottom: 85px;
+      gap: 0;
+      margin-bottom: 70px;
+      padding: 15px 0 35px;
     }
 
     .person {
       position: relative;
       background: var(--white);
-      overflow: hidden;
+      overflow: visible;
       min-height: 390px;
-      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.08);
+      margin: 0 -8px;
+      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.10);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .person:hover {
+    /*
+      Stagger the cards to create the
+      overlapping editorial / magazine look.
+    */
+
+    .person:nth-child(1) {
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    .person:nth-child(2) {
+      transform: translateY(35px);
+      z-index: 3;
+    }
+
+    .person:nth-child(3) {
       transform: translateY(-5px);
-      box-shadow: 0 14px 35px rgba(16, 43, 82, 0.14);
+      z-index: 2;
+    }
+
+    .person:nth-child(4) {
+      transform: translateY(-5px);
+      z-index: 2;
+    }
+
+    .person:nth-child(5) {
+      transform: translateY(35px);
+      z-index: 3;
+    }
+
+    .person:nth-child(6) {
+      transform: translateY(-5px);
+      z-index: 2;
+    }
+
+    .person:hover {
+      transform: translateY(-8px);
+      z-index: 10;
+      box-shadow: 0 16px 35px rgba(16, 43, 82, 0.18);
+    }
+
+    .person:nth-child(2):hover,
+    .person:nth-child(5):hover {
+      transform: translateY(27px);
     }
 
     .person-image {
@@ -219,7 +253,10 @@
       transform: scale(1.04);
     }
 
-    /* Individual image adjustments */
+
+    /* =========================
+       INDIVIDUAL IMAGE CROPPING
+    ========================= */
 
     .ashwini-image img {
       object-position: center center;
@@ -241,10 +278,13 @@
       object-position: center center;
     }
 
-    /* Navika: tighter crop + darker background */
+
+    /* =========================
+       NAVIKA IMAGE
+    ========================= */
 
     .navika-image img {
-      transform: scale(1.3);
+      transform: scale(1.5);
       object-position: center center;
     }
 
@@ -271,12 +311,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 55px 28px 25px;
+      padding: 60px 28px 25px;
       z-index: 4;
+
       background: linear-gradient(
         to top,
-        rgba(11, 53, 104, 0.92),
-        rgba(11, 53, 104, 0.45),
+        rgba(11, 53, 104, 0.94),
+        rgba(11, 53, 104, 0.55),
         transparent
       );
     }
@@ -291,24 +332,9 @@
     }
 
     .person-info p {
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 13px;
       line-height: 1.5;
-    }
-
-
-    /* =========================
-       SPECIAL POSITIONING
-    ========================= */
-
-    /*
-      Ashwini and Inés have their names positioned
-      directly on their own photographs.
-    */
-
-    .ashwini .person-info,
-    .ines .person-info {
-      padding-bottom: 27px;
     }
 
 
@@ -419,7 +445,7 @@
 
 
     /* =========================
-       MOBILE
+       TABLET
     ========================= */
 
     @media (max-width: 850px) {
@@ -435,11 +461,31 @@
       .people-grid,
       .advisory-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      /*
+        Remove the desktop overlap on smaller screens
+        so the photos remain clean and readable.
+      */
+
+      .person {
+        margin: 0;
+      }
+
+      .person:nth-child(1),
+      .person:nth-child(2),
+      .person:nth-child(3),
+      .person:nth-child(4),
+      .person:nth-child(5),
+      .person:nth-child(6) {
+        transform: none;
+      }
+
+      .person:hover,
+      .person:nth-child(2):hover,
+      .person:nth-child(5):hover {
+        transform: translateY(-5px);
       }
 
       .person,
@@ -447,8 +493,17 @@
         min-height: 340px;
         height: 340px;
       }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 600px) {
 
@@ -476,6 +531,20 @@
       .people-grid,
       .advisory-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .person {
+        margin: 0;
+      }
+
+      .person:nth-child(1),
+      .person:nth-child(2),
+      .person:nth-child(3),
+      .person:nth-child(4),
+      .person:nth-child(5),
+      .person:nth-child(6) {
+        transform: none;
       }
 
       .person,
@@ -578,15 +647,22 @@
         </div>
 
 
+        <!-- =========================
+             PEOPLE
+        ========================= -->
+
         <div class="people-grid">
 
 
           <!-- ASHWINI -->
 
-          <div class="person ashwini">
+          <div class="person">
 
             <div class="person-image ashwini-image">
-              <img src="ashwini_photo.jpeg" alt="Ashwini Deshpande">
+              <img
+                src="ashwini_photo.jpeg"
+                alt="Ashwini Deshpande"
+              >
             </div>
 
             <div class="person-info">
@@ -599,10 +675,13 @@
 
           <!-- MARÍA INÉS -->
 
-          <div class="person ines">
+          <div class="person">
 
             <div class="person-image ines-image">
-              <img src="ines_photo.jpeg" alt="María Inés Berniell">
+              <img
+                src="ines_photo.jpeg"
+                alt="María Inés Berniell"
+              >
             </div>
 
             <div class="person-info">
@@ -618,7 +697,10 @@
           <div class="person">
 
             <div class="person-image raquel-image">
-              <img src="raquel_photo.jpg" alt="Raquel Fernández">
+              <img
+                src="raquel_photo.jpg"
+                alt="Raquel Fernández"
+              >
             </div>
 
             <div class="person-info">
@@ -634,7 +716,10 @@
           <div class="person">
 
             <div class="person-image dani-image">
-              <img src="dani_photo.jpeg" alt="Dani Rodrik">
+              <img
+                src="dani_photo.jpeg"
+                alt="Dani Rodrik"
+              >
             </div>
 
             <div class="person-info">
@@ -650,7 +735,10 @@
           <div class="person">
 
             <div class="person-image fiona-image">
-              <img src="fiona_photo.jpeg" alt="Fiona Tregenna">
+              <img
+                src="fiona_photo.jpeg"
+                alt="Fiona Tregenna"
+              >
             </div>
 
             <div class="person-info">
@@ -666,7 +754,10 @@
           <div class="person">
 
             <div class="person-image navika-image">
-              <img src="navika_photo.jpg" alt="Navika Mehta">
+              <img
+                src="navika_photo.jpg"
+                alt="Navika Mehta"
+              >
             </div>
 
             <div class="person-info">
