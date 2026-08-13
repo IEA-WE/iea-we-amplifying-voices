@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Leadership | IEA-WE</title>
+  <title>Team | IEA-WE</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
@@ -101,8 +101,8 @@
     ========================= */
 
     .page-hero {
-      padding: 90px 0 70px;
-      background: var(--white);
+      padding: 90px 0 80px;
+      background: var(--off-white);
       border-bottom: 1px solid var(--line);
     }
 
@@ -127,7 +127,7 @@
     }
 
     .page-hero p {
-      max-width: 900px;
+      max-width: 760px;
       color: var(--muted);
       font-size: 18px;
       line-height: 1.8;
@@ -135,17 +135,17 @@
 
 
     /* =========================
-       LEADERSHIP
+       TEAM SECTION
     ========================= */
 
     .leadership {
-      padding: 80px 0 100px;
+      padding: 90px 0 100px;
       background: var(--light-blue);
     }
 
     .section-heading {
-      max-width: 800px;
-      margin-bottom: 50px;
+      max-width: 780px;
+      margin-bottom: 55px;
     }
 
     .section-heading h2 {
@@ -164,154 +164,151 @@
       line-height: 1.8;
     }
 
+    .leadership-title {
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
 
     /* =========================
-       EDITORIAL PHOTO GRID
+       PHOTO GRID
     ========================= */
 
     .people-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
-      position: relative;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 85px;
     }
 
     .person {
       position: relative;
-      overflow: hidden;
       background: var(--white);
-      min-width: 0;
+      overflow: hidden;
+      min-height: 390px;
+      box-shadow: 0 8px 25px rgba(16, 43, 82, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .person img {
+    .person:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(16, 43, 82, 0.14);
+    }
+
+    .person-image {
+      position: relative;
+      width: 100%;
+      height: 390px;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .person-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      object-fit: cover;
+      transition: transform 0.4s ease;
     }
 
-    .person:hover img {
-      transform: scale(1.025);
+    .person:hover .person-image img {
+      transform: scale(1.04);
     }
 
-    /* Large top images */
+    /* Individual image adjustments */
 
-    .person.large {
-      grid-column: span 6;
-      height: 440px;
-      z-index: 2;
+    .ashwini-image img {
+      object-position: center center;
     }
 
-    /* Keep names of the large images above the overlapping images */
-
-    .person.large .person-info {
-      bottom: 35px;
+    .ines-image img {
+      object-position: center center;
     }
 
-
-    /* Smaller bottom images */
-
-    .person.small {
-      grid-column: span 3;
-      height: 330px;
-      margin-top: -55px;
-      z-index: 3;
+    .raquel-image img {
+      object-position: center center;
     }
 
+    .dani-image img {
+      object-position: center center;
+    }
 
-    /* =========================
-       NAVIKA IMAGE CROP
-    ========================= */
+    .fiona-image img {
+      object-position: center center;
+    }
 
-    .person.navika img {
+    /* Navika: tighter crop + darker background */
+
+    .navika-image img {
       transform: scale(1.3);
+      object-position: center center;
     }
 
-    .person.navika:hover img {
-      transform: scale(1.33);
+    .person:hover .navika-image img {
+      transform: scale(1.34);
     }
 
-
-    /* =========================
-       PHOTO GRADIENT
-    ========================= */
-
-    .person::after {
+    .navika-image::after {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(
-          to top,
-          rgba(8, 24, 45, 0.82) 0%,
-          rgba(8, 24, 45, 0.48) 30%,
-          rgba(8, 24, 45, 0.08) 58%,
-          rgba(8, 24, 45, 0) 75%
-        );
+      background: rgba(11, 53, 104, 0.28);
       pointer-events: none;
+      z-index: 2;
     }
 
 
     /* =========================
-       TEXT ON PHOTOGRAPHS
+       NAME OVERLAYS
     ========================= */
 
     .person-info {
       position: absolute;
-      left: 30px;
-      right: 25px;
-      bottom: 25px;
-      z-index: 5;
-      color: var(--white);
-    }
-
-    .person-info::before {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: var(--red);
-      margin-bottom: 14px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 55px 28px 25px;
+      z-index: 4;
+      background: linear-gradient(
+        to top,
+        rgba(11, 53, 104, 0.92),
+        rgba(11, 53, 104, 0.45),
+        transparent
+      );
     }
 
     .person-info h3 {
-      font-family: "Playfair Display", Georgia, serif;
       color: var(--white);
-      font-size: 29px;
-      line-height: 1.15;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 27px;
+      line-height: 1.2;
+      margin-bottom: 5px;
       font-weight: 500;
-      margin-bottom: 7px;
     }
 
     .person-info p {
-      color: rgba(255, 255, 255, 0.94);
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 500;
-    }
-
-
-    /* Smaller card typography */
-
-    .person.small .person-info {
-      left: 20px;
-      right: 18px;
-      bottom: 20px;
-    }
-
-    .person.small .person-info::before {
-      width: 35px;
-      height: 3px;
-      margin-bottom: 11px;
-    }
-
-    .person.small .person-info h3 {
-      font-size: 22px;
-    }
-
-    .person.small .person-info p {
+      color: rgba(255, 255, 255, 0.88);
       font-size: 13px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       SPECIAL POSITIONING
+    ========================= */
+
+    /*
+      Ashwini and Inés have their names positioned
+      directly on their own photographs.
+    */
+
+    .ashwini .person-info,
+    .ines .person-info {
+      padding-bottom: 27px;
     }
 
 
@@ -320,7 +317,7 @@
     ========================= */
 
     .advisory-section {
-      background: var(--off-white);
+      background: var(--white);
       padding: 90px 0;
     }
 
@@ -353,26 +350,15 @@
 
     .advisory-card h3 {
       color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.3;
       margin-bottom: 8px;
-      font-weight: 500;
     }
 
     .advisory-card p {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
-    }
-
-    .advisory-card::after {
-      content: "";
-      display: block;
-      width: 35px;
-      height: 3px;
-      background: var(--red);
-      margin-top: 22px;
     }
 
 
@@ -433,58 +419,36 @@
 
 
     /* =========================
-       TABLET
+       MOBILE
     ========================= */
 
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
 
       nav {
-        gap: 18px;
+        gap: 15px;
       }
 
       nav a {
         font-size: 12px;
       }
 
-      .people-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .person.large {
-        grid-column: span 1;
-        height: 400px;
-      }
-
-      .person.small {
-        grid-column: span 1;
-        height: 330px;
-        margin-top: 0;
-      }
-
-      /* Reset Navika crop slightly for smaller screens */
-
-      .person.navika img {
-        transform: scale(1.3);
-      }
-
-      .person.navika:hover img {
-        transform: scale(1.33);
-      }
-
+      .people-grid,
       .advisory-grid {
         grid-template-columns: 1fr 1fr;
       }
 
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .person,
+      .person-image {
+        min-height: 340px;
+        height: 340px;
       }
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 600px) {
 
@@ -509,41 +473,19 @@
         padding: 65px 0;
       }
 
-      .section-heading {
-        margin-bottom: 35px;
-      }
-
-      .people-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .person.large,
-      .person.small {
-        grid-column: span 1;
-        height: 380px;
-        margin-top: 0;
-      }
-
-      .person.large .person-info {
-        bottom: 25px;
-      }
-
-      .person-info h3 {
-        font-size: 26px;
-      }
-
-      .person.small .person-info h3 {
-        font-size: 24px;
-      }
-
+      .people-grid,
       .advisory-grid {
         grid-template-columns: 1fr;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .person,
+      .person-image {
+        min-height: 390px;
+        height: 390px;
+      }
+
+      .person-info h3 {
+        font-size: 25px;
       }
     }
 
@@ -570,7 +512,7 @@
         <a href="index.html">Home</a>
         <a href="work.html">Our Work</a>
         <a href="articles.html">Amplifying Voices</a>
-        <a href="leadership.html">Leadership</a>
+        <a href="leadership.html">Team</a>
         <a href="reports.html">Reports</a>
         <a href="about.html">About</a>
       </nav>
@@ -591,7 +533,7 @@
       <div class="container">
 
         <div class="section-label">
-          Leadership
+          Team
         </div>
 
         <h1>
@@ -624,44 +566,32 @@
           </div>
 
           <h2>
-            The IEA-WE Team.
+            The people behind the initiative.
           </h2>
 
           <p>
-            The initiative is led by economists committed to identifying
-            barriers to women's participation and advancing greater equity
-            and excellence in the economics profession.
+            IEA-WE brings together economists and communications professionals
+            committed to identifying barriers to women's participation and
+            advancing greater equity and excellence in the economics profession.
           </p>
 
         </div>
 
-
-        <!-- =========================
-             PHOTO GRID
-        ========================= -->
 
         <div class="people-grid">
 
 
           <!-- ASHWINI -->
 
-          <div class="person large">
+          <div class="person ashwini">
 
-            <img
-              src="ashwini_photo.jpeg"
-              alt="Ashwini Deshpande"
-            >
+            <div class="person-image ashwini-image">
+              <img src="ashwini_photo.jpeg" alt="Ashwini Deshpande">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                Ashwini Deshpande
-              </h3>
-
-              <p>
-                Ashoka University
-              </p>
-
+              <h3>Ashwini Deshpande</h3>
+              <p>Ashoka University</p>
             </div>
 
           </div>
@@ -669,23 +599,15 @@
 
           <!-- MARÍA INÉS -->
 
-          <div class="person large">
+          <div class="person ines">
 
-            <img
-              src="ines_photo.jpeg"
-              alt="María Inés Berniell"
-            >
+            <div class="person-image ines-image">
+              <img src="ines_photo.jpeg" alt="María Inés Berniell">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                María Inés Berniell
-              </h3>
-
-              <p>
-                Universidad Nacional de la Plata and CEDLAS
-              </p>
-
+              <h3>María Inés Berniell</h3>
+              <p>Universidad Nacional de la Plata and CEDLAS</p>
             </div>
 
           </div>
@@ -693,23 +615,15 @@
 
           <!-- RAQUEL -->
 
-          <div class="person small">
+          <div class="person">
 
-            <img
-              src="raquel_photo.jpg"
-              alt="Raquel Fernández"
-            >
+            <div class="person-image raquel-image">
+              <img src="raquel_photo.jpg" alt="Raquel Fernández">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                Raquel Fernández
-              </h3>
-
-              <p>
-                New York University
-              </p>
-
+              <h3>Raquel Fernández</h3>
+              <p>New York University</p>
             </div>
 
           </div>
@@ -717,23 +631,15 @@
 
           <!-- DANI -->
 
-          <div class="person small">
+          <div class="person">
 
-            <img
-              src="dani_photo.jpeg"
-              alt="Dani Rodrik"
-            >
+            <div class="person-image dani-image">
+              <img src="dani_photo.jpeg" alt="Dani Rodrik">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                Dani Rodrik
-              </h3>
-
-              <p>
-                Harvard University
-              </p>
-
+              <h3>Dani Rodrik</h3>
+              <p>Harvard University</p>
             </div>
 
           </div>
@@ -741,23 +647,15 @@
 
           <!-- FIONA -->
 
-          <div class="person small">
+          <div class="person">
 
-            <img
-              src="fiona_photo.jpeg"
-              alt="Fiona Tregenna"
-            >
+            <div class="person-image fiona-image">
+              <img src="fiona_photo.jpeg" alt="Fiona Tregenna">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                Fiona Tregenna
-              </h3>
-
-              <p>
-                University of Johannesburg
-              </p>
-
+              <h3>Fiona Tregenna</h3>
+              <p>University of Johannesburg</p>
             </div>
 
           </div>
@@ -765,23 +663,18 @@
 
           <!-- NAVIKA -->
 
-          <div class="person small navika">
+          <div class="person">
 
-            <img
-              src="navika_photo.jpg"
-              alt="Navika Mehta"
-            >
+            <div class="person-image navika-image">
+              <img src="navika_photo.jpg" alt="Navika Mehta">
+            </div>
 
             <div class="person-info">
-
-              <h3>
-                Navika Mehta
-              </h3>
-
+              <h3>Navika Mehta</h3>
               <p>
-                Strategic Communications and Research Dissemination Lead, IEA-WE
+                Strategic Communications and Research Dissemination Lead,
+                IEA-WE
               </p>
-
             </div>
 
           </div>
@@ -814,13 +707,10 @@
 
         </div>
 
-
         <p class="advisory-intro">
-
           The IEA-WE Advisory Board brings together leading scholars from
           around the world whose expertise helps inform the initiative's
           research, partnerships and broader goals.
-
         </p>
 
 
@@ -828,80 +718,38 @@
 
 
           <div class="advisory-card">
-
-            <h3>
-              Radhika Balakrishnan
-            </h3>
-
-            <p>
-              Rutgers University
-            </p>
-
+            <h3>Radhika Balakrishnan</h3>
+            <p>Rutgers University</p>
           </div>
 
 
           <div class="advisory-card">
-
-            <h3>
-              Marianne Bertrand
-            </h3>
-
-            <p>
-              University of Chicago Booth School of Business
-            </p>
-
+            <h3>Marianne Bertrand</h3>
+            <p>University of Chicago Booth School of Business</p>
           </div>
 
 
           <div class="advisory-card">
-
-            <h3>
-              Wendy Carlin
-            </h3>
-
-            <p>
-              University College London, CEPR and Santa Fe Institute
-            </p>
-
+            <h3>Wendy Carlin</h3>
+            <p>University College London, CEPR and Santa Fe Institute</p>
           </div>
 
 
           <div class="advisory-card">
-
-            <h3>
-              Marcela Eslava
-            </h3>
-
-            <p>
-              Universidad de los Andes
-            </p>
-
+            <h3>Marcela Eslava</h3>
+            <p>Universidad de los Andes</p>
           </div>
 
 
           <div class="advisory-card">
-
-            <h3>
-              Rohini Pande
-            </h3>
-
-            <p>
-              Yale University
-            </p>
-
+            <h3>Rohini Pande</h3>
+            <p>Yale University</p>
           </div>
 
 
           <div class="advisory-card">
-
-            <h3>
-              Leonard Wantchekon
-            </h3>
-
-            <p>
-              Princeton University
-            </p>
-
+            <h3>Leonard Wantchekon</h3>
+            <p>Princeton University</p>
           </div>
 
 
@@ -946,27 +794,11 @@
           </h4>
 
           <div class="footer-links">
-
-            <a href="index.html">
-              Home
-            </a>
-
-            <a href="work.html">
-              Our Work
-            </a>
-
-            <a href="articles.html">
-              Amplifying Voices
-            </a>
-
-            <a href="leadership.html">
-              Leadership
-            </a>
-
-            <a href="reports.html">
-              Reports
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="work.html">Our Work</a>
+            <a href="articles.html">Amplifying Voices</a>
+            <a href="leadership.html">Team</a>
+            <a href="reports.html">Reports</a>
           </div>
 
         </div>
@@ -979,15 +811,8 @@
           </h4>
 
           <div class="footer-links">
-
-            <a href="about.html">
-              About
-            </a>
-
-            <a href="leadership.html">
-              Advisory Board
-            </a>
-
+            <a href="about.html">About</a>
+            <a href="leadership.html">Advisory Board</a>
           </div>
 
         </div>
@@ -997,9 +822,7 @@
 
 
       <div class="footer-bottom">
-
         International Economic Association — Women in Economics Initiative
-
       </div>
 
     </div>
