@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,22 @@
   <title>Leadership | IEA-WE</title>
 
   <style>
+
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
-  :root {
-  --navy: #0b3568;
-  --dark-blue: #102b52;
-  --pink: #c92f45;
-  --light-blue: #eef4fc;
-  --white: #ffffff;
-  --text: #17263b;
-  --muted: #536174;
-  --line: #dce3ec;
-}
+    :root {
+      --navy: #0b3568;
+      --dark-blue: #102b52;
+      --blue: #1557a6;
+      --red: #c92f45;
+      --light-blue: #eef4fc;
+      --off-white: #faf9f5;
+      --white: #ffffff;
+      --text: #17263b;
+      --muted: #536174;
+      --line: #dce3ec;
+      --soft-pink: #f8e5e8;
+    }
 
     * {
       box-sizing: border-box;
@@ -46,6 +51,7 @@
       width: min(1180px, 90%);
       margin: 0 auto;
     }
+
 
     /* =========================
        NAVIGATION
@@ -87,8 +93,9 @@
     }
 
     nav a:hover {
-      color: var(--pink);
+      color: var(--red);
     }
+
 
     /* =========================
        PAGE HERO
@@ -101,7 +108,7 @@
     }
 
     .section-label {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 2.5px;
       font-size: 13px;
@@ -127,12 +134,13 @@
       line-height: 1.8;
     }
 
+
     /* =========================
        LEADERSHIP
     ========================= */
 
     .leadership {
-      padding: 85px 0;
+      padding: 95px 0 105px;
       background: var(--light-blue);
     }
 
@@ -157,47 +165,129 @@
       line-height: 1.8;
     }
 
-    .leadership-title {
-      color: var(--navy);
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
-    }
+
+    /* =========================
+       EDITORIAL PHOTO GRID
+    ========================= */
 
     .people-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 300px;
       gap: 18px;
-      margin-bottom: 75px;
+      margin-top: 55px;
     }
 
     .person {
-      background: var(--white);
-      padding: 30px;
-      min-height: 155px;
-      border-top: 3px solid transparent;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      min-height: 300px;
     }
 
-    .person:hover {
-      border-top-color: var(--pink);
-      transform: translateY(-3px);
+    .person.large {
+      grid-column: span 2;
+      min-height: 420px;
     }
 
-    .person h3 {
-      color: var(--navy);
-      font-size: 20px;
-      line-height: 1.3;
-      margin-bottom: 8px;
+    .person img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
     }
 
-    .person p {
-      color: var(--muted);
+    .person:hover img {
+      transform: scale(1.035);
+    }
+
+    /* Individual image positioning */
+
+    .person.ashwini img {
+      object-position: center 35%;
+    }
+
+    .person.ines img {
+      object-position: center 35%;
+    }
+
+    .person.raquel img {
+      object-position: center 35%;
+    }
+
+    .person.dani img {
+      object-position: center 40%;
+    }
+
+    .person.fiona img {
+      object-position: center 30%;
+    }
+
+    .person.navika img {
+      object-position: center 35%;
+    }
+
+
+    /* Dark gradient over image */
+
+    .person::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(8, 28, 55, 0.88) 0%,
+        rgba(8, 28, 55, 0.45) 32%,
+        rgba(8, 28, 55, 0.05) 68%,
+        rgba(8, 28, 55, 0) 100%
+      );
+      pointer-events: none;
+    }
+
+
+    /* Text over images */
+
+    .person-info {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 25px;
+      z-index: 2;
+      color: var(--white);
+    }
+
+    .person-info h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .person-info p {
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 420px;
     }
+
+    .person-info .role {
+      color: #ffffff;
+    }
+
+
+    /* Small red accent */
+
+    .person-info::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: var(--red);
+      margin-bottom: 12px;
+    }
+
 
     /* =========================
        ADVISORY BOARD
@@ -205,13 +295,14 @@
 
     .advisory-section {
       background: var(--white);
-      padding: 90px 0;
+      padding: 95px 0;
     }
 
     .advisory-intro {
       max-width: 720px;
       color: var(--muted);
       font-size: 17px;
+      line-height: 1.8;
       margin-bottom: 45px;
     }
 
@@ -230,7 +321,7 @@
     }
 
     .advisory-card:hover {
-      border-color: var(--pink);
+      border-color: var(--red);
       transform: translateY(-3px);
     }
 
@@ -246,6 +337,7 @@
       font-size: 14px;
       line-height: 1.6;
     }
+
 
     /* =========================
        FOOTER
@@ -276,7 +368,7 @@
     }
 
     footer h4 {
-      color: var(--pink);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       font-size: 12px;
@@ -290,6 +382,10 @@
       margin-bottom: 7px;
     }
 
+    .footer-links a:hover {
+      color: white;
+    }
+
     .footer-bottom {
       border-top: 1px solid #385171;
       margin-top: 45px;
@@ -298,30 +394,40 @@
       font-size: 12px;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 850px) {
+    @media (max-width: 950px) {
 
       nav {
-        gap: 15px;
+        gap: 20px;
       }
 
       nav a {
-        font-size: 12px;
+        font-size: 13px;
       }
 
-      .people-grid,
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+      }
+
+      .person.large {
+        grid-column: span 2;
+      }
+
       .advisory-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
       }
     }
+
 
     @media (max-width: 600px) {
 
@@ -346,16 +452,45 @@
         padding: 65px 0;
       }
 
-      .people-grid,
+      .people-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 360px;
+        gap: 14px;
+      }
+
+      .person,
+      .person.large {
+        grid-column: span 1;
+        min-height: 360px;
+      }
+
+      .person-info {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+      }
+
+      .person-info h3 {
+        font-size: 26px;
+      }
+
       .advisory-grid {
         grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
     }
 
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- =========================
        NAVIGATION
@@ -439,40 +574,157 @@
         </div>
 
 
+        <!-- =========================
+             PEOPLE PHOTO GRID
+        ========================= -->
+
         <div class="people-grid">
 
-          <div class="person">
-            <h3>Ashwini Deshpande</h3>
-            <p>Ashoka University</p>
+
+          <!-- ASHWINI -->
+
+          <div class="person large ashwini">
+
+            <img
+              src="ashwini_photo.jpeg"
+              alt="Ashwini Deshpande speaking at an event"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                Ashwini Deshpande
+              </h3>
+
+              <p>
+                Ashoka University
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="person">
-            <h3>María Inés Berniell</h3>
-            <p>Universidad Nacional de la Plata and CEDLAS</p>
+
+          <!-- MARÍA INÉS -->
+
+          <div class="person large ines">
+
+            <img
+              src="ines_photo.jpeg"
+              alt="María Inés Berniell speaking at an event"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                María Inés Berniell
+              </h3>
+
+              <p>
+                Universidad Nacional de la Plata and CEDLAS
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="person">
-            <h3>Raquel Fernández</h3>
-            <p>New York University</p>
+
+          <!-- RAQUEL -->
+
+          <div class="person raquel">
+
+            <img
+              src="raquel_photo.jpg"
+              alt="Raquel Fernández speaking at an event"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                Raquel Fernández
+              </h3>
+
+              <p>
+                New York University
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="person">
-            <h3>Dani Rodrik</h3>
-            <p>Harvard University</p>
+
+          <!-- DANI -->
+
+          <div class="person dani">
+
+            <img
+              src="dani_photo.jpeg"
+              alt="Dani Rodrik speaking at an event"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                Dani Rodrik
+              </h3>
+
+              <p>
+                Harvard University
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="person">
-            <h3>Fiona Tregenna</h3>
-            <p>University of Johannesburg</p>
+
+          <!-- FIONA -->
+
+          <div class="person fiona">
+
+            <img
+              src="fiona_photo.jpeg"
+              alt="Fiona Tregenna"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                Fiona Tregenna
+              </h3>
+
+              <p>
+                University of Johannesburg
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="person">
-            <h3>Navika Mehta</h3>
-            <p>
-              Strategic Communications and Research Dissemination Lead,
-              IEA-WE
-            </p>
+
+          <!-- NAVIKA -->
+
+          <div class="person navika">
+
+            <img
+              src="navika_photo.jpg"
+              alt="Navika Mehta at the IEA World Congress Serbia 2026"
+            >
+
+            <div class="person-info">
+
+              <h3>
+                Navika Mehta
+              </h3>
+
+              <p class="role">
+                Strategic Communications and Research Dissemination Lead,
+                IEA-WE
+              </p>
+
+            </div>
+
           </div>
+
 
         </div>
 
@@ -510,35 +762,84 @@
 
         <div class="advisory-grid">
 
-          <div class="advisory-card">
-            <h3>Radhika Balakrishnan</h3>
-            <p>Rutgers University</p>
-          </div>
 
           <div class="advisory-card">
-            <h3>Marianne Bertrand</h3>
-            <p>University of Chicago Booth School of Business</p>
+
+            <h3>
+              Radhika Balakrishnan
+            </h3>
+
+            <p>
+              Rutgers University
+            </p>
+
           </div>
 
-          <div class="advisory-card">
-            <h3>Wendy Carlin</h3>
-            <p>University College London, CEPR and Santa Fe Institute</p>
-          </div>
 
           <div class="advisory-card">
-            <h3>Marcela Eslava</h3>
-            <p>Universidad de los Andes</p>
+
+            <h3>
+              Marianne Bertrand
+            </h3>
+
+            <p>
+              University of Chicago Booth School of Business
+            </p>
+
           </div>
 
-          <div class="advisory-card">
-            <h3>Rohini Pande</h3>
-            <p>Yale University</p>
-          </div>
 
           <div class="advisory-card">
-            <h3>Leonard Wantchekon</h3>
-            <p>Princeton University</p>
+
+            <h3>
+              Wendy Carlin
+            </h3>
+
+            <p>
+              University College London, CEPR and Santa Fe Institute
+            </p>
+
           </div>
+
+
+          <div class="advisory-card">
+
+            <h3>
+              Marcela Eslava
+            </h3>
+
+            <p>
+              Universidad de los Andes
+            </p>
+
+          </div>
+
+
+          <div class="advisory-card">
+
+            <h3>
+              Rohini Pande
+            </h3>
+
+            <p>
+              Yale University
+            </p>
+
+          </div>
+
+
+          <div class="advisory-card">
+
+            <h3>
+              Leonard Wantchekon
+            </h3>
+
+            <p>
+              Princeton University
+            </p>
+
+          </div>
+
 
         </div>
 
@@ -558,6 +859,7 @@
     <div class="container">
 
       <div class="footer-grid">
+
 
         <div>
 
@@ -580,11 +882,27 @@
           </h4>
 
           <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="work.html">Our Work</a>
-            <a href="articles.html">Amplifying Voices</a>
-            <a href="leadership.html">Leadership</a>
-            <a href="reports.html">Reports</a>
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <a href="work.html">
+              Our Work
+            </a>
+
+            <a href="articles.html">
+              Amplifying Voices
+            </a>
+
+            <a href="leadership.html">
+              Leadership
+            </a>
+
+            <a href="reports.html">
+              Reports
+            </a>
+
           </div>
 
         </div>
@@ -597,22 +915,34 @@
           </h4>
 
           <div class="footer-links">
-            <a href="about.html">About</a>
-            <a href="leadership.html">Advisory Board</a>
+
+            <a href="about.html">
+              About
+            </a>
+
+            <a href="leadership.html">
+              Advisory Board
+            </a>
+
           </div>
 
         </div>
+
 
       </div>
 
 
       <div class="footer-bottom">
+
         International Economic Association — Women in Economics Initiative
+
       </div>
 
     </div>
 
   </footer>
 
+
 </body>
+
 </html>
