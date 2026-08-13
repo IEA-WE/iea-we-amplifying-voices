@@ -1457,460 +1457,545 @@
 
   <script src="articles-data.js"></script>
 
+<script>
 
-  <!-- =========================
-       ARTICLE ARCHIVE SCRIPT
-  ========================= -->
-
-  <script>
-
-    const articleGrid =
-      document.getElementById("articleGrid");
-
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const topicFilter =
-      document.getElementById("topicFilter");
-
-    const countryFilter =
-      document.getElementById("countryFilter");
-
-    const publicationFilter =
-      document.getElementById("publicationFilter");
-
-    const yearFilter =
-      document.getElementById("yearFilter");
-
-    const noResults =
-      document.getElementById("noResults");
+  const articleGrid = document.getElementById("articleGrid");
+  const searchInput = document.getElementById("searchInput");
+  const topicFilter = document.getElementById("topicFilter");
+  const countryFilter = document.getElementById("countryFilter");
+  const publicationFilter = document.getElementById("publicationFilter");
+  const yearFilter = document.getElementById("yearFilter");
+  const noResults = document.getElementById("noResults");
 
 
-    // =========================
-    // HELPERS
-    // =========================
+  // =========================
+  // HELPERS
+  // =========================
 
-    function getArray(value) {
+  function getField(article, possibleNames) {
 
-      if (Array.isArray(value)) {
-        return value;
-      }
+    for (const name of possibleNames) {
 
       if (
-        typeof value === "string" &&
-        value.trim() !== ""
+        article &&
+        article[name] !== undefined &&
+        article[name] !== null
       ) {
-        return [value.trim()];
+        return article[name];
       }
 
-      return [];
-
     }
 
+    return "";
 
-    function escapeHTML(value) {
+  }
 
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
 
+  function getArray(value) {
+
+    if (Array.isArray(value)) {
+      return value;
     }
 
-
-    // =========================
-    // FILTER OPTIONS
-    // =========================
-
-    function addFilterOptions(select, values) {
-
-      const uniqueValues = [
-        ...new Set(
-          values
-            .flatMap(value => getArray(value))
-            .filter(value => value !== "")
-        )
-      ];
-
-      uniqueValues.sort((a, b) =>
-        String(a).localeCompare(String(b))
-      );
-
-      uniqueValues.forEach(value => {
-
-        const option =
-          document.createElement("option");
-
-        option.value = value;
-
-        option.textContent = value;
-
-        select.appendChild(option);
-
-      });
-
+    if (
+      typeof value === "string" &&
+      value.trim() !== ""
+    ) {
+      return [value.trim()];
     }
 
+    return [];
 
-    function initialiseFilters() {
-
-      const articles =
-        Array.isArray(window.articles)
-          ? window.articles
-          : [];
+  }
 
 
-      const topics =
-        articles.map(article => article.topic);
+  function escapeHTML(value) {
 
-      const countries =
-        articles.map(article => article.country);
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
 
-      const publications =
-        articles.map(article => article.publication);
-
-      const years =
-        articles.map(article => article.year);
+  }
 
 
-      addFilterOptions(
-        topicFilter,
-        topics
+  // =========================
+  // GET ARTICLES
+  // =========================
+
+  function getArticles() {
+
+    return (
+      window.articles ||
+      window.articleData ||
+      []
+    );
+
+  }
+
+
+  // =========================
+  // FILTER OPTIONS
+  // =========================
+
+  function addFilterOptions(select, values) {
+
+    const uniqueValues = [
+      ...new Set(
+        values
+          .flatMap(value => getArray(value))
+          .filter(value => value !== "")
+      )
+    ];
+
+    uniqueValues.sort((a, b) =>
+      a.localeCompare(b)
+    );
+
+
+    uniqueValues.forEach(value => {
+
+      const option =
+        document.createElement("option");
+
+      option.value = value;
+      option.textContent = value;
+
+      select.appendChild(option);
+
+    });
+
+  }
+
+
+  function initialiseFilters() {
+
+    const articles = getArticles();
+
+
+    const topics = [];
+    const countries = [];
+    const publications = [];
+    const years = [];
+
+
+    articles.forEach(article => {
+
+      topics.push(
+        getField(article, [
+          "topic",
+          "topics",
+          "category"
+        ])
       );
 
 
-      addFilterOptions(
-        countryFilter,
-        countries
+      countries.push(
+        getField(article, [
+          "country",
+          "countries"
+        ])
       );
 
 
-      addFilterOptions(
-        publicationFilter,
-        publications
+      publications.push(
+        getField(article, [
+          "publication",
+          "publications",
+          "outlet"
+        ])
       );
 
 
-      addFilterOptions(
-        yearFilter,
-        years
+      years.push(
+        getField(article, [
+          "year"
+        ])
       );
 
-    }
+    });
 
 
-    // =========================
-    // RENDER ARTICLES
-    // =========================
+    addFilterOptions(
+      topicFilter,
+      topics
+    );
 
-    function renderArticles() {
 
-      const articles =
-        Array.isArray(window.articles)
-          ? window.articles
-          : [];
+    addFilterOptions(
+      countryFilter,
+      countries
+    );
 
 
-      const searchTerm =
-        searchInput.value
-          .toLowerCase()
-          .trim();
+    addFilterOptions(
+      publicationFilter,
+      publications
+    );
 
 
-      const selectedTopic =
-        topicFilter.value;
+    addFilterOptions(
+      yearFilter,
+      years
+    );
 
+  }
 
-      const selectedCountry =
-        countryFilter.value;
 
+  // =========================
+  // RENDER ARTICLES
+  // =========================
 
-      const selectedPublication =
-        publicationFilter.value;
+  function renderArticles() {
 
+    const articles = getArticles();
 
-      const selectedYear =
-        yearFilter.value;
 
+    const searchTerm =
+      searchInput.value
+        .toLowerCase()
+        .trim();
 
-      const filteredArticles =
-        articles.filter(article => {
 
+    const selectedTopic =
+      topicFilter.value;
 
-          const searchableText = [
 
-            article.title,
+    const selectedCountry =
+      countryFilter.value;
 
-            article.authors,
 
-            getArray(article.publication).join(" "),
+    const selectedPublication =
+      publicationFilter.value;
 
-            getArray(article.country).join(" "),
 
-            getArray(article.topic).join(" "),
+    const selectedYear =
+      yearFilter.value;
 
-            article.date,
 
-            article.year
-
-          ]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase();
-
-
-          const matchesSearch =
-            !searchTerm ||
-            searchableText.includes(searchTerm);
-
-
-          const matchesTopic =
-            !selectedTopic ||
-            getArray(article.topic)
-              .includes(selectedTopic);
-
-
-          const matchesCountry =
-            !selectedCountry ||
-            getArray(article.country)
-              .includes(selectedCountry);
-
-
-          const matchesPublication =
-            !selectedPublication ||
-            getArray(article.publication)
-              .includes(selectedPublication);
-
-
-          const matchesYear =
-            !selectedYear ||
-            String(article.year) === selectedYear;
-
-
-          return (
-            matchesSearch &&
-            matchesTopic &&
-            matchesCountry &&
-            matchesPublication &&
-            matchesYear
-          );
-
-        });
-
-
-      // =========================
-      // SORT NEWEST FIRST
-      // =========================
-
-      filteredArticles.sort((a, b) => {
-
-        const yearDifference =
-          Number(b.year || 0) -
-          Number(a.year || 0);
-
-
-        if (yearDifference !== 0) {
-          return yearDifference;
-        }
-
-
-        return String(b.date || "")
-          .localeCompare(
-            String(a.date || "")
-          );
-
-      });
-
-
-      // =========================
-      // CLEAR GRID
-      // =========================
-
-      articleGrid.innerHTML = "";
-
-
-      // =========================
-      // CREATE CARDS
-      // =========================
-
-      filteredArticles.forEach(article => {
-
-        const card =
-          document.createElement("article");
-
-
-        card.className =
-          "article-card";
-
-
-        const topics =
-          getArray(article.topic);
-
-
-        const publications =
-          getArray(article.publication);
-
-
-        const topic =
-          escapeHTML(
-            topics.join(" · ")
-          );
-
-
-        const publication =
-          escapeHTML(
-            publications.join(" · ")
-          );
-
-
-        const date =
-          article.date
-            ? escapeHTML(article.date)
-            : "";
+    const filteredArticles =
+      articles.filter(article => {
 
 
         const title =
-          escapeHTML(article.title);
+          getField(article, ["title"]);
 
 
         const authors =
-          escapeHTML(article.authors);
+          getField(article, [
+            "authors",
+            "author"
+          ]);
 
 
-        const url =
-          typeof article.url === "string"
-            ? article.url.trim()
-            : "";
+        const publication =
+          getField(article, [
+            "publication",
+            "publications",
+            "outlet"
+          ]);
 
 
-        const metaParts = [];
+        const country =
+          getField(article, [
+            "country",
+            "countries"
+          ]);
 
 
-        if (topic) {
-          metaParts.push(topic);
-        }
+        const topic =
+          getField(article, [
+            "topic",
+            "topics",
+            "category"
+          ]);
 
 
-        if (publication) {
-          metaParts.push(publication);
-        }
+        const date =
+          getField(article, ["date"]);
 
 
-        if (date) {
-          metaParts.push(date);
-        }
+        const year =
+          getField(article, ["year"]);
 
 
-        const meta =
-          metaParts.join(" · ");
+        const searchableText = [
+
+          title,
+          authors,
+          publication,
+          country,
+          topic,
+          date,
+          year
+
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
 
 
-        card.innerHTML = `
-
-          <div class="article-meta">
-            ${meta}
-          </div>
+        const matchesSearch =
+          !searchTerm ||
+          searchableText.includes(searchTerm);
 
 
-          <h3>
-            ${title}
-          </h3>
+        const matchesTopic =
+          !selectedTopic ||
+          getArray(topic)
+            .includes(selectedTopic);
 
 
-          <p>
-            ${authors}
-          </p>
+        const matchesCountry =
+          !selectedCountry ||
+          getArray(country)
+            .includes(selectedCountry);
 
 
-          ${
-            url
-              ? `
-                <a
-                  href="${escapeHTML(url)}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="read-more"
-                >
-                  Read article →
-                </a>
-              `
-              : ""
-          }
-
-        `;
+        const matchesPublication =
+          !selectedPublication ||
+          getArray(publication)
+            .includes(selectedPublication);
 
 
-        articleGrid.appendChild(card);
+        const matchesYear =
+          !selectedYear ||
+          String(year) === selectedYear;
+
+
+        return (
+          matchesSearch &&
+          matchesTopic &&
+          matchesCountry &&
+          matchesPublication &&
+          matchesYear
+        );
 
       });
 
 
-      // =========================
-      // NO RESULTS
-      // =========================
-
-      noResults.style.display =
-        filteredArticles.length === 0
-          ? "block"
-          : "none";
-
-    }
-
-
     // =========================
-    // EVENTS
+    // SORT NEWEST FIRST
     // =========================
 
-    searchInput.addEventListener(
-      "input",
-      renderArticles
-    );
+    filteredArticles.sort((a, b) => {
+
+      const yearA =
+        Number(
+          getField(a, ["year"]) || 0
+        );
 
 
-    topicFilter.addEventListener(
-      "change",
-      renderArticles
-    );
+      const yearB =
+        Number(
+          getField(b, ["year"]) || 0
+        );
 
 
-    countryFilter.addEventListener(
-      "change",
-      renderArticles
-    );
-
-
-    publicationFilter.addEventListener(
-      "change",
-      renderArticles
-    );
-
-
-    yearFilter.addEventListener(
-      "change",
-      renderArticles
-    );
-
-
-    // =========================
-    // INITIALISE
-    // =========================
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      () => {
-
-        initialiseFilters();
-
-        renderArticles();
-
+      if (yearB !== yearA) {
+        return yearB - yearA;
       }
-    );
-
-  </script>
 
 
+      const dateA =
+        String(
+          getField(a, ["date"]) || ""
+        );
+
+
+      const dateB =
+        String(
+          getField(b, ["date"]) || ""
+        );
+
+
+      return dateB.localeCompare(dateA);
+
+    });
+
+
+    // =========================
+    // CLEAR GRID
+    // =========================
+
+    articleGrid.innerHTML = "";
+
+
+    // =========================
+    // CREATE CARDS
+    // =========================
+
+    filteredArticles.forEach(article => {
+
+
+      const card =
+        document.createElement("article");
+
+
+      card.className =
+        "article-card";
+
+
+      const topic =
+        escapeHTML(
+          getField(article, [
+            "topic",
+            "topics",
+            "category"
+          ])
+        );
+
+
+      const publication =
+        escapeHTML(
+          getField(article, [
+            "publication",
+            "publications",
+            "outlet"
+          ])
+        );
+
+
+      const date =
+        escapeHTML(
+          getField(article, ["date"])
+        );
+
+
+      const title =
+        escapeHTML(
+          getField(article, ["title"])
+        );
+
+
+      const authors =
+        escapeHTML(
+          getField(article, [
+            "authors",
+            "author"
+          ])
+        );
+
+
+      const url =
+        getField(article, ["url"]);
+
+
+      card.innerHTML = `
+
+        <div class="article-meta">
+
+          ${topic}
+
+          ${
+            topic && publication
+              ? " · "
+              : ""
+          }
+
+          ${publication}
+
+          ${
+            (topic || publication) && date
+              ? " · "
+              : ""
+          }
+
+          ${date}
+
+        </div>
+
+
+        <h3>
+          ${title}
+        </h3>
+
+
+        <p>
+          ${authors}
+        </p>
+
+
+        ${
+          url
+            ? `
+              <a
+                href="${escapeHTML(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="read-more"
+              >
+                Read article →
+              </a>
+            `
+            : ""
+        }
+
+      `;
+
+
+      articleGrid.appendChild(card);
+
+    });
+
+
+    // =========================
+    // NO RESULTS
+    // =========================
+
+    noResults.style.display =
+      filteredArticles.length === 0
+        ? "block"
+        : "none";
+
+  }
+
+
+  // =========================
+  // EVENTS
+  // =========================
+
+  searchInput.addEventListener(
+    "input",
+    renderArticles
+  );
+
+
+  topicFilter.addEventListener(
+    "change",
+    renderArticles
+  );
+
+
+  countryFilter.addEventListener(
+    "change",
+    renderArticles
+  );
+
+
+  publicationFilter.addEventListener(
+    "change",
+    renderArticles
+  );
+
+
+  yearFilter.addEventListener(
+    "change",
+    renderArticles
+  );
+
+
+  // =========================
+  // INITIALISE
+  // =========================
+
+  initialiseFilters();
+  renderArticles();
+
+</script>
+  
 </body>
 
 </html>
