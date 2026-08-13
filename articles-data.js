@@ -1,7 +1,6 @@
-<script>
-
 /* =========================================================
-   ARTICLES
+   IEA-WE AMPLIFYING VOICES
+   ARTICLE DATABASE
    ========================================================= */
 
 window.articles = [
@@ -173,10 +172,10 @@ window.articles = [
     title: "Sri Lanka’s Debt Restructuring Is Hurting Older Women",
     authors: "Nisha Arunatilake",
     publication: "Project Syndicate",
-    date: "10-Jan",
+    date: "10 Jan 2024",
     year: "2024",
     country: "Sri Lanka",
-    topic: "",
+    topic: "Gender",
     url: "https://www.project-syndicate.org/commentary/sri-lanka-domestic-debt-restructuring-reduces-women-pension-by-nisha-arunatilake-2024-01"
   },
 
@@ -184,10 +183,10 @@ window.articles = [
     title: "Are Social Norms Really the Main Cause of Low Female Employment?",
     authors: "Ashwini Deshpande",
     publication: "Project Syndicate",
-    date: "16-Jan",
+    date: "16 Jan 2024",
     year: "2024",
     country: "India",
-    topic: "",
+    topic: "Labour Markets",
     url: "https://www.project-syndicate.org/commentary/social-norms-not-only-cause-india-low-women-employment-rate-by-ashwini-deshpande-2024-01"
   },
 
@@ -195,10 +194,10 @@ window.articles = [
     title: "Will Turkey Remain Committed to Economic Reform?",
     authors: "Selva Demiralp",
     publication: "Project Syndicate",
-    date: "05-Feb",
+    date: "05 Feb 2024",
     year: "2024",
     country: "Turkey",
-    topic: "",
+    topic: "Macroeconomics",
     url: "https://www.project-syndicate.org/commentary/will-turkey-erdogan-continue-to-pursue-orthodox-economic-policies-by-selva-demiralp-2024-02"
   },
 
@@ -206,7 +205,7 @@ window.articles = [
     title: "How did child health respond to trade shocks in Brazil?",
     authors: "Danyelle Branco",
     publication: "VoxDev",
-    date: "08-Feb",
+    date: "08 Feb 2024",
     year: "2024",
     country: "Brazil",
     topic: "Health",
@@ -217,10 +216,10 @@ window.articles = [
     title: "Rethinking Inequality in Latin America",
     authors: "Ana María Ibáñez",
     publication: "Project Syndicate",
-    date: "20-Feb",
+    date: "20 Feb 2024",
     year: "2024",
     country: "Mexico",
-    topic: "",
+    topic: "Inequality",
     url: "https://www.project-syndicate.org/commentary/latin-america-inequality-needs-radical-rethink-by-ana-maria-ibanez-2024-02"
   },
 
@@ -228,7 +227,7 @@ window.articles = [
     title: "Victim-blaming norms and violence against women: Moral considerations can induce policy and behaviour change",
     authors: "Sevinç Bermek and Aslı Unan",
     publication: "VoxEU",
-    date: "08-Mar",
+    date: "08 Mar 2024",
     year: "2024",
     country: "Turkey and UK",
     topic: "Gender",
@@ -239,7 +238,7 @@ window.articles = [
     title: "Beyond rejection: Exploring gender differences in academic resilience",
     authors: "Renata Narita, Paula Pereda, Fabiana Rocha, Maria Dolores Montoya Diaz",
     publication: "VoxEU",
-    date: "08-Mar",
+    date: "08 Mar 2024",
     year: "2024",
     country: "Brazil",
     topic: "Gender",
@@ -250,7 +249,7 @@ window.articles = [
     title: "How Wide Are Latin America’s Health Inequalities?",
     authors: "Dolores de la Mata",
     publication: "Project Syndicate",
-    date: "14-Mar",
+    date: "14 Mar 2024",
     year: "2024",
     country: "Argentina",
     topic: "Health",
@@ -261,7 +260,7 @@ window.articles = [
     title: "Give Women with Disabilities a Chance",
     authors: "Nkechi Owoo",
     publication: "Project Syndicate",
-    date: "15-Mar",
+    date: "15 Mar 2024",
     year: "2024",
     country: "Ghana",
     topic: "Gender",
@@ -272,7 +271,7 @@ window.articles = [
     title: "The world’s largest humanitarian cash transfer programme reduces child labour and increases schooling among refugee children",
     authors: "Aysun Hızıroğlu Aygün",
     publication: "VoxEU",
-    date: "25-Mar",
+    date: "25 Mar 2024",
     year: "2024",
     country: "Turkey",
     topic: "Education",
@@ -283,7 +282,7 @@ window.articles = [
     title: "Africa’s Prosperity Depends on Achieving Gender Equality",
     authors: "Jane Kabubo-Mariara",
     publication: "Project Syndicate",
-    date: "27-Mar",
+    date: "27 Mar 2024",
     year: "2024",
     country: "Kenya",
     topic: "Gender",
@@ -294,7 +293,7 @@ window.articles = [
     title: "Silence is golden: How public criticism of central banks can backfire for leaders",
     authors: "Selva Demiralp",
     publication: "VoxEU",
-    date: "18-Apr",
+    date: "18 Apr 2024",
     year: "2024",
     country: "Turkey",
     topic: "Macroeconomics",
@@ -305,7 +304,7 @@ window.articles = [
     title: "Exposure to soap operas featuring LGBTQ+ characters has a negative short-term impact on viewers’ attitudes towards homosexuality",
     authors: "Alejandra Ramos and María Lombardi",
     publication: "VoxEU",
-    date: "20-Apr",
+    date: "20 Apr 2024",
     year: "2024",
     country: "Argentina and Colombia",
     topic: "Gender",
@@ -316,7 +315,7 @@ window.articles = [
     title: "As families change, so must the safety net",
     authors: "Neha Bansal",
     publication: "Project Syndicate",
-    date: "22-Apr",
+    date: "22 Apr 2024",
     year: "2024",
     country: "India",
     topic: "Social Policy",
@@ -327,7 +326,7 @@ window.articles = [
     title: "Entering during an economic crisis: Labour market trajectories of young Indian workers",
     authors: "Mrinalini Jha and Rosa Abraham",
     publication: "VoxEU",
-    date: "29-May",
+    date: "29 May 2024",
     year: "2024",
     country: "India",
     topic: "Labour Markets",
@@ -338,7 +337,7 @@ window.articles = [
     title: "Capital controls and firm performance: The Chilean ‘encaje’",
     authors: "Eugenia Andreasen, Sofía Bauducco, Evangelina Dardati",
     publication: "VoxEU",
-    date: "07-Jun",
+    date: "07 Jun 2024",
     year: "2024",
     country: "Chile",
     topic: "Macroeconomics",
@@ -349,7 +348,7 @@ window.articles = [
     title: "Heatwaves ripple into the financial system",
     authors: "Sandra Aguilar-Gomez",
     publication: "VoxEU",
-    date: "12-Jun",
+    date: "12 Jun 2024",
     year: "2024",
     country: "Colombia",
     topic: "Climate",
@@ -360,7 +359,7 @@ window.articles = [
     title: "Can Private Hospitals Increase Access to Health Care in Developing Countries?",
     authors: "Tanika Chakraborty and Titir Bhattacharya",
     publication: "Project Syndicate",
-    date: "17-Jun",
+    date: "17 Jun 2024",
     year: "2024",
     country: "India",
     topic: "Health",
@@ -371,7 +370,7 @@ window.articles = [
     title: "Affordable home ownership can lead to stronger relationships",
     authors: "Jeanne Lafortune and Corinne Low",
     publication: "VoxEU",
-    date: "20-Jun",
+    date: "20 Jun 2024",
     year: "2024",
     country: "Chile and US",
     topic: "Gender",
@@ -382,7 +381,7 @@ window.articles = [
     title: "Using nudges to improve food choices",
     authors: "Ana Balsa, Cecilia Noboa, Patricia Triunfo",
     publication: "VoxEU",
-    date: "27-Jun",
+    date: "27 Jun 2024",
     year: "2024",
     country: "Uruguay",
     topic: "Health",
@@ -393,7 +392,7 @@ window.articles = [
     title: "Rethinking How to Address Irregular Migration from Africa",
     authors: "Linguère Mously Mbaye",
     publication: "Project Syndicate",
-    date: "28-Jun",
+    date: "28 Jun 2024",
     year: "2024",
     country: "Ivory Coast",
     topic: "Migration",
@@ -404,7 +403,7 @@ window.articles = [
     title: "High Labor Turnover Fuels Inequality in Latin America",
     authors: "Renata Narita",
     publication: "Project Syndicate",
-    date: "01-Aug",
+    date: "01 Aug 2024",
     year: "2024",
     country: "Brazil",
     topic: "Labour Markets",
@@ -415,7 +414,7 @@ window.articles = [
     title: "The impact of road connectivity on fertility and child health in rural India",
     authors: "Aparajita Dasgupta",
     publication: "VoxEU",
-    date: "07-Aug",
+    date: "07 Aug 2024",
     year: "2024",
     country: "India",
     topic: "Health",
@@ -426,7 +425,7 @@ window.articles = [
     title: "Uruguay’s Lessons for Building a Care Economy",
     authors: "Carmen Estrades and Florencia Amabile",
     publication: "Project Syndicate",
-    date: "13-Aug",
+    date: "13 Aug 2024",
     year: "2024",
     country: "Uruguay",
     topic: "Care Economy",
@@ -437,7 +436,7 @@ window.articles = [
     title: "Rethinking Emissions Targets in Developing Countries",
     authors: "Elisa Belfiori and Yanel Llohis",
     publication: "Project Syndicate",
-    date: "27-Aug",
+    date: "27 Aug 2024",
     year: "2024",
     country: "Argentina",
     topic: "Climate",
@@ -448,7 +447,7 @@ window.articles = [
     title: "The urban wage premium for women: Evidence across the wage distribution",
     authors: "Solange Ledi Gonçalves and Eloiza Almeida",
     publication: "VoxEU",
-    date: "05-Sep",
+    date: "05 Sep 2024",
     year: "2024",
     country: "Brazil",
     topic: "Labour Markets",
@@ -459,7 +458,7 @@ window.articles = [
     title: "Egypt’s Skyrocketing C-Sections",
     authors: "Rana Hendy and Lobna Shaheen",
     publication: "Project Syndicate",
-    date: "11-Sep",
+    date: "11 Sep 2024",
     year: "2024",
     country: "Egypt",
     topic: "Health",
@@ -470,7 +469,7 @@ window.articles = [
     title: "School feeding programmes improved attendance in northern Burkina Faso",
     authors: "Pouirkèta Rita Nikiema",
     publication: "VoxDev",
-    date: "17-Sep",
+    date: "17 Sep 2024",
     year: "2024",
     country: "Burkina Faso",
     topic: "Education",
@@ -481,7 +480,7 @@ window.articles = [
     title: "Unfair rentals: Discrimination against transgender couples in Latin America",
     authors: "María Florencia Pinto, Mariana Marchionni and Inés Berniell",
     publication: "VoxDev",
-    date: "26-Sep",
+    date: "26 Sep 2024",
     year: "2024",
     country: "Argentina",
     topic: "Gender",
@@ -492,7 +491,7 @@ window.articles = [
     title: "Addressing the lingering effects of colonial influence on educational institutions",
     authors: "Maleke Fourati",
     publication: "VoxEU",
-    date: "30-Sep",
+    date: "30 Sep 2024",
     year: "2024",
     country: "Tunisia and Tahiti",
     topic: "Education",
@@ -503,7 +502,7 @@ window.articles = [
     title: "Bridging global divides: How Southern researchers can lead sustainable development",
     authors: "Verónica Amarante, Jane Mariara, Ana Maria Kassouf",
     publication: "VoxDev",
-    date: "25-Oct",
+    date: "25 Oct 2024",
     year: "2024",
     country: "Kenya, Uruguay, Brazil",
     topic: "Development",
@@ -514,7 +513,7 @@ window.articles = [
     title: "To Prosper, India Must Close Its Gender Employment Gap",
     authors: "Kanika Mahajan",
     publication: "Project Syndicate",
-    date: "05-Nov",
+    date: "05 Nov 2024",
     year: "2024",
     country: "India",
     topic: "Labour Markets",
@@ -525,7 +524,7 @@ window.articles = [
     title: "The Second Glass Ceiling for Women",
     authors: "Xianghong Wang",
     publication: "Project Syndicate",
-    date: "05-Dec",
+    date: "05 Dec 2024",
     year: "2024",
     country: "China",
     topic: "Gender",
@@ -536,7 +535,7 @@ window.articles = [
     title: "The Bank of Korea Moves Beyond Monetary Policy",
     authors: "Soohyung Lee",
     publication: "Project Syndicate",
-    date: "12-Dec",
+    date: "12 Dec 2024",
     year: "2024",
     country: "South Korea",
     topic: "Macroeconomics",
@@ -547,7 +546,7 @@ window.articles = [
     title: "Crime Is Punishing Latin America’s Economies",
     authors: "Ana María Ibáñez and Nathalie Alvarado",
     publication: "Project Syndicate",
-    date: "17-Dec",
+    date: "17 Dec 2024",
     year: "2024",
     country: "Mexico",
     topic: "Development",
@@ -563,10 +562,10 @@ window.articles = [
     title: "The emergence of economic rationality of GPT",
     authors: "Tracy Xiao Liu and Yiting Chen",
     publication: "VoxEU",
-    date: "07-Jan",
+    date: "07 Jan 2025",
     year: "2025",
     country: "China",
-    topic: "",
+    topic: "Technology",
     url: "https://cepr.org/voxeu/columns/emergence-economic-rationality-gpt"
   },
 
@@ -574,7 +573,7 @@ window.articles = [
     title: "The evolution of gender in the labour market",
     authors: "Claudia Olivetti, Jessica Pan and Barbara Petrongolo",
     publication: "VoxEU",
-    date: "20-Jan",
+    date: "20 Jan 2025",
     year: "2025",
     country: "Singapore and UK",
     topic: "Gender",
@@ -585,7 +584,7 @@ window.articles = [
     title: "Supporting the transition to digital cash transfers in rural Mexico",
     authors: "Fernanda Márquez-Padilla and Susan Wendy Parker",
     publication: "VoxDev",
-    date: "21-Jan",
+    date: "21 Jan 2025",
     year: "2025",
     country: "Mexico",
     topic: "Social Protection",
@@ -596,7 +595,7 @@ window.articles = [
     title: "The demand-side story: Structural change and the decline in female labour force participation in India",
     authors: "Ashwini Deshpande",
     publication: "VoxEU",
-    date: "21-Jan",
+    date: "21 Jan 2025",
     year: "2025",
     country: "India",
     topic: "Labour Markets",
@@ -607,7 +606,7 @@ window.articles = [
     title: "Gender and task rewards in exams: Implications for performance and labour outcomes",
     authors: "Fernanda Estevan and Bruna Borges",
     publication: "VoxEU",
-    date: "15-Feb",
+    date: "15 Feb 2025",
     year: "2025",
     country: "Brazil",
     topic: "Gender",
@@ -618,7 +617,7 @@ window.articles = [
     title: "Gender bias in access to finance and implications for capital misallocation",
     authors: "Mariana Viollaz and Arti Grover",
     publication: "VoxEU",
-    date: "06-Mar",
+    date: "06 Mar 2025",
     year: "2025",
     country: "Argentina",
     topic: "Gender",
@@ -629,7 +628,7 @@ window.articles = [
     title: "Twitter sentiment and stock market movements: The predictive power of social media",
     authors: "Talita Greyling and Stephanie Rossouw",
     publication: "VoxEU",
-    date: "26-Mar",
+    date: "26 Mar 2025",
     year: "2025",
     country: "South Africa and New Zealand",
     topic: "Finance",
@@ -640,7 +639,7 @@ window.articles = [
     title: "Managing credit in dollarised economies: The effective but asymmetric effects of foreign currency reserve requirements",
     authors: "Eugenia Andreasen and Victoria Nuguer",
     publication: "VoxEU",
-    date: "15-Apr",
+    date: "15 Apr 2025",
     year: "2025",
     country: "Chile",
     topic: "Macroeconomics",
@@ -651,7 +650,7 @@ window.articles = [
     title: "Female teachers help reduce gender gaps in STEM",
     authors: "Paola Bordón, María Paola Sevilla, Fernanda Ramírez-Espinoza",
     publication: "VoxEU",
-    date: "29-Apr",
+    date: "29 Apr 2025",
     year: "2025",
     country: "Chile",
     topic: "Gender",
@@ -662,7 +661,7 @@ window.articles = [
     title: "Short-term labour mobility drives innovation in Africa",
     authors: "Linguère Mously Mbaye",
     publication: "VoxEU",
-    date: "03-May",
+    date: "03 May 2025",
     year: "2025",
     country: "Ivory Coast",
     topic: "Labour Markets",
@@ -673,7 +672,7 @@ window.articles = [
     title: "Trump’s America Illustrates What Turkey Knows",
     authors: "Selva Demiralp",
     publication: "Project Syndicate",
-    date: "13-May",
+    date: "13 May 2025",
     year: "2025",
     country: "Turkey",
     topic: "Macroeconomics",
@@ -684,7 +683,7 @@ window.articles = [
     title: "Women’s Role in War Must Extend to Peace",
     authors: "Carolyn Chisadza",
     publication: "Project Syndicate",
-    date: "20-May",
+    date: "20 May 2025",
     year: "2025",
     country: "South Africa",
     topic: "Gender",
@@ -695,7 +694,7 @@ window.articles = [
     title: "War of attrition in the streets: Rethinking the dynamics of protest participation",
     authors: "Sofía Correa",
     publication: "VoxDev",
-    date: "22-May",
+    date: "22 May 2025",
     year: "2025",
     country: "Chile",
     topic: "Institutions",
@@ -706,7 +705,7 @@ window.articles = [
     title: "From risk to resilience: Increasing insurance uptake among farmers in rural Uganda",
     authors: "Aisha Nanyiti",
     publication: "VoxDev",
-    date: "29-May",
+    date: "29 May 2025",
     year: "2025",
     country: "Uganda",
     topic: "Agriculture",
@@ -717,7 +716,7 @@ window.articles = [
     title: "Risks and benefits of high-speed internet for socioemotional wellbeing in adolescence and youth",
     authors: "Elisa Failache, Karina Colombo, Martina Querejeta",
     publication: "VoxEU",
-    date: "29-May",
+    date: "29 May 2025",
     year: "2025",
     country: "Uruguay",
     topic: "Health",
@@ -728,7 +727,7 @@ window.articles = [
     title: "Ukrainian refugee labour market access shows no impact on local employment outcomes in Czechia",
     authors: "Agnieszka Postepska and Anastasiia Voloshyna",
     publication: "VoxEU",
-    date: "11-Jun",
+    date: "11 Jun 2025",
     year: "2025",
     country: "Netherlands",
     topic: "Labour Markets",
@@ -739,7 +738,7 @@ window.articles = [
     title: "Boosting women’s labour force participation in China: Current state and challenges",
     authors: "Xianghong Wang",
     publication: "VoxDev",
-    date: "16-Jun",
+    date: "16 Jun 2025",
     year: "2025",
     country: "China",
     topic: "Labour Markets",
@@ -750,7 +749,7 @@ window.articles = [
     title: "Can smoking bans curb the habit?",
     authors: "Paula Carvalho Pereda and Camila Steffens",
     publication: "VoxDev",
-    date: "30-Jun",
+    date: "30 Jun 2025",
     year: "2025",
     country: "Brazil",
     topic: "Health",
@@ -761,7 +760,7 @@ window.articles = [
     title: "North Africa Must Look South for Trade",
     authors: "Audrey Verdier-Chouchane",
     publication: "Project Syndicate",
-    date: "17-Jul",
+    date: "17 Jul 2025",
     year: "2025",
     country: "Ivory Coast",
     topic: "Trade",
@@ -772,7 +771,7 @@ window.articles = [
     title: "Pentecostal Evangelicals as a vehicle of political mobilisation",
     authors: "Daniela Sola",
     publication: "VoxEU",
-    date: "21-Jul",
+    date: "21 Jul 2025",
     year: "2025",
     country: "Spain",
     topic: "Political Economy",
@@ -783,7 +782,7 @@ window.articles = [
     title: "Gender-neutral economics can no longer be the default",
     authors: "Navika Mehta",
     publication: "VoxEU",
-    date: "31-Jul",
+    date: "31 Jul 2025",
     year: "2025",
     country: "India",
     topic: "Gender",
@@ -794,7 +793,7 @@ window.articles = [
     title: "Unintended consequences of lockdowns: Evidence on violence against women",
     authors: "Maria Dolores Montoya Diaz, Paula Pereda, Fabiana Rocha, and Isadora Árabe",
     publication: "VoxEU",
-    date: "09-Aug",
+    date: "09 Aug 2025",
     year: "2025",
     country: "Brazil",
     topic: "Gender",
@@ -805,7 +804,7 @@ window.articles = [
     title: "Small Fiscal Reforms Can Deliver Big Results",
     authors: "Ana María Ibáñez and Marta Ruiz-Arranz",
     publication: "Project Syndicate",
-    date: "15-Aug",
+    date: "15 Aug 2025",
     year: "2025",
     country: "Mexico",
     topic: "Fiscal Policy",
@@ -816,7 +815,7 @@ window.articles = [
     title: "Reinforced regional integration fosters inclusive growth and human development",
     authors: "Mariame Bakouan",
     publication: "VoxEU",
-    date: "14-Sep",
+    date: "14 Sep 2025",
     year: "2025",
     country: "Burkina Faso",
     topic: "Development",
@@ -827,7 +826,7 @@ window.articles = [
     title: "Markets, marriage, and norms: Understanding female labour force participation in India",
     authors: "Farzana Afridi",
     publication: "VoxDev",
-    date: "18-Sep",
+    date: "18 Sep 2025",
     year: "2025",
     country: "India",
     topic: "Labour Markets",
@@ -838,7 +837,7 @@ window.articles = [
     title: "Climate adaptation in Argentina: Short-term instability, long-term risk",
     authors: "Elisa Belfiori and Yanel Llohis",
     publication: "VoxDev",
-    date: "30-Sep",
+    date: "30 Sep 2025",
     year: "2025",
     country: "Argentina",
     topic: "Climate",
@@ -849,7 +848,7 @@ window.articles = [
     title: "Why diverting cotton inputs hurts maize productivity in Burkina Faso",
     authors: "Salimata Traoré",
     publication: "VoxDev",
-    date: "31-Oct",
+    date: "31 Oct 2025",
     year: "2025",
     country: "Burkina Faso",
     topic: "Agriculture",
@@ -860,7 +859,7 @@ window.articles = [
     title: "After ‘the change’: How menopause affects women’s labour and health outcomes",
     authors: "Fernanda Márquez-Padilla and Laura Juarez",
     publication: "VoxEU",
-    date: "06-Dec",
+    date: "06 Dec 2025",
     year: "2025",
     country: "Mexico",
     topic: "Gender",
@@ -876,7 +875,7 @@ window.articles = [
     title: "What Mexico’s drug war reveals about internal migration",
     authors: "Aurora Ramírez-Álvarez",
     publication: "VoxDev",
-    date: "12-Jan",
+    date: "12 Jan 2026",
     year: "2026",
     country: "Mexico",
     topic: "Migration",
@@ -887,7 +886,7 @@ window.articles = [
     title: "Climate adaptation and vulnerability in Mexico",
     authors: "Sandra Aguilar Gomez",
     publication: "VoxDev",
-    date: "16-Jan",
+    date: "16 Jan 2026",
     year: "2026",
     country: "Mexico",
     topic: "Climate",
@@ -898,7 +897,7 @@ window.articles = [
     title: "Why Young People Are Choosing Protest",
     authors: "Rose Ngugi",
     publication: "Project Syndicate",
-    date: "28-Jan",
+    date: "28 Jan 2026",
     year: "2026",
     country: "Kenya",
     topic: "Political Economy",
@@ -909,7 +908,7 @@ window.articles = [
     title: "Why is female labour force participation still so low in Egypt?",
     authors: "Rana Hendy",
     publication: "VoxDev",
-    date: "30-Jan",
+    date: "30 Jan 2026",
     year: "2026",
     country: "Egypt",
     topic: "Labour Markets",
@@ -920,7 +919,7 @@ window.articles = [
     title: "The Impact of Trump’s Tariffs on Latin America",
     authors: "Eugenia Andreasen",
     publication: "Project Syndicate",
-    date: "02-Feb",
+    date: "02 Feb 2026",
     year: "2026",
     country: "Chile",
     topic: "Trade",
@@ -931,7 +930,7 @@ window.articles = [
     title: "Urban slums: Stepping-stone for some and traps (or shields) for others",
     authors: "Luciene Periera",
     publication: "VoxEU",
-    date: "15-Feb",
+    date: "15 Feb 2026",
     year: "2026",
     country: "Brazil",
     topic: "Urbanisation",
@@ -942,7 +941,7 @@ window.articles = [
     title: "Who Can Lead India Toward Sustainable Development?",
     authors: "Bipasha Maity",
     publication: "Project Syndicate",
-    date: "04-Mar",
+    date: "04 Mar 2026",
     year: "2026",
     country: "India",
     topic: "Climate",
@@ -953,7 +952,7 @@ window.articles = [
     title: "The Hidden Economic Costs of Menopause",
     authors: "Fernanda Márquez-Padilla and Laura Juárez",
     publication: "Project Syndicate",
-    date: "16-Mar",
+    date: "16 Mar 2026",
     year: "2026",
     country: "Mexico",
     topic: "Gender",
@@ -964,7 +963,7 @@ window.articles = [
     title: "How Women Succeed in Male-Dominated Fields",
     authors: "Fernanda Estevan and Bruna Borges",
     publication: "Project Syndicate",
-    date: "07-Apr",
+    date: "07 Apr 2026",
     year: "2026",
     country: "Brazil",
     topic: "Gender",
@@ -975,7 +974,7 @@ window.articles = [
     title: "The value of free health insurance: Evidence from Mexico’s Seguro Popular",
     authors: "Renata Narita",
     publication: "VoxEU",
-    date: "16-Apr",
+    date: "16 Apr 2026",
     year: "2026",
     country: "Brazil",
     topic: "Health",
@@ -986,9 +985,9 @@ window.articles = [
     title: "Women’s status in economics: Evidence from Africa, Asia, and Latin America",
     authors: "Inés Berniell, Ashwini Deshpande, Raquel Fernández, Navika Mehta, Fiona Tregenna",
     publication: "VoxDev",
-    date: "22-Apr",
+    date: "22 Apr 2026",
     year: "2026",
-    country: "IEAWE",
+    country: "IEA-WE",
     topic: "Gender",
     url: "https://voxdev.org/topic/labour-markets/womens-status-economics-evidence-africa-asia-and-latin-america"
   },
@@ -997,7 +996,7 @@ window.articles = [
     title: "Why Slums Persist",
     authors: "Luciene Periera",
     publication: "Project Syndicate",
-    date: "23-Apr",
+    date: "23 Apr 2026",
     year: "2026",
     country: "Brazil",
     topic: "Urbanisation",
@@ -1008,7 +1007,7 @@ window.articles = [
     title: "What’s holding back agriculture in Ghana?",
     authors: "Nkechi Owoo",
     publication: "VoxDev",
-    date: "01-May",
+    date: "01 May 2026",
     year: "2026",
     country: "Ghana",
     topic: "Agriculture",
@@ -1019,7 +1018,7 @@ window.articles = [
     title: "Will AI Democratize Skills?",
     authors: "María Lombardi",
     publication: "Project Syndicate",
-    date: "06-May",
+    date: "06 May 2026",
     year: "2026",
     country: "Argentina",
     topic: "Technology",
@@ -1030,7 +1029,7 @@ window.articles = [
     title: "Why Gender Inequality Still Haunts the Economy",
     authors: "Eleni Yitbarek, Nicky Nicholls, Michelle Pleace",
     publication: "Project Syndicate",
-    date: "22-May",
+    date: "22 May 2026",
     year: "2026",
     country: "South Africa",
     topic: "Gender",
@@ -1041,7 +1040,7 @@ window.articles = [
     title: "Latin America’s Agricultural Boom Is Faltering",
     authors: "Ana María Ibáñez, Lina Salazar, Maja Schling",
     publication: "Project Syndicate",
-    date: "28-May",
+    date: "28 May 2026",
     year: "2026",
     country: "US",
     topic: "Agriculture",
@@ -1052,7 +1051,7 @@ window.articles = [
     title: "Female labour force participation in Pakistan and the central role of norms",
     authors: "Hadia Majid",
     publication: "VoxDev",
-    date: "29-May",
+    date: "29 May 2026",
     year: "2026",
     country: "Pakistan",
     topic: "Labour Markets",
@@ -1063,7 +1062,7 @@ window.articles = [
     title: "How to Encourage Deceased Organ Donation",
     authors: "Maleke Fourati and Christina Sarah Hauser",
     publication: "Project Syndicate",
-    date: "02-Jun",
+    date: "02 Jun 2026",
     year: "2026",
     country: "Tunisia",
     topic: "Health",
@@ -1074,7 +1073,7 @@ window.articles = [
     title: "The Right Incentives for Climate Action",
     authors: "Paula Carvalho Pereda",
     publication: "Project Syndicate",
-    date: "03-Jun",
+    date: "03 Jun 2026",
     year: "2026",
     country: "Brazil",
     topic: "Climate",
@@ -1085,7 +1084,7 @@ window.articles = [
     title: "Why Nigeria's smallholders remain stuck: Seeds, credit, and missing data",
     authors: "Khadijat Busola Amolegbe",
     publication: "VoxDev",
-    date: "25-Jun",
+    date: "25 Jun 2026",
     year: "2026",
     country: "Nigeria",
     topic: "Agriculture",
@@ -1096,7 +1095,7 @@ window.articles = [
     title: "Institutions, not innovation, are the barrier to Nigeria’s agricultural productivity growth",
     authors: "Khadijat Busola Amolegbe",
     publication: "VoxDev",
-    date: "25-Jun",
+    date: "25 Jun 2026",
     year: "2026",
     country: "Nigeria",
     topic: "Agriculture",
@@ -1107,7 +1106,7 @@ window.articles = [
     title: "Bridging the gap for women in export-led growth",
     authors: "Rozi Kumari, Prarthna Agarwal Goel and Devasmita Jena",
     publication: "VoxDev",
-    date: "09-Jul",
+    date: "09 Jul 2026",
     year: "2026",
     country: "India",
     topic: "Labour Markets",
@@ -1118,7 +1117,7 @@ window.articles = [
     title: "High-speed internet and early childhood development: Causal evidence from a countrywide programme",
     authors: "Elisa Failache and Karina Colombo",
     publication: "VoxEU",
-    date: "10-Jul",
+    date: "10 Jul 2026",
     year: "2026",
     country: "Uruguay",
     topic: "Health",
@@ -1126,217 +1125,3 @@ window.articles = [
   }
 
 ];
-
-
-/* =========================================================
-   NORMALISE THE DATA
-   ========================================================= */
-
-window.articles = window.articles.map(article => ({
-
-  ...article,
-
-  // Always store year as a string
-  year: String(article.year),
-
-  // Always use "authors"
-  authors: article.authors || article.author || "",
-
-  // Standardise publication names
-  publication:
-    article.publication === "PS"
-      ? "Project Syndicate"
-      : article.publication
-
-}));
-
-
-/* =========================================================
-   FILTER OPTIONS
-   ========================================================= */
-
-function populateFilters() {
-
-  const yearFilter = document.getElementById("yearFilter");
-  const publicationFilter = document.getElementById("publicationFilter");
-
-  if (!yearFilter || !publicationFilter) {
-    console.warn("Year or publication filter not found.");
-    return;
-  }
-
-
-  /* -------------------------
-     YEARS
-     ------------------------- */
-
-  const years = [
-    ...new Set(
-      window.articles
-        .map(article => String(article.year))
-        .filter(Boolean)
-    )
-  ].sort((a, b) => Number(b) - Number(a));
-
-
-  yearFilter.innerHTML = `
-    <option value="">All Years</option>
-    ${years
-      .map(year => `<option value="${year}">${year}</option>`)
-      .join("")}
-  `;
-
-
-  /* -------------------------
-     PUBLICATIONS
-     ------------------------- */
-
-  const publications = [
-    ...new Set(
-      window.articles
-        .map(article => article.publication)
-        .filter(Boolean)
-    )
-  ].sort();
-
-
-  publicationFilter.innerHTML = `
-    <option value="">All Publications</option>
-    ${publications
-      .map(publication =>
-        `<option value="${publication}">${publication}</option>`
-      )
-      .join("")}
-  `;
-}
-
-
-/* =========================================================
-   FILTER ARTICLES
-   ========================================================= */
-
-function filterArticles() {
-
-  const yearFilter =
-    document.getElementById("yearFilter");
-
-  const publicationFilter =
-    document.getElementById("publicationFilter");
-
-
-  const selectedYear =
-    yearFilter ? yearFilter.value : "";
-
-  const selectedPublication =
-    publicationFilter ? publicationFilter.value : "";
-
-
-  const filteredArticles = window.articles.filter(article => {
-
-    const yearMatches =
-      !selectedYear ||
-      String(article.year) === String(selectedYear);
-
-
-    const publicationMatches =
-      !selectedPublication ||
-      article.publication === selectedPublication;
-
-
-    return yearMatches && publicationMatches;
-
-  });
-
-
-  /*
-   * IMPORTANT:
-   * This assumes your existing page has a function
-   * called renderArticles().
-   *
-   * If your existing rendering function has a different
-   * name, replace renderArticles() with that function.
-   */
-
-  if (typeof renderArticles === "function") {
-    renderArticles(filteredArticles);
-  } else {
-    console.warn(
-      "renderArticles() was not found. " +
-      "The filters are working, but your existing article-rendering function " +
-      "needs to be connected here."
-    );
-  }
-
-
-  /* Optional result count */
-
-  const resultCount =
-    document.getElementById("resultCount");
-
-  if (resultCount) {
-    resultCount.textContent =
-      `${filteredArticles.length} article${filteredArticles.length === 1 ? "" : "s"}`;
-  }
-
-}
-
-
-/* =========================================================
-   CONNECT FILTERS
-   ========================================================= */
-
-function initialiseFilters() {
-
-  populateFilters();
-
-
-  const yearFilter =
-    document.getElementById("yearFilter");
-
-  const publicationFilter =
-    document.getElementById("publicationFilter");
-
-
-  if (yearFilter) {
-    yearFilter.addEventListener(
-      "change",
-      filterArticles
-    );
-  }
-
-
-  if (publicationFilter) {
-    publicationFilter.addEventListener(
-      "change",
-      filterArticles
-    );
-  }
-
-
-  /*
-   * Initial state:
-   * show all articles.
-   */
-
-  filterArticles();
-}
-
-
-/* =========================================================
-   INITIALISE WHEN PAGE LOADS
-   ========================================================= */
-
-if (document.readyState === "loading") {
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    initialiseFilters
-  );
-
-} else {
-
-  initialiseFilters();
-
-}
-
-</script>
