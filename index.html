@@ -115,7 +115,7 @@
   overflow: hidden;
 }
 
-/* Background image */
+/* Full background image */
 .hero::before {
   content: "";
   position: absolute;
@@ -127,18 +127,17 @@
   z-index: 0;
 }
 
-/* Fade overlay:
-   left = 70% white → image appears at ~30%
-   right = transparent → image fully visible */
+/* White fade over the image */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.70) 0%,
-    rgba(255, 255, 255, 0.55) 30%,
-    rgba(255, 255, 255, 0.20) 60%,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(255, 255, 255, 0.72) 30%,
+    rgba(255, 255, 255, 0.50) 50%,
+    rgba(255, 255, 255, 0.22) 70%,
     rgba(255, 255, 255, 0) 100%
   );
   z-index: 1;
@@ -147,7 +146,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 850px;
+  max-width: 800px;
   padding: 90px 0;
 }
     .eyebrow {
