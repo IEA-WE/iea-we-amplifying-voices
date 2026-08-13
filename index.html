@@ -1731,96 +1731,8 @@
 
     </div>
 
-
-    <div class="article-grid">
-
-      <article class="article-card">
-
-        <div class="article-image">
-          Article image
-        </div>
-
-        <div class="article-content">
-
-          <div class="article-meta">
-            Labour markets · 2025
-          </div>
-
-          <h3>
-            The evolution of gender in the labour market
-          </h3>
-
-          <p>
-            Jessica Pan, Claudia Olivetti and Barbara Petrongolo
-          </p>
-
-          <a href="#" class="read-more">
-            Read more →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <article class="article-card">
-
-        <div class="article-image">
-          Article image
-        </div>
-
-        <div class="article-content">
-
-          <div class="article-meta">
-            Digital finance · Mexico
-          </div>
-
-          <h3>
-            Supporting the transition to digital cash transfers in rural Mexico
-          </h3>
-
-          <p>
-            Fernanda Márquez-Padilla and Susan W. Parker
-          </p>
-
-          <a href="#" class="read-more">
-            Read more →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <article class="article-card">
-
-        <div class="article-image">
-          Article image
-        </div>
-
-        <div class="article-content">
-
-          <div class="article-meta">
-            Explore the archive
-          </div>
-
-          <h3>
-            Explore research from women economists around the world
-          </h3>
-
-          <p>
-            Our full searchable article archive brings together
-            contributions from across Africa, Asia and Latin America.
-          </p>
-
-          <a href="articles.html" class="read-more">
-            Explore the archive →
-          </a>
-
-        </div>
-
-      </article>
-
+    <div class="article-grid" id="latest-articles">
+      <!-- Latest articles will be loaded automatically -->
     </div>
 
   </div>
@@ -2103,6 +2015,49 @@
 
 </footer>
 
+<script src="articles-data.js"></script>
+
+<script>
+  const latestArticlesContainer = document.getElementById("latest-articles");
+
+  if (latestArticlesContainer && window.articles) {
+
+    const latestArticles = [...window.articles]
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 3);
+
+    latestArticlesContainer.innerHTML = latestArticles.map(article => `
+      <article class="article-card">
+
+        <div class="article-image">
+          Article image
+        </div>
+
+        <div class="article-content">
+
+          <div class="article-meta">
+            ${article.topic} · ${article.year}
+          </div>
+
+          <h3>
+            ${article.title}
+          </h3>
+
+          <p>
+            ${article.authors}
+          </p>
+
+          <a href="${article.url}" class="read-more" target="_blank" rel="noopener">
+            Read more →
+          </a>
+
+        </div>
+
+      </article>
+    `).join("");
+
+  }
+</script>
 
 </body>
 </html>
