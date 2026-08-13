@@ -7,7 +7,6 @@
   <title>IEA-WE | International Economic Association Women in Economics</title>
 
   <style>
-
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
     :root {
@@ -107,35 +106,25 @@
     ========================= */
 
     .hero {
-      background: var(--white);
-      color: var(--text);
       min-height: 600px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-    }
 
-    /* Full photograph across the hero */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url("writers_photo.jpg");
-      background-size: 100% auto;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.30) 0%,
+          rgba(255, 255, 255, 0.20) 25%,
+          rgba(255, 255, 255, 0.08) 55%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("writers_photo.jpg");
+
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      opacity: 0.26;
-      z-index: 0;
-    }
-
-    /* Soft white overlay so the text remains easy to read */
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.55);
-      z-index: 1;
     }
 
     .hero-content {
@@ -205,6 +194,7 @@
     .button-secondary {
       border: 1px solid var(--navy);
       color: var(--navy);
+      background: rgba(255, 255, 255, 0.75);
     }
 
     .button-secondary:hover {
@@ -915,6 +905,17 @@
 
       .hero {
         min-height: auto;
+
+        background-position: center center;
+
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.40) 0%,
+            rgba(255, 255, 255, 0.15) 60%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          url("writers_photo.jpg");
       }
 
       .hero-content {
@@ -971,9 +972,7 @@
         flex-basis: 320px;
         height: 340px;
       }
-
     }
-
 
     @media (max-width: 600px) {
 
@@ -987,6 +986,10 @@
 
       .logo img {
         width: 155px;
+      }
+
+      .hero {
+        background-position: center center;
       }
 
       .hero h1 {
@@ -1042,16 +1045,12 @@
       .feed-note {
         padding: 0 20px;
       }
-
     }
 
-
     @media (prefers-reduced-motion: reduce) {
-
       .feed-track {
         animation: none;
       }
-
     }
 
   </style>
@@ -1061,7 +1060,6 @@
 <body>
 
 <header>
-
   <div class="container nav">
 
     <a href="index.html" class="logo">
@@ -1078,7 +1076,6 @@
     </nav>
 
   </div>
-
 </header>
 
 
@@ -2075,6 +2072,9 @@
         <div class="footer-links">
           <a href="about.html">About</a>
           <a href="leadership.html">Advisory Board</a>
+          <a href="https://welac-lacea.com/" target="_blank" rel="noopener">
+            WELAC Website
+          </a>
         </div>
 
       </div>
