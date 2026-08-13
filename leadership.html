@@ -203,11 +203,7 @@
       z-index: 2;
     }
 
-    /*
-      Put the large-image names slightly above the bottom edge.
-      This means the smaller images can overlap the bottom of the
-      large images without covering the names.
-    */
+    /* Keep names of the large images above the overlapping images */
 
     .person.large .person-info {
       bottom: 35px;
@@ -224,7 +220,22 @@
     }
 
 
-    /* Dark gradient over each photograph */
+    /* =========================
+       NAVIKA IMAGE CROP
+    ========================= */
+
+    .person.navika img {
+      transform: scale(1.3);
+    }
+
+    .person.navika:hover img {
+      transform: scale(1.33);
+    }
+
+
+    /* =========================
+       PHOTO GRADIENT
+    ========================= */
 
     .person::after {
       content: "";
@@ -242,7 +253,9 @@
     }
 
 
-    /* Text sitting directly on the photographs */
+    /* =========================
+       TEXT ON PHOTOGRAPHS
+    ========================= */
 
     .person-info {
       position: absolute;
@@ -420,7 +433,7 @@
 
 
     /* =========================
-       MOBILE / TABLET
+       TABLET
     ========================= */
 
     @media (max-width: 900px) {
@@ -446,6 +459,16 @@
         grid-column: span 1;
         height: 330px;
         margin-top: 0;
+      }
+
+      /* Reset Navika crop slightly for smaller screens */
+
+      .person.navika img {
+        transform: scale(1.3);
+      }
+
+      .person.navika:hover img {
+        transform: scale(1.33);
       }
 
       .advisory-grid {
@@ -742,7 +765,7 @@
 
           <!-- NAVIKA -->
 
-          <div class="person small">
+          <div class="person small navika">
 
             <img
               src="navika_photo.jpg"
