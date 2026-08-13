@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,21 @@
   <title>WELAC | IEA-WE</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+    :root {
+      --navy: #0b3568;
+      --dark-blue: #102b52;
+      --blue: #1557a6;
+      --red: #c92f45;
+      --light-blue: #eef4fc;
+      --off-white: #faf9f5;
+      --white: #ffffff;
+      --text: #17263b;
+      --muted: #536174;
+      --line: #dce3ec;
+      --soft-pink: #f8e5e8;
+    }
 
     * {
       box-sizing: border-box;
@@ -16,439 +29,1217 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'DM Sans', sans-serif;
-      color: #222;
-      background: #faf9f6;
-      line-height: 1.6;
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
 
     /* =========================
        NAVIGATION
-       ========================= */
+    ========================= */
 
-    .navbar {
-      width: 100%;
-      padding: 24px 6%;
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #edf0f4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 90px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: #faf9f6;
-      border-bottom: 1px solid #e5e2dc;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     .logo {
-      font-weight: 700;
-      font-size: 20px;
-      text-decoration: none;
-    }
-
-    .nav-links {
       display: flex;
-      gap: 32px;
       align-items: center;
+      flex-shrink: 0;
     }
 
-    .nav-links a {
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
+    .logo img {
+      width: 190px;
+      height: auto;
+      display: block;
     }
 
-    .nav-links a:hover {
-      text-decoration: underline;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
     }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    nav a.active {
+      color: var(--red);
+    }
+
 
     /* =========================
        HERO
-       ========================= */
+    ========================= */
 
     .hero {
-      padding: 100px 8% 80px;
-      max-width: 1200px;
-      margin: auto;
+      background: var(--white);
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      right: -150px;
+      top: -160px;
+      opacity: 0.9;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: #f5d9de;
+      right: 12%;
+      bottom: -130px;
+      opacity: 0.65;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      padding: 90px 0;
     }
 
     .eyebrow {
+      color: var(--red);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
+      letter-spacing: 3px;
+      font-size: 14px;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.05;
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(52px, 7vw, 90px);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -3px;
       max-width: 900px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    .hero p {
-      font-size: 20px;
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero-intro {
       max-width: 780px;
-      color: #555;
+      font-size: 19px;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 34px;
     }
 
-    /* =========================
-       CONTENT
-       ========================= */
-
-    .section {
-      padding: 70px 8%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      margin-bottom: 24px;
-    }
-
-    .section-intro {
-      max-width: 850px;
-      font-size: 18px;
-      color: #555;
-    }
-
-    /* =========================
-       OUTCOME CARDS
-       ========================= */
-
-    .outcomes {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 45px;
-    }
-
-    .card {
-      background: white;
-      padding: 32px;
-      border: 1px solid #e5e2dc;
-    }
-
-    .card-number {
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      margin-bottom: 14px;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    /* =========================
-       WEBSITE LINK
-       ========================= */
-
-    .website-section {
-      margin-top: 30px;
-      padding: 60px;
-      background: #eeeae2;
-      text-align: center;
-    }
-
-    .website-section h2 {
-      margin-bottom: 15px;
-    }
-
-    .website-section p {
-      max-width: 650px;
-      margin: 0 auto 28px;
-      color: #555;
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 26px;
-      background: #222;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--red);
       color: white;
-      text-decoration: none;
-      font-weight: 600;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .button-secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .section-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .two-column h2,
+    .section-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.1;
+      font-weight: 500;
+      letter-spacing: -1.5px;
+    }
+
+    .copy {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .copy p {
+      margin-bottom: 22px;
+    }
+
+    .highlight {
+      border-top: 2px solid var(--red);
+      padding-top: 22px;
+      margin-top: 28px;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+
+    /* =========================
+       KEY NUMBERS
+    ========================= */
+
+    .numbers {
+      background: var(--light-blue);
+      padding: 75px 0;
+    }
+
+    .number-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .number {
+      border-top: 2px solid #aebfd6;
+      padding-top: 20px;
+    }
+
+    .number-value {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--red);
+      font-size: 46px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .number-label {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       2025 PROGRESS
+    ========================= */
+
+    .progress {
+      padding: 95px 0;
+      background: var(--white);
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 18px;
+    }
+
+    .progress-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .progress-card {
+      border: 1px solid var(--line);
+      padding: 35px;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .progress-card:hover {
+      transform: translateY(-4px);
+      border-color: #b9c8dc;
+    }
+
+    .progress-number {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .progress-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 29px;
+      line-height: 1.2;
+      margin-bottom: 17px;
+    }
+
+    .progress-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .progress-card a {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       NETWORK
+    ========================= */
+
+    .network {
+      padding: 90px 0;
+      background: var(--light-blue);
+    }
+
+    .network-box {
+      background: var(--white);
+      padding: 50px;
+    }
+
+    .network-box h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 45px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .network-box > p {
+      color: var(--muted);
+      max-width: 800px;
+      margin-bottom: 35px;
+    }
+
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .committee {
+      border-top: 3px solid var(--red);
+      background: var(--off-white);
+      padding: 22px;
+    }
+
+    .committee h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .committee p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       MENTORSHIP
+    ========================= */
+
+    .mentorship {
+      padding: 95px 0;
+      background: var(--white);
+    }
+
+    .mentor-box {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .mentor-box h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(40px, 5vw, 60px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .mentor-box p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .mentor-side {
+      background: var(--light-blue);
+      border-left: 5px solid var(--red);
+      padding: 30px;
+    }
+
+    .mentor-side strong {
+      display: block;
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .mentor-side span {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    .button:hover {
-      opacity: 0.8;
+
+    /* =========================
+       WEBSITE CTA
+    ========================= */
+
+    .cta {
+      background: var(--dark-blue);
+      color: white;
+      padding: 85px 0;
+      text-align: center;
     }
+
+    .cta .section-label {
+      color: #f0a2ad;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 5vw, 62px);
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: #cbd5e4;
+      font-size: 17px;
+    }
+
 
     /* =========================
        FOOTER
-       ========================= */
+    ========================= */
 
     footer {
-      margin-top: 80px;
-      padding: 40px 8%;
-      border-top: 1px solid #e5e2dc;
-      font-size: 13px;
-      color: #666;
+      background: var(--dark-blue);
+      color: white;
+      padding: 55px 0;
     }
 
-    @media (max-width: 700px) {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
 
-      .navbar {
-        align-items: flex-start;
+    .footer-brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #cbd5e4;
+      font-size: 14px;
+      max-width: 500px;
+    }
+
+    footer h4 {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #e5eaf2;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #385171;
+      margin-top: 45px;
+      padding-top: 22px;
+      color: #aebbd0;
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .nav {
+        min-height: 78px;
       }
 
-      .nav-links {
+      .logo img {
+        width: 165px;
+      }
+
+      nav {
         gap: 15px;
       }
 
-      .outcomes {
-        grid-template-columns: 1fr;
+      nav a {
+        font-size: 12px;
       }
 
       .hero {
-        padding-top: 70px;
+        min-height: auto;
       }
 
-      .website-section {
-        padding: 40px 25px;
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+      }
+
+      .two-column,
+      .mentor-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .number-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .progress-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .committee-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .logo img {
+        width: 155px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-intro {
+        font-size: 17px;
+      }
+
+      .intro,
+      .progress,
+      .network,
+      .mentorship,
+      .cta {
+        padding: 65px 0;
+      }
+
+      .number-grid,
+      .committee-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .network-box {
+        padding: 30px;
+      }
+
+      .network-box h2 {
+        font-size: 38px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
-
-  <nav class="navbar">
+<header>
+  <div class="container nav">
 
     <a href="index.html" class="logo">
-      IEA-WE
+      <img src="logoWE.svg" alt="IEA-WE">
     </a>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
+    <nav>
+      <a href="index.html#work">Our Work</a>
       <a href="articles.html">Amplifying Voices</a>
-      <a href="welac.html">WELAC</a>
+      <a href="index.html#leadership">Leadership</a>
+      <a href="reports.html">Reports</a>
+      <a href="welac.html" class="active">WELAC</a>
+      <a href="about.html">About</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Women in Economics in Latin America & the Caribbean
+      </div>
+
+      <h1>
+        Building a stronger
+        <span>economics profession.</span>
+      </h1>
+
+      <p class="hero-intro">
+        WELAC works to advance gender equality in economics across Latin
+        America and the Caribbean by building a strong network of women
+        economists, supporting professional development, and increasing
+        visibility in academic and policy circles.
+      </p>
+
+      <div class="buttons">
+
+        <a href="https://welac-lacea.com/"
+           target="_blank"
+           rel="noopener"
+           class="button button-primary">
+          Visit WELAC →
+        </a>
+
+        <a href="#progress" class="button button-secondary">
+          Explore the work
+        </a>
+
+      </div>
+
     </div>
 
-  </nav>
+  </div>
+
+</section>
 
 
-  <!-- HERO -->
+<!-- INTRO -->
 
-  <header class="hero">
+<section class="intro">
 
-    <div class="eyebrow">
-      Women in Economics in Latin America and the Caribbean
+  <div class="container">
+
+    <div class="section-label">
+      About WELAC
     </div>
 
-    <h1>
-      Building a stronger network of women economists across Latin America and the Caribbean.
-    </h1>
+    <div class="two-column">
 
-    <p>
-      WELAC advances gender equality in economics by building a strong network
-      of women economists, supporting their professional development, and
-      enhancing their visibility in academic and policy circles.
-    </p>
+      <div>
 
-  </header>
+        <h2>
+          Advancing gender equality in economics across the region.
+        </h2>
 
+      </div>
 
-  <!-- ABOUT -->
+      <div class="copy">
 
-  <section class="section">
+        <p>
+          The Women in Economics in Latin America and the Caribbean (WELAC)
+          initiative aims to strengthen the participation and influence of
+          women throughout the economics profession.
+        </p>
 
-    <h2>About WELAC</h2>
+        <p>
+          Its theory of change centres on building a strong regional network
+          of women economists, supporting their professional development,
+          and enhancing their visibility in academic and policy circles.
+        </p>
 
-    <p class="section-intro">
-      The WELAC Theory of Change aims to advance gender equality in economics
-      by strengthening networks, creating opportunities for professional
-      development, and increasing the visibility of women economists across
-      academic and policy communities.
-    </p>
+        <p>
+          Co-Impact funding facilitated the appointment of Inés Berniell as
+          WELAC Coordinator, working alongside WELAC Director Raquel Fernández,
+          as well as Milagros Onofri, who contributes to the management and
+          coordination of WELAC activities.
+        </p>
 
-    <p class="section-intro" style="margin-top: 20px;">
-      Co-Impact funding facilitated the hiring of Inés Berniell as WELAC
-      Coordinator, working alongside WELAC Director Raquel Fernández, as well
-      as the hiring of Milagros Onofri, who contributes to the management and
-      coordination of WELAC activities.
-    </p>
+        <div class="highlight">
 
-  </section>
+          <strong>A growing regional network.</strong>
 
+          <p>
+            WELAC brings together economists, students, researchers and
+            professional associations across Latin America and the Caribbean
+            to create stronger pathways for women in economics.
+          </p>
 
-  <!-- 2025 PROGRESS -->
+        </div>
 
-  <section class="section">
+      </div>
 
-    <div class="eyebrow">
-      Progress towards outcomes
     </div>
 
-    <h2>2025 in focus</h2>
+  </div>
 
-    <div class="outcomes">
+</section>
 
-      <article class="card">
 
-        <div class="card-number">01</div>
+<!-- KEY NUMBERS -->
 
-        <h3>WELAC Survey</h3>
+<section class="numbers">
+
+  <div class="container">
+
+    <div class="number-grid">
+
+      <div class="number">
+        <div class="number-value">1,400</div>
+        <div class="number-label">
+          Students surveyed
+        </div>
+      </div>
+
+      <div class="number">
+        <div class="number-value">96</div>
+        <div class="number-label">
+          Universities represented
+        </div>
+      </div>
+
+      <div class="number">
+        <div class="number-value">8</div>
+        <div class="number-label">
+          Latin American countries
+        </div>
+      </div>
+
+      <div class="number">
+        <div class="number-value">400+</div>
+        <div class="number-label">
+          Women economists in the WELAC Directory
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<section class="progress" id="progress">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Progress in 2025
+      </div>
+
+      <h2>
+        Building networks, evidence and opportunity.
+      </h2>
+
+      <p>
+        Across 2025, WELAC expanded its research, national networks,
+        workshops, mentorship activities and visibility across the region.
+      </p>
+
+    </div>
+
+
+    <div class="progress-grid">
+
+
+      <!-- CARD 1 -->
+
+      <div class="progress-card">
+
+        <div class="progress-number">
+          01 — WELAC SURVEY
+        </div>
+
+        <h3>
+          Understanding the next generation.
+        </h3>
 
         <p>
           The second WELAC Survey gathered responses from 1,400 students
-          across 96 universities in eight Latin American countries:
-          Argentina, Bolivia, Brazil, Chile, Colombia, Mexico, Peru and
-          Uruguay. The survey explored future academic plans, job preferences,
-          the influence of role models, and barriers to further study,
-          including financial constraints, partner considerations and family
-          obligations.
+          across 96 universities in Argentina, Bolivia, Brazil, Chile,
+          Colombia, Mexico, Peru and Uruguay.
         </p>
 
-        <p style="margin-top: 14px;">
-          Preliminary results were presented by Raquel Fernández at the LACEA
-          Annual Meeting in Recife in November 2025.
+        <p style="margin-top:15px;">
+          The survey explored academic plans, job preferences, role models,
+          financial constraints, partner considerations and family
+          obligations affecting decisions about further study.
         </p>
 
-      </article>
+      </div>
 
 
-      <article class="card">
+      <!-- CARD 2 -->
 
-        <div class="card-number">02</div>
+      <div class="progress-card">
 
-        <h3>National Committees & WELAC Network</h3>
+        <div class="progress-number">
+          02 — NATIONAL NETWORKS
+        </div>
+
+        <h3>
+          Six active national committees.
+        </h3>
 
         <p>
-          The WELAC network now includes six active national committees in
+          The WELAC network now includes active national committees in
           Argentina, Bolivia, Brazil, Chile, Colombia and Uruguay.
-          The committees conduct activities including workshops, mentoring
-          sessions and advocacy events within their national economics
-          associations.
         </p>
 
-      </article>
+        <p style="margin-top:15px;">
+          These committees conduct workshops, mentoring sessions and
+          advocacy activities within their national economics associations.
+        </p>
+
+      </div>
 
 
-      <article class="card">
+      <!-- CARD 3 -->
 
-        <div class="card-number">03</div>
+      <div class="progress-card">
 
-        <h3>WELAC-RIDGE Workshops</h3>
+        <div class="progress-number">
+          03 — WORKSHOPS
+        </div>
+
+        <h3>
+          Connecting research across the region.
+        </h3>
 
         <p>
-          Two major workshops were held in 2025. The 5th RIDGE-WELAC Workshop
-          on Gender and Household Economics took place in Lima, Peru, in May,
-          receiving 93 submissions and featuring 14 selected papers.
+          Two major workshops took place in 2025. The 5th RIDGE-WELAC
+          Workshop on Gender and Household Economics was held in Lima,
+          while the CAF-WELAC Workshop took place in Buenos Aires.
         </p>
 
-        <p style="margin-top: 14px;">
-          The CAF-WELAC Workshop in Buenos Aires followed in December,
-          receiving 180 submissions and featuring 16 accepted papers alongside
-          distinguished invited speakers.
-        </p>
+        <a href="https://ridge.org.uy/wp-content/uploads/2025/05/Gender-and-Household-Economics-Program.pdf"
+           target="_blank"
+           rel="noopener">
+          View RIDGE-WELAC programme →
+        </a>
 
-      </article>
+      </div>
 
 
-      <article class="card">
+      <!-- CARD 4 -->
 
-        <div class="card-number">04</div>
+      <div class="progress-card">
 
-        <h3>LACEA Special Session</h3>
+        <div class="progress-number">
+          04 — GENDER ECONOMICS
+        </div>
+
+        <h3>
+          Research, policy and cultural norms.
+        </h3>
 
         <p>
-          A special WELAC session on Gender Economics: Policies and Cultural
-          Norms was held at the LACEA Annual Meeting in Recife in November
-          2025. The session highlighted research on public policy, economic
-          conditions, gender norms and behavioural outcomes.
+          A special WELAC session at the LACEA Annual Meeting in Recife
+          brought together research examining how public policies and
+          economic conditions shape gender norms and behavioural outcomes.
         </p>
 
-      </article>
+      </div>
 
 
-      <article class="card">
+      <!-- CARD 5 -->
 
-        <div class="card-number">05</div>
+      <div class="progress-card">
 
-        <h3>Mentorship Programme</h3>
+        <div class="progress-number">
+          05 — MENTORSHIP
+        </div>
+
+        <h3>
+          Looking ahead in the profession.
+        </h3>
 
         <p>
           The annual WELAC mentorship session at the LACEA Annual Meeting
           brought together PhD students, junior faculty and senior economists
-          to discuss the future direction of the profession, emerging
-          research questions and changing priorities in economics.
+          for a forward-looking discussion on research, careers and the
+          future of the profession.
         </p>
 
-        <p style="margin-top: 14px;">
-          The session drew 94 registered participants.
+        <p style="margin-top:15px;">
+          The session attracted 94 registered participants.
         </p>
 
-      </article>
+      </div>
 
 
-      <article class="card">
+      <!-- CARD 6 -->
 
-        <div class="card-number">06</div>
+      <div class="progress-card">
 
-        <h3>WELAC Directory</h3>
+        <div class="progress-number">
+          06 — WELAC DIRECTORY
+        </div>
+
+        <h3>
+          Making women economists visible.
+        </h3>
 
         <p>
-          The Directory of Women Economists in Latin America and the Caribbean
-          was successfully launched on the WELAC website. It now features
-          more than 400 profiles of women economists across the region,
-          supporting networking, visibility and participation in conferences,
+          The Directory of Women Economists in Latin America and the
+          Caribbean was successfully launched on the WELAC website.
+        </p>
+
+        <p style="margin-top:15px;">
+          With more than 400 profiles, the directory provides a resource
+          for networking, visibility and participation in conferences,
           seminars and policy debates.
         </p>
 
-      </article>
+      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- WEBSITE -->
+<!-- NETWORK -->
 
-  <section class="section">
+<section class="network">
 
-    <div class="website-section">
+  <div class="container">
 
-      <h2>Explore WELAC</h2>
+    <div class="network-box">
+
+      <div class="section-label">
+        WELAC Network
+      </div>
+
+      <h2>
+        A regional network with national roots.
+      </h2>
 
       <p>
-        Discover the WELAC network, directory, research, activities and
-        opportunities for women economists across Latin America and the
-        Caribbean.
+        WELAC works through national committees embedded within economics
+        associations across Latin America. These networks create spaces
+        for mentoring, collaboration, advocacy and professional development.
       </p>
 
-      <a
-        href="https://welac-lacea.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button"
-      >
-        Visit the WELAC website
-      </a>
+      <div class="committee-grid">
+
+        <div class="committee">
+          <h3>Argentina</h3>
+          <p>COMAE</p>
+        </div>
+
+        <div class="committee">
+          <h3>Bolivia</h3>
+          <p>BOWEN</p>
+        </div>
+
+        <div class="committee">
+          <h3>Brazil</h3>
+          <p>Rede de Mulheres Economistas do Brasil</p>
+        </div>
+
+        <div class="committee">
+          <h3>Chile</h3>
+          <p>REM</p>
+        </div>
+
+        <div class="committee">
+          <h3>Colombia</h3>
+          <p>Under Afadeco</p>
+        </div>
+
+        <div class="committee">
+          <h3>Uruguay</h3>
+          <p>WELAC national committee</p>
+        </div>
+
+      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <footer>
-    © IEA Women in Economics
-  </footer>
+<!-- MENTORSHIP -->
+
+<section class="mentorship">
+
+  <div class="container">
+
+    <div class="mentor-box">
+
+      <div>
+
+        <div class="section-label">
+          Mentorship
+        </div>
+
+        <h2>
+          Creating connections across generations of economists.
+        </h2>
+
+        <p>
+          WELAC's mentorship activities bring together economists at
+          different stages of their careers to discuss research, professional
+          development and the future direction of the discipline.
+        </p>
+
+      </div>
+
+      <div class="mentor-side">
+
+        <strong>
+          94 registered participants
+        </strong>
+
+        <span>
+          The 2025 mentorship session at the LACEA Annual Meeting in Recife
+          brought together PhD students, junior faculty and senior economists.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="section-label">
+      Explore WELAC
+    </div>
+
+    <h2>
+      Discover the network.
+    </h2>
+
+    <p>
+      Visit the WELAC website to explore the latest research, activities,
+      events and the Directory of Women Economists across Latin America
+      and the Caribbean.
+    </p>
+
+    <a href="https://welac-lacea.com/"
+       target="_blank"
+       rel="noopener"
+       class="button button-primary">
+      Visit the WELAC website →
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+          IEA-WE
+        </div>
+
+        <p>
+          Strengthening the presence and influence of women in economics.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Explore
+        </h4>
+
+        <div class="footer-links">
+          <a href="index.html#work">Our Work</a>
+          <a href="articles.html">Amplifying Voices</a>
+          <a href="index.html#leadership">Leadership</a>
+          <a href="reports.html">Reports</a>
+          <a href="welac.html">WELAC</a>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          IEA-WE
+        </h4>
+
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="leadership.html">Advisory Board</a>
+          <a href="https://welac-lacea.com/"
+             target="_blank"
+             rel="noopener">
+            WELAC website
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      International Economic Association — Women in Economics Initiative
+    </div>
+
+  </div>
+
+</footer>
+
 
 </body>
-
 </html>
