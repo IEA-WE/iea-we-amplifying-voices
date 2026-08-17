@@ -158,18 +158,8 @@
 
 
     /* =========================
-       TEAM GROUPS
+       TEAM GROUP HEADINGS
     ========================= */
-
-    .team-group {
-      margin-top: 65px;
-    }
-
-
-    .team-group:first-of-type {
-      margin-top: 0;
-    }
-
 
     .team-group-heading {
       display: flex;
@@ -202,6 +192,11 @@
        CORE TEAM
     ========================= */
 
+    .core-section {
+      margin-top: 0;
+    }
+
+
     .core-team {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -209,12 +204,24 @@
     }
 
 
+    /*
+      First row:
+      Ashwini | Dani | María Inés
+    */
+
     .core-team .person:nth-child(1),
     .core-team .person:nth-child(2),
     .core-team .person:nth-child(3) {
       grid-column: span 2;
     }
 
+
+    /*
+      Second row:
+      Raquel | Fiona
+
+      Centred underneath the first three.
+    */
 
     .core-team .person:nth-child(4) {
       grid-column: 2 / 4;
@@ -228,13 +235,31 @@
 
 
     /* =========================
+       SECONDARY TEAM ROW
+    ========================= */
+
+    .secondary-team {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 16px;
+      margin-top: 65px;
+      align-items: start;
+    }
+
+
+
+    /* =========================
        QUALITATIVE RESEARCH LEAD
     ========================= */
+
+    .qualitative-section {
+      min-width: 0;
+    }
+
 
     .qualitative-team {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 580px;
     }
 
 
@@ -243,23 +268,31 @@
        PROJECT TEAM
     ========================= */
 
+    .project-section {
+      min-width: 0;
+    }
+
+
     .project-team {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      max-width: 780px;
     }
 
 
 
     /* =========================
-       PERSON CARDS
+       ALL PERSON CARDS
+       
+       Every photo/card has
+       exactly the same size.
     ========================= */
 
     .person {
       position: relative;
       overflow: hidden;
       background: #dfe5ec;
+      height: 340px;
       min-height: 340px;
     }
 
@@ -267,7 +300,6 @@
     .person img {
       width: 100%;
       height: 100%;
-      min-height: 340px;
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease;
@@ -281,30 +313,10 @@
 
 
     /* =========================
-       IMAGE POSITIONING
+       IMAGE CROPPING
     ========================= */
 
-    .core-team .person:nth-child(1) img {
-      object-position: center center;
-    }
-
-
-    .core-team .person:nth-child(2) img {
-      object-position: center center;
-    }
-
-
-    .core-team .person:nth-child(3) img {
-      object-position: center center;
-    }
-
-
-    .core-team .person:nth-child(4) img {
-      object-position: center center;
-    }
-
-
-    .core-team .person:nth-child(5) img {
+    .core-team .person img {
       object-position: center center;
     }
 
@@ -314,18 +326,22 @@
     }
 
 
+
     /* =========================
-       NAVIKA IMAGE
+       NAVIKA
+       
+       Restored to the previous
+       zoomed-in treatment.
     ========================= */
 
     .navika-card img {
       object-position: center center;
-      transform: scale(1.18);
+      transform: scale(1.22);
     }
 
 
     .navika-card:hover img {
-      transform: scale(1.23);
+      transform: scale(1.27);
     }
 
 
@@ -373,7 +389,7 @@
 
 
     /* =========================
-       DARK GRADIENT BEHIND TEXT
+       DARK GRADIENT
     ========================= */
 
     .person::before {
@@ -548,13 +564,13 @@
       }
 
 
-      .qualitative-team {
-        max-width: 100%;
+      .secondary-team {
+        grid-template-columns: 1fr 1fr;
       }
 
 
       .project-team {
-        max-width: 100%;
+        grid-template-columns: 1fr;
       }
 
 
@@ -608,11 +624,6 @@
       }
 
 
-      .team-group {
-        margin-top: 48px;
-      }
-
-
       .team-group-heading {
         gap: 12px;
       }
@@ -623,6 +634,8 @@
         letter-spacing: 2px;
       }
 
+
+      /* Core team becomes one column */
 
       .core-team {
         grid-template-columns: 1fr;
@@ -639,26 +652,31 @@
       }
 
 
-      .qualitative-team {
+      /* Secondary sections stack */
+
+      .secondary-team {
         grid-template-columns: 1fr;
-        max-width: none;
+        gap: 48px;
+        margin-top: 55px;
       }
 
 
       .project-team {
         grid-template-columns: 1fr;
-        max-width: none;
         gap: 14px;
       }
 
 
+      /* Keep every mobile card the same size */
+
       .person {
+        height: 360px;
         min-height: 360px;
       }
 
 
       .person img {
-        min-height: 360px;
+        height: 360px;
       }
 
 
@@ -782,7 +800,7 @@
              CORE TEAM
         ========================= -->
 
-        <div class="team-group">
+        <div class="core-section">
 
           <div class="team-group-heading">
 
@@ -805,13 +823,11 @@
                 alt="Ashwini Deshpande"
               >
 
-
               <div class="person-info">
 
                 <h3>
                   Ashwini Deshpande
                 </h3>
-
 
                 <p>
                   Ashoka University
@@ -832,13 +848,11 @@
                 alt="Dani Rodrik"
               >
 
-
               <div class="person-info">
 
                 <h3>
                   Dani Rodrik
                 </h3>
-
 
                 <p>
                   Harvard University
@@ -859,13 +873,11 @@
                 alt="María Inés Berniell"
               >
 
-
               <div class="person-info">
 
                 <h3>
                   María Inés Berniell
                 </h3>
-
 
                 <p>
                   Universidad Nacional de la Plata and CEDLAS
@@ -886,13 +898,11 @@
                 alt="Raquel Fernández"
               >
 
-
               <div class="person-info">
 
                 <h3>
                   Raquel Fernández
                 </h3>
-
 
                 <p>
                   New York University
@@ -913,13 +923,11 @@
                 alt="Fiona Tregenna"
               >
 
-
               <div class="person-info">
 
                 <h3>
                   Fiona Tregenna
                 </h3>
-
 
                 <p>
                   University of Johannesburg
@@ -937,121 +945,123 @@
 
 
         <!-- =========================
-             QUALITATIVE RESEARCH LEAD
+             QUALITATIVE + PROJECT
+             SAME HORIZONTAL ROW
         ========================= -->
 
-        <div class="team-group qualitative-group">
-
-          <div class="team-group-heading">
-
-            <span>
-              Qualitative Research Lead
-            </span>
-
-          </div>
+        <div class="secondary-team">
 
 
-          <div class="qualitative-team">
+          <!-- QUALITATIVE RESEARCH LEAD -->
 
+          <div class="qualitative-section">
 
-            <!-- Monica -->
+            <div class="team-group-heading">
 
-            <div class="person">
-
-              <img
-                src="monica_photo.jpg"
-                alt="Monica Biradavolu"
-              >
-
-
-              <div class="person-info">
-
-                <h3>
-                  Monica Biradavolu
-                </h3>
-
-
-                <p>
-                  Qualitative Research Lead (Qual Analytics)
-                </p>
-
-              </div>
+              <span>
+                Qualitative Research Lead
+              </span>
 
             </div>
 
 
-          </div>
-
-        </div>
+            <div class="qualitative-team">
 
 
+              <!-- Monica -->
 
-        <!-- =========================
-             PROJECT TEAM
-        ========================= -->
+              <div class="person">
 
-        <div class="team-group project-group">
+                <img
+                  src="monica_photo.jpg"
+                  alt="Monica Biradavolu"
+                >
 
-          <div class="team-group-heading">
+                <div class="person-info">
 
-            <span>
-              Project Team
-            </span>
+                  <h3>
+                    Monica Biradavolu
+                  </h3>
 
-          </div>
+                  <p>
+                    Qualitative Research Lead (Qual Analytics)
+                  </p>
 
-
-          <div class="project-team">
-
-
-            <!-- Andrea -->
-
-            <div class="person">
-
-              <div class="person-info">
-
-                <h3>
-                  Andrea Cavallo
-                </h3>
-
-
-                <p>
-                  Project Manager, IEA-WE
-                </p>
+                </div>
 
               </div>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PROJECT TEAM -->
+
+          <div class="project-section">
+
+            <div class="team-group-heading">
+
+              <span>
+                Project Team
+              </span>
 
             </div>
 
 
-
-            <!-- Navika -->
-
-            <div class="person navika-card">
-
-              <img
-                src="navika_photo.jpg"
-                alt="Navika Mehta"
-              >
+            <div class="project-team">
 
 
-              <div class="person-info">
+              <!-- Andrea -->
 
-                <h3>
-                  Navika Mehta
-                </h3>
+              <div class="person">
 
+                <div class="person-info">
 
-                <p>
-                  Strategic Communications and Research Dissemination Lead, IEA-WE
-                </p>
+                  <h3>
+                    Andrea Cavallo
+                  </h3>
+
+                  <p>
+                    Project Manager, IEA-WE
+                  </p>
+
+                </div>
 
               </div>
 
+
+
+              <!-- Navika -->
+
+              <div class="person navika-card">
+
+                <img
+                  src="navika_photo.jpg"
+                  alt="Navika Mehta"
+                >
+
+                <div class="person-info">
+
+                  <h3>
+                    Navika Mehta
+                  </h3>
+
+                  <p>
+                    Strategic Communications and Research Dissemination Lead, IEA-WE
+                  </p>
+
+                </div>
+
+              </div>
+
+
             </div>
 
-
           </div>
+
 
         </div>
 
@@ -1098,8 +1108,6 @@
         <div class="advisory-grid">
 
 
-          <!-- Radhika -->
-
           <div class="advisory-card">
 
             <h3>
@@ -1112,9 +1120,6 @@
 
           </div>
 
-
-
-          <!-- Marianne -->
 
           <div class="advisory-card">
 
@@ -1129,9 +1134,6 @@
           </div>
 
 
-
-          <!-- Wendy -->
-
           <div class="advisory-card">
 
             <h3>
@@ -1144,9 +1146,6 @@
 
           </div>
 
-
-
-          <!-- Marcela -->
 
           <div class="advisory-card">
 
@@ -1161,9 +1160,6 @@
           </div>
 
 
-
-          <!-- Rohini -->
-
           <div class="advisory-card">
 
             <h3>
@@ -1176,9 +1172,6 @@
 
           </div>
 
-
-
-          <!-- Leonard -->
 
           <div class="advisory-card">
 
@@ -1212,18 +1205,14 @@
 
     <div class="container">
 
-
       <div class="footer-grid">
 
-
-        <!-- Footer description -->
 
         <div>
 
           <div class="footer-brand">
             IEA-WE
           </div>
-
 
           <p>
             Strengthening the presence and influence of women in economics
@@ -1234,14 +1223,11 @@
 
 
 
-        <!-- Explore -->
-
         <div>
 
           <h4>
             Explore
           </h4>
-
 
           <div class="footer-links">
 
@@ -1271,14 +1257,11 @@
 
 
 
-        <!-- IEA-WE -->
-
         <div>
 
           <h4>
             IEA-WE
           </h4>
-
 
           <div class="footer-links">
 
@@ -1298,13 +1281,11 @@
       </div>
 
 
-
       <div class="footer-bottom">
 
         International Economic Association — Women in Economics Initiative
 
       </div>
-
 
     </div>
 
