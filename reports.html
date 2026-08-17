@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Research & Reports | IEA-WE</title>
 
   <style>
+
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
     :root {
@@ -353,7 +358,7 @@
 
 
     /* =========================
-       DISSEMINATION
+       RESEARCH DISSEMINATION
     ========================= */
 
     .dissemination {
@@ -542,22 +547,63 @@
       line-height: 1.8;
     }
 
-    .coming-soon {
+    .intervention-summary {
       background: var(--light-blue);
       padding: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       border-left: 4px solid var(--red);
     }
 
-    .coming-soon strong {
+    .intervention-summary strong {
       color: var(--navy);
       font-size: 16px;
     }
 
-    .coming-soon p {
+    .intervention-summary p {
       color: var(--muted);
       font-size: 14px;
-      margin-top: 5px;
+      line-height: 1.7;
+      margin-top: 7px;
+    }
+
+    .intervention-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-bottom: 45px;
+    }
+
+    .intervention-result {
+      border: 1px solid var(--line);
+      padding: 28px;
+      background: var(--white);
+    }
+
+    .intervention-result-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .intervention-result h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 27px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .intervention-result p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .intervention-result strong {
+      color: var(--navy);
     }
 
     .intervention-grid {
@@ -587,6 +633,20 @@
       font-size: 14px;
       line-height: 1.5;
       font-weight: 600;
+    }
+
+
+    /* =========================
+       QUALITATIVE NOTE
+    ========================= */
+
+    .research-note {
+      padding: 100px 0;
+      background: var(--light-blue);
+    }
+
+    .research-note .dissemination-card {
+      background: var(--dark-blue);
     }
 
 
@@ -679,9 +739,11 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .intervention-grid {
+      .intervention-grid,
+      .intervention-results {
         grid-template-columns: repeat(2, 1fr);
       }
+
     }
 
 
@@ -716,7 +778,8 @@
       .evidence,
       .dissemination,
       .qualitative,
-      .interventions {
+      .interventions,
+      .research-note {
         padding: 65px 0;
       }
 
@@ -742,7 +805,8 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .intervention-grid {
+      .intervention-grid,
+      .intervention-results {
         grid-template-columns: 1fr;
       }
 
@@ -750,18 +814,23 @@
         grid-template-columns: 1fr;
         gap: 30px;
       }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
+
 
   <!-- =========================
        NAVIGATION
   ========================= -->
 
   <header>
+
     <div class="container nav">
 
       <a href="index.html" class="logo">
@@ -776,6 +845,7 @@
       </nav>
 
     </div>
+
   </header>
 
 
@@ -844,16 +914,18 @@
             </p>
 
             <p>
-              Following a competitive call for proposals, six evidence-based
-              studies were commissioned in Argentina, Colombia, Ghana, India,
-              Mexico, and South Africa, alongside eight intervention studies.
+              Six independent evidence studies examine women's representation
+              and progression through the economics profession, from
+              undergraduate enrolment through senior faculty. Alongside this,
+              eleven intervention projects test practical strategies for
+              reducing gender gaps.
             </p>
 
             <p>
-              Together, the research seeks to build a deeper understanding of
-              gender disparities in economics while identifying effective
-              strategies to promote women's participation and leadership in
-              the field.
+              A parallel qualitative research programme, led by Monica
+              Biradavolu and QualAnalytics, examines the experiences and
+              obstacles women economists face through in-depth interviews
+              and focus group discussions across the six study countries.
             </p>
 
 
@@ -864,11 +936,11 @@
                 <div class="component-number">01</div>
 
                 <div>
-                  <h3>Data gathering and synthesis</h3>
+                  <h3>Quantitative evidence</h3>
                   <p>
-                    Building evidence on women's representation and
-                    trajectories across the economics profession in three
-                    regions.
+                    Building comparable country-level evidence on women's
+                    representation and progression through the economics
+                    profession.
                   </p>
                 </div>
 
@@ -880,11 +952,11 @@
                 <div class="component-number">02</div>
 
                 <div>
-                  <h3>Qualitative cross-national evidence</h3>
+                  <h3>Intervention research</h3>
                   <p>
-                    Examining experiences and obstacles faced by women in
-                    economics, including through longitudinal and tracking
-                    studies.
+                    Testing practical approaches including mentorship,
+                    networks, role models, visibility, and curriculum-based
+                    interventions to identify what works.
                   </p>
                 </div>
 
@@ -896,10 +968,11 @@
                 <div class="component-number">03</div>
 
                 <div>
-                  <h3>Intervention research</h3>
+                  <h3>Qualitative evidence</h3>
                   <p>
-                    Evaluating specific interventions and policies to identify
-                    what works in lowering the gender gap in economics.
+                    Documenting women's experiences through in-depth
+                    interviews and focus group discussions, helping explain
+                    the mechanisms behind the quantitative evidence.
                   </p>
                 </div>
 
@@ -917,7 +990,7 @@
 
 
     <!-- =========================
-         STATS
+         RESEARCH STATS
     ========================= -->
 
     <section class="stats">
@@ -927,31 +1000,46 @@
         <div class="stats-grid">
 
           <div class="stat">
+
             <div class="stat-number">6</div>
+
             <div class="stat-label">
-              Evidence-based country studies
+              Country evidence papers
             </div>
+
           </div>
 
-          <div class="stat">
-            <div class="stat-number">8</div>
-            <div class="stat-label">
-              Intervention studies
-            </div>
-          </div>
 
           <div class="stat">
-            <div class="stat-number">3</div>
+
+            <div class="stat-number">11</div>
+
             <div class="stat-label">
-              Regions: Africa, Asia & Latin America and the Caribbean
+              Intervention projects testing what works
             </div>
+
           </div>
 
+
           <div class="stat">
-            <div class="stat-number">6</div>
+
+            <div class="stat-number">200+</div>
+
             <div class="stat-label">
-              Countries in the qualitative research programme
+              In-depth interviews across the study countries
             </div>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-number">100+</div>
+
+            <div class="stat-label">
+              Focus group discussions with students and faculty
+            </div>
+
           </div>
 
         </div>
@@ -972,7 +1060,7 @@
         <div class="section-header">
 
           <div class="section-label">
-            Evidence-based papers
+            Quantitative research · Evidence
           </div>
 
           <h2>
@@ -980,11 +1068,13 @@
           </h2>
 
           <p>
-            Six independent studies examine women's representation and
-            progression through the economics profession, from undergraduate
-            education through faculty and research positions. Together, they
-            provide country-level evidence on career trajectories, research,
-            leadership, networks, and persistent gender gaps.
+            Six independent country studies examine women's representation
+            and progression through the economics profession, from
+            undergraduate education through senior faculty and research
+            positions. Together, they provide comparable evidence on career
+            trajectories, research, leadership, networks, and persistent
+            gender gaps across Argentina, Colombia, Ghana, India, Mexico,
+            and South Africa.
           </p>
 
         </div>
@@ -1010,18 +1100,23 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/mariana-viollaz-4/" target="_blank" rel="noopener noreferrer">
                 Mariana Viollaz
               </a>,
+
               <a href="https://www.iea-world.org/mariana-marchionni-4/" target="_blank" rel="noopener noreferrer">
                 Mariana Marchionni
               </a>,
+
               <a href="https://www.iea-world.org/maria-edo-2/" target="_blank" rel="noopener noreferrer">
                 María Edo
               </a>,
+
               <a href="https://www.iea-world.org/maria-florencia-pinto/" target="_blank" rel="noopener noreferrer">
                 Florencia Pinto
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1063,9 +1158,11 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/maria-del-pilar-lopez-uribe/" target="_blank" rel="noopener noreferrer">
                 Maria del Pilar López-Uribe
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1106,13 +1203,17 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/abena-oduro/" target="_blank" rel="noopener noreferrer">
                 Abena Oduro
               </a>
+
               &amp;
+
               <a href="https://www.iea-world.org/gloria-afful-mensah/" target="_blank" rel="noopener noreferrer">
                 Gloria Afful-Mensah
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1153,16 +1254,21 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/ambrish-dongre/" target="_blank" rel="noopener noreferrer">
                 Ambrish Dongre
               </a>,
+
               <a href="https://www.iea-world.org/upasak-das/" target="_blank" rel="noopener noreferrer">
                 Upasak Das
               </a>
+
               &amp;
+
               <a href="https://www.iea-world.org/karan-singhal/" target="_blank" rel="noopener noreferrer">
                 Karan Singhal
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1203,9 +1309,11 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/eva-o-arceo-gomez/" target="_blank" rel="noopener noreferrer">
                 Eva Olimpia Arceo-Gómez
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1246,13 +1354,17 @@
             </div>
 
             <div class="paper-authors">
+
               <a href="https://www.iea-world.org/nicola-branson/" target="_blank" rel="noopener noreferrer">
                 Nicola Branson
               </a>
+
               &amp;
+
               <a href="https://www.iea-world.org/emma-whitelaw/" target="_blank" rel="noopener noreferrer">
                 Emma Whitelaw
               </a>
+
             </div>
 
             <p class="paper-description">
@@ -1284,6 +1396,7 @@
 
     <!-- =========================
          RESEARCH DISSEMINATION
+         KEPT FROM ORIGINAL PAGE
     ========================= -->
 
     <section class="dissemination">
@@ -1319,6 +1432,12 @@
               research and helps translate country-level findings into a
               broader conversation about gender, representation, and
               progression in economics.
+            </p>
+
+            <p>
+              This is part of IEA-WE's broader effort to ensure that the
+              evidence generated through the research programme reaches
+              policymakers and wider audiences beyond academia.
             </p>
 
             <a
@@ -1360,9 +1479,9 @@
             </h2>
 
             <p class="qualitative-intro">
-              Alongside the country evidence, the IEA-WE research programme
-              includes a cross-national qualitative study examining the
-              experiences and barriers faced by women in economics.
+              Quantitative evidence shows where women exit the pipeline.
+              Qualitative research helps explain the obstacles women
+              economists actually experience, in their own words.
             </p>
 
           </div>
@@ -1377,23 +1496,24 @@
               </strong>
 
               <span>
-                Principal Investigator · QualAnalytics
+                Qualitative Research Lead · QualAnalytics
               </span>
 
             </div>
 
+
             <p>
-              The QualAnalytics team, led by Monica Biradavolu, comprises
-              six country teams. Data collection across Argentina, Colombia,
-              Ghana, India, Mexico, and South Africa is approaching completion,
-              with country reports at different stages of finalisation.
+              Led by Monica Biradavolu and QualAnalytics, the qualitative
+              research programme examines women's experiences across
+              Argentina, Colombia, Ghana, India, Mexico, and South Africa.
+              The research combines in-depth interviews and focus group
+              discussions with students and faculty.
             </p>
 
             <p>
-              The research combines in-depth interviews and focus groups
-              across universities in the six countries. Longitudinal interviews
-              are ongoing and will conclude at the end of 2026, with findings
-              incorporated into the respective final country reports.
+              The qualitative evidence complements the six country evidence
+              papers by examining the experiences, barriers, and mechanisms
+              behind the patterns observed in the quantitative data.
             </p>
 
 
@@ -1415,11 +1535,11 @@
               <div class="qual-fact">
 
                 <div class="qual-fact-number">
-                  220+
+                  200+
                 </div>
 
                 <div class="qual-fact-label">
-                  Interviews and focus groups completed across the six countries
+                  In-depth interviews across the study countries
                 </div>
 
               </div>
@@ -1428,11 +1548,11 @@
               <div class="qual-fact">
 
                 <div class="qual-fact-number">
-                  6
+                  100+
                 </div>
 
                 <div class="qual-fact-label">
-                  Country teams working across the research programme
+                  Focus group discussions with students and faculty
                 </div>
 
               </div>
@@ -1445,7 +1565,7 @@
                 </div>
 
                 <div class="qual-fact-label">
-                  Findings to be presented at the IEA World Congress
+                  Key findings to be presented at the IEA World Congress
                 </div>
 
               </div>
@@ -1460,11 +1580,11 @@
               </h3>
 
               <p>
-                Data collection is complete in Argentina, Colombia, Ghana,
-                India, Mexico, and South Africa, with country reports at
-                different stages of completion. Findings from the qualitative
-                research will contribute to the consolidated presentation at
-                the IEA World Congress 2026.
+                Qualitative research has been conducted across Argentina,
+                Colombia, Ghana, India, Mexico, and South Africa. Country
+                reports are being finalised, with key findings from the
+                qualitative research due to be presented at the IEA World
+                Congress in 2026.
               </p>
 
             </div>
@@ -1489,7 +1609,7 @@
         <div class="intervention-intro">
 
           <div class="section-label">
-            Intervention-based papers
+            Quantitative research · Interventions
           </div>
 
           <h2>
@@ -1497,24 +1617,101 @@
           </h2>
 
           <p>
-            Eight studies examine interventions that may be effective in
-            lowering the gender gap in economics. The evidence will be
-            generated through trials of new interventions or analysis of
-            existing policies.
+            Eleven intervention projects test practical strategies designed
+            to reduce gender gaps in economics. The portfolio includes
+            approaches such as mentorship, networks, role models, visibility,
+            and curriculum-based interventions.
           </p>
 
         </div>
 
 
-        <div class="coming-soon">
+        <div class="intervention-summary">
 
           <strong>
-            Papers coming soon.
+            From diagnosis to action.
           </strong>
 
           <p>
-            The intervention studies are currently underway and will be added
-            here as the research becomes available.
+            The intervention programme is designed around the evidence on
+            where gender gaps emerge and the barriers women experience. The
+            goal is not simply to identify whether an intervention changes
+            beliefs, but whether it changes behaviour and outcomes.
+          </p>
+
+        </div>
+
+
+        <div class="intervention-results">
+
+
+          <div class="intervention-result">
+
+            <div class="intervention-result-label">
+              Emerging evidence
+            </div>
+
+            <h3>
+              The decision matters more than the dose.
+            </h3>
+
+            <p>
+              The presentation reports that the thinnest intervention in the
+              portfolio — four e-books sent to a chat group, with no facilitator
+              or live speaker — produced the clearest behavioural result,
+              while the most elaborate intervention produced no detectable
+              behavioural effect.
+            </p>
+
+            <p>
+              The emerging pattern is that interventions are more likely to
+              affect behaviour when the decision can be made by the student
+              herself, costs little, and can be reversed.
+            </p>
+
+          </div>
+
+
+          <div class="intervention-result">
+
+            <div class="intervention-result-label">
+              Curriculum intervention
+            </div>
+
+            <h3>
+              Structural change can reach what information cannot.
+            </h3>
+
+            <p>
+              One of the eleven projects replaced the first-year economics
+              curriculum at the University of Cape Town.
+            </p>
+
+            <p>
+              The intervention produced no detectable change in the probability
+              that women declared or switched into an economics major, but
+              the gender gap in introductory microeconomics attainment narrowed
+              by roughly <strong>1 to 2.5 percentage points</strong>, with a
+              similar effect at intermediate level.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="intervention-summary">
+
+          <strong>
+            The broader lesson from the intervention portfolio
+          </strong>
+
+          <p>
+            The presentation emphasises that the economics pipeline leaks at
+            different points in different countries. Effective interventions
+            therefore need to target the specific bottleneck rather than
+            assume a single solution will work everywhere.
           </p>
 
         </div>
@@ -1588,7 +1785,7 @@
          QUALITATIVE NOTE
     ========================= -->
 
-    <section class="dissemination">
+    <section class="research-note">
 
       <div class="container">
 
@@ -1610,15 +1807,15 @@
           <div class="dissemination-copy">
 
             <p>
-              The qualitative research is ongoing, with longitudinal interviews
-              continuing through the end of 2026. Final country reports and
-              consolidated findings will add further depth to the evidence
-              base on women's experiences in economics.
+              The qualitative research adds the lived experience behind the
+              quantitative evidence, helping identify the mechanisms and
+              constraints that shape women's progression through economics.
             </p>
 
             <p>
-              Findings from the research programme will be presented at the
-              International Economic Association World Congress 2026.
+              Final country reports and consolidated findings will add further
+              depth to the evidence base, with key findings due to be presented
+              at the International Economic Association World Congress 2026.
             </p>
 
           </div>
@@ -1628,6 +1825,7 @@
       </div>
 
     </section>
+
 
   </main>
 
@@ -1660,11 +1858,13 @@
           <h4>Explore</h4>
 
           <div class="footer-links">
+
             <a href="index.html">Our Work</a>
             <a href="articles.html">Amplifying Voices</a>
             <a href="leadership.html">Team</a>
             <a href="#evidence">Research</a>
             <a href="reports.html">Reports</a>
+
           </div>
 
         </div>
@@ -1675,9 +1875,11 @@
           <h4>Research</h4>
 
           <div class="footer-links">
+
             <a href="#evidence">Evidence Papers</a>
             <a href="#qualitative">Qualitative Research</a>
             <a href="#interventions">Intervention Studies</a>
+
           </div>
 
         </div>
@@ -1686,12 +1888,16 @@
 
 
       <div class="footer-bottom">
+
         International Economic Association — Women in Economics Initiative
+
       </div>
 
     </div>
 
   </footer>
 
+
 </body>
+
 </html>
