@@ -416,6 +416,84 @@
 
 
     /* =========================
+       INTERVENTION STUDIES
+    ========================= */
+
+    .interventions {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .intervention-intro {
+      max-width: 800px;
+      margin-bottom: 45px;
+    }
+
+    .intervention-intro h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .intervention-intro p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .intervention-summary {
+      background: var(--light-blue);
+      padding: 30px;
+      margin-bottom: 35px;
+      border-left: 4px solid var(--red);
+    }
+
+    .intervention-summary strong {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .intervention-summary p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 7px;
+    }
+
+    .intervention-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .intervention-item {
+      border: 1px solid var(--line);
+      padding: 20px 22px;
+      background: var(--white);
+    }
+
+    .intervention-item span {
+      display: block;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .intervention-item p {
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+
+    /* =========================
        QUALITATIVE RESEARCH
     ========================= */
 
@@ -515,98 +593,6 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.7;
-    }
-
-
-    /* =========================
-       INTERVENTION STUDIES
-    ========================= */
-
-    .interventions {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .intervention-intro {
-      max-width: 800px;
-      margin-bottom: 45px;
-    }
-
-    .intervention-intro h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: clamp(42px, 5vw, 60px);
-      line-height: 1.1;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-
-    .intervention-intro p {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .intervention-summary {
-      background: var(--light-blue);
-      padding: 30px;
-      margin-bottom: 35px;
-      border-left: 4px solid var(--red);
-    }
-
-    .intervention-summary strong {
-      color: var(--navy);
-      font-size: 16px;
-    }
-
-    .intervention-summary p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-      margin-top: 7px;
-    }
-
-    .intervention-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .intervention-item {
-      border: 1px solid var(--line);
-      padding: 20px 22px;
-      background: var(--white);
-    }
-
-    .intervention-item span {
-      display: block;
-      color: var(--red);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 10px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .intervention-item p {
-      color: var(--navy);
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-
-
-    /* =========================
-       QUALITATIVE NOTE
-    ========================= */
-
-    .research-note {
-      padding: 100px 0;
-      background: var(--light-blue);
-    }
-
-    .research-note .dissemination-card {
-      background: var(--dark-blue);
     }
 
 
@@ -737,8 +723,7 @@
       .evidence,
       .dissemination,
       .qualitative,
-      .interventions,
-      .research-note {
+      .interventions {
         padding: 65px 0;
       }
 
@@ -1417,6 +1402,115 @@
 
 
     <!-- =========================
+         INTERVENTION STUDIES
+         MOVED ABOVE QUALITATIVE RESEARCH
+    ========================= -->
+
+    <section class="interventions" id="interventions">
+
+      <div class="container">
+
+        <div class="intervention-intro">
+
+          <div class="section-label">
+            Quantitative research · Interventions
+          </div>
+
+          <h2>
+            Testing what works.
+          </h2>
+
+          <p>
+            Eleven intervention projects test practical strategies designed
+            to reduce gender gaps in economics. The portfolio includes
+            approaches such as mentorship, networks, role models, visibility,
+            and curriculum-based interventions.
+          </p>
+
+        </div>
+
+
+        <div class="intervention-summary">
+
+          <strong>
+            From diagnosis to action.
+          </strong>
+
+          <p>
+            The intervention programme is designed around the evidence on
+            where gender gaps emerge and the barriers women experience. The
+            goal is not simply to identify whether an intervention changes
+            beliefs, but whether it changes behaviour and outcomes.
+          </p>
+
+        </div>
+
+
+        <div class="intervention-grid">
+
+          <div class="intervention-item">
+            <span>Argentina</span>
+            <p>Hernán Ruffo</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Brazil</span>
+            <p>Bruna Borges, Fernanda Estevan, Kelly Santos</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>China</span>
+            <p>Xianghong Shirley Wang</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Colombia</span>
+            <p>Camila Galindo and Julia Seither</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Ghana</span>
+            <p>Rebecca Nana Yaa Ayifah and Emmanuel Ayifah</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>India</span>
+            <p>Anahita Karandikar</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>India</span>
+            <p>Bharti Nandwani and Akanksha Aggarwal</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Mexico</span>
+            <p>Joana Chapa, Stanislao Maldonado, and Elvira Naranjo</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>Mexico</span>
+            <p>Lucia Del Carpio, Emilio Gutierrez, Adrian Rubli</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>South Africa</span>
+            <p>Carike Claassen</p>
+          </div>
+
+          <div class="intervention-item">
+            <span>South Africa</span>
+            <p>Janine Jantjies</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
          QUALITATIVE RESEARCH
     ========================= -->
 
@@ -1546,160 +1640,6 @@
               </p>
 
             </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         INTERVENTION STUDIES
-    ========================= -->
-
-    <section class="interventions" id="interventions">
-
-      <div class="container">
-
-        <div class="intervention-intro">
-
-          <div class="section-label">
-            Quantitative research · Interventions
-          </div>
-
-          <h2>
-            Testing what works.
-          </h2>
-
-          <p>
-            Eleven intervention projects test practical strategies designed
-            to reduce gender gaps in economics. The portfolio includes
-            approaches such as mentorship, networks, role models, visibility,
-            and curriculum-based interventions.
-          </p>
-
-        </div>
-
-
-        <div class="intervention-summary">
-
-          <strong>
-            From diagnosis to action.
-          </strong>
-
-          <p>
-            The intervention programme is designed around the evidence on
-            where gender gaps emerge and the barriers women experience. The
-            goal is not simply to identify whether an intervention changes
-            beliefs, but whether it changes behaviour and outcomes.
-          </p>
-
-        </div>
-
-
-        <div class="intervention-grid">
-
-          <div class="intervention-item">
-            <span>Argentina</span>
-            <p>Hernán Ruffo</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>Brazil</span>
-            <p>Bruna Borges, Fernanda Estevan, Kelly Santos</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>China</span>
-            <p>Xianghong Shirley Wang</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>Colombia</span>
-            <p>Camila Galindo and Julia Seither</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>Ghana</span>
-            <p>Rebecca Nana Yaa Ayifah and Emmanuel Ayifah</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>India</span>
-            <p>Anahita Karandikar</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>India</span>
-            <p>Bharti Nandwani and Akanksha Aggarwal</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>Mexico</span>
-            <p>Joana Chapa, Stanislao Maldonado, and Elvira Naranjo</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>Mexico</span>
-            <p>Lucia Del Carpio, Emilio Gutierrez, Adrian Rubli</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>South Africa</span>
-            <p>Carike Claassen</p>
-          </div>
-
-          <div class="intervention-item">
-            <span>South Africa</span>
-            <p>Janine Jantjies</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         QUALITATIVE NOTE
-    ========================= -->
-
-    <section class="research-note">
-
-      <div class="container">
-
-        <div class="dissemination-card">
-
-          <div>
-
-            <div class="dissemination-label">
-              QualAnalytics
-            </div>
-
-            <h2>
-              More findings to come.
-            </h2>
-
-          </div>
-
-
-          <div class="dissemination-copy">
-
-            <p>
-              The qualitative research adds the lived experience behind the
-              quantitative evidence, helping identify the mechanisms and
-              constraints that shape women's progression through economics.
-            </p>
-
-            <p>
-              Final country reports and consolidated findings will add further
-              depth to the evidence base, with key findings due to be presented
-              at the International Economic Association World Congress 2026.
-            </p>
 
           </div>
 
