@@ -2,1084 +2,1091 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Team | IEA-WE</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-
-\:root {
-  \--navy: #0b3568;
-  \--dark-blue: #102b52;
-  \--blue: #1557a6;
-  \--red: #c92f45;
-  \--light-blue: #eef4fc;
-  \--off-white: #faf9f5;
-  \--white: #ffffff;
-  \--text: #17263b;
-  \--muted: #536174;
-  \--line: #dce3ec;
-  \--soft-pink: #f8e5e8;
-}
-
-\* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "DM Sans", Arial, sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: min(1180px, 90%);
-  margin: 0 auto;
-}
-
-
-/\* =========================
-   NAVIGATION
-\========================= \*/
-
-header {
-  background: var(--white);
-  border-bottom: 1px solid #edf0f4;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav {
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.logo img {
-  width: 145px;
-  height: auto;
-  display: block;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 34px;
-}
-
-nav a {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-  transition: color 0.2s ease;
-}
-
-nav a\:hover {
-  color: var(--red);
-}
-
-
-/\* =========================
-   TEAM SECTION
-\========================= \*/
-
-.leadership {
-  padding: 90px 0 100px;
-  background: var(--off-white);
-}
-
-.section-heading {
-  max-width: 780px;
-  margin-bottom: 55px;
-}
-
-.section-label {
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.section-heading h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  color: var(--navy);
-  font-size: clamp(46px, 6vw, 70px);
-  line-height: 1.08;
-  font-weight: 500;
-  letter-spacing: -1.8px;
-  margin-bottom: 20px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.8;
-  max-width: 760px;
-}
-
-
-/\* =========================
-   EDITORIAL PHOTO GRID
-\========================= \*/
-
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 340px);
-  gap: 16px;
-  margin-top: 20px;
-  position: relative;
-}
-
-.person {
-  position: relative;
-  overflow: hidden;
-  background: #dfe5ec;
-  min-height: 0;
-}
-
-.person img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.person\:hover img {
-  transform: scale(1.04);
-}
-
-
-/\* =========================
-   INDIVIDUAL POSITIONING
-\========================= \*/
-
-/\* Line 1: Ashwini / Dani / Inés \*/
-
-.person\:nth-child(4) {
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-}
-
-.person\:nth-child(5) {
-  grid-column: 5 / 9;
-  grid-row: 1 / 2;
-  transform: translateY(8px);
-}
-
-.person\:nth-child(6) {
-  grid-column: 9 / 13;
-  grid-row: 1 / 2;
-}
-
-
-/\* Line 2: Raquel / Fiona — centered \*/
-
-.person\:nth-child(7) {
-  grid-column: 3 / 7;
-  grid-row: 2 / 3;
-  transform: translateY(-8px);
-}
-
-.person\:nth-child(8) {
-  grid-column: 7 / 11;
-  grid-row: 2 / 3;
-  transform: translateY(8px);
-}
-
-
-/\* Line 3: Monica / Andrea / Navika \*/
-
-.person\:nth-child(9) {
-  grid-column: 1 / 5;
-  grid-row: 3 / 4;
-  transform: translateY(-8px);
-}
-
-/\* Andrea moved slightly left to balance the spacing \*/
-.person\:nth-child(10) {
-  grid-column: 5 / 9;
-  grid-row: 3 / 4;
-  transform: translate(55px, 8px);
-}
-
-/\* Navika remains on the right \*/
-.person\:nth-child(11) {
-  grid-column: 9 / 13;
-  grid-row: 3 / 4;
-  transform: translate(120px, -8px);
-}
-
-
-/\* =========================
-   VERTICAL TEAM LABELS
-\========================= \*/
-
-.team-label {
-  position: absolute;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 3.5px;
-  font-size: 17px;
-  font-weight: 700;
-  white-space: nowrap;
-  z-index: 10;
-
-  height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/\* Left of Line 1 \*/
-
-.team-label-core {
-  left: -52px;
-  top: 0;
-}
-
-
-/\* Left of Monica \*/
-
-.team-label-qual {
-  left: -52px;
-  top: 712px;
-}
-
-
-/\* Project Team — white space between Monica and Andrea \*/
-
-.team-label-project {
-  left: 32.5%;
-  top: 712px;
-}
-
-
-/\* =========================
-   IMAGE CROPPING
-\========================= \*/
-
-.person\:nth-child(4) img {
-  object-position: center center;
-}
-
-.person\:nth-child(5) img {
-  object-position: center center;
-}
-
-.person\:nth-child(6) img {
-  object-position: center center;
-}
-
-.person\:nth-child(7) img {
-  object-position: center center;
-}
-
-.person\:nth-child(8) img {
-  object-position: center center;
-}
-
-.person\:nth-child(9) img {
-  object-position: center center;
-}
-
-.person\:nth-child(11) img {
-  object-position: center center;
-}
-
-
-/\* Navika: darker + more zoomed in \*/
-
-.person\:nth-child(11)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(16, 43, 82, 0.20);
-  pointer-events: none;
-}
-
-.person\:nth-child(11) img {
-  object-position: center center;
-  transform: scale(1.22);
-}
-
-.person\:nth-child(11)\:hover img {
-  transform: scale(1.27);
-}
-
-
-/\* =========================
-   PHOTO TEXT
-\========================= \*/
-
-.person-info {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 20px;
-  z-index: 5;
-  color: var(--white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-}
-
-.person-info h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 27px;
-  line-height: 1.15;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.person-info p {
-  font-size: 13px;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-
-/\* Slight dark gradient behind text \*/
-
-.person::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 42%;
-  background: linear-gradient(
-    to top,
-    rgba(10, 30, 55, 0.68),
-    rgba(10, 30, 55, 0)
-  );
-  z-index: 3;
-  pointer-events: none;
-}
-
-
-/\* =========================
-   ADVISORY BOARD
-\========================= \*/
-
-.advisory-section {
-  background: var(--white);
-  padding: 95px 0;
-}
-
-.advisory-intro {
-  max-width: 720px;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.8;
-  margin-top: -25px;
-  margin-bottom: 48px;
-}
-
-.advisory-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.advisory-card {
-  border: 1px solid var(--line);
-  padding: 30px;
-  min-height: 150px;
-  background: var(--white);
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.advisory-card\:hover {
-  border-color: var(--red);
-  transform: translateY(-3px);
-}
-
-.advisory-card h3 {
-  color: var(--navy);
-  font-size: 20px;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
-
-.advisory-card p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-
-/\* =========================
-   FOOTER
-\========================= \*/
-
-footer {
-  background: var(--dark-blue);
-  color: white;
-  padding: 55px 0;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 50px;
-}
-
-.footer-brand {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-footer p {
-  color: #cbd5e4;
-  font-size: 14px;
-  max-width: 500px;
-}
-
-footer h4 {
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.footer-links a {
-  display: block;
-  color: #e5eaf2;
-  font-size: 14px;
-  margin-bottom: 7px;
-}
-
-.footer-links a\:hover {
-  color: var(--white);
-}
-
-.footer-bottom {
-  border-top: 1px solid #385171;
-  margin-top: 45px;
-  padding-top: 22px;
-  color: #aebbd0;
-  font-size: 12px;
-}
-
-
-/\* =========================
-   MOBILE
-\========================= \*/
-
-@media (max-width: 850px) {
-
-  nav {
-    gap: 15px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
-
-  .team-label {
-    display: none;
-  }
-
-  .people-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 300px);
-  }
-
-  .person\:nth-child(4),
-  .person\:nth-child(5),
-  .person\:nth-child(6),
-  .person\:nth-child(7),
-  .person\:nth-child(8),
-  .person\:nth-child(9),
-  .person\:nth-child(10),
-  .person\:nth-child(11) {
-    grid-column: auto;
-    grid-row: auto;
-    transform: none;
-  }
-
-  .advisory-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .container {
-    width: 88%;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .leadership {
-    padding: 65px 0 75px;
-  }
-
-  .section-heading {
-    margin-bottom: 40px;
-  }
-
-  .section-heading h2 {
-    font-size: 48px;
-  }
-
-  .section-heading p {
-    font-size: 16px;
-  }
-
-  .people-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 14px;
-  }
-
-  .person\:nth-child(4),
-  .person\:nth-child(5),
-  .person\:nth-child(6),
-  .person\:nth-child(7),
-  .person\:nth-child(8),
-  .person\:nth-child(9),
-  .person\:nth-child(10),
-  .person\:nth-child(11) {
-    grid-column: auto;
-    grid-row: auto;
-    height: 360px;
-    transform: none;
-  }
-
-  .advisory-section {
-    padding: 65px 0;
-  }
-
-  .advisory-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .person-info h3 {
-    font-size: 25px;
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Team | IEA-WE</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+    :root {
+      --navy: #0b3568;
+      --dark-blue: #102b52;
+      --blue: #1557a6;
+      --red: #c92f45;
+      --light-blue: #eef4fc;
+      --off-white: #faf9f5;
+      --white: #ffffff;
+      --text: #17263b;
+      --muted: #536174;
+      --line: #dce3ec;
+      --soft-pink: #f8e5e8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #edf0f4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo img {
+      width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+
+    /* =========================
+       TEAM SECTION
+    ========================= */
+
+    .leadership {
+      padding: 90px 0 100px;
+      background: var(--off-white);
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(46px, 6vw, 70px);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -1.8px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+
+
+    /* =========================
+       EDITORIAL PHOTO GRID
+    ========================= */
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(3, 340px);
+      gap: 16px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .person {
+      position: relative;
+      overflow: hidden;
+      background: #dfe5ec;
+      min-height: 0;
+    }
+
+    .person img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .person:hover img {
+      transform: scale(1.04);
+    }
+
+
+    /* =========================
+       INDIVIDUAL POSITIONING
+    ========================= */
+
+    /* Line 1: Ashwini / Dani / Inés */
+
+    .person:nth-child(4) {
+      grid-column: 1 / 5;
+      grid-row: 1 / 2;
+    }
+
+    .person:nth-child(5) {
+      grid-column: 5 / 9;
+      grid-row: 1 / 2;
+      transform: translateY(8px);
+    }
+
+    .person:nth-child(6) {
+      grid-column: 9 / 13;
+      grid-row: 1 / 2;
+    }
+
+
+    /* Line 2: Raquel / Fiona — centered */
+
+    .person:nth-child(7) {
+      grid-column: 3 / 7;
+      grid-row: 2 / 3;
+      transform: translateY(-8px);
+    }
+
+    .person:nth-child(8) {
+      grid-column: 7 / 11;
+      grid-row: 2 / 3;
+      transform: translateY(8px);
+    }
+
+
+    /* Line 3: Monica / Andrea / Navika */
+
+    .person:nth-child(9) {
+      grid-column: 1 / 5;
+      grid-row: 3 / 4;
+      transform: translateY(-8px);
+    }
+
+    /* Andrea moved slightly left to balance the spacing */
+    .person:nth-child(10) {
+      grid-column: 5 / 9;
+      grid-row: 3 / 4;
+      transform: translate(55px, 8px);
+    }
+
+    /* Navika remains on the right */
+    .person:nth-child(11) {
+      grid-column: 9 / 13;
+      grid-row: 3 / 4;
+      transform: translate(120px, -8px);
+    }
+
+
+    /* =========================
+       VERTICAL TEAM LABELS
+    ========================= */
+
+    .team-label {
+      position: absolute;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+      font-size: 17px;
+      font-weight: 700;
+      white-space: nowrap;
+      z-index: 10;
+
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    /* Left of Line 1 */
+
+    .team-label-core {
+      left: -52px;
+      top: 0;
+    }
+
+
+    /* Left of Monica */
+
+    .team-label-qual {
+      left: -52px;
+      top: 712px;
+    }
+
+
+    /* Project Team — white space between Monica and Andrea */
+
+    .team-label-project {
+      left: 32.5%;
+      top: 712px;
+    }
+
+
+    /* =========================
+       IMAGE CROPPING
+    ========================= */
+
+    .person:nth-child(4) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(5) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(6) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(7) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(8) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(9) img {
+      object-position: center center;
+    }
+
+    .person:nth-child(11) img {
+      object-position: center center;
+    }
+
+
+    /* Navika: darker + more zoomed in */
+
+    .person:nth-child(11)::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(16, 43, 82, 0.20);
+      pointer-events: none;
+    }
+
+    .person:nth-child(11) img {
+      object-position: center center;
+      transform: scale(1.22);
+    }
+
+    .person:nth-child(11):hover img {
+      transform: scale(1.27);
+    }
+
+
+    /* =========================
+       PHOTO TEXT
+    ========================= */
+
+    .person-info {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      z-index: 5;
+      color: var(--white);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    }
+
+    .person-info h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 27px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .person-info p {
+      font-size: 13px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+
+    /* Slight dark gradient behind text */
+
+    .person::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 42%;
+      background: linear-gradient(
+        to top,
+        rgba(10, 30, 55, 0.68),
+        rgba(10, 30, 55, 0)
+      );
+      z-index: 3;
+      pointer-events: none;
+    }
+
+
+    /* =========================
+       ADVISORY BOARD
+    ========================= */
+
+    .advisory-section {
+      background: var(--white);
+      padding: 95px 0;
+    }
+
+    .advisory-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-top: -25px;
+      margin-bottom: 48px;
+    }
+
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .advisory-card {
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 150px;
+      background: var(--white);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .advisory-card:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    .advisory-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .advisory-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark-blue);
+      color: white;
+      padding: 55px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #cbd5e4;
+      font-size: 14px;
+      max-width: 500px;
+    }
+
+    footer h4 {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #e5eaf2;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #385171;
+      margin-top: 45px;
+      padding-top: 22px;
+      color: #aebbd0;
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .team-label {
+        display: none;
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 300px);
+      }
+
+      .person:nth-child(4),
+      .person:nth-child(5),
+      .person:nth-child(6),
+      .person:nth-child(7),
+      .person:nth-child(8),
+      .person:nth-child(9),
+      .person:nth-child(10),
+      .person:nth-child(11) {
+        grid-column: auto;
+        grid-row: auto;
+        transform: none;
+      }
+
+      .advisory-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .leadership {
+        padding: 65px 0 75px;
+      }
+
+      .section-heading {
+        margin-bottom: 40px;
+      }
+
+      .section-heading h2 {
+        font-size: 48px;
+      }
+
+      .section-heading p {
+        font-size: 16px;
+      }
+
+      .people-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 14px;
+      }
+
+      .person:nth-child(4),
+      .person:nth-child(5),
+      .person:nth-child(6),
+      .person:nth-child(7),
+      .person:nth-child(8),
+      .person:nth-child(9),
+      .person:nth-child(10),
+      .person:nth-child(11) {
+        grid-column: auto;
+        grid-row: auto;
+        height: 360px;
+        transform: none;
+      }
+
+      .advisory-section {
+        padding: 65px 0;
+      }
+
+      .advisory-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .person-info h3 {
+        font-size: 25px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<!-- =========================
-NAVIGATION
-========================= -->
 
-<header>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-\<div class="container nav">
+  <header>
 
-  \<a href="index.html" class="logo">
-    \<img src="logoWE.svg" alt="IEA-WE">
-  \</a>
+    <div class="container nav">
 
-  \<nav>
-    \<a href="index.html">Home\</a>
-    \<a href="work.html">Our Work\</a>
-    \<a href="articles.html">Amplifying Voices\</a>
-    \<a href="leadership.html">Team\</a>
-    \<a href="reports.html">Reports\</a>
-    \<a href="about.html">About\</a>
-  \</nav>
+      <a href="index.html" class="logo">
+        <img src="logoWE.svg" alt="IEA-WE">
+      </a>
 
-\</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Our Work</a>
+        <a href="articles.html">Amplifying Voices</a>
+        <a href="leadership.html">Team</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
 
-</header>
+    </div>
 
-<!-- =========================
-MAIN
-========================= -->
+  </header>
 
-<main>
 
-\<!-- =========================
-     IEA-WE TEAM
-\========================= -->
+  <!-- =========================
+       MAIN
+  ========================= -->
 
-\<section class="leadership">
+  <main>
 
-  \<div class="container">
 
-    \<div class="section-heading">
+    <!-- =========================
+         IEA-WE TEAM
+    ========================= -->
 
-      \<div class="section-label">
-        IEA-WE Team
-      \</div>
+    <section class="leadership">
 
-      \<h2>
-        The people behind the initiative.
-      \</h2>
+      <div class="container">
 
-      \<p>
-        IEA-WE brings together economists and communications professionals
-        working across research, advocacy and dissemination to strengthen
-        women's participation and influence in economics.
-      \</p>
+        <div class="section-heading">
 
-    \</div>
+          <div class="section-label">
+            IEA-WE Team
+          </div>
 
+          <h2>
+            The people behind the initiative.
+          </h2>
 
-    \<!-- =========================
-         TEAM PHOTO GRID
-    \========================= -->
+          <p>
+            IEA-WE brings together economists and communications professionals
+            working across research, advocacy and dissemination to strengthen
+            women's participation and influence in economics.
+          </p>
 
-    \<div class="people-grid">
+        </div>
 
 
-      \<!-- Vertical labels -->
+        <!-- =========================
+             TEAM PHOTO GRID
+        ========================= -->
 
-      \<div class="team-label team-label-core">
-        Core Team
-      \</div>
+        <div class="people-grid">
 
-      \<div class="team-label team-label-qual">
-        Qualitative Research Lead
-      \</div>
 
-      \<div class="team-label team-label-project">
-        Project Team
-      \</div>
+          <!-- Vertical labels -->
 
+          <div class="team-label team-label-core">
+            Core Team
+          </div>
 
-      \<!-- Ashwini -->
+          <div class="team-label team-label-qual">
+            Qualitative Research Lead
+          </div>
 
-      \<div class="person">
+          <div class="team-label team-label-project">
+            Project Team
+          </div>
 
-        \<img
-          src="ashwini\_photo.jpeg"
-          alt="Ashwini Deshpande"
-        \>
 
-        \<div class="person-info">
+          <!-- Ashwini -->
 
-          \<h3>
-            Ashwini Deshpande
-          \</h3>
+          <div class="person">
 
-          \<p>
-            Ashoka University
-          \</p>
+            <img
+              src="ashwini_photo.jpeg"
+              alt="Ashwini Deshpande"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Ashwini Deshpande
+              </h3>
 
+              <p>
+                Ashoka University
+              </p>
 
-      \<!-- Dani -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="dani\_photo.jpeg"
-          alt="Dani Rodrik"
-        \>
 
-        \<div class="person-info">
+          <!-- Dani -->
 
-          \<h3>
-            Dani Rodrik
-          \</h3>
+          <div class="person">
 
-          \<p>
-            Harvard University
-          \</p>
+            <img
+              src="dani_photo.jpeg"
+              alt="Dani Rodrik"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Dani Rodrik
+              </h3>
 
+              <p>
+                Harvard University
+              </p>
 
-      \<!-- María Inés -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="ines\_photo.jpeg"
-          alt="María Inés Berniell"
-        \>
 
-        \<div class="person-info">
+          <!-- María Inés -->
 
-          \<h3>
-            María Inés Berniell
-          \</h3>
+          <div class="person">
 
-          \<p>
-            Universidad Nacional de la Plata and CEDLAS
-          \</p>
+            <img
+              src="ines_photo.jpeg"
+              alt="María Inés Berniell"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                María Inés Berniell
+              </h3>
 
+              <p>
+                Universidad Nacional de la Plata and CEDLAS
+              </p>
 
-      \<!-- Raquel -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="raquel\_photo.jpg"
-          alt="Raquel Fernández"
-        \>
 
-        \<div class="person-info">
+          <!-- Raquel -->
 
-          \<h3>
-            Raquel Fernández
-          \</h3>
+          <div class="person">
 
-          \<p>
-            New York University
-          \</p>
+            <img
+              src="raquel_photo.jpg"
+              alt="Raquel Fernández"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Raquel Fernández
+              </h3>
 
+              <p>
+                New York University
+              </p>
 
-      \<!-- Fiona -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="fiona\_photo.jpeg"
-          alt="Fiona Tregenna"
-        \>
 
-        \<div class="person-info">
+          <!-- Fiona -->
 
-          \<h3>
-            Fiona Tregenna
-          \</h3>
+          <div class="person">
 
-          \<p>
-            University of Johannesburg
-          \</p>
+            <img
+              src="fiona_photo.jpeg"
+              alt="Fiona Tregenna"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Fiona Tregenna
+              </h3>
 
+              <p>
+                University of Johannesburg
+              </p>
 
-      \<!-- Monica -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="monica\_photo.jpg"
-          alt="Monica Biradavolu"
-        \>
 
-        \<div class="person-info">
+          <!-- Monica -->
 
-          \<h3>
-            Monica Biradavolu
-          \</h3>
+          <div class="person">
 
-          \<p>
-            Qualitative Research Lead (Qual Analytics)
-          \</p>
+            <img
+              src="monica_photo.jpg"
+              alt="Monica Biradavolu"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Monica Biradavolu
+              </h3>
 
+              <p>
+                Qualitative Research Lead (Qual Analytics)
+              </p>
 
-      \<!-- Andrea -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<div class="person-info">
 
-          \<h3>
-            Andrea Cavallo
-          \</h3>
+          <!-- Andrea -->
 
-          \<p>
-            Project Manager, IEA-WE
-          \</p>
+          <div class="person">
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Andrea Cavallo
+              </h3>
 
+              <p>
+                Project Manager, IEA-WE
+              </p>
 
-      \<!-- Navika -->
+            </div>
 
-      \<div class="person">
+          </div>
 
-        \<img
-          src="navika\_photo.jpg"
-          alt="Navika Mehta"
-        \>
 
-        \<div class="person-info">
+          <!-- Navika -->
 
-          \<h3>
-            Navika Mehta
-          \</h3>
+          <div class="person">
 
-          \<p>
-            Strategic Communications and Research Dissemination Lead, IEA-WE
-          \</p>
+            <img
+              src="navika_photo.jpg"
+              alt="Navika Mehta"
+            >
 
-        \</div>
+            <div class="person-info">
 
-      \</div>
+              <h3>
+                Navika Mehta
+              </h3>
 
+              <p>
+                Strategic Communications and Research Dissemination Lead, IEA-WE
+              </p>
 
-    \</div>
+            </div>
 
-  \</div>
+          </div>
 
-\</section>
 
+        </div>
 
-\<!-- =========================
-     ADVISORY BOARD
-\========================= -->
+      </div>
 
-\<section class="advisory-section">
+    </section>
 
-  \<div class="container">
 
-    \<div class="section-heading">
+    <!-- =========================
+         ADVISORY BOARD
+    ========================= -->
 
-      \<div class="section-label">
-        Advisory Board
-      \</div>
+    <section class="advisory-section">
 
-      \<h2>
-        Expertise guiding the initiative.
-      \</h2>
+      <div class="container">
 
-    \</div>
+        <div class="section-heading">
 
+          <div class="section-label">
+            Advisory Board
+          </div>
 
-    \<p class="advisory-intro">
-      The IEA-WE Advisory Board brings together leading scholars from
-      around the world whose expertise helps inform the initiative's
-      research, partnerships and broader goals.
-    \</p>
+          <h2>
+            Expertise guiding the initiative.
+          </h2>
 
+        </div>
 
-    \<div class="advisory-grid">
 
+        <p class="advisory-intro">
+          The IEA-WE Advisory Board brings together leading scholars from
+          around the world whose expertise helps inform the initiative's
+          research, partnerships and broader goals.
+        </p>
 
-      \<div class="advisory-card">
 
-        \<h3>
-          Radhika Balakrishnan
-        \</h3>
+        <div class="advisory-grid">
 
-        \<p>
-          Rutgers University
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Radhika Balakrishnan
+            </h3>
 
-      \<div class="advisory-card">
+            <p>
+              Rutgers University
+            </p>
 
-        \<h3>
-          Marianne Bertrand
-        \</h3>
+          </div>
 
-        \<p>
-          University of Chicago Booth School of Business
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Marianne Bertrand
+            </h3>
 
-      \<div class="advisory-card">
+            <p>
+              University of Chicago Booth School of Business
+            </p>
 
-        \<h3>
-          Wendy Carlin
-        \</h3>
+          </div>
 
-        \<p>
-          University College London, CEPR and Santa Fe Institute
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Wendy Carlin
+            </h3>
 
-      \<div class="advisory-card">
+            <p>
+              University College London, CEPR and Santa Fe Institute
+            </p>
 
-        \<h3>
-          Marcela Eslava
-        \</h3>
+          </div>
 
-        \<p>
-          Universidad de los Andes
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Marcela Eslava
+            </h3>
 
-      \<div class="advisory-card">
+            <p>
+              Universidad de los Andes
+            </p>
 
-        \<h3>
-          Rohini Pande
-        \</h3>
+          </div>
 
-        \<p>
-          Yale University
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Rohini Pande
+            </h3>
 
-      \<div class="advisory-card">
+            <p>
+              Yale University
+            </p>
 
-        \<h3>
-          Leonard Wantchekon
-        \</h3>
+          </div>
 
-        \<p>
-          Princeton University
-        \</p>
 
-      \</div>
+          <div class="advisory-card">
 
+            <h3>
+              Leonard Wantchekon
+            </h3>
 
-    \</div>
+            <p>
+              Princeton University
+            </p>
 
-  \</div>
+          </div>
 
-\</section>
 
-</main>
+        </div>
 
-<!-- =========================
-FOOTER
-========================= -->
+      </div>
 
-<footer>
+    </section>
 
-\<div class="container">
 
-  \<div class="footer-grid">
+  </main>
 
 
-    \<div>
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-      \<div class="footer-brand">
-        IEA-WE
-      \</div>
+  <footer>
 
-      \<p>
-        Strengthening the presence and influence of women in economics
-        through research, collaboration, advocacy and amplifying voices.
-      \</p>
+    <div class="container">
 
-    \</div>
+      <div class="footer-grid">
 
 
-    \<div>
+        <div>
 
-      \<h4>
-        Explore
-      \</h4>
+          <div class="footer-brand">
+            IEA-WE
+          </div>
 
-      \<div class="footer-links">
+          <p>
+            Strengthening the presence and influence of women in economics
+            through research, collaboration, advocacy and amplifying voices.
+          </p>
 
-        \<a href="index.html">
-          Home
-        \</a>
+        </div>
 
-        \<a href="work.html">
-          Our Work
-        \</a>
 
-        \<a href="articles.html">
-          Amplifying Voices
-        \</a>
+        <div>
 
-        \<a href="leadership.html">
-          Team
-        \</a>
+          <h4>
+            Explore
+          </h4>
 
-        \<a href="reports.html">
-          Reports
-        \</a>
+          <div class="footer-links">
 
-      \</div>
+            <a href="index.html">
+              Home
+            </a>
 
-    \</div>
+            <a href="work.html">
+              Our Work
+            </a>
 
+            <a href="articles.html">
+              Amplifying Voices
+            </a>
 
-    \<div>
+            <a href="leadership.html">
+              Team
+            </a>
 
-      \<h4>
-        IEA-WE
-      \</h4>
+            <a href="reports.html">
+              Reports
+            </a>
 
-      \<div class="footer-links">
+          </div>
 
-        \<a href="about.html">
-          About
-        \</a>
+        </div>
 
-        \<a href="leadership.html">
-          Advisory Board
-        \</a>
 
-      \</div>
+        <div>
 
-    \</div>
+          <h4>
+            IEA-WE
+          </h4>
 
+          <div class="footer-links">
 
-  \</div>
+            <a href="about.html">
+              About
+            </a>
 
+            <a href="leadership.html">
+              Advisory Board
+            </a>
 
-  \<div class="footer-bottom">
+          </div>
 
-    International Economic Association — Women in Economics Initiative
+        </div>
 
-  \</div>
 
-\</div>
+      </div>
 
-</footer>
+
+      <div class="footer-bottom">
+
+        International Economic Association — Women in Economics Initiative
+
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </body>
 
