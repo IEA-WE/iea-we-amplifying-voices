@@ -223,13 +223,13 @@
 
     /* =========================================================
        LATEST FROM IEA-WE
-       PRESERVED — CAROUSEL SPEED REMAINS 38s
+       COMPACT VERSION — RESTORED
     ========================================================= */
 
     .latest-feed {
       position: relative;
       overflow: hidden;
-      padding: 88px 0 82px;
+      padding: 55px 0 48px;
       background:
         radial-gradient(circle at 92% 15%, rgba(201, 47, 69, 0.09) 0 150px, transparent 151px),
         radial-gradient(circle at 8% 90%, rgba(21, 87, 166, 0.07) 0 180px, transparent 181px),
@@ -255,38 +255,38 @@
       position: relative;
       z-index: 2;
       width: min(1180px, 90%);
-      margin: 0 auto 42px;
+      margin: 0 auto 25px;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 50px;
+      gap: 40px;
       align-items: end;
     }
 
     .latest-top h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(42px, 5vw, 66px);
+      font-size: clamp(34px, 4vw, 52px);
       line-height: 1.04;
       font-weight: 500;
-      letter-spacing: -1.8px;
-      max-width: 720px;
+      letter-spacing: -1.4px;
+      max-width: 650px;
     }
 
     .latest-top p {
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
-      max-width: 390px;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 360px;
       justify-self: end;
     }
 
     .latest-label {
       color: var(--red);
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
+      letter-spacing: 2.5px;
+      font-size: 12px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
 
     .feed-window {
@@ -299,9 +299,9 @@
     .feed-track {
       display: flex;
       width: max-content;
-      gap: 22px;
+      gap: 18px;
       animation: latestScroll 38s linear infinite;
-      padding: 5px 0 15px;
+      padding: 5px 0 10px;
     }
 
     .feed-window:hover .feed-track {
@@ -309,16 +309,16 @@
     }
 
     .latest-card {
-      width: 355px;
-      height: 355px;
-      flex: 0 0 355px;
+      width: 300px;
+      height: 300px;
+      flex: 0 0 300px;
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-      padding: 30px;
+      padding: 24px;
       background: var(--white);
       border: 1px solid #e8e3de;
-      box-shadow: 0 12px 35px rgba(23, 38, 59, 0.06);
+      box-shadow: 0 10px 28px rgba(23, 38, 59, 0.06);
       display: flex;
       flex-direction: column;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -327,11 +327,11 @@
     .latest-card::after {
       content: "";
       position: absolute;
-      width: 130px;
-      height: 130px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      right: -48px;
-      top: -48px;
+      right: -42px;
+      top: -42px;
       background: var(--soft-pink);
       opacity: 0.75;
       z-index: 0;
@@ -342,8 +342,8 @@
     }
 
     .latest-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 45px rgba(23, 38, 59, 0.11);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(23, 38, 59, 0.11);
     }
 
     .latest-card > * {
@@ -354,22 +354,22 @@
     .latest-meta {
       color: var(--red);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 11px;
+      letter-spacing: 1.3px;
+      font-size: 10px;
       line-height: 1.4;
       font-weight: 700;
-      margin-bottom: 18px;
-      min-height: 31px;
+      margin-bottom: 13px;
+      min-height: 28px;
     }
 
     .latest-card h3 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1.16;
       font-weight: 600;
-      margin-bottom: 16px;
-      max-width: 310px;
+      margin-bottom: 12px;
+      max-width: 270px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
@@ -378,9 +378,9 @@
 
     .latest-card p {
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-      max-width: 305px;
+      font-size: 13px;
+      line-height: 1.55;
+      max-width: 265px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 4;
@@ -389,9 +389,9 @@
 
     .latest-link {
       margin-top: auto;
-      padding-top: 18px;
+      padding-top: 14px;
       color: var(--red);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
 
@@ -410,19 +410,19 @@
 
     .video-card .play-button {
       position: absolute;
-      right: 28px;
-      bottom: 27px;
-      width: 56px;
-      height: 56px;
+      right: 22px;
+      bottom: 22px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--red);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
+      font-size: 16px;
       padding-left: 3px;
-      box-shadow: 0 8px 20px rgba(201, 47, 69, 0.22);
+      box-shadow: 0 7px 18px rgba(201, 47, 69, 0.22);
       transition: transform 0.2s ease;
       z-index: 3;
     }
@@ -435,9 +435,9 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      margin-top: 25px;
+      margin-top: 14px;
       color: #7a8798;
-      font-size: 13px;
+      font-size: 11px;
     }
 
     @keyframes latestScroll {
@@ -453,7 +453,6 @@
 
     /* =========================================================
        COMPACT CONTENT SECTIONS
-       SLOWER HOVER OPEN/CLOSE
     ========================================================= */
 
     .compact-sections {
@@ -479,7 +478,7 @@
       gap: 25px;
       cursor: default;
 
-      /* Slower, smoother hover transition */
+      /* SLOWED DOWN */
       transition: min-height 0.8s ease;
     }
 
@@ -504,8 +503,8 @@
       font-size: 24px;
       text-align: right;
 
-      /* Slower arrow movement */
-      transition: transform 0.8s ease;
+      /* SLOWED DOWN */
+      transition: transform 0.7s ease;
     }
 
     .compact-content {
@@ -514,8 +513,10 @@
       max-height: 0;
       overflow: hidden;
       opacity: 0;
+
+      /* SLOWED DOWN */
       transition:
-        max-height 0.8s ease,
+        max-height 0.9s ease,
         opacity 0.6s ease,
         padding 0.7s ease;
     }
@@ -845,9 +846,9 @@
     }
 
 
-    /* =========================================================
-       LEADERSHIP — CLEANER & MORE COMPACT
-    ========================================================= */
+    /* =========================
+       LEADERSHIP — COMPACT
+    ========================= */
 
     .leadership-content {
       background: var(--light-blue);
@@ -857,7 +858,7 @@
     .leadership-intro {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
-      gap: 60px;
+      gap: 70px;
       align-items: start;
       margin-bottom: 30px;
     }
@@ -872,8 +873,7 @@
 
     .leadership-intro p {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 16px;
     }
 
     .leadership-title {
@@ -882,30 +882,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin: 22px 0 10px;
-    }
-
-    /* Core team: 3 on first row, 2 on second */
-    .core-team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    /* Qualitative + Project Team side-by-side */
-    .leadership-two-column {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 18px;
-      margin-top: 2px;
-    }
-
-    .leadership-group {
-      min-width: 0;
-    }
-
-    .leadership-group .leadership-title {
-      margin-top: 22px;
+      margin: 20px 0 10px;
     }
 
     .people-grid {
@@ -916,11 +893,11 @@
 
     .person {
       background: var(--white);
-      padding: 14px 16px;
-      border-top: 2px solid transparent;
+      padding: 15px 18px;
+      border-top: 3px solid transparent;
       transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
+        border-color 0.3s ease,
+        transform 0.3s ease;
     }
 
     .person:hover {
@@ -930,40 +907,14 @@
 
     .person h4 {
       color: var(--navy);
-      font-size: 15px;
-      line-height: 1.3;
+      font-size: 16px;
       margin-bottom: 3px;
     }
 
     .person p {
       color: var(--muted);
       font-size: 11px;
-      line-height: 1.45;
-    }
-
-    /* Single Monica card */
-    .qualitative-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    /* Project team gets two compact cards */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    /* Advisory board */
-    .advisory-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .leadership-link {
-      margin-top: 22px;
+      line-height: 1.4;
     }
 
 
@@ -1154,20 +1105,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .people-grid,
-      .core-team-grid,
-      .advisory-grid {
+      .people-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .leadership-two-column {
-        grid-template-columns: 1fr;
-        gap: 10px;
       }
 
       .latest-top {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 12px;
       }
 
       .latest-top p {
@@ -1183,10 +1127,6 @@
         font-size: 36px;
       }
 
-      /*
-        On tablet/mobile, sections remain open on tap/focus
-        rather than relying only on hover.
-      */
       .compact-section:focus-within .compact-content {
         max-height: 1500px;
       }
@@ -1224,22 +1164,22 @@
       }
 
       .latest-top h2 {
-        font-size: 43px;
+        font-size: 38px;
       }
 
       .latest-card {
-        width: 285px;
-        flex-basis: 285px;
-        height: 325px;
-        padding: 25px;
+        width: 270px;
+        flex-basis: 270px;
+        height: 295px;
+        padding: 22px;
       }
 
       .latest-card h3 {
-        font-size: 25px;
+        font-size: 23px;
       }
 
       .feed-track {
-        gap: 15px;
+        gap: 14px;
       }
 
       .feed-note {
@@ -1295,13 +1235,7 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .people-grid,
-      .core-team-grid,
-      .advisory-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-grid {
+      .people-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1338,6 +1272,7 @@
       .compact-arrow {
         transition: none;
       }
+
     }
 
   </style>
@@ -1419,7 +1354,6 @@
 
 <!-- =========================================================
      LATEST FROM IEA-WE
-     DO NOT CHANGE
 ========================================================= -->
 
 <section class="latest-feed">
@@ -1884,8 +1818,8 @@
 
           <p>
             Alongside this, eleven intervention projects are underway testing
-            practical strategies to close the gender gap and grow the number
-            of women who choose economics as a field of study and career.
+            practical strategies to close the gender gap and grow the number of
+            women who choose economics as a field of study and career.
           </p>
 
           <a href="reports.html">
@@ -2245,9 +2179,7 @@
   </section>
 
 
-  <!-- =========================================================
-       LEADERSHIP — CLEANER STRUCTURE
-  ========================================================= -->
+  <!-- LEADERSHIP -->
 
   <section class="compact-section">
 
@@ -2286,22 +2218,15 @@
         </div>
 
 
-        <!-- CORE TEAM -->
-
         <div class="leadership-title">
-          Core Team
+          Initiative Leadership
         </div>
 
-        <div class="core-team-grid">
+        <div class="people-grid">
 
           <div class="person">
             <h4>Ashwini Deshpande</h4>
             <p>Ashoka University</p>
-          </div>
-
-          <div class="person">
-            <h4>Dani Rodrik</h4>
-            <p>Harvard University</p>
           </div>
 
           <div class="person">
@@ -2315,6 +2240,11 @@
           </div>
 
           <div class="person">
+            <h4>Dani Rodrik</h4>
+            <p>Harvard University</p>
+          </div>
+
+          <div class="person">
             <h4>Fiona Tregenna</h4>
             <p>University of Johannesburg</p>
           </div>
@@ -2322,160 +2252,79 @@
         </div>
 
 
-        <!-- QUALITATIVE + PROJECT TEAM -->
+        <div class="leadership-title">
+          Qualitative Research Lead
+        </div>
 
-        <div class="leadership-two-column">
+        <div class="people-grid">
 
-
-          <div class="leadership-group">
-
-            <div class="leadership-title">
-              Qualitative Research Lead
-            </div>
-
-            <div class="qualitative-grid">
-
-              <div class="person">
-
-                <h4>
-                  Monica Biradavolu
-                </h4>
-
-                <p>
-                  Qualitative Research Lead · QualAnalytics
-                </p>
-
-              </div>
-
-            </div>
-
+          <div class="person">
+            <h4>Monica Biradavolu</h4>
+            <p>Qualitative Research Lead (Qual Analytics)</p>
           </div>
-
-
-          <div class="leadership-group">
-
-            <div class="leadership-title">
-              Project Team
-            </div>
-
-            <div class="project-grid">
-
-              <div class="person">
-
-                <h4>
-                  Andrea Cavallo
-                </h4>
-
-                <p>
-                  Project Manager, IEA-WE
-                </p>
-
-              </div>
-
-              <div class="person">
-
-                <h4>
-                  Navika Mehta
-                </h4>
-
-                <p>
-                  Strategic Communications and Research Dissemination Lead, IEA-WE
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
 
         </div>
 
 
-        <!-- ADVISORY BOARD -->
+        <div class="leadership-title">
+          Project Team
+        </div>
+
+        <div class="people-grid">
+
+          <div class="person">
+            <h4>Andrea Cavallo</h4>
+            <p>Project Manager, IEA-WE</p>
+          </div>
+
+          <div class="person">
+            <h4>Navika Mehta</h4>
+            <p>Strategic Communications and Research Dissemination Lead, IEA-WE</p>
+          </div>
+
+        </div>
+
 
         <div class="leadership-title">
           Advisory Board
         </div>
 
-        <div class="advisory-grid">
+        <div class="people-grid">
 
           <div class="person">
-
-            <h4>
-              Radhika Balakrishnan
-            </h4>
-
-            <p>
-              Rutgers University
-            </p>
-
+            <h4>Radhika Balakrishnan</h4>
+            <p>Rutgers University</p>
           </div>
 
           <div class="person">
-
-            <h4>
-              Marianne Bertrand
-            </h4>
-
-            <p>
-              University of Chicago Booth School of Business
-            </p>
-
+            <h4>Marianne Bertrand</h4>
+            <p>University of Chicago Booth School of Business</p>
           </div>
 
           <div class="person">
-
-            <h4>
-              Wendy Carlin
-            </h4>
-
-            <p>
-              University College London, CEPR and Santa Fe Institute
-            </p>
-
+            <h4>Wendy Carlin</h4>
+            <p>University College London, CEPR and Santa Fe Institute</p>
           </div>
 
           <div class="person">
-
-            <h4>
-              Marcela Eslava
-            </h4>
-
-            <p>
-              Universidad de los Andes
-            </p>
-
+            <h4>Marcela Eslava</h4>
+            <p>Universidad de los Andes</p>
           </div>
 
           <div class="person">
-
-            <h4>
-              Rohini Pande
-            </h4>
-
-            <p>
-              Yale University
-            </p>
-
+            <h4>Rohini Pande</h4>
+            <p>Yale University</p>
           </div>
 
           <div class="person">
-
-            <h4>
-              Leonard Wantchekon
-            </h4>
-
-            <p>
-              Princeton University
-            </p>
-
+            <h4>Leonard Wantchekon</h4>
+            <p>Princeton University</p>
           </div>
 
         </div>
 
 
-        <div class="leadership-link">
+        <div style="margin-top:20px;">
 
           <a href="leadership.html" class="read-more">
             Meet the full team →
