@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Research & Reports | IEA-WE</title>
@@ -106,7 +104,7 @@
 
     .hero {
       background: var(--white);
-      padding: 95px 0 85px;
+      padding: 90px 0 75px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -116,7 +114,7 @@
       letter-spacing: 3px;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
@@ -127,7 +125,7 @@
       font-weight: 500;
       letter-spacing: -4px;
       max-width: 950px;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .hero h1 span {
@@ -136,197 +134,309 @@
 
     .hero-intro {
       max-width: 850px;
-      font-size: 21px;
+      font-size: 20px;
       line-height: 1.7;
       color: var(--muted);
     }
 
 
     /* =========================
-       RESEARCH OVERVIEW
+       PROGRAMME OVERVIEW
     ========================= */
 
-    .overview {
-      padding: 100px 0;
+    .programme {
+      padding: 85px 0 75px;
       background: var(--white);
     }
 
-    .overview-grid {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 80px;
-      align-items: start;
+    .programme-header {
+      max-width: 850px;
+      margin-bottom: 42px;
     }
 
     .section-label {
       color: var(--red);
       text-transform: uppercase;
       letter-spacing: 2.5px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
-    .overview h2 {
+    .programme-header h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
       font-size: clamp(40px, 5vw, 62px);
-      line-height: 1.1;
+      line-height: 1.08;
       font-weight: 500;
       letter-spacing: -1.5px;
+      margin-bottom: 18px;
     }
 
-    .overview-copy p {
+    .programme-header p {
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.85;
-      margin-bottom: 20px;
-    }
-
-    .research-components {
-      margin-top: 30px;
-      border-top: 1px solid var(--line);
-    }
-
-    .component {
-      display: grid;
-      grid-template-columns: 45px 1fr;
-      gap: 18px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .component-number {
-      color: var(--red);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 25px;
-    }
-
-    .component h3 {
-      color: var(--navy);
-      font-size: 17px;
-      margin-bottom: 5px;
-    }
-
-    .component p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.8;
+      max-width: 820px;
     }
 
 
     /* =========================
-       RESEARCH STATS
+       THREE RESEARCH CARDS
+    ========================= */
+
+    .research-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .research-nav-card {
+      position: relative;
+      background: var(--light-blue);
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 245px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .research-nav-card:hover {
+      transform: translateY(-5px);
+      background: var(--white);
+      border-color: #bdcbdc;
+    }
+
+    .research-nav-card:nth-child(2) {
+      background: var(--off-white);
+    }
+
+    .research-nav-card:nth-child(3) {
+      background: #f7f3f3;
+    }
+
+    .research-nav-number {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+
+    .research-nav-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: 29px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .research-nav-subtitle {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .research-nav-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .research-nav-arrow {
+      margin-top: auto;
+      padding-top: 20px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .research-nav-card:hover .research-nav-arrow {
+      color: var(--red-dark);
+    }
+
+
+    /* =========================
+       QUICK STATS
     ========================= */
 
     .stats {
       background: var(--dark-blue);
       color: var(--white);
-      padding: 65px 0;
+      padding: 50px 0;
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
+      gap: 30px;
     }
 
     .stat {
       border-top: 1px solid #7285a2;
-      padding-top: 20px;
+      padding-top: 17px;
     }
 
     .stat-number {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--white);
-      font-size: 48px;
+      font-size: 45px;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     .stat-label {
       color: #e4eaf2;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.5;
     }
 
 
     /* =========================
-       EVIDENCE PAPERS
+       SHARED SECTION HEADERS
     ========================= */
 
-    .evidence {
-      padding: 100px 0;
-      background: var(--light-blue);
+    .research-section {
+      scroll-margin-top: 100px;
     }
 
     .section-header {
       max-width: 820px;
-      margin-bottom: 50px;
+      margin-bottom: 42px;
     }
 
     .section-header h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
       font-size: clamp(42px, 5vw, 62px);
-      line-height: 1.1;
+      line-height: 1.08;
       font-weight: 500;
-      margin-bottom: 20px;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
     }
 
     .section-header p {
       color: var(--muted);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.8;
     }
 
+
+    /* =========================
+       EVIDENCE
+    ========================= */
+
+    .evidence {
+      padding: 90px 0;
+      background: var(--light-blue);
+    }
+
+    .evidence-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 50px;
+      margin-bottom: 42px;
+    }
+
+    .evidence-top .section-header {
+      margin-bottom: 0;
+    }
+
+    .evidence-count {
+      flex-shrink: 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 18px 22px;
+      min-width: 130px;
+      text-align: center;
+    }
+
+    .evidence-count strong {
+      display: block;
+      color: var(--red);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .evidence-count span {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       COUNTRY PAPER CARDS
+    ========================= */
+
     .paper-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .paper-card {
       background: var(--white);
       border-top: 4px solid var(--red);
-      padding: 34px;
+      padding: 27px;
+      min-height: 345px;
       display: flex;
       flex-direction: column;
-      min-height: 390px;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .paper-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(16, 43, 82, 0.08);
     }
 
     .paper-country {
       color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1.8px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
 
     .paper-card h3 {
       color: var(--navy);
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 28px;
+      font-size: 23px;
       line-height: 1.25;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .paper-date {
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 11px;
+      font-size: 9px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 13px;
     }
 
     .paper-authors {
       color: var(--text);
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 600;
-      line-height: 1.6;
-      margin-bottom: 18px;
+      line-height: 1.55;
+      margin-bottom: 14px;
     }
 
     .paper-authors a {
@@ -339,16 +449,16 @@
 
     .paper-description {
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-      margin-bottom: 25px;
+      font-size: 12.5px;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
 
     .paper-link {
       display: inline-block;
       color: var(--red);
       font-weight: 700;
-      font-size: 14px;
+      font-size: 12px;
       margin-top: auto;
     }
 
@@ -358,54 +468,74 @@
 
 
     /* =========================
-       RESEARCH DISSEMINATION
+       VOXDEV BRIDGE
     ========================= */
 
     .dissemination {
-      padding: 100px 0;
+      padding: 70px 0;
       background: var(--white);
     }
 
     .dissemination-card {
       background: var(--dark-blue);
       color: var(--white);
-      padding: 55px;
+      padding: 48px 55px;
       display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 70px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
       align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dissemination-card::after {
+      content: "→";
+      position: absolute;
+      right: 38px;
+      top: 18px;
+      font-family: "Playfair Display", Georgia, serif;
+      color: rgba(255,255,255,0.08);
+      font-size: 150px;
+      line-height: 1;
     }
 
     .dissemination-label {
       color: #f1a6b2;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .dissemination-card h2 {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(38px, 4vw, 52px);
-      line-height: 1.1;
+      font-size: clamp(35px, 4vw, 50px);
+      line-height: 1.08;
       font-weight: 500;
+      position: relative;
+      z-index: 2;
+    }
+
+    .dissemination-copy {
+      position: relative;
+      z-index: 2;
     }
 
     .dissemination-copy p {
       color: #dce5f0;
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.75;
+      margin-bottom: 15px;
     }
 
     .dissemination-link {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
       background: var(--red);
       color: var(--white);
-      padding: 13px 20px;
-      font-size: 14px;
+      padding: 12px 18px;
+      font-size: 13px;
       font-weight: 700;
       transition: background 0.2s ease;
     }
@@ -416,29 +546,32 @@
 
 
     /* =========================
-       INTERVENTION STUDIES
+       INTERVENTIONS
     ========================= */
 
     .interventions {
-      padding: 100px 0;
-      background: var(--white);
+      padding: 90px 0;
+      background: var(--off-white);
     }
 
-    .intervention-intro {
-      max-width: 800px;
-      margin-bottom: 45px;
+    .intervention-heading {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: end;
+      margin-bottom: 42px;
     }
 
-    .intervention-intro h2 {
+    .intervention-heading h2 {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(42px, 5vw, 60px);
-      line-height: 1.1;
+      font-size: clamp(42px, 5vw, 62px);
+      line-height: 1.08;
       font-weight: 500;
-      margin-bottom: 20px;
+      letter-spacing: -1.5px;
     }
 
-    .intervention-intro p {
+    .intervention-heading p {
       color: var(--muted);
       font-size: 16px;
       line-height: 1.8;
@@ -446,33 +579,57 @@
 
     .intervention-summary {
       background: var(--light-blue);
-      padding: 30px;
-      margin-bottom: 35px;
+      padding: 25px 28px;
+      margin-bottom: 30px;
       border-left: 4px solid var(--red);
     }
 
     .intervention-summary strong {
       color: var(--navy);
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .intervention-summary p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.7;
-      margin-top: 7px;
+      margin-top: 5px;
     }
+
+
+    /* =========================
+       INTERVENTION PROJECTS
+    ========================= */
 
     .intervention-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
     }
 
     .intervention-item {
       border: 1px solid var(--line);
-      padding: 20px 22px;
+      padding: 20px;
       background: var(--white);
+      min-height: 125px;
+      position: relative;
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .intervention-item:hover {
+      transform: translateY(-3px);
+      border-color: #b9c6d6;
+    }
+
+    .intervention-number {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+      color: #cbd5e2;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 22px;
     }
 
     .intervention-item span {
@@ -480,32 +637,33 @@
       color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
     .intervention-item p {
       color: var(--navy);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.5;
       font-weight: 600;
+      padding-right: 15px;
     }
 
 
     /* =========================
-       QUALITATIVE RESEARCH
+       QUALITATIVE
     ========================= */
 
     .qualitative {
-      padding: 100px 0;
-      background: var(--off-white);
+      padding: 90px 0;
+      background: var(--white);
     }
 
     .qualitative-grid {
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      gap: 80px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 75px;
       align-items: start;
     }
 
@@ -513,85 +671,91 @@
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
       font-size: clamp(40px, 5vw, 60px);
-      line-height: 1.1;
+      line-height: 1.08;
       font-weight: 500;
-      margin-bottom: 20px;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
     }
 
     .qualitative-intro {
       color: var(--muted);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.8;
     }
 
     .qualitative-copy > p {
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.8;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .qual-lead {
       border-left: 4px solid var(--red);
-      padding: 5px 0 5px 22px;
-      margin-bottom: 30px;
+      padding: 4px 0 4px 20px;
+      margin-bottom: 25px;
     }
 
     .qual-lead strong {
       color: var(--navy);
       display: block;
-      font-size: 17px;
-      margin-bottom: 4px;
+      font-size: 16px;
+      margin-bottom: 3px;
     }
 
     .qual-lead span {
       color: var(--red);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
     }
 
+
+    /* =========================
+       QUALITATIVE FACTS
+    ========================= */
+
     .qual-facts {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 28px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 25px;
     }
 
     .qual-fact {
-      background: var(--white);
+      background: var(--light-blue);
       border: 1px solid var(--line);
-      padding: 20px;
+      padding: 17px;
     }
 
     .qual-fact-number {
       color: var(--red);
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 30px;
+      font-size: 28px;
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .qual-fact-label {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 10px;
       line-height: 1.5;
     }
 
     .qual-status {
-      margin-top: 30px;
-      background: var(--light-blue);
-      padding: 24px;
+      margin-top: 22px;
+      background: var(--dark-blue);
+      padding: 23px 25px;
     }
 
     .qual-status h3 {
-      color: var(--navy);
-      font-size: 17px;
-      margin-bottom: 8px;
+      color: var(--white);
+      font-size: 16px;
+      margin-bottom: 6px;
     }
 
     .qual-status p {
-      color: var(--muted);
-      font-size: 14px;
+      color: #dce5f0;
+      font-size: 13px;
       line-height: 1.7;
     }
 
@@ -603,7 +767,7 @@
     footer {
       background: var(--dark-blue);
       color: white;
-      padding: 60px 0;
+      padding: 55px 0;
     }
 
     .footer-grid {
@@ -628,14 +792,14 @@
       color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      font-size: 12px;
+      font-size: 11px;
       margin-bottom: 15px;
     }
 
     .footer-links a {
       display: block;
       color: #e5eaf2;
-      font-size: 14px;
+      font-size: 13px;
       margin-bottom: 7px;
     }
 
@@ -645,16 +809,37 @@
 
     .footer-bottom {
       border-top: 1px solid #385171;
-      margin-top: 45px;
-      padding-top: 22px;
+      margin-top: 40px;
+      padding-top: 20px;
       color: #aebbd0;
-      font-size: 12px;
+      font-size: 11px;
     }
 
 
     /* =========================
        MOBILE
     ========================= */
+
+    @media (max-width: 1000px) {
+
+      .research-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .paper-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intervention-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .qual-facts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
 
     @media (max-width: 850px) {
 
@@ -670,15 +855,26 @@
         font-size: 12px;
       }
 
-      .overview-grid,
+      .evidence-top,
+      .intervention-heading,
       .qualitative-grid,
       .dissemination-card {
         grid-template-columns: 1fr;
-        gap: 40px;
       }
 
-      .paper-grid {
-        grid-template-columns: 1fr;
+      .evidence-top {
+        display: grid;
+        gap: 25px;
+      }
+
+      .intervention-heading {
+        display: grid;
+        gap: 25px;
+      }
+
+      .qualitative-grid,
+      .dissemination-card {
+        gap: 40px;
       }
 
       .stats-grid {
@@ -707,7 +903,7 @@
       }
 
       .hero {
-        padding: 70px 0;
+        padding: 65px 0;
       }
 
       .hero h1 {
@@ -719,12 +915,23 @@
         font-size: 17px;
       }
 
-      .overview,
+      .programme,
       .evidence,
       .dissemination,
       .qualitative,
       .interventions {
         padding: 65px 0;
+      }
+
+      .programme-header h2,
+      .section-header h2,
+      .intervention-heading h2,
+      .qualitative h2 {
+        font-size: 42px;
+      }
+
+      .stats {
+        padding: 42px 0;
       }
 
       .stats-grid {
@@ -733,24 +940,32 @@
       }
 
       .stat-number {
-        font-size: 40px;
+        font-size: 38px;
+      }
+
+      .paper-grid {
+        grid-template-columns: 1fr;
       }
 
       .paper-card {
-        padding: 28px;
         min-height: 0;
+        padding: 27px;
       }
 
       .dissemination-card {
         padding: 35px 28px;
       }
 
-      .qual-facts {
-        grid-template-columns: 1fr 1fr;
+      .dissemination-card::after {
+        display: none;
       }
 
       .intervention-grid {
         grid-template-columns: 1fr;
+      }
+
+      .qual-facts {
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-grid {
@@ -824,106 +1039,119 @@
 
 
     <!-- =========================
-         OVERVIEW
+         PROGRAMME OVERVIEW
     ========================= -->
 
-    <section class="overview">
+    <section class="programme">
 
       <div class="container">
 
-        <div class="overview-grid">
+        <div class="programme-header">
 
-          <div>
-
-            <div class="section-label">
-              The research programme
-            </div>
-
-            <h2>
-              Understanding the gap. Finding what works.
-            </h2>
-
+          <div class="section-label">
+            The research programme
           </div>
 
+          <h2>
+            Six countries. Three approaches. One question: what changes?
+          </h2>
 
-          <div class="overview-copy">
+          <p>
+            The International Economic Association's Women in Leadership
+            in Economics Initiative (IEA-WE) is leading a comprehensive
+            research programme to advance gender inclusivity in the
+            economics profession across Africa, Latin America and the
+            Caribbean, and Asia.
+          </p>
 
-            <p>
-              The International Economic Association's Women in Leadership
-              in Economics Initiative (IEA-WE) is leading a comprehensive
-              research programme to advance gender inclusivity in the
-              economics profession across Africa, Latin America and the
-              Caribbean, and Asia.
-            </p>
-
-            <p>
-              Six independent evidence studies examine women's representation
-              and progression through the economics profession, from
-              undergraduate enrolment through senior faculty. Alongside this,
-              eleven intervention projects test practical strategies for
-              reducing gender gaps.
-            </p>
-
-            <p>
-              A parallel qualitative research programme, led by Monica
-              Biradavolu and QualAnalytics, examines the experiences and
-              obstacles women economists face through in-depth interviews
-              and focus group discussions across the six study countries.
-            </p>
+        </div>
 
 
-            <div class="research-components">
-
-              <div class="component">
-
-                <div class="component-number">01</div>
-
-                <div>
-                  <h3>Quantitative evidence</h3>
-                  <p>
-                    Building comparable country-level evidence on women's
-                    representation and progression through the economics
-                    profession.
-                  </p>
-                </div>
-
-              </div>
+        <div class="research-nav">
 
 
-              <div class="component">
+          <!-- COMPONENT 01 -->
 
-                <div class="component-number">02</div>
+          <a href="#evidence" class="research-nav-card">
 
-                <div>
-                  <h3>Intervention research</h3>
-                  <p>
-                    Testing practical approaches including mentorship,
-                    networks, role models, visibility, and curriculum-based
-                    interventions to identify what works.
-                  </p>
-                </div>
-
-              </div>
-
-
-              <div class="component">
-
-                <div class="component-number">03</div>
-
-                <div>
-                  <h3>Qualitative evidence</h3>
-                  <p>
-                    Documenting women's experiences through in-depth
-                    interviews and focus group discussions, helping explain
-                    the mechanisms behind the quantitative evidence.
-                  </p>
-                </div>
-
-              </div>
-
+            <div class="research-nav-number">
+              01
             </div>
 
-          </div>
+            <div class="research-nav-subtitle">
+              Quantitative research · Evidence
+            </div>
+
+            <h3>
+              Map the gap.
+            </h3>
+
+            <p>
+              Six country studies examine women's representation and
+              progression through the economics profession.
+            </p>
+
+            <div class="research-nav-arrow">
+              Explore the evidence →
+            </div>
+
+          </a>
+
+
+          <!-- COMPONENT 02 -->
+
+          <a href="#interventions" class="research-nav-card">
+
+            <div class="research-nav-number">
+              02
+            </div>
+
+            <div class="research-nav-subtitle">
+              Quantitative research · Interventions
+            </div>
+
+            <h3>
+              Test what works.
+            </h3>
+
+            <p>
+              Eleven intervention projects test practical strategies
+              designed to reduce gender gaps in economics.
+            </p>
+
+            <div class="research-nav-arrow">
+              Explore the interventions →
+            </div>
+
+          </a>
+
+
+          <!-- COMPONENT 03 -->
+
+          <a href="#qualitative" class="research-nav-card">
+
+            <div class="research-nav-number">
+              03
+            </div>
+
+            <div class="research-nav-subtitle">
+              Qualitative research
+            </div>
+
+            <h3>
+              Understand the experience.
+            </h3>
+
+            <p>
+              Interviews and focus groups explore the experiences and
+              barriers behind the patterns in the data.
+            </p>
+
+            <div class="research-nav-arrow">
+              Explore the research →
+            </div>
+
+          </a>
 
         </div>
 
@@ -933,7 +1161,7 @@
 
 
     <!-- =========================
-         RESEARCH STATS
+         QUICK STATS
     ========================= -->
 
     <section class="stats">
@@ -944,7 +1172,9 @@
 
           <div class="stat">
 
-            <div class="stat-number">6</div>
+            <div class="stat-number">
+              6
+            </div>
 
             <div class="stat-label">
               Country evidence papers
@@ -955,7 +1185,9 @@
 
           <div class="stat">
 
-            <div class="stat-number">11</div>
+            <div class="stat-number">
+              11
+            </div>
 
             <div class="stat-label">
               Intervention projects testing what works
@@ -966,7 +1198,9 @@
 
           <div class="stat">
 
-            <div class="stat-number">200+</div>
+            <div class="stat-number">
+              200+
+            </div>
 
             <div class="stat-label">
               In-depth interviews across the study countries
@@ -977,7 +1211,9 @@
 
           <div class="stat">
 
-            <div class="stat-number">100+</div>
+            <div class="stat-number">
+              100+
+            </div>
 
             <div class="stat-label">
               Focus group discussions with students and faculty
@@ -996,29 +1232,46 @@
          EVIDENCE PAPERS
     ========================= -->
 
-    <section class="evidence" id="evidence">
+    <section class="evidence research-section" id="evidence">
 
       <div class="container">
 
-        <div class="section-header">
+        <div class="evidence-top">
 
-          <div class="section-label">
-            Quantitative research · Evidence
+          <div class="section-header">
+
+            <div class="section-label">
+              01 · Quantitative research · Evidence
+            </div>
+
+            <h2>
+              Mapping women's position in economics.
+            </h2>
+
+            <p>
+              Six independent country studies examine women's representation
+              and progression through the economics profession, from
+              undergraduate education through senior faculty and research
+              positions. Together, they provide comparable evidence on career
+              trajectories, research, leadership, networks, and persistent
+              gender gaps across Argentina, Colombia, Ghana, India, Mexico,
+              and South Africa.
+            </p>
+
           </div>
 
-          <h2>
-            Mapping women's position in economics.
-          </h2>
 
-          <p>
-            Six independent country studies examine women's representation
-            and progression through the economics profession, from
-            undergraduate education through senior faculty and research
-            positions. Together, they provide comparable evidence on career
-            trajectories, research, leadership, networks, and persistent
-            gender gaps across Argentina, Colombia, Ghana, India, Mexico,
-            and South Africa.
-          </p>
+          <div class="evidence-count">
+
+            <strong>
+              6
+            </strong>
+
+            <span>
+              Evidence papers
+            </span>
+
+          </div>
 
         </div>
 
@@ -1339,7 +1592,6 @@
 
     <!-- =========================
          RESEARCH DISSEMINATION
-         KEPT FROM ORIGINAL PAGE
     ========================= -->
 
     <section class="dissemination">
@@ -1351,11 +1603,11 @@
           <div>
 
             <div class="dissemination-label">
-              Research dissemination · VoxDev
+              From evidence → wider conversation
             </div>
 
             <h2>
-              Bringing the evidence into the wider policy conversation.
+              Bringing the evidence into the policy conversation.
             </h2>
 
           </div>
@@ -1403,22 +1655,25 @@
 
     <!-- =========================
          INTERVENTION STUDIES
-         MOVED ABOVE QUALITATIVE RESEARCH
     ========================= -->
 
-    <section class="interventions" id="interventions">
+    <section class="interventions research-section" id="interventions">
 
       <div class="container">
 
-        <div class="intervention-intro">
+        <div class="intervention-heading">
 
-          <div class="section-label">
-            Quantitative research · Interventions
+          <div>
+
+            <div class="section-label">
+              02 · Quantitative research · Interventions
+            </div>
+
+            <h2>
+              Testing what works.
+            </h2>
+
           </div>
-
-          <h2>
-            Testing what works.
-          </h2>
 
           <p>
             Eleven intervention projects test practical strategies designed
@@ -1448,59 +1703,169 @@
 
         <div class="intervention-grid">
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              01
+            </div>
+
             <span>Argentina</span>
-            <p>Hernán Ruffo</p>
+
+            <p>
+              Hernán Ruffo
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              02
+            </div>
+
             <span>Brazil</span>
-            <p>Bruna Borges, Fernanda Estevan, Kelly Santos</p>
+
+            <p>
+              Bruna Borges, Fernanda Estevan, Kelly Santos
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              03
+            </div>
+
             <span>China</span>
-            <p>Xianghong Shirley Wang</p>
+
+            <p>
+              Xianghong Shirley Wang
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              04
+            </div>
+
             <span>Colombia</span>
-            <p>Camila Galindo and Julia Seither</p>
+
+            <p>
+              Camila Galindo and Julia Seither
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              05
+            </div>
+
             <span>Ghana</span>
-            <p>Rebecca Nana Yaa Ayifah and Emmanuel Ayifah</p>
+
+            <p>
+              Rebecca Nana Yaa Ayifah and Emmanuel Ayifah
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              06
+            </div>
+
             <span>India</span>
-            <p>Anahita Karandikar</p>
+
+            <p>
+              Anahita Karandikar
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              07
+            </div>
+
             <span>India</span>
-            <p>Bharti Nandwani and Akanksha Aggarwal</p>
+
+            <p>
+              Bharti Nandwani and Akanksha Aggarwal
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              08
+            </div>
+
             <span>Mexico</span>
-            <p>Joana Chapa, Stanislao Maldonado, and Elvira Naranjo</p>
+
+            <p>
+              Joana Chapa, Stanislao Maldonado, and Elvira Naranjo
+            </p>
+
           </div>
 
+
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              09
+            </div>
+
             <span>Mexico</span>
-            <p>Lucia Del Carpio, Emilio Gutierrez, Adrian Rubli</p>
+
+            <p>
+              Lucia Del Carpio, Emilio Gutierrez, Adrian Rubli
+            </p>
+
           </div>
 
-          <div class="intervention-item">
-            <span>South Africa</span>
-            <p>Carike Claassen</p>
-          </div>
 
           <div class="intervention-item">
+
+            <div class="intervention-number">
+              10
+            </div>
+
             <span>South Africa</span>
-            <p>Janine Jantjies</p>
+
+            <p>
+              Carike Claassen
+            </p>
+
+          </div>
+
+
+          <div class="intervention-item">
+
+            <div class="intervention-number">
+              11
+            </div>
+
+            <span>South Africa</span>
+
+            <p>
+              Janine Jantjies
+            </p>
+
           </div>
 
         </div>
@@ -1514,16 +1879,17 @@
          QUALITATIVE RESEARCH
     ========================= -->
 
-    <section class="qualitative" id="qualitative">
+    <section class="qualitative research-section" id="qualitative">
 
       <div class="container">
 
         <div class="qualitative-grid">
 
+
           <div>
 
             <div class="section-label">
-              Qualitative research
+              03 · Qualitative research
             </div>
 
             <h2>
@@ -1562,6 +1928,7 @@
               discussions with students and faculty.
             </p>
 
+
             <p>
               The qualitative evidence complements the six country evidence
               papers by examining the experiences, barriers, and mechanisms
@@ -1570,6 +1937,7 @@
 
 
             <div class="qual-facts">
+
 
               <div class="qual-fact">
 
@@ -1663,6 +2031,7 @@
 
       <div class="footer-grid">
 
+
         <div>
 
           <div class="footer-brand">
@@ -1678,15 +2047,31 @@
 
         <div>
 
-          <h4>Explore</h4>
+          <h4>
+            Explore
+          </h4>
 
           <div class="footer-links">
 
-            <a href="index.html">Our Work</a>
-            <a href="articles.html">Amplifying Voices</a>
-            <a href="leadership.html">Team</a>
-            <a href="#evidence">Research</a>
-            <a href="reports.html">Reports</a>
+            <a href="index.html">
+              Our Work
+            </a>
+
+            <a href="articles.html">
+              Amplifying Voices
+            </a>
+
+            <a href="leadership.html">
+              Team
+            </a>
+
+            <a href="#evidence">
+              Research
+            </a>
+
+            <a href="reports.html">
+              Reports
+            </a>
 
           </div>
 
@@ -1695,13 +2080,23 @@
 
         <div>
 
-          <h4>Research</h4>
+          <h4>
+            Research
+          </h4>
 
           <div class="footer-links">
 
-            <a href="#evidence">Evidence Papers</a>
-            <a href="#qualitative">Qualitative Research</a>
-            <a href="#interventions">Intervention Studies</a>
+            <a href="#evidence">
+              Evidence Papers
+            </a>
+
+            <a href="#interventions">
+              Intervention Studies
+            </a>
+
+            <a href="#qualitative">
+              Qualitative Research
+            </a>
 
           </div>
 
