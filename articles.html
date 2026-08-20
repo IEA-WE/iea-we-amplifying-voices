@@ -144,15 +144,22 @@
     .hero {
 
       position: relative;
-      background: var(--white);
-      padding: 95px 0 85px;
-      border-bottom: 1px solid var(--line);
+      min-height: 600px;
+      display: flex;
+      align-items: center;
       overflow: hidden;
+      background: #111;
+
+      background-image:
+        url("amplifying_voices_main.jpg");
+
+      background-size: cover;
+      background-position: center;
 
     }
 
 
-    /* B&W background image */
+    /* Black & white treatment */
 
     .hero::before {
 
@@ -160,24 +167,39 @@
       position: absolute;
       inset: 0;
 
-      background-image: url("amplifying_voices_main.jpg");
+      background-image:
+        url("amplifying_voices_main.jpg");
+
       background-size: cover;
       background-position: center;
 
       filter: grayscale(100%);
-      opacity: 0.30;
 
       z-index: 0;
 
     }
 
 
-    /* Keep hero content above image */
-
     .hero .container {
 
       position: relative;
       z-index: 1;
+
+    }
+
+
+    /*
+      White box keeps the original typography
+      and colours clearly visible against the image.
+    */
+
+    .hero-content {
+
+      background: rgba(255, 255, 255, 0.96);
+      padding: 48px 55px 52px;
+      max-width: 880px;
+
+      box-shadow: 0 12px 35px rgba(16, 43, 82, 0.16);
 
     }
 
@@ -1054,6 +1076,20 @@
 
       }
 
+
+      .hero {
+
+        min-height: 520px;
+
+      }
+
+
+      .hero-content {
+
+        padding: 38px 35px 40px;
+
+      }
+
     }
 
 
@@ -1082,7 +1118,15 @@
 
       .hero {
 
-        padding: 70px 0;
+        min-height: 500px;
+        padding: 55px 0;
+
+      }
+
+
+      .hero-content {
+
+        padding: 30px 25px 32px;
 
       }
 
@@ -1235,24 +1279,28 @@
 
       <div class="container">
 
-        <div class="eyebrow">
-          IEA-WE · Amplifying Voices
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            IEA-WE · Amplifying Voices
+          </div>
+
+
+          <h1>
+            Turning up the volume
+            <span>for women in economics.</span>
+          </h1>
+
+
+          <p class="hero-intro">
+
+            Turning rigorous research by women economists into a global
+            editorial movement — 100 articles, 120 authors, 30 countries,
+            18M+ readers, and counting.
+
+          </p>
+
         </div>
-
-
-        <h1>
-          Turning up the volume
-          <span>for women in economics.</span>
-        </h1>
-
-
-        <p class="hero-intro">
-
-          Turning rigorous research by women economists into a global
-          editorial movement — 100 articles, 120 authors, 30 countries,
-          18M+ readers, and counting.
-
-        </p>
 
       </div>
 
