@@ -144,28 +144,32 @@
     .hero {
 
       position: relative;
-      min-height: 570px;
-
+      min-height: 620px;
       display: flex;
       align-items: center;
+      overflow: hidden;
 
-      padding: 90px 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--white) 0%,
-          rgba(255, 255, 255, 0.98) 30%,
-          rgba(255, 255, 255, 0.82) 48%,
-          rgba(255, 255, 255, 0.30) 72%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        url("amplifying_voices_main.jpg");
-
+      background-image: url("amplifying_voices_main.jpg");
       background-size: cover;
-      background-position: center right;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      padding: 95px 0;
 
       border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .hero::before {
+
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: rgba(255, 255, 255, 0.08);
+
+      z-index: 0;
 
     }
 
@@ -173,7 +177,22 @@
     .hero .container {
 
       position: relative;
-      z-index: 2;
+      z-index: 1;
+
+    }
+
+
+    .hero-content {
+
+      display: inline-block;
+      max-width: 900px;
+
+      background: rgba(250, 249, 245, 0.94);
+
+      padding: 42px 50px 45px;
+
+      box-shadow:
+        0 12px 40px rgba(16, 43, 82, 0.12);
 
     }
 
@@ -215,7 +234,7 @@
 
       max-width: 820px;
       font-size: 21px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--muted);
 
     }
@@ -229,7 +248,7 @@
 
       background: var(--dark-blue);
       color: var(--white);
-      padding: 55px 0;
+      padding: 65px 0;
 
     }
 
@@ -246,7 +265,7 @@
     .impact-stat {
 
       border-top: 1px solid #7285a2;
-      padding-top: 18px;
+      padding-top: 20px;
 
     }
 
@@ -255,9 +274,9 @@
 
       font-family: "Playfair Display", Georgia, serif;
       color: var(--white);
-      font-size: 50px;
+      font-size: 52px;
       line-height: 1;
-      margin-bottom: 9px;
+      margin-bottom: 10px;
 
     }
 
@@ -271,12 +290,12 @@
 
 
     /* =========================
-       STORY / THE PROJECT
+       STORY
        ========================= */
 
     .story {
 
-      padding: 68px 0 42px;
+      padding: 100px 0 55px;
       background: var(--white);
 
     }
@@ -284,7 +303,10 @@
 
     .story-grid {
 
-      display: block;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 75px;
+      align-items: center;
 
     }
 
@@ -296,7 +318,7 @@
       letter-spacing: 2.5px;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
 
     }
 
@@ -306,11 +328,10 @@
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
       font-size: clamp(40px, 5vw, 62px);
-      line-height: 1.08;
+      line-height: 1.1;
       font-weight: 500;
       letter-spacing: -1.5px;
-      margin-bottom: 22px;
-      max-width: 850px;
+      margin-bottom: 25px;
 
     }
 
@@ -319,16 +340,26 @@
 
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.75;
-      margin-bottom: 15px;
-      max-width: 1050px;
+      line-height: 1.8;
+      margin-bottom: 20px;
 
     }
 
 
-    .story p:last-child {
+    .story-main-image {
 
-      margin-bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      background: var(--light-blue);
+
+    }
+
+
+    .story-main-image img {
+
+      width: 100%;
+      height: auto;
+      display: block;
 
     }
 
@@ -339,7 +370,7 @@
 
     .writers-feature {
 
-      padding: 18px 0 68px;
+      padding: 55px 0 100px;
       background: var(--white);
 
     }
@@ -368,7 +399,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
-      margin-top: 18px;
+      margin-top: 25px;
       align-items: start;
 
     }
@@ -389,19 +420,19 @@
 
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.7;
 
     }
 
 
     /* =========================
-       FEATURES
+       FEATURE CARDS
        ========================= */
 
     .features {
 
       background: var(--light-blue);
-      padding: 68px 0;
+      padding: 85px 0;
 
     }
 
@@ -410,7 +441,7 @@
 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
 
     }
 
@@ -418,8 +449,8 @@
     .feature-card {
 
       background: var(--white);
-      padding: 32px;
-      min-height: 285px;
+      padding: 38px;
+      min-height: 330px;
       border-top: 4px solid var(--red);
       display: flex;
       flex-direction: column;
@@ -431,9 +462,9 @@
 
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: 28px;
+      font-size: 30px;
       line-height: 1.2;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
 
     }
 
@@ -442,8 +473,8 @@
 
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.65;
-      margin-bottom: 15px;
+      line-height: 1.7;
+      margin-bottom: 18px;
 
     }
 
@@ -464,29 +495,7 @@
       letter-spacing: 1.5px;
       font-size: 12px;
       font-weight: 700;
-      margin-bottom: 10px;
-
-    }
-
-
-    /* =========================
-       PARTNERSHIPS + EDITOR
-       ========================= */
-
-    .connections {
-
-      background: var(--white);
-      padding: 72px 0;
-
-    }
-
-
-    .connections-grid {
-
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 55px;
-      align-items: start;
+      margin-bottom: 12px;
 
     }
 
@@ -497,7 +506,7 @@
 
     .partnerships {
 
-      padding: 0;
+      padding: 95px 0;
       background: var(--white);
 
     }
@@ -505,8 +514,8 @@
 
     .partnerships-header {
 
-      max-width: 700px;
-      margin-bottom: 28px;
+      max-width: 760px;
+      margin-bottom: 45px;
 
     }
 
@@ -515,10 +524,10 @@
 
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: clamp(40px, 4vw, 54px);
-      line-height: 1.08;
+      font-size: clamp(42px, 5vw, 60px);
+      line-height: 1.1;
       font-weight: 500;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
 
     }
 
@@ -526,8 +535,7 @@
     .partnerships-intro {
 
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.65;
+      font-size: 17px;
 
     }
 
@@ -536,7 +544,7 @@
 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 20px;
 
     }
 
@@ -544,19 +552,8 @@
     .partner {
 
       border: 1px solid var(--line);
-      padding: 22px;
-      min-height: 245px;
-      transition:
-        border-color 0.2s ease,
-        transform 0.2s ease;
-
-    }
-
-
-    .partner:hover {
-
-      border-color: var(--red);
-      transform: translateY(-2px);
+      padding: 32px;
+      min-height: 280px;
 
     }
 
@@ -564,9 +561,8 @@
     .partner h3 {
 
       color: var(--navy);
-      font-size: 21px;
-      line-height: 1.25;
-      margin-bottom: 11px;
+      font-size: 25px;
+      margin-bottom: 15px;
 
     }
 
@@ -574,8 +570,8 @@
     .partner p {
 
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.7;
 
     }
 
@@ -587,8 +583,17 @@
     .editor {
 
       background: var(--off-white);
-      padding: 32px;
-      height: fit-content;
+      padding: 100px 0;
+
+    }
+
+
+    .editor-grid {
+
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 80px;
+      align-items: center;
 
     }
 
@@ -598,8 +603,7 @@
       width: 100%;
       overflow: hidden;
       background: #ffffff;
-      padding: 12px;
-      margin-bottom: 22px;
+      padding: 18px;
 
     }
 
@@ -617,9 +621,9 @@
 
       font-family: "Playfair Display", Georgia, serif;
       color: var(--navy);
-      font-size: 42px;
+      font-size: 52px;
       line-height: 1.1;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
 
     }
 
@@ -634,10 +638,8 @@
     .editor-role {
 
       color: var(--red);
-      font-size: 14px;
       font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 15px;
+      margin-bottom: 22px;
 
     }
 
@@ -645,9 +647,8 @@
     .editor p {
 
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-      margin-bottom: 9px;
+      font-size: 16px;
+      margin-bottom: 12px;
 
     }
 
@@ -666,9 +667,8 @@
 
     .archive {
 
-      padding: 82px 0;
+      padding: 100px 0;
       background: var(--white);
-      border-top: 1px solid var(--line);
 
     }
 
@@ -679,7 +679,7 @@
       justify-content: space-between;
       align-items: end;
       gap: 30px;
-      margin-bottom: 38px;
+      margin-bottom: 45px;
 
     }
 
@@ -699,20 +699,18 @@
 
       color: var(--muted);
       max-width: 500px;
-      margin-top: 10px;
+      margin-top: 12px;
 
     }
 
 
-    /* =========================
-       FILTERS
-       ========================= */
+    /* FILTERS */
 
     .filters {
 
       background: var(--light-blue);
-      padding: 24px;
-      margin-bottom: 35px;
+      padding: 28px;
+      margin-bottom: 40px;
 
     }
 
@@ -720,12 +718,12 @@
     .search-box {
 
       width: 100%;
-      padding: 14px 17px;
+      padding: 15px 18px;
       border: 1px solid var(--line);
       background: var(--white);
       font-family: "DM Sans", Arial, sans-serif;
       font-size: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       outline: none;
 
     }
@@ -742,7 +740,7 @@
 
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+      gap: 12px;
 
     }
 
@@ -750,7 +748,7 @@
     .filter-row select {
 
       width: 100%;
-      padding: 12px 13px;
+      padding: 13px 14px;
       border: 1px solid var(--line);
       background: var(--white);
       font-family: "DM Sans", Arial, sans-serif;
@@ -760,15 +758,13 @@
     }
 
 
-    /* =========================
-       ARTICLE GRID
-       ========================= */
+    /* ARTICLE GRID */
 
     .article-grid {
 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 24px;
 
     }
 
@@ -777,7 +773,7 @@
 
       border: 1px solid var(--line);
       background: var(--white);
-      padding: 25px;
+      padding: 28px;
       transition:
         transform 0.2s ease,
         border-color 0.2s ease;
@@ -803,7 +799,7 @@
       letter-spacing: 1px;
       font-size: 11px;
       font-weight: 700;
-      margin-bottom: 11px;
+      margin-bottom: 12px;
 
     }
 
@@ -813,7 +809,7 @@
       color: var(--navy);
       font-size: 21px;
       line-height: 1.35;
-      margin-bottom: 11px;
+      margin-bottom: 12px;
 
     }
 
@@ -831,7 +827,7 @@
 
       display: inline-block;
       margin-top: auto;
-      padding-top: 17px;
+      padding-top: 18px;
       color: var(--red);
       font-weight: 700;
       font-size: 14px;
@@ -922,7 +918,7 @@
 
       background: var(--dark-blue);
       color: white;
-      padding: 55px 0;
+      padding: 60px 0;
 
     }
 
@@ -985,8 +981,8 @@
     .footer-bottom {
 
       border-top: 1px solid #385171;
-      margin-top: 40px;
-      padding-top: 20px;
+      margin-top: 45px;
+      padding-top: 22px;
       color: #aebbd0;
       font-size: 12px;
 
@@ -994,37 +990,8 @@
 
 
     /* =========================
-       MOBILE / TABLET
+       MOBILE
        ========================= */
-
-    @media (max-width: 1000px) {
-
-      .connections-grid {
-
-        grid-template-columns: 1fr;
-        gap: 55px;
-
-      }
-
-
-      .editor {
-
-        display: grid;
-        grid-template-columns: 280px 1fr;
-        gap: 30px;
-        align-items: center;
-
-      }
-
-
-      .editor-photo {
-
-        margin-bottom: 0;
-
-      }
-
-    }
-
 
     @media (max-width: 850px) {
 
@@ -1049,17 +1016,28 @@
       }
 
 
-      .features-grid,
-      .article-grid {
+      .story-grid,
+      .editor-grid {
 
         grid-template-columns: 1fr;
+        gap: 40px;
 
       }
 
 
-      .partner-grid {
+      .writers-caption {
 
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+      }
+
+
+      .features-grid,
+      .partner-grid,
+      .article-grid {
+
+        grid-template-columns: 1fr;
 
       }
 
@@ -1085,18 +1063,24 @@
       }
 
 
-      .editor {
+      .editor-photo {
 
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 25px;
+        max-width: 500px;
+
+      }
+
+
+      .hero-content {
+
+        max-width: 850px;
+        padding: 36px 38px 40px;
 
       }
 
     }
 
 
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
 
       .container {
 
@@ -1119,27 +1103,17 @@
       }
 
 
-      /* =========================
-         MOBILE HERO
-         ========================= */
-
       .hero {
 
-        min-height: 520px;
-        padding: 70px 0;
+        min-height: 560px;
+        padding: 60px 0;
 
-        background:
-          linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.94) 0%,
-            rgba(255, 255, 255, 0.88) 48%,
-            rgba(255, 255, 255, 0.45) 75%,
-            rgba(255, 255, 255, 0.15) 100%
-          ),
-          url("amplifying_voices_main.jpg");
+      }
 
-        background-size: cover;
-        background-position: center;
+
+      .hero-content {
+
+        padding: 30px 25px 32px;
 
       }
 
@@ -1163,25 +1137,11 @@
       .story,
       .writers-feature,
       .features,
-      .connections,
+      .partnerships,
+      .editor,
       .archive {
 
-        padding: 55px 0;
-
-      }
-
-
-      .story {
-
-        padding-bottom: 25px;
-
-      }
-
-
-      .writers-feature {
-
-        padding-top: 12px;
-        padding-bottom: 55px;
+        padding: 65px 0;
 
       }
 
@@ -1201,40 +1161,16 @@
       }
 
 
-      .writers-caption {
-
-        grid-template-columns: 1fr;
-        gap: 10px;
-
-      }
-
-
-      .partner-grid {
+      .filter-row {
 
         grid-template-columns: 1fr;
 
       }
 
 
-      .partner {
+      .editor-grid {
 
-        min-height: auto;
-
-      }
-
-
-      .editor {
-
-        display: block;
-        padding: 25px;
-
-      }
-
-
-      .editor-photo {
-
-        max-width: 400px;
-        margin-bottom: 20px;
+        gap: 30px;
 
       }
 
@@ -1242,13 +1178,6 @@
       .editor h2 {
 
         font-size: 42px;
-
-      }
-
-
-      .filter-row {
-
-        grid-template-columns: 1fr;
 
       }
 
@@ -1261,11 +1190,15 @@
       }
 
 
+      /* FLOATING SUBSCRIBE BUTTON — MOBILE */
+
       .floating-subscribe {
 
         right: 16px;
         bottom: 16px;
+
         padding: 14px 18px;
+
         font-size: 14px;
 
       }
@@ -1333,24 +1266,28 @@
 
       <div class="container">
 
-        <div class="eyebrow">
-          IEA-WE · Amplifying Voices
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            IEA-WE · Amplifying Voices
+          </div>
+
+
+          <h1>
+            Turning up the volume
+            <span>for women in economics.</span>
+          </h1>
+
+
+          <p class="hero-intro">
+
+            Turning rigorous research by women economists into a global
+            editorial movement — 100 articles, 120 authors, 30 countries,
+            18M+ readers, and counting.
+
+          </p>
+
         </div>
-
-
-        <h1>
-          Turning up the volume
-          <span>for women in economics.</span>
-        </h1>
-
-
-        <p class="hero-intro">
-
-          Turning rigorous research by women economists into a global
-          editorial movement — 100 articles, 120 authors, 30 countries,
-          18M+ readers, and counting.
-
-        </p>
 
       </div>
 
@@ -1426,7 +1363,7 @@
 
 
     <!-- =========================
-         STORY / THE PROJECT
+         STORY
          ========================= -->
 
     <section class="story">
@@ -1476,6 +1413,16 @@
               partnerships and full-cycle publication support.
 
             </p>
+
+          </div>
+
+
+          <div class="story-main-image">
+
+            <img
+              src="amplifying_voices_main.jpg"
+              alt="Amplifying Voices project"
+            >
 
           </div>
 
@@ -1630,181 +1577,176 @@
 
 
     <!-- =========================
-         PARTNERSHIPS + EDITOR
+         PARTNERSHIPS
          ========================= -->
 
-    <section class="connections">
+    <section
+      class="partnerships"
+      id="partnerships"
+    >
 
       <div class="container">
 
-        <div class="connections-grid">
+        <div class="partnerships-header">
+
+          <div class="section-label">
+            Amplifying Voices Partnerships
+          </div>
+
+          <h2>
+            Research that travels further.
+          </h2>
+
+          <p class="partnerships-intro">
+
+            Strategic partnerships help connect women economists with
+            the platforms and audiences that shape international policy
+            debate.
+
+          </p>
+
+        </div>
 
 
-          <!-- =========================
-               PARTNERSHIPS
-               ========================= -->
-
-          <div
-            class="partnerships"
-            id="partnerships"
-          >
-
-            <div class="partnerships-header">
-
-              <div class="section-label">
-                Amplifying Voices Partnerships
-              </div>
-
-              <h2>
-                Research that travels further.
-              </h2>
-
-              <p class="partnerships-intro">
-
-                Strategic partnerships help connect women economists with
-                the platforms and audiences that shape international policy
-                debate.
-
-              </p>
-
-            </div>
+        <div class="partner-grid">
 
 
-            <div class="partner-grid">
+          <div class="partner">
 
+            <h3>
+              Project Syndicate
+            </h3>
 
-              <div class="partner">
+            <p>
 
-                <h3>
-                  Project Syndicate
-                </h3>
+              Project Syndicate produces and delivers original,
+              high-quality commentaries to a global audience. Featuring
+              contributions from political leaders, policymakers,
+              scholars, business leaders and civic activists, it provides
+              news media and their readers with analysis and insight.
 
-                <p>
-
-                  Project Syndicate produces and delivers original,
-                  high-quality commentaries to a global audience. Featuring
-                  contributions from political leaders, policymakers,
-                  scholars, business leaders and civic activists, it provides
-                  news media and their readers with analysis and insight.
-
-                </p>
-
-              </div>
-
-
-              <div class="partner">
-
-                <h3>
-                  VoxEU
-                </h3>
-
-                <p>
-
-                  VoxEU is CEPR's policy portal, established to promote
-                  research-based policy analysis and commentary by leading
-                  economists. Its audience includes economists working in the
-                  public sector, private sector, academia and media,
-                  as well as students of economics.
-
-                </p>
-
-              </div>
-
-
-              <div class="partner">
-
-                <h3>
-                  VoxDev
-                </h3>
-
-                <p>
-
-                  VoxDev is a platform for economists, policymakers,
-                  practitioners, donors, the private sector and others
-                  interested in development. Expert contributors provide
-                  accessible commentary, analysis and evidence on a wide
-                  range of policy challenges.
-
-                </p>
-
-              </div>
-
-
-            </div>
+            </p>
 
           </div>
 
 
-          <!-- =========================
-               EDITOR
-               ========================= -->
+          <div class="partner">
 
-          <section
-            class="editor"
-            id="editor"
-          >
+            <h3>
+              VoxEU
+            </h3>
 
-            <div class="editor-photo">
+            <p>
 
-              <img
-                src="navika_photo.jpg"
-                alt="Navika Mehta"
+              VoxEU is CEPR's policy portal, established to promote
+              research-based policy analysis and commentary by leading
+              economists. Its audience includes economists working in the
+              public sector, private sector, academia and media,
+              as well as students of economics.
+
+            </p>
+
+          </div>
+
+
+          <div class="partner">
+
+            <h3>
+              VoxDev
+            </h3>
+
+            <p>
+
+              VoxDev is a platform for economists, policymakers,
+              practitioners, donors, the private sector and others
+              interested in development. Expert contributors provide
+              accessible commentary, analysis and evidence on a wide
+              range of policy challenges.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDITOR
+         ========================= -->
+
+    <section
+      class="editor"
+      id="editor"
+    >
+
+      <div class="container">
+
+        <div class="editor-grid">
+
+
+          <div class="editor-photo">
+
+            <img
+              src="navika_photo.jpg"
+              alt="Navika Mehta"
+            >
+
+          </div>
+
+
+          <div>
+
+            <div class="section-label">
+              Meet the editor
+            </div>
+
+
+            <h2>
+
+              <a
+                class="editor-name-link"
+                href="https://www.linkedin.com/in/navika-m-5a3071a5/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Navika Mehta
+              </a>
+
+            </h2>
+
+
+            <div class="editor-role">
+
+              Strategic Communications & Research Dissemination Lead, IEA
 
             </div>
 
 
-            <div>
+            <p>
 
-              <div class="section-label">
-                Meet the editor
-              </div>
+              For any queries or suggestions about Amplifying Voices,
+              please get in touch.
 
-
-              <h2>
-
-                <a
-                  class="editor-name-link"
-                  href="https://www.linkedin.com/in/navika-m-5a3071a5/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Navika Mehta
-                </a>
-
-              </h2>
+            </p>
 
 
-              <div class="editor-role">
+            <p>
 
-                Strategic Communications & Research Dissemination Lead, IEA
+              <a
+                class="editor-email"
+                href="mailto:navika.mehta@iea-world.org"
+              >
+                navika.mehta@iea-world.org
+              </a>
 
-              </div>
+            </p>
 
-
-              <p>
-
-                For any queries or suggestions about Amplifying Voices,
-                please get in touch.
-
-              </p>
-
-
-              <p>
-
-                <a
-                  class="editor-email"
-                  href="mailto:navika.mehta@iea-world.org"
-                >
-                  navika.mehta@iea-world.org
-                </a>
-
-              </p>
-
-            </div>
-
-          </section>
-
+          </div>
 
         </div>
 
