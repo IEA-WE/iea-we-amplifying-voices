@@ -105,7 +105,7 @@
 
 
     /* =========================
-       HERO — UNCHANGED
+       HERO
     ========================= */
 
     .hero {
@@ -159,6 +159,20 @@
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 28px;
+      transition: color 0.2s ease;
+    }
+
+    .eyebrow:hover {
+      color: var(--red);
+    }
+
+    .eyebrow a {
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .eyebrow a:hover {
+      color: var(--red);
     }
 
     .hero h1 {
@@ -476,7 +490,9 @@
       align-items: center;
       gap: 25px;
       cursor: default;
-      transition: min-height 0.8s ease;
+
+      /* SLOWED DOWN */
+      transition: min-height 1.15s ease;
     }
 
     .compact-number {
@@ -486,21 +502,23 @@
       letter-spacing: 2px;
     }
 
-    /* CHANGED: section titles now use muted blue for visual separation */
+    /* Dark blue distinguishes section titles from internal navy headings */
     .compact-title {
       font-family: "Playfair Display", Georgia, serif;
-      color: var(--muted);
-      font-size: clamp(30px, 4vw, 48px);
+      color: var(--dark-blue);
+      font-size: clamp(27px, 3vw, 40px);
       line-height: 1.1;
       font-weight: 500;
-      letter-spacing: -1px;
+      letter-spacing: -0.7px;
     }
 
     .compact-arrow {
       color: var(--red);
       font-size: 24px;
       text-align: right;
-      transition: transform 0.7s ease;
+
+      /* SLOWED DOWN */
+      transition: transform 1s ease;
     }
 
     .compact-content {
@@ -509,10 +527,12 @@
       max-height: 0;
       overflow: hidden;
       opacity: 0;
+
+      /* SLOWED DOWN */
       transition:
-        max-height 0.9s ease,
-        opacity 0.6s ease,
-        padding 0.7s ease;
+        max-height 1.35s ease,
+        opacity 0.8s ease,
+        padding 1s ease;
     }
 
     .compact-section:hover .compact-content,
@@ -841,18 +861,16 @@
 
 
     /* =========================
-       TEAM — COMPACT
+       TEAM
     ========================= */
 
-    /* CHANGED: expanded Team background is now full-width */
+    /* No separate background here:
+       the Team section now follows the same
+       white / light-blue pattern as every other section. */
+
     .leadership-content {
-      background: var(--light-blue);
+      background: transparent;
       padding: 0;
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      padding-left: max(5%, calc((100vw - 1180px) / 2));
-      padding-right: max(5%, calc((100vw - 1180px) / 2));
     }
 
     .leadership-intro {
@@ -959,6 +977,10 @@
       color: #e5eaf2;
       font-size: 14px;
       margin-bottom: 7px;
+    }
+
+    .footer-links a:hover {
+      color: var(--red);
     }
 
     .footer-bottom {
@@ -1124,16 +1146,11 @@
       }
 
       .compact-title {
-        font-size: 36px;
+        font-size: 33px;
       }
 
       .compact-section:focus-within .compact-content {
         max-height: 1500px;
-      }
-
-      .leadership-content {
-        padding-left: 6%;
-        padding-right: 6%;
       }
     }
 
@@ -1207,8 +1224,8 @@
       }
 
       .compact-title {
-        font-size: 29px;
-        letter-spacing: -0.5px;
+        font-size: 27px;
+        letter-spacing: -0.4px;
       }
 
       .compact-number {
@@ -1242,11 +1259,6 @@
 
       .people-grid {
         grid-template-columns: 1fr;
-      }
-
-      .leadership-content {
-        padding-left: 6%;
-        padding-right: 6%;
       }
 
       .floating-video {
