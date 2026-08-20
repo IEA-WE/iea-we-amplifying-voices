@@ -54,7 +54,6 @@
     }
 
 
-
     /* =========================
        NAVIGATION
     ========================= */
@@ -103,7 +102,6 @@
     nav a:hover {
       color: var(--red);
     }
-
 
 
     /* =========================
@@ -229,7 +227,6 @@
       background: var(--navy);
       color: white;
     }
-
 
 
     /* =========================================================
@@ -461,7 +458,6 @@
     }
 
 
-
     /* =========================================================
        COMPACT CONTENT SECTIONS
     ========================================================= */
@@ -488,7 +484,7 @@
       align-items: center;
       gap: 25px;
       cursor: default;
-      transition: min-height 0.8s ease;
+      transition: min-height 1.1s ease;
     }
 
     .compact-number {
@@ -498,20 +494,26 @@
       letter-spacing: 2px;
     }
 
+    /*
+      IEA-WE BLUE:
+      Section titles use the medium logo blue so they are
+      visually distinct from the navy headings below.
+    */
+
     .compact-title {
       font-family: "Playfair Display", Georgia, serif;
       color: var(--blue);
-      font-size: clamp(30px, 4vw, 48px);
+      font-size: clamp(27px, 3.2vw, 40px);
       line-height: 1.1;
       font-weight: 500;
-      letter-spacing: -1px;
+      letter-spacing: -0.8px;
     }
 
     .compact-arrow {
       color: var(--red);
       font-size: 24px;
       text-align: right;
-      transition: transform 0.7s ease;
+      transition: transform 1s ease;
     }
 
     .compact-content {
@@ -521,9 +523,9 @@
       overflow: hidden;
       opacity: 0;
       transition:
-        max-height 0.9s ease,
-        opacity 0.6s ease,
-        padding 0.7s ease;
+        max-height 1.2s ease,
+        opacity 0.8s ease,
+        padding 1s ease;
     }
 
     .compact-section:hover .compact-content,
@@ -542,7 +544,6 @@
     .compact-section:focus-within .compact-arrow {
       transform: rotate(90deg);
     }
-
 
 
     /* =========================
@@ -607,7 +608,6 @@
     }
 
 
-
     /* =========================
        OUR WORK
     ========================= */
@@ -656,7 +656,6 @@
       margin-top: 10px;
       font-size: 14px;
     }
-
 
 
     /* =========================
@@ -713,7 +712,6 @@
     .amplifying-button {
       margin-top: 28px;
     }
-
 
 
     /* =========================
@@ -787,7 +785,6 @@
     }
 
 
-
     /* =========================
        REPORTS
     ========================= */
@@ -826,7 +823,6 @@
     }
 
 
-
     /* =========================
        ABOUT
     ========================= */
@@ -857,10 +853,15 @@
     }
 
 
-
     /* =========================
        TEAM
     ========================= */
+
+    /*
+      The Team section now uses the exact same background as
+      the parent compact section. There is no separate blue box,
+      so the background runs cleanly from edge to edge.
+    */
 
     .leadership-content {
       background: transparent;
@@ -930,7 +931,6 @@
     }
 
 
-
     /* =========================
        FOOTER
     ========================= */
@@ -974,6 +974,10 @@
       margin-bottom: 7px;
     }
 
+    .footer-links a:hover {
+      color: var(--red);
+    }
+
     .footer-bottom {
       border-top: 1px solid #385171;
       margin-top: 45px;
@@ -981,7 +985,6 @@
       color: #aebbd0;
       font-size: 12px;
     }
-
 
 
     /* =========================
@@ -1062,7 +1065,6 @@
     }
 
 
-
     /* =========================
        MOBILE
     ========================= */
@@ -1139,14 +1141,13 @@
       }
 
       .compact-title {
-        font-size: 36px;
+        font-size: 33px;
       }
 
       .compact-section:focus-within .compact-content {
         max-height: 1500px;
       }
     }
-
 
 
     @media (max-width: 600px) {
@@ -1218,7 +1219,7 @@
       }
 
       .compact-title {
-        font-size: 29px;
+        font-size: 27px;
         letter-spacing: -0.5px;
       }
 
@@ -1277,7 +1278,6 @@
     }
 
 
-
     @media (prefers-reduced-motion: reduce) {
 
       .feed-track {
@@ -1297,9 +1297,7 @@
 </head>
 
 
-
 <body>
-
 
 
 <header>
@@ -1324,9 +1322,7 @@
 </header>
 
 
-
 <main>
-
 
 
 <!-- =========================================================
@@ -1343,7 +1339,7 @@
         <a
           href="https://www.iea-world.org/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           International Economic Association
         </a>
@@ -1379,7 +1375,6 @@
 </section>
 
 
-
 <!-- =========================================================
      LATEST FROM IEA-WE
 ========================================================= -->
@@ -1408,11 +1403,9 @@
   </div>
 
 
-
   <div class="feed-window">
 
     <div class="feed-track">
-
 
 
       <!-- CARD 1 -->
@@ -1444,7 +1437,6 @@
       </a>
 
 
-
       <!-- CARD 2 -->
 
       <a
@@ -1474,7 +1466,6 @@
       </a>
 
 
-
       <!-- CARD 3 -->
 
       <a
@@ -1502,7 +1493,6 @@
         </div>
 
       </a>
-
 
 
       <!-- CARD 4 -->
@@ -1538,7 +1528,6 @@
       </a>
 
 
-
       <!-- CARD 5 -->
 
       <a
@@ -1564,7 +1553,6 @@
         </div>
 
       </a>
-
 
 
       <!-- DUPLICATE CARDS FOR SEAMLESS LOOP -->
@@ -1596,7 +1584,6 @@
       </a>
 
 
-
       <a
         href="https://voxdev.org/topic/labour-markets/bridging-gap-women-export-led-growth"
         target="_blank"
@@ -1624,7 +1611,6 @@
       </a>
 
 
-
       <a
         href="https://www.imf.org/en/news/podcasts/all-podcasts/2024/11/29/power-of-local-marcela-eslava"
         target="_blank"
@@ -1650,7 +1636,6 @@
         </div>
 
       </a>
-
 
 
       <a
@@ -1684,7 +1669,6 @@
       </a>
 
 
-
       <a
         href="reports.html"
         class="latest-card"
@@ -1710,11 +1694,9 @@
       </a>
 
 
-
     </div>
 
   </div>
-
 
 
   <div class="feed-note">
@@ -1724,13 +1706,11 @@
 </section>
 
 
-
 <!-- =========================================================
      COMPACT SECTIONS
 ========================================================= -->
 
 <section class="compact-sections">
-
 
 
   <!-- WHY THIS MATTERS -->
@@ -1817,7 +1797,6 @@
   </section>
 
 
-
   <!-- OUR WORK -->
 
   <section class="compact-section" id="work">
@@ -1841,7 +1820,6 @@
     <div class="compact-content">
 
       <div class="work-content">
-
 
 
         <div class="work-card">
@@ -1874,7 +1852,6 @@
         </div>
 
 
-
         <div class="work-card">
 
           <div class="work-number">
@@ -1893,7 +1870,6 @@
           </p>
 
         </div>
-
 
 
         <div class="work-card">
@@ -1919,7 +1895,6 @@
         </div>
 
 
-
         <div class="work-card">
 
           <div class="work-number">
@@ -1943,13 +1918,11 @@
         </div>
 
 
-
       </div>
 
     </div>
 
   </section>
-
 
 
   <!-- AMPLIFYING VOICES -->
@@ -1997,7 +1970,6 @@
           </div>
 
         </div>
-
 
 
         <div class="stats">
@@ -2051,7 +2023,6 @@
   </section>
 
 
-
   <!-- LATEST ARTICLES -->
 
   <section class="compact-section">
@@ -2094,7 +2065,6 @@
         </div>
 
 
-
         <div class="article-grid" id="latest-articles">
           <!-- Latest articles loaded automatically -->
         </div>
@@ -2104,7 +2074,6 @@
     </div>
 
   </section>
-
 
 
   <!-- REPORTS -->
@@ -2173,7 +2142,6 @@
   </section>
 
 
-
   <!-- ABOUT -->
 
   <section class="compact-section">
@@ -2234,7 +2202,6 @@
   </section>
 
 
-
   <!-- TEAM -->
 
   <section class="compact-section">
@@ -2274,7 +2241,6 @@
         </div>
 
 
-
         <div class="leadership-title">
           Initiative Leadership
         </div>
@@ -2309,7 +2275,6 @@
         </div>
 
 
-
         <div class="leadership-title">
           Qualitative Research Lead
         </div>
@@ -2322,7 +2287,6 @@
           </div>
 
         </div>
-
 
 
         <div class="leadership-title">
@@ -2342,7 +2306,6 @@
           </div>
 
         </div>
-
 
 
         <div class="leadership-title">
@@ -2379,7 +2342,6 @@
         </div>
 
 
-
         <div style="margin-top:20px;">
 
           <a href="leadership.html" class="read-more">
@@ -2395,13 +2357,10 @@
   </section>
 
 
-
 </section>
 
 
-
 </main>
-
 
 
 <!-- =========================================================
@@ -2425,7 +2384,6 @@
         </p>
 
       </div>
-
 
 
       <div>
@@ -2465,7 +2423,6 @@
       </div>
 
 
-
       <div>
 
         <h4>
@@ -2497,7 +2454,6 @@
     </div>
 
 
-
     <div class="footer-bottom">
       ©2023 International Economic Association — Women in Economics Initiative (IEA-WE)
     </div>
@@ -2505,7 +2461,6 @@
   </div>
 
 </footer>
-
 
 
 <script src="articles-data.js"></script>
@@ -2559,7 +2514,6 @@
 </script>
 
 
-
 <!-- =========================================================
      FLOATING IEA CONGRESS VIDEO
 ========================================================= -->
@@ -2592,7 +2546,6 @@
   </span>
 
 </a>
-
 
 
 </body>
