@@ -151,19 +151,19 @@
 
       padding: 90px 0;
 
-      color: var(--white);
-
-      background-image:
+      background:
         linear-gradient(
           90deg,
-          rgba(11, 53, 104, 0.82) 0%,
-          rgba(11, 53, 104, 0.70) 45%,
-          rgba(11, 53, 104, 0.48) 100%
+          var(--white) 0%,
+          rgba(255, 255, 255, 0.98) 30%,
+          rgba(255, 255, 255, 0.82) 48%,
+          rgba(255, 255, 255, 0.30) 72%,
+          rgba(255, 255, 255, 0) 100%
         ),
         url("amplifying_voices_main.jpg");
 
       background-size: cover;
-      background-position: center;
+      background-position: center right;
 
       border-bottom: 1px solid var(--line);
 
@@ -180,7 +180,7 @@
 
     .eyebrow {
 
-      color: var(--white);
+      color: var(--red);
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 13px;
@@ -193,7 +193,7 @@
     .hero h1 {
 
       font-family: "Playfair Display", Georgia, serif;
-      color: var(--white);
+      color: var(--navy);
       font-size: clamp(55px, 8vw, 100px);
       line-height: 0.98;
       font-weight: 500;
@@ -206,7 +206,7 @@
 
     .hero h1 span {
 
-      color: #ffd4da;
+      color: var(--red);
 
     }
 
@@ -216,7 +216,7 @@
       max-width: 820px;
       font-size: 21px;
       line-height: 1.65;
-      color: rgba(255, 255, 255, 0.94);
+      color: var(--muted);
 
     }
 
@@ -1119,18 +1119,27 @@
       }
 
 
+      /* =========================
+         MOBILE HERO
+         ========================= */
+
       .hero {
 
         min-height: 520px;
         padding: 70px 0;
 
-        background-image:
+        background:
           linear-gradient(
-            90deg,
-            rgba(11, 53, 104, 0.84) 0%,
-            rgba(11, 53, 104, 0.72) 100%
+            180deg,
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.88) 48%,
+            rgba(255, 255, 255, 0.45) 75%,
+            rgba(255, 255, 255, 0.15) 100%
           ),
           url("amplifying_voices_main.jpg");
+
+        background-size: cover;
+        background-position: center;
 
       }
 
