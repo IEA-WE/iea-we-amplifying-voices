@@ -151,19 +151,10 @@
 
       padding: 90px 0;
 
-      background:
-        linear-gradient(
-          90deg,
-          var(--white) 0%,
-          rgba(255, 255, 255, 0.98) 30%,
-          rgba(255, 255, 255, 0.82) 48%,
-          rgba(255, 255, 255, 0.30) 72%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        url("amplifying_voices_main.jpg");
-
+      background-image: url("amplifying_voices_main.jpg");
       background-size: cover;
       background-position: center right;
+      filter: grayscale(100%);
 
       border-bottom: 1px solid var(--line);
 
@@ -174,6 +165,26 @@
 
       position: relative;
       z-index: 2;
+
+    }
+
+
+    .hero .container::before {
+
+      content: "";
+      position: absolute;
+
+      top: 50%;
+      left: -25px;
+
+      transform: translateY(-50%);
+
+      width: 760px;
+      height: 390px;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      z-index: -1;
 
     }
 
@@ -1128,18 +1139,21 @@
         min-height: 520px;
         padding: 70px 0;
 
-        background:
-          linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.94) 0%,
-            rgba(255, 255, 255, 0.88) 48%,
-            rgba(255, 255, 255, 0.45) 75%,
-            rgba(255, 255, 255, 0.15) 100%
-          ),
-          url("amplifying_voices_main.jpg");
-
+        background-image: url("amplifying_voices_main.jpg");
         background-size: cover;
         background-position: center;
+        filter: grayscale(100%);
+
+      }
+
+
+      .hero .container::before {
+
+        top: 50%;
+        left: -15px;
+
+        width: calc(100% + 30px);
+        height: 410px;
 
       }
 
