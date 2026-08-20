@@ -144,22 +144,15 @@
     .hero {
 
       position: relative;
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-
-      background-image: url("amplifying_voices_main.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      padding: 95px 0;
-
+      background: var(--white);
+      padding: 95px 0 85px;
       border-bottom: 1px solid var(--line);
+      overflow: hidden;
 
     }
 
+
+    /* B&W background image */
 
     .hero::before {
 
@@ -167,32 +160,24 @@
       position: absolute;
       inset: 0;
 
-      background: rgba(255, 255, 255, 0.08);
+      background-image: url("amplifying_voices_main.jpg");
+      background-size: cover;
+      background-position: center;
+
+      filter: grayscale(100%);
+      opacity: 0.30;
 
       z-index: 0;
 
     }
 
 
+    /* Keep hero content above image */
+
     .hero .container {
 
       position: relative;
       z-index: 1;
-
-    }
-
-
-    .hero-content {
-
-      display: inline-block;
-      max-width: 900px;
-
-      background: rgba(250, 249, 245, 0.94);
-
-      padding: 42px 50px 45px;
-
-      box-shadow:
-        0 12px 40px rgba(16, 43, 82, 0.12);
 
     }
 
@@ -1069,14 +1054,6 @@
 
       }
 
-
-      .hero-content {
-
-        max-width: 850px;
-        padding: 36px 38px 40px;
-
-      }
-
     }
 
 
@@ -1105,15 +1082,7 @@
 
       .hero {
 
-        min-height: 560px;
-        padding: 60px 0;
-
-      }
-
-
-      .hero-content {
-
-        padding: 30px 25px 32px;
+        padding: 70px 0;
 
       }
 
@@ -1266,28 +1235,24 @@
 
       <div class="container">
 
-        <div class="hero-content">
-
-          <div class="eyebrow">
-            IEA-WE · Amplifying Voices
-          </div>
-
-
-          <h1>
-            Turning up the volume
-            <span>for women in economics.</span>
-          </h1>
-
-
-          <p class="hero-intro">
-
-            Turning rigorous research by women economists into a global
-            editorial movement — 100 articles, 120 authors, 30 countries,
-            18M+ readers, and counting.
-
-          </p>
-
+        <div class="eyebrow">
+          IEA-WE · Amplifying Voices
         </div>
+
+
+        <h1>
+          Turning up the volume
+          <span>for women in economics.</span>
+        </h1>
+
+
+        <p class="hero-intro">
+
+          Turning rigorous research by women economists into a global
+          editorial movement — 100 articles, 120 authors, 30 countries,
+          18M+ readers, and counting.
+
+        </p>
 
       </div>
 
