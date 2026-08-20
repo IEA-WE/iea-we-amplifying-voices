@@ -154,9 +154,25 @@
       background-image: url("amplifying_voices_main.jpg");
       background-size: cover;
       background-position: center right;
-      filter: grayscale(100%);
 
       border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .hero::before {
+
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background-image: url("amplifying_voices_main.jpg");
+      background-size: cover;
+      background-position: center right;
+
+      filter: grayscale(100%);
+
+      z-index: 0;
 
     }
 
@@ -166,25 +182,11 @@
       position: relative;
       z-index: 2;
 
-    }
-
-
-    .hero .container::before {
-
-      content: "";
-      position: absolute;
-
-      top: 50%;
-      left: -25px;
-
-      transform: translateY(-50%);
-
-      width: 760px;
-      height: 390px;
-
       background: rgba(255, 255, 255, 0.94);
 
-      z-index: -1;
+      padding: 48px 55px;
+
+      max-width: 980px;
 
     }
 
@@ -1142,18 +1144,23 @@
         background-image: url("amplifying_voices_main.jpg");
         background-size: cover;
         background-position: center;
-        filter: grayscale(100%);
 
       }
 
 
-      .hero .container::before {
+      .hero::before {
 
-        top: 50%;
-        left: -15px;
+        background-image: url("amplifying_voices_main.jpg");
+        background-size: cover;
+        background-position: center;
 
-        width: calc(100% + 30px);
-        height: 410px;
+      }
+
+
+      .hero .container {
+
+        padding: 35px 30px;
+        max-width: 100%;
 
       }
 
